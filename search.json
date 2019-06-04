@@ -1,0 +1,35 @@
+[
+	
+		{
+		  "title"      : "Lecture 1: A professional programmer uses Version Control System (VCS)",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/1-version-control-system",
+		  "date"       : "2019-06-04 00:00:00 -0500",
+		  "shortdate"  : "June 04, 2019"
+		} ,
+	
+		{
+		  "title"      : "Homework 1: Problems - Version Control Using Git and Github",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/homework/1-problems-version-control-using-git-github",
+		  "date"       : "2019-06-04 00:00:00 -0500",
+		  "shortdate"  : "June 04, 2019"
+		} ,
+	
+		{
+		  "title"      : "Announcement 0: Student-professor connection day",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/announcement/0-student-professor-connection-day",
+		  "date"       : "2019-06-04 00:00:00 -0500",
+		  "shortdate"  : "June 04, 2019"
+		} ,
+	
+		{
+		  "title"      : "Announcement 1: Assessing your programming knowledge and interests",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests",
+		  "date"       : "2017-06-04 00:00:00 -0500",
+		  "shortdate"  : "June 04, 2017"
+		} 
+	
+]
