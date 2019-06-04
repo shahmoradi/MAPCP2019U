@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-04T10:02:18-05:00</updated>
+<updated>2019-06-04T10:06:01-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1694,7 +1694,7 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
     &lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests&quot;&gt;Announcement 1: Assessing your programming knowledge and interests&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 04, 2017.&lt;/p&gt;</content>
