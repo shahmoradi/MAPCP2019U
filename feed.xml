@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-05T17:58:02-05:00</updated>
+<updated>2019-06-06T01:42:57-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -30,7 +30,7 @@
   
   <content type="html">
   
-    &lt;p&gt;This lecture aims at providing a brief review of Version Control Systems, why they are needed, how they work, and the most prominent and popular version control software that are available today for professional collaborative programming.&lt;/p&gt;
+    &lt;p&gt;This lecture aims at providing a brief review of Version Control Systems, why they are needed, how they work, and the most prominent and popular version control software that is available today for professional collaborative programming.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some useful links for future reference:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -53,7 +53,7 @@
 &lt;p&gt;Back in the early years of my graduate studies when I started scientific research and programming, the directory containing my first project looked something like the following figure.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/lecture/1/badCodingHabit.png&quot; width=&quot;900&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/1/badCodingHabit.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         An example of bad coding habit and project maintenance. The figure shows part of the content of a directory dedicated to a research project. Each folder contains one version of the project and its corresponding codes and results at a given time (i.e., one &lt;a href=&quot;https://en.wikipedia.org/wiki/Deliverable&quot; target=&quot;_blank&quot;&gt;deliverable&lt;/a&gt;). Obviously, tracking minor development stages of the project leading to each of the deliverables would be a very difficult task with such project management method.
     &lt;/figcaption&gt;
@@ -63,13 +63,13 @@
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Data redundancy and storage inefficiency&lt;/strong&gt;&lt;br /&gt;
- Every time you want to develop your existing project and take it to the next level, you have to make a whole duplicate of the last version of your project to start the new development (i.e., the next version of your project). Obviously, your the new version of your project will have a lot in common with the previous version. But, each one has its own dedicated separate folder, there is &lt;em&gt;a lot of code and data redundancy&lt;/em&gt; in using such method for just keeping track of your project version history.
+ Every time you want to develop your existing project and take it to the next level, you have to make a whole copy of the last version of your project to start the new development (i.e., the next version of your project). Obviously, the new version of your project will have a lot in common with the previous version. But, each one has its own dedicated separate folder. So, there is &lt;em&gt;a lot of code and data redundancy&lt;/em&gt; in using such an approach to keeping track of your project’s version history.
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;High risk of errors and irreversible mistakes&lt;/strong&gt;&lt;br /&gt;
-Using this method, it is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to.
+Using this method, it is easy to forget which directory you are in, and to accidentally write to the wrong file or to mistakenly overwrite files you did not mean to.
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Difficulty in tracking minor developments in the project&lt;/strong&gt;&lt;br /&gt;
- Every version of the project is supposed to correspond to one working version of the project, that is, in professional terminology, each stage of the project should correspond to a &lt;a href=&quot;https://en.wikipedia.org/wiki/Deliverable&quot; target=&quot;_blank&quot;&gt;deliverable&lt;/a&gt;. Therefore, if all minor developments of the project are to be documented, then each minor development has to be recorded as a new version of the project, with its own dedicated directory. However, since this is practically impossible, the programmer (researcher) has to either skip documenting all minor improvements, and therefore lose track of every detailed development in the code, or exacerbate the first caveat mentioned above, by generating more and more redundant copies of the same codes and data for the sake of keeping track of all minor stages of the development.
+ In professional programming, all minor developments and changes to a project must be tracked and well-documented (only the major versions of the project (called &lt;a href=&quot;https://en.wikipedia.org/wiki/Deliverable&quot; target=&quot;_blank&quot;&gt;deliverable&lt;/a&gt; in programming terminology) are supposed to be available to non-developers or customers. This means that in order to keep track of every minor stage of the program development, one has to create a &lt;strong&gt;new complete&lt;/strong&gt; copy of the project, with its own dedicated directory. However, since this is practically impossible, the programmer or the researcher has to either skip documenting all minor improvements and therefore, lose track of detailed changes in the code, or otherwise, worsen the first caveat mentioned above, by generating more and more redundant copies of the same codes and data for the sake of keeping track of all minor stages of the development.
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Ambiguity in version differences&lt;/strong&gt;&lt;br /&gt;
  With this primitive method of project version control, it is not clear what the main differences between different versions of the project are, unless a very detailed documentation is provided along with each version detailing the differences between the current, its ancestor (i.e., the previous version of the project) and its descendant (i.e., the next version of the project), or parallel independent versions of the project (i.e., the project &lt;a href=&quot;https://en.wikipedia.org/wiki/Branching_(version_control)&quot; target=&quot;_blank&quot;&gt;branches&lt;/a&gt;).
@@ -78,46 +78,46 @@ Using this method, it is easy to forget which directory you’re in and accident
  Since the entire project is locally stored and accessible to one programmer or researcher, any collaborative effort will be extremely difficult, and require manual duplication and syncing of the project with other developers.
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Potential risk of complete data loss:&lt;/strong&gt;&lt;br /&gt;
- As a result of the local storage of the project on a single computer or storage device, there is always a high risk of losing the entire project due to hardware failure, or other unpredicted events.
+ Since the project is stored locally, on a single computer or storage device, there is always a high risk of losing the entire project due to hardware failure, or other unpredicted events.
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Fortunately, several smart powerful solutions and software have been developed, collectively known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot; target=&quot;_blank&quot;&gt;Version Control System (VCS)&lt;/a&gt; for &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_configuration_management&quot; target=&quot;_blank&quot;&gt;project management&lt;/a&gt;, in particular, since the turn of the millennium.
+&lt;p&gt;Fortunately, several smart powerful solutions and software have been developed, collectively known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot; target=&quot;_blank&quot;&gt;Version Control System (VCS)&lt;/a&gt; for &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_configuration_management&quot; target=&quot;_blank&quot;&gt;project management&lt;/a&gt;, in particular, since the dawn of the new millennium.
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a name=&quot;VCS&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;what-is-version-control-system-vcs&quot;&gt;What is Version Control System (VCS)?&lt;/h2&gt;
 
-&lt;p&gt;Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.&lt;sup&gt;&lt;a href=&quot;#fn1&quot; id=&quot;ref1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
-Depending on how the project is maintained and shared with others, VCS are classified into three categories:&lt;/p&gt;
+&lt;p&gt;Version control is a system (e.g., software) that records changes to a file or set of files over time so that you can recall specific versions later.&lt;sup&gt;&lt;a href=&quot;#fn1&quot; id=&quot;ref1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+Depending on how the project is maintained and shared with others, VCS is classified into three categories:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Local VCS&lt;/strong&gt;&lt;br /&gt;
- The simplest form of project version control, and probably the oldest method is &lt;em&gt;local VCS&lt;/em&gt; where the VCS software keeps track of details of evolution of files in the project only on a local storage device or computer. A prime example of such version control software is the GNU &lt;a href=&quot;https://www.gnu.org/software/rcs/&quot; target=&quot;_blank&quot;&gt;Revision Control System (RCS)&lt;/a&gt;. Such VCS are able to avoid problems 1-4 mentioned above. The following figure illustrates the inner working of a local VCS.&lt;br /&gt;
+ The simplest form of project version control, and probably the oldest method is &lt;em&gt;local VCS&lt;/em&gt; where the VCS software keeps detailed track of the evolution of individual files in the project &lt;em&gt;only on a local storage device or computer&lt;/em&gt;. A prime example of such version control software is the GNU &lt;a href=&quot;https://www.gnu.org/software/rcs/&quot; target=&quot;_blank&quot;&gt;Revision Control System (RCS)&lt;/a&gt;. Such VCS is able to avoid problems 1-4 mentioned above. The following figure illustrates the inner workings of a local VCS.&lt;br /&gt;
  &lt;br /&gt;
  &lt;img src=&quot;1/localVCS.png&quot; alt=&quot;Local Version Control&quot; /&gt;&lt;br /&gt;
  &lt;br /&gt;
  &lt;strong&gt;Major Caveats:&lt;/strong&gt;
     &lt;ol&gt;
-      &lt;li&gt;No easy way of collaboration and synchronization between team members.&lt;/li&gt;
-      &lt;li&gt;Potential risk of complete data loss.&lt;br /&gt;
+      &lt;li&gt;There is no easy way for collaboration and synchronization between team members.&lt;/li&gt;
+      &lt;li&gt;There is a potential risk of complete data loss.&lt;br /&gt;
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Centralized VCS (CVCS)&lt;/strong&gt;&lt;br /&gt;
- Since collaborative effort is at the heart of almost every large-scale project, a new generation of VCS has been developed that go beyond the capabilities of local VCS. These VCS have a central repository that is accessible by all members of the project’s team. This central repository contains all the project’s information and its development history and clients (team members) can check out and work on individual files of the project. For many years this VCS has been the dominant method version control. Prime examples include &lt;a href=&quot;https://en.wikipedia.org/wiki/Concurrent_Versions_System&quot; target=&quot;_blank&quot;&gt;Concurrent Versions System (CVS)&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Perforce_Helix&quot; target=&quot;_blank&quot;&gt;Perforce Helix&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Apache_Subversion&quot; target=&quot;_blank&quot;&gt;Apache Subversion(SVN)&lt;/a&gt;. The following figure illustrates the inner working of a CVCS.&lt;br /&gt;
+ Since collaborative effort is at the heart of almost every large-scale project, a new generation of VCS has been developed that go beyond the capabilities of local VCS. These VCS have a central repository that is accessible by all members of the project’s team. This central repository contains all of the project’s information and its development history and clients (team members) can check out and work on individual files of the project. For many years this style of VCS used to be the dominant method of software version control. Prime examples include &lt;a href=&quot;https://en.wikipedia.org/wiki/Concurrent_Versions_System&quot; target=&quot;_blank&quot;&gt;Concurrent Versions System (CVS)&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Perforce_Helix&quot; target=&quot;_blank&quot;&gt;Perforce Helix&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Apache_Subversion&quot; target=&quot;_blank&quot;&gt;Apache Subversion(SVN)&lt;/a&gt;. The following figure illustrates the inner workings of a CVCS.&lt;br /&gt;
  &lt;br /&gt;
  &lt;img src=&quot;1/centralizedVCS.png&quot; alt=&quot;Centralized Version Control&quot; /&gt;&lt;br /&gt;
  &lt;br /&gt;
  &lt;strong&gt;Major Caveats:&lt;/strong&gt;
     &lt;ol&gt;
-      &lt;li&gt;Since the main database of the project is centralized, and team members have only snapshots of a specific version of the project, any failure in the central database would halt the individual and collaborative works of all team members, since no further developments can be submitted to the central database.&lt;/li&gt;
+      &lt;li&gt;Since the main database of the project is centralized, and team members have only snapshots of a specific version of the project, any failure in the central database would halt the individual and the collaborative works of all team members as no further developments can be submitted to the central database.&lt;/li&gt;
       &lt;li&gt;Also, if the central database is completely corrupted with no backups, then the entire history of the project is lost.
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Distributed VCS (DVCS)&lt;/strong&gt;&lt;br /&gt;
- In order to resolve the caveats of the aforementioned VCS, several new VCS known as &lt;em&gt;distributed VCS&lt;/em&gt; have been developed within the first decade of the new millennium. With these VCS, each client has an entire copy of the central database at his own local storage device. Thus, every &lt;strong&gt;clone&lt;/strong&gt; of the central repository that is with each client, is a full backup of all the project data.  Consequently, if the central server/repository fails for any reason, the local repository of the team member that has the most recent clone of the project database, can be used to restore the central repository. *This VCS paradigm is currently the most popular class of VCS and we will be using a major implementation of it known as &lt;a href=&quot;https://git-scm.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/a&gt; throughout this course. Other major DVCS implementations include &lt;a href=&quot;https://www.mercurial-scm.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&quot;https://bazaar.canonical.com/en/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bazaar&lt;/strong&gt;&lt;/a&gt;, and &lt;a href=&quot;http://darcs.net/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Darcs&lt;/strong&gt;&lt;/a&gt;. The following figure illustrates the inner working of a DVCS.&lt;br /&gt;
+ In order to resolve the caveats of the aforementioned VCS, several new VCS, known as &lt;em&gt;distributed VCS&lt;/em&gt;, have been developed within the first decade of the new millennium. With these VCS, each client has an entire copy of the central database at their own local storage device. Thus, every &lt;strong&gt;clone&lt;/strong&gt; of the central repository that is with each client, is a full backup of all of the project’s data and history.  Consequently, if the central server/repository fails for any reason, the local repository of the team member that has the most recent clone of the project database, can be used to restore the central repository. &lt;strong&gt;This VCS paradigm is currently the most popular class of VCS&lt;/strong&gt;. We will be using a major implementation of it known as &lt;a href=&quot;https://git-scm.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/a&gt; throughout this course. Other major DVCS implementations include &lt;a href=&quot;https://www.mercurial-scm.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&quot;https://bazaar.canonical.com/en/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bazaar&lt;/strong&gt;&lt;/a&gt;, and &lt;a href=&quot;http://darcs.net/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Darcs&lt;/strong&gt;&lt;/a&gt;. The following figure illustrates the inner working of a DVCS.&lt;br /&gt;
  &lt;br /&gt;
  &lt;img src=&quot;1/distributedVCS.png&quot; alt=&quot;Distributed Version Control&quot; /&gt;&lt;br /&gt;
  &lt;br /&gt;&lt;/li&gt;
@@ -128,7 +128,7 @@ Depending on how the project is maintained and shared with others, VCS are class
 &lt;p&gt;&lt;a name=&quot;GM-VCS&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;gitmercurial-version-control-system&quot;&gt;Git/Mercurial version control system&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; is a DVCS that grew out of frustration between the Linux kernel developing community and a proprietary VCS software company that maintained and indexed Linux kernel development. Similar to the other major DVCS implementation &lt;a href=&quot;https://www.mercurial-scm.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;&lt;/a&gt;, Git is designed with the following goals in mind:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; is a DVCS that grew out of frustration between the Linux kernel developing community and a proprietary VCS software company that maintained and indexed Linux kernel development. Similar to another major DVCS implementation &lt;a href=&quot;https://www.mercurial-scm.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;&lt;/a&gt;, Git is designed with the following goals in mind:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Speed.&lt;/li&gt;
@@ -141,26 +141,26 @@ Depending on how the project is maintained and shared with others, VCS are class
 &lt;p&gt;&lt;a name=&quot;GM-indexingMethod&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;gitmercurial-project-indexing-method&quot;&gt;Git/Mercurial project indexing method&lt;/h3&gt;
 
-&lt;p&gt;VCS software, such as SVN and and Bazaar, index the new developments in the projects by tracking the changes in individual files of the projects, similar to the diagram below.&lt;/p&gt;
+&lt;p&gt;VCS software, such as SVN and Bazaar, index the new developments of a given project by tracking the changes in individual files of the project, similar to the diagram below.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/lecture/1/deltas.png&quot; width=&quot;900&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/1/deltas.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption&gt;
         &lt;b&gt;File-based&lt;/b&gt; project indexing method that is common to some VCS software such as CVS, Subversion, Perforce, Bazaar. &lt;br /&gt;(&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;By contrast, both Git and Mercurial work by generating a complete snapshot of the project at any moment the project is committed to the local repository for version control. Even if some files have not changed in the new version of the project, they will still exist in the newly generated version of the project. However, both Git and Mercurial have been designed smart enough to realize if any changes has occurred to each individual file and store the files effectively and without redundancy.  The complete history of the project is constructed by the series of snapshots generated, a flow similar to the following figure.&lt;/p&gt;
+&lt;p&gt;By contrast, both Git and Mercurial work by generating a complete snapshot of the project at any moment the project is committed to the local repository for the purpose of version control. Even if some files have not changed in the new version of the project, they will still exist in the newly generated version of the project. However, both Git and Mercurial have been designed smart enough to realize what changes have occurred to individual files and then store the files effectively, without redundancy.  The complete history of the project is constructed by the series of snapshots generated, a flow that is similar to the following illustration.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/lecture/1/snapshots.png&quot; width=&quot;900&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/1/snapshots.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption&gt;
         &lt;b&gt;Snapshot-based&lt;/b&gt; project indexing method that is used in Git and Mercurial VCS software. &lt;br /&gt;(&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;a name=&quot;gitAreas&quot;&gt;&lt;/a&gt;
-Each project file in Git/Mercurial indexing process can have one of the three possible states:&lt;/p&gt;
+Each project’s file in Git/Mercurial indexing process can have one of the three possible states:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;modified, but not staged:&lt;/strong&gt;
@@ -170,30 +170,31 @@ Each project file in Git/Mercurial indexing process can have one of the three po
   &lt;li&gt;&lt;strong&gt;staged for commit to the repository:&lt;/strong&gt;
  When a file is modified it can be added to the Git staging area to be later &lt;em&gt;committed&lt;/em&gt; permanently to the repository. The staging area is a file, generally contained in the project’s repository (&lt;code&gt;.git&lt;/code&gt; directory), that stores information about what will go into the next &lt;em&gt;commit&lt;/em&gt; to the repository. The staging area is also sometimes referred to as the &lt;strong&gt;index&lt;/strong&gt;.
  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;committed to the repository:&lt;/strong&gt; Once the staged files are &lt;em&gt;committed&lt;/em&gt; to the repository, they become a permanent part of it, and can be later extracted (checked out) for review or further development.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;committed to the repository:&lt;/strong&gt; Once the staged files are &lt;em&gt;committed&lt;/em&gt; to the repository, they become a permanent part of it and can be later extracted (i.e., checked out) for review or further development.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;These three file states comprise an important integral part of Git and Mercurial. The following figure provides an illustration of the three file states.
+&lt;p&gt;These three file states comprise an important integral part of Git and Mercurial. The following figure provides an illustration of these three file states.
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/lecture/1/gitAreas.png&quot; width=&quot;900&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/1/gitAreas.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption&gt;
-        A diagram illustrating the project-indexing process of Git and Mercurial VCS software. Each project file can reside in three different states: working directory, staging area, or in the local repository. (&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
+        A diagram illustrating the project-indexing process of Git and Mercurial VCS software. Each project file can reside in three different states: &lt;b&gt;working directory&lt;/b&gt;, &lt;b&gt;staging area&lt;/b&gt;, or in the &lt;b&gt;local repository&lt;/b&gt;. (&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;a name=&quot;remRepos&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;remote-repository-options-for-your-gitmercurial-projects&quot;&gt;Remote repository options for your Git/Mercurial projects&lt;/h3&gt;
 
-&lt;p&gt;Git can be downloaded and installed from &lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; for Windows, Mac, or Linux systems. The installation guide is available &lt;a href=&quot;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Mercurial can be downloaded and installed from &lt;a href=&quot;https://www.mercurial-scm.org/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; for Windows, Mac, or other operating systems. For collaborative projects, you will need a central (remote) project repository to which all team members submit their latest developments. &lt;em&gt;Even if you are working on a project alone, it is always a good idea to submit all your project developments to a remote repository for the sake of avoiding unpredicted data loss and also publicly showcasing your work.&lt;/em&gt; Two popular online repositories for version-controlled projects are:&lt;/p&gt;
+&lt;p&gt;Git can be downloaded and installed from &lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; for Windows, Mac, or Linux systems. The installation guide is available &lt;a href=&quot;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Mercurial can be downloaded and installed from &lt;a href=&quot;https://www.mercurial-scm.org/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; for Windows, Mac, or other operating systems. For collaborative projects, you will need a central (remote) project-repository to which all team members submit their latest developments. &lt;strong&gt;Even if you are working on a project alone, it is always a good idea to submit all of your project developments to a remote repository for the sake of avoiding unpredicted data loss, also for publicly showcasing your work.&lt;/strong&gt; Three popular online repositories for version-controlled projects are:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt;, which is also an Internet hosting service works and works exclusively for projects that are indexed using Git. As of today, all public projects (visible to everyone on the web) are free-of-charge. For private projects you will have to pay a monthly fee. However, &lt;a href=&quot;https://github.com/blog/1900-the-best-developer-tools-now-free-for-students&quot; target=&quot;_blank&quot;&gt;Github Student&lt;/a&gt; offers a micro-account specially for students with five private repositories free-of-charge (normally $7/month) while you’re a student.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bitbucket&lt;/strong&gt;&lt;/a&gt;, which used to exclusively host Mercurial-indexed projects, but as of 2011 can also host Git-indexed projects. As of today, all projects, public or private (up to 5 users), can be stored on Bitbucket free-of-charge.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt;, which is also an Internet hosting service, works exclusively for projects that are indexed using Git VCS. As of today, all public projects (visible to everyone on the web) on Github are free-of-charge. For private projects, you will have to pay a monthly fee. However, &lt;a href=&quot;https://github.com/blog/1900-the-best-developer-tools-now-free-for-students&quot; target=&quot;_blank&quot;&gt;Github Student&lt;/a&gt; offers a micro-account specially for students with five private repositories free-of-charge (normally $7/month) while you’re a student.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bitbucket&lt;/strong&gt;&lt;/a&gt;, which used to exclusively host Mercurial-indexed projects. But since 2011, it can also host Git-indexed projects. As of today, all projects, public or private (up to 5 users), can be stored on Bitbucket free-of-charge.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;about.gitlab.com&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;GitLab&lt;/strong&gt;&lt;/a&gt;, is another rather-new  Git-repository manager that provides developer tools comparable wth GitHub, and even more. At the moment, it is not as popular as GitHub. However, it is used by many major companies and industries across the world for software version control (e.g., NASA, IBM, Boeing, CERN, Oracle, Sony, …).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The following is a concise comparison between the general features and services of Github and Bitbucket.&lt;/p&gt;
+&lt;p&gt;GitHub and Bitbucket are particularly useful for education as they provide notable services and options for educational accounts and purposes. The following is a concise comparison between the general features and services of Github and Bitbucket.&lt;/p&gt;
 
 &lt;table class=&quot;center&quot;&gt;
 &lt;tbody&gt;
@@ -265,7 +266,7 @@ Each project file in Git/Mercurial indexing process can have one of the three po
 &lt;p&gt;&lt;a name=&quot;gitProjectSetup&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;setting-up-your-first-git-project-on-github&quot;&gt;Setting up your first Git project on Github&lt;/h2&gt;
 
-&lt;p&gt;For this course, we will use Git as our version control software, and Github as central (remote) repository. Follow the following guidelines to create your first Git project on Github.&lt;/p&gt;
+&lt;p&gt;For this course, we will use Git as our version control software, and Github as our central (remote) repository. Follow the guidelines below to create your first Git project on Github.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Go to &lt;a href=&quot;https://education.github.com/&quot; target=&quot;_blank&quot;&gt;Github Student&lt;/a&gt; and create your student account.&lt;/li&gt;
@@ -275,12 +276,12 @@ Each project file in Git/Mercurial indexing process can have one of the three po
 &lt;p&gt;&lt;a name=&quot;gitID&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;setting-up-your-git-identity&quot;&gt;Setting up your Git identity&lt;/h3&gt;
 
-&lt;p&gt;The first thing you should do when you install Git is to set your user-name and email address. This is important because every Git commit uses this information, and this information is permanently baked into the &lt;em&gt;commits&lt;/em&gt; you start making to your projects’ repositories. To set your name and email globally for all Git projects &lt;em&gt;once and for all&lt;/em&gt; on your computer, use the following Git commands:&lt;/p&gt;
+&lt;p&gt;The first thing you should do when you install Git is to set your user-name and email address. This is important because every Git commit uses this information, and this information is permanently baked into the &lt;em&gt;commits&lt;/em&gt; that will make to your projects’ repository. To set your name and email globally for all Git projects &lt;em&gt;once and for all&lt;/em&gt; on your computer, use the following Git commands:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git config --global user.name &quot;&amp;lt;your name, e.g., Amir Shahmoradi&amp;gt;&quot;
-$ git config --global user.email &amp;lt;your email, e.g., amir@ices.utexas.edu&amp;gt;
+$ git config --global user.email &amp;lt;your email, e.g., shahmoradi@utexas.edu&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-You need to do this only once if you pass the &lt;code&gt;--global&lt;/code&gt; option, because then Git will always use the provided information for anything you do with Git on your system. If you want to override this information with a different name or email address later on for some specific projects, you can run the above same Git commands, but &lt;em&gt;without the &lt;code&gt;--global&lt;/code&gt; optional flag when you are in your specific project’s directory&lt;/em&gt;.&lt;/p&gt;
+You need to do this only once if you pass the &lt;code&gt;--global&lt;/code&gt; option because then Git will always use the provided information for anything you do with Git on your system. Later on, if you want to override this information with a different name or email address for some specific projects, you can run the above same Git commands, but &lt;em&gt;without the &lt;code&gt;--global&lt;/code&gt; optional flag&lt;/em&gt;, only &lt;strong&gt;when you are in your specific project’s directory&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a name=&quot;gitInit&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;two-methods-of-project-initialization&quot;&gt;Two methods of project initialization&lt;/h3&gt;
@@ -297,25 +298,26 @@ You need to do this only once if you pass the &lt;code&gt;--global&lt;/code&gt; 
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git init
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-This command will initialize an empty repository in the current directory. If you check the repository, you will notice that a &lt;code&gt;.git&lt;/code&gt; (hidden) folder has been added to the directory. This folder will contain all history of your new project, and anything in the current directory in which &lt;code&gt;.git&lt;/code&gt; folder exists will be indexed as part of the project.&lt;br /&gt;
-In order to generate the project’s repository in different directory, use&lt;/p&gt;
+This command will initialize an empty repository in the current directory. If you check the directory containing your repository, you will notice that a new hidden  &lt;code&gt;.git&lt;/code&gt; folder has been added to the directory. This folder will contain all of the history of your new project. Anything in the directory where the hidden &lt;code&gt;.git&lt;/code&gt; folder exists will be indexed as part of the project.&lt;br /&gt;
+In order to generate the project’s repository in a different directory, use&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git init &amp;lt;directory name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-Even if the requested directory does not exist, git will first automatically create the requested directory and initialize the empty project inside it. That’s it! Now all you need to do is to start adding or developing your project files inside the project folder.&lt;/p&gt;
+Even if the requested directory does not exist, git will first automatically create the requested directory and initialize an empty project inside of it. That’s it! Now all you need to do is to start adding or developing your project files inside the project folder.&lt;/p&gt;
 
 &lt;p&gt;&lt;a name=&quot;lorcalRemoteConnection&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;local-device-and-remote-repository-ssh-connection&quot;&gt;Local device and remote repository SSH connection&lt;/h3&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;strong&gt;Why is SSH needed?&lt;/strong&gt;&lt;br /&gt;
-Now every time may you want to &lt;strong&gt;clone&lt;/strong&gt; your remote private repository to your local device or &lt;strong&gt;push&lt;/strong&gt; your local repository to a remote server (your Github account), or basically do any communication between the local and remote repositories, Git will ask you to authenticate your connection by supplying your Github username and password. Note that this security behavior is necessary, since you don’t want just anyone to be able to push to your personal projects or mess with them without your prior permission.
-However, this rather annoying user/pass request by Git can be resolved by setting up an &lt;strong&gt;SSH&lt;/strong&gt; secure connection between your local device and the remote repository.&lt;/p&gt;
+Now every time may you want to &lt;strong&gt;clone&lt;/strong&gt; your remote private repository to your local device or &lt;strong&gt;push&lt;/strong&gt; your local repository to a remote server (your Github account), or basically do any communication between the local and remote repositories, Git will ask you to authenticate your connection by supplying your Github username and password. Note that this security check is necessary since you don’t want just anyone to be able to push unwanted changes to your personal projects or mess with them without your prior permission.
+However, this rather annoying user/pass request by Git can be resolved by setting up an &lt;strong&gt;SSH&lt;/strong&gt; secure connection between your local device and the remote repository.&lt;br /&gt;
+SSH, also known as &lt;strong&gt;Secure Shell&lt;/strong&gt; or &lt;strong&gt;Secure Socket Shell&lt;/strong&gt;, is a network protocol that gives users a secure way to access a computer over an unsecured network. SSH may also refer to the suite of utilities that implement the SSH protocol.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;How does it work?&lt;/strong&gt;&lt;br /&gt;
-Think of your local device as a person who has a set of keys, now if your remote repository is a home with an entrance key hole that matches one of the person’s (local device’s) keys, then the person (your device) can gain access to the interior of the home (your remote repository).&lt;/p&gt;
+Think of your local device as a person who has a set of keys. Now, if your remote repository is a home with an entrance keyhole that matches one of the person’s keys, then the person (i.e., your local device) can gain access to the interior of the home (i.e., your remote repository).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;How is it set up?&lt;/strong&gt;&lt;br /&gt;
-You can generate keys for your local device by following the instructions given &lt;a href=&quot;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Once you have generated the key and the key hole, you can add a copy of the key hole to your Github account by following the instructions given &lt;a href=&quot;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+You can generate keys for your local device by following the instructions given &lt;a href=&quot;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Once you have generated the key and the keyhole, you can add a copy of the keyhole to your Github account by following the instructions given &lt;a href=&quot;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here is an example educational video, explaining the SSH key setup process:&lt;/p&gt;
 &lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
@@ -326,11 +328,11 @@ You can generate keys for your local device by following the instructions given 
 &lt;p&gt;&lt;a name=&quot;mainGitCommands&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;main-git-commands&quot;&gt;Main Git commands&lt;/h3&gt;
 
-&lt;p&gt;As of today, Git has more than 150 commands. For a complete list, you can type on your &lt;em&gt;Git bash&lt;/em&gt; command window,&lt;/p&gt;
+&lt;p&gt;As of today, Git has more than 150 commands. For a complete list, you can type the following on your &lt;em&gt;Git bash&lt;/em&gt; command window,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git help -a
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-to see a list of all Git commands. Note that every Git command begins with &lt;code&gt;git&lt;/code&gt;. Despite the long list of Git commands, you will likely use only five of them on an everyday basis. Not that the rest are unimportant, but with these five basic commands you will be at least able to develop and index your project, and communicate with remote repository and colleagues. In order to understand these five, we will have to recall the three states of a project’s files, described earlier &lt;a href=&quot;#gitAreas&quot;&gt;above&lt;/a&gt;.&lt;/p&gt;
+to see a list of all possible Git commands. Note that every Git command begins with &lt;code&gt;git&lt;/code&gt;. Despite the long list of Git commands, you will likely use only five of them on an everyday basis. Not that the rest are unimportant, but with these five basic commands you will be at least able to develop and index your project and communicate with your remote repository as well as your colleagues. In order to understand these five, we will have to recall the three states of a project’s files, described earlier &lt;a href=&quot;#gitAreas&quot;&gt;above&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a name=&quot;git-status&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;1-check-the-status-of-the-project&quot;&gt;1. Check the status of the project&lt;/h4&gt;
@@ -360,7 +362,7 @@ This command is equivalent to&lt;/p&gt;
 $ git add -u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-The first command stages new and modified files, but not the deleted files. The second command, stages modified and deleted files, without the newly created files.&lt;/p&gt;
+The first command stages the new and modified files, but not the deleted files. The second command stages the modified and deleted files, without the newly-created files.&lt;/p&gt;
 
 &lt;p&gt;The full documentation for &lt;code&gt;git add&lt;/code&gt; can be found &lt;a href=&quot;https://git-scm.com/docs/git-add&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -371,7 +373,7 @@ The first command stages new and modified files, but not the deleted files. The 
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git commit
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-once this command is entered, a new page for &lt;em&gt;log message&lt;/em&gt; will open on the command line, which contains the list of all files to be committed, and a place at the top of the page to add comments regarding this version of the files that is being committed to the repository. To add a comment, press &lt;code&gt;i&lt;/code&gt; to enter the &lt;em&gt;insert&lt;/em&gt; mode of the &lt;strong&gt;vim&lt;/strong&gt; text-editor. Once comment is added, press &lt;code&gt;ESC&lt;/code&gt; button to exit the insert mode, and write &lt;code&gt;:wq&lt;/code&gt; on the command-line to &lt;strong&gt;w&lt;/strong&gt;rite the comment file (i.e., save it) and &lt;strong&gt;q&lt;/strong&gt;uit &lt;em&gt;vim&lt;/em&gt; text-editor.&lt;/p&gt;
+once this command is entered, a new page for &lt;em&gt;log message&lt;/em&gt; will open on the command line, which contains the list of all files to be committed, and a place at the top of the page to add comments regarding this version of files that are being committed to the repository. To add a comment, press &lt;code&gt;i&lt;/code&gt; to enter the &lt;em&gt;insert&lt;/em&gt; mode of the &lt;strong&gt;vim&lt;/strong&gt; text-editor. Once your comment is added to the text file, press &lt;code&gt;ESC&lt;/code&gt; button to exit the insert mode, and write &lt;code&gt;:wq&lt;/code&gt; on the command-line to &lt;strong&gt;w&lt;/strong&gt;rite the comment file (i.e., save it) and &lt;strong&gt;q&lt;/strong&gt;uit &lt;em&gt;vim&lt;/em&gt; text-editor.&lt;/p&gt;
 
 &lt;p&gt;If you use,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git commit -a
@@ -400,20 +402,20 @@ The &lt;code&gt;-a&lt;/code&gt; and &lt;code&gt;-m&lt;/code&gt; flags can be com
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git push --all
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-We have not yet talked about &lt;strong&gt;git branches&lt;/strong&gt;, but what the above command basically does is that it orders Git to &lt;strong&gt;push all project branches&lt;/strong&gt; to the remote repository. Later on, we will talk more about different flags that can follow &lt;code&gt;git push&lt;/code&gt; command.&lt;/p&gt;
+We have not yet talked about &lt;strong&gt;git branches&lt;/strong&gt;, but what the above command basically does is that it orders Git to &lt;strong&gt;push all branches of the project&lt;/strong&gt; to the remote repository. Later on, we will talk more about different flags that can follow &lt;code&gt;git push&lt;/code&gt; command.&lt;/p&gt;
 
 &lt;p&gt;The full documentation for &lt;code&gt;git push&lt;/code&gt; can be found &lt;a href=&quot;https://git-scm.com/docs/git-push&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a name=&quot;git-pull&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;5-pull-the-latest-project-revision-from-the-remote-to-the-local-repository&quot;&gt;5. Pull the latest project revision from the remote to the local repository&lt;/h4&gt;
 
-&lt;p&gt;Now, in order to &lt;em&gt;pull&lt;/em&gt; the latest revision of the project – a result of other people’s work that is not available in your local repository – from the remote to the your local repository, use&lt;/p&gt;
+&lt;p&gt;Sometimes, your project collaborators might be working simultaneously but independently on the project. In such cases, whenever you want to restart your work on your project, you may want to first &lt;em&gt;pull&lt;/em&gt; the latest revision of the project – that is not available yet in your local repository – from the remote to your local repository. To do so, you can simply use&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git pull
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-There are some important details about &lt;code&gt;git pull&lt;/code&gt; which we will delve into later on in the following lectures.&lt;/p&gt;
+There are some important details about &lt;code&gt;git pull&lt;/code&gt; which we will delve into later on in the following sections.&lt;/p&gt;
 
-&lt;p&gt;The full documentation for &lt;code&gt;git push&lt;/code&gt; can be found &lt;a href=&quot;https://git-scm.com/docs/git-pull&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The full documentation for &lt;code&gt;git pull&lt;/code&gt; can be found &lt;a href=&quot;https://git-scm.com/docs/git-pull&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a name=&quot;git-summary&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;git-commands-summary&quot;&gt;Git commands summary&lt;/h4&gt;
@@ -428,21 +430,21 @@ for submitting your changes to the local and remote repositories, and&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git pull
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-for syncing your local with the remote repository. Remember that you have to use these commands, in the above forms, inside the directory of the project.&lt;/p&gt;
+for syncing your local with the remote repository. Remember that you have to use these commands, in the above forms, **inside the directory of the project **.&lt;/p&gt;
 
-&lt;h2 id=&quot;getting-help-for-git-commands&quot;&gt;Getting help for Git commands&lt;/h2&gt;
+&lt;h2 id=&quot;getting-help-with-git-commands&quot;&gt;Getting help with Git commands&lt;/h2&gt;
 
 &lt;p&gt;There are basically three ways to request information about Git commands on the Git-bash command line:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git help &amp;lt;command name&amp;gt;
 $ git &amp;lt;command name&amp;gt; --help
 $ man git-&amp;lt;command name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note that the last command &lt;code&gt;man&lt;/code&gt; is not a Git command. All Git commands begin with the word &lt;em&gt;git&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Note that the last command &lt;code&gt;man&lt;/code&gt; is not a Git command, but a &lt;a href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot; target=&quot;_blank&quot;&gt;Bash environment&lt;/a&gt; command. Just as a reminder, all Git commands begin with the word &lt;em&gt;git&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;viewing-the-git-commit-history&quot;&gt;Viewing the Git commit history&lt;/h2&gt;
 
-&lt;p&gt;You can check the history of project commits to the repository using the Git command &lt;code&gt;git log&lt;/code&gt;.
-For example, here is a snippet from the output  of &lt;code&gt;git log&lt;/code&gt; on laptop screen:&lt;/p&gt;
+&lt;p&gt;You can check the history of your project’s commits to the repository using the Git command &lt;code&gt;git log&lt;/code&gt;.
+For example, here is a snippet from the output  of &lt;code&gt;git log&lt;/code&gt; on my laptop screen:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;  $ git log
 commit 264043e0d49006b7f59e57639961c333b5d5f124
 Author: Amir Shahmoradi &amp;lt;a.shahmoradi@gmail.com&amp;gt;
@@ -511,13 +513,13 @@ Date:   Thu Jan 12 19:05:14 2017 -0600
 :
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-There is a long list of options that can be used with &lt;code&gt;git log&lt;/code&gt; command to display exactly what you need on bash screen.
-Some of the most useful are discussed below.&lt;br /&gt;
-To lists the differences of the files between different commits use &lt;code&gt;-p&lt;/code&gt; flag:&lt;/p&gt;
+There is a long list of options that can be used with &lt;code&gt;git log&lt;/code&gt; command to display exactly what you need on the Bash environment screen.
+Some of the most useful options are discussed below.&lt;br /&gt;
+To lists the differences between different commits of the same file, use &lt;code&gt;-p&lt;/code&gt; flag:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git log -p
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-To lists only a limited number of most recent commits use &lt;code&gt;-&amp;lt;number of commits to display&amp;gt;&lt;/code&gt; flag. For example:&lt;/p&gt;
+To list only a limited count of the most recent commits use &lt;code&gt;-&amp;lt;number of commits to display&amp;gt;&lt;/code&gt; flag. For example:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git log -2
 $ git log -2
 commit 264043e0d49006b7f59e57639961c333b5d5f124
@@ -550,7 +552,7 @@ Date:   Tue Jan 24 17:48:33 2017 -0600
  9 files changed, 140 insertions(+), 56 deletions(-)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-The log data can be even represented formatted via the flag &lt;code&gt;--pretty=format:&quot;&amp;lt;the desired format&amp;gt;&quot;&lt;/code&gt;. For example,&lt;/p&gt;
+The log data can be even represented in formatted style via the flag &lt;code&gt;--pretty=format:&quot;&amp;lt;the desired format&amp;gt;&quot;&lt;/code&gt;. For example,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git log -3 --pretty=format:&quot;%h - %an, %ar : %s&quot;
 264043e - Amir Shahmoradi, 7 days ago : data tables for 1D model added.
 b45ddd7 - Amir Shahmoradi, 7 days ago : minor edit
@@ -757,12 +759,12 @@ or, with the following date format:&lt;/p&gt;
 
 &lt;h2 id=&quot;undoing-amending-and-tagging&quot;&gt;Undoing, amending, and tagging&lt;/h2&gt;
 
-&lt;p&gt;Suppose you want to undo the latest addition of files to the stage area. The command to use in order to clean the stage area is,&lt;/p&gt;
+&lt;p&gt;Suppose you want to undo the latest addition of files to the staging area of your Git repository. The command that you need to use to clean the stage area is,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git reset
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 This command is basically the opposite of &lt;code&gt;git add&lt;/code&gt;. There are a lot of options that can accompany this Git command, details of which can be found in &lt;a href=&quot;https://git-scm.com/docs/git-reset&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;.
-However, &lt;strong&gt;be careful when using this command&lt;/strong&gt;, especially with flag &lt;code&gt;--hard&lt;/code&gt;, which can result in changes in your working directory as well, thus leading to involuntary loss of latest uncommitted files.&lt;/p&gt;
+However, &lt;strong&gt;be careful when using this command&lt;/strong&gt;, especially with flag &lt;code&gt;--hard&lt;/code&gt;, which can result in changes in your working directory as well, thus leading to &lt;strong&gt;involuntary loss of latest uncommitted files&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Another useful command is,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git commit --amend
@@ -770,7 +772,7 @@ However, &lt;strong&gt;be careful when using this command&lt;/strong&gt;, especi
 &lt;p&gt;&lt;br /&gt;
 which is used when you forget to add some files to your latest commit and now, you would like to add the latest content of your project’s staging area to the last commit, by &lt;em&gt;amending&lt;/em&gt; it.&lt;/p&gt;
 
-&lt;p&gt;The Git command &lt;code&gt;git tag&lt;/code&gt; allows you to tag specific important commits in your commit history, for example a final release of your project/software. If you just type &lt;code&gt;git tag&lt;/code&gt; on Git bash command line, it will list all tags in the project, &lt;strong&gt;in alphabetical order&lt;/strong&gt;,&lt;/p&gt;
+&lt;p&gt;The Git command &lt;code&gt;git tag&lt;/code&gt; allows you to tag specific important commits in your project’s commit history, for example, a final release of your project (e.g., software). If you just type &lt;code&gt;git tag&lt;/code&gt; on Git bash command line, it will list all tags in the project, &lt;strong&gt;in alphabetical order&lt;/strong&gt;,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git tag
 v1.0
 v1.1
@@ -778,10 +780,10 @@ v2.0
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 You can create a tag for the latest commit to your repository by using,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;git tag -a v3.0 -m &quot;new version of project&quot;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;git tag -a v3.0 -m &quot;new version of the project&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-This will add a new tag pointing to the latest commit in the project with name &lt;code&gt;v3.0&lt;/code&gt; and the message &lt;em&gt;new version of project&lt;/em&gt;.
+This will add a new tag pointing to the latest commit in the project with name &lt;code&gt;v3.0&lt;/code&gt; and the message &lt;em&gt;new version of the project&lt;/em&gt;.
 Now if you want to display the information about a specific tag, use &lt;code&gt;git show&lt;/code&gt;,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git show v1.0
 tag v1.0
@@ -797,7 +799,7 @@ Date:   Fri Dec 27 17:12:08 2016 -0600
     Update README.md
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-You can also create a &lt;strong&gt;lightweight&lt;/strong&gt; tag by avoiding &lt;code&gt;-a&lt;/code&gt;, &lt;code&gt;-s&lt;/code&gt;, or &lt;code&gt;-m&lt;/code&gt; flags in you tag command,&lt;/p&gt;
+You can also create a &lt;strong&gt;lightweight&lt;/strong&gt; tag by avoiding &lt;code&gt;-a&lt;/code&gt;, &lt;code&gt;-s&lt;/code&gt;, or &lt;code&gt;-m&lt;/code&gt; flags in your tag command,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;git tag v4.0
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
@@ -812,13 +814,13 @@ For more information about &lt;code&gt;git tag&lt;/code&gt;, see &lt;a href=&quo
 origin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-In the output above, &lt;code&gt;origin&lt;/code&gt; is the default name that Git gives to the server you cloned your project from. If you also specify &lt;code&gt;-v&lt;/code&gt; flag, Git will show you the URLs that Git has stored for the remote shortname (e.g., origin) to be used when reading and writing to that remote repository.&lt;/p&gt;
+In the output above, &lt;code&gt;origin&lt;/code&gt; is the default name that Git gives to the server from which you cloned your the project. If you also specify &lt;code&gt;-v&lt;/code&gt; flag, Git will show you the URLs that Git has stored corresponding to the remote’s short name (e.g., origin). This URL is used to read from or write to the remote repository.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git remote -v
 origin  git@github.com:shahmoradi/foo.git (fetch)
 origin  git@github.com:shahmoradi/foo.git (push)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-In order to see more information about a particular remote repository in your project, you can use,&lt;/p&gt;
+In order to see more information about the remote repository of your project, you can use,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git remote show origin
 * remote origin
   Fetch URL: git@github.com:shahmoradi/foo.git
@@ -840,27 +842,27 @@ The above information indicates that the current HEAD branch of the project is o
 
 &lt;h2 id=&quot;git-branching&quot;&gt;Git branching&lt;/h2&gt;
 
-&lt;p&gt;Branching is powerful idea in Version Control Systems, which significantly facilitates collaboration or parallel development of a project. Suppose you have already a project which has reached its first release version, meaning that it works all fine. Now, you like to add a new feature to your project. To do this and to avoid further commits to your original project, you can create a new &lt;strong&gt;branch&lt;/strong&gt; of the project which is specifically devoted to adding the new feature. See the following figure, for an example of Git branching.&lt;/p&gt;
+&lt;p&gt;Branching is a powerful idea in the Version Control System which significantly facilitates collaboration or parallel development of a project. Suppose you have already a project which has reached its first release version, meaning that it works all fine. Now, you like to add a new feature to your project. To do this and to avoid further commits to your original project, you can create a new &lt;strong&gt;branch&lt;/strong&gt; of the project which is specifically devoted to adding the new feature. See the following figure, for an example of Git branching.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/lecture/1/branch-flowchart.png&quot; width=&quot;900&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/1/branch-flowchart.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         An example illustration of Git branching for a project with three branches: master, development, topic.
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;When you create a Git project, the default single branch in your project is &lt;strong&gt;master&lt;/strong&gt;. So, for example if you search for your project branches, you’d see,&lt;/p&gt;
+&lt;p&gt;When you create a Git project, the default single branch in your project is &lt;strong&gt;master&lt;/strong&gt;. So, for example, if you search for your project branches, you’d see,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch
 * master
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-If you already have created other branches in your project, for example &lt;strong&gt;development&lt;/strong&gt;, then you may see a Git message like the following,&lt;/p&gt;
+If you have already created other branches in your project, for example, &lt;strong&gt;development&lt;/strong&gt;, then you may see a Git message like the following,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch
 * development
   master
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-The &lt;strong&gt;*&lt;/strong&gt; behind the branch name indicates that the project HEAD (i.e., your working directory) points to that branch, that is, all commits will be made to that branch that is highlighted with &lt;strong&gt;*&lt;/strong&gt;. In the example above, the working directory points to &lt;em&gt;development&lt;/em&gt; branch.&lt;/p&gt;
+The &lt;strong&gt;*&lt;/strong&gt; behind the branch name indicates that the &lt;strong&gt;project HEAD (i.e., your working directory)&lt;/strong&gt; points to that branch. This means that all commits will be made to that branch highlighted by &lt;strong&gt;*&lt;/strong&gt;. In the example above, the working directory points to the &lt;em&gt;development&lt;/em&gt; branch.&lt;/p&gt;
 
 &lt;p&gt;In order to &lt;strong&gt;create a new branch&lt;/strong&gt; in your project, use,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch &amp;lt;branch name&amp;gt;
@@ -887,12 +889,12 @@ A shortcut for &lt;strong&gt;both creating a new branch from the current branch,
 Switched to a new branch 'test'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-Now suppose, you have made some significant progress on your project &lt;strong&gt;development&lt;/strong&gt; branch, and now you want to add the newly developed feature to your &lt;strong&gt;master&lt;/strong&gt; branch. All you need to do, is,&lt;/p&gt;
+Now suppose, you have made some significant progress on your project &lt;strong&gt;development&lt;/strong&gt; branch, and now you want to add the newly-developed feature in the development branch to your &lt;strong&gt;master&lt;/strong&gt; branch. All you need to do is,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout master
 $ git merge development
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-By doing this, you first switch to master branch, then request Git, to &lt;strong&gt;merge&lt;/strong&gt; all changes made to the project on the &lt;em&gt;development&lt;/em&gt; branch to be copied and transferred to the &lt;em&gt;master&lt;/em&gt; branch. For example, if I have added a single &lt;code&gt;test.txt&lt;/code&gt; file, and committed the change to the development branch, then upon mergin with master, Git will display something like the following,&lt;/p&gt;
+By doing this, you first switch to master branch, then request Git to &lt;strong&gt;merge&lt;/strong&gt; all changes made to the project on the &lt;em&gt;development&lt;/em&gt; branch to be copied and transferred to the &lt;em&gt;master&lt;/em&gt; branch. For example, if I have added a single &lt;code&gt;test.txt&lt;/code&gt; file, and committed the change to the development branch, then upon merging it with the master branch, Git will display a message like the following,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git merge development
 Updating 25129a0..57ed7c2
 Fast-forward
@@ -901,7 +903,7 @@ Fast-forward
  create mode 100644 test.txt
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-Now suppose there was no change in the development branch, since branching it from master. Then upon merging, you would get a message like the following,&lt;/p&gt;
+Now suppose there was no change in the development branch ever since branching it from the master branch. Then upon merging, you would get a message like the following,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git merge development
 Already up-to-date.
 &lt;/code&gt;&lt;/pre&gt;
@@ -928,12 +930,12 @@ Unmerged paths:
 no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-To resolve the conflict, open the conflicting file. There you will see the segments of the file from both versions which are the cause of the conflict. Edit the file as you wish. and then perform the normal &lt;code&gt;git add&lt;/code&gt; and &lt;code&gt;git commit&lt;/code&gt; on the file, to resolve the conflict and complete the merge process.&lt;/p&gt;
+To resolve the conflict, open the conflicting file. There you will see segments of the file from both versions which are the cause of the conflict. Edit the file as you wish. and then perform the normal &lt;code&gt;git add&lt;/code&gt; and &lt;code&gt;git commit&lt;/code&gt; on the file, to resolve the conflict and complete the merge process.&lt;/p&gt;
 
 &lt;p&gt;In addition to &lt;code&gt;git merge&lt;/code&gt;, there is another more elegant and powerful Git command, &lt;code&gt;git rebase&lt;/code&gt; for integrating changes in different branches into a single branch. But, the subject goes beyond the goals of this class, and the interested reader is referred to &lt;a href=&quot;https://git-scm.com/docs/git-rebase&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt; for this command and &lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Rebasing&quot; target=&quot;_blank&quot;&gt;this pedagogical Git page&lt;/a&gt; for &lt;code&gt;git rebase&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;deleting-a-branch&quot;&gt;Deleting a branch&lt;/h3&gt;
-&lt;p&gt;Normally, when a branch merge is done, the development branch is not needed anymore, so it is always wise and cleaner to delete the unwanted branches, using the command &lt;code&gt;git branch -d &amp;lt;branch name&amp;gt;&lt;/code&gt;. To do this, on the same branch that you just performed &lt;code&gt;git merge&lt;/code&gt; use,&lt;/p&gt;
+&lt;p&gt;Normally, when a branch merge is done, the development branch is not needed anymore, so it is always wise and cleaner to delete the unwanted branches, using the command &lt;code&gt;git branch -d &amp;lt;branch name&amp;gt;&lt;/code&gt;. To do this, check out the same branch on which you just performed &lt;code&gt;git merge&lt;/code&gt;, then delete the other unwanted branch,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use &quot;git push&quot; to publish your local commits)
@@ -942,12 +944,12 @@ $ git branch -d test
 Deleted branch hotfix (3a0874c).
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-Note that you cannot delete a branch while you are on it (i.e., while it is checked out). For example, Git will give you the following error message,&lt;/p&gt;
+&lt;strong&gt;Note that you cannot delete a branch while you are on it (i.e., while it is checked out)&lt;/strong&gt;. If you do so, Git will print out an error message like the following on screen,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch -d test
 error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;You cannot delete a branch from another branch with which you have not performed the merging either&lt;/strong&gt;. In this case, Git will give the following error,&lt;/p&gt;
+&lt;strong&gt;You cannot delete a branch from another branch with which you have not performed the merging either&lt;/strong&gt;. In this case, Git will print the following error,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch -d test
 error: The branch 'test' is not fully merged.
 If you are sure you want to delete it, run 'git branch -D test'.
