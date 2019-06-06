@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-06T01:42:57-05:00</updated>
+<updated>2019-06-06T01:56:47-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -191,7 +191,7 @@ Each project’s file in Git/Mercurial indexing process can have one of the thre
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt;, which is also an Internet hosting service, works exclusively for projects that are indexed using Git VCS. As of today, all public projects (visible to everyone on the web) on Github are free-of-charge. For private projects, you will have to pay a monthly fee. However, &lt;a href=&quot;https://github.com/blog/1900-the-best-developer-tools-now-free-for-students&quot; target=&quot;_blank&quot;&gt;Github Student&lt;/a&gt; offers a micro-account specially for students with five private repositories free-of-charge (normally $7/month) while you’re a student.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bitbucket&lt;/strong&gt;&lt;/a&gt;, which used to exclusively host Mercurial-indexed projects. But since 2011, it can also host Git-indexed projects. As of today, all projects, public or private (up to 5 users), can be stored on Bitbucket free-of-charge.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;about.gitlab.com&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;GitLab&lt;/strong&gt;&lt;/a&gt;, is another rather-new  Git-repository manager that provides developer tools comparable wth GitHub, and even more. At the moment, it is not as popular as GitHub. However, it is used by many major companies and industries across the world for software version control (e.g., NASA, IBM, Boeing, CERN, Oracle, Sony, …).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://about.gitlab.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;GitLab&lt;/strong&gt;&lt;/a&gt;, is another rather-new  Git-repository manager that provides developer tools comparable wth GitHub, and even more. At the moment, it is not as popular as GitHub. However, it is used by many major companies and industries across the world for software version control (e.g., NASA, IBM, Boeing, CERN, Oracle, Sony, …).&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;GitHub and Bitbucket are particularly useful for education as they provide notable services and options for educational accounts and purposes. The following is a concise comparison between the general features and services of Github and Bitbucket.&lt;/p&gt;
