@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="/MAPCP2019U/assets/js/mdHeaderCollapse.js"></script>
+-->
+
+<meta charset="utf-8">
+<title>LECTURE 3: MATLAB FOR BEGINNERS &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+<meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
+<meta name="twitter:title" content="Lecture 3: MATLAB for beginners">
+<meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta name="twitter:creator" content="@AmirShahmoradi">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lecture 3: MATLAB for beginners">
+<meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta property="og:url" content="/MAPCP2019U/lecture/3-matlab-for-beginners">
+<meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
+<meta property="og:image" content="/MAPCP2019U/images/">
+
+
+
+
+
+<link rel="canonical" href="/MAPCP2019U/lecture/3-matlab-for-beginners">
+<!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/font-awesome.min.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/normalize.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/nprogress.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/foundation.min.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/style.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/post.css">
+
+<!--Mathjax-->
+
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/MAPCP2019U/favicon.ico">
+<!--
+<link rel="shortcut icon" href="/MAPCP2019U/favicon.png">
+-->
+
+
+<!-- prism
+<link href="/MAPCP2019U/assets/css/prismTwilight.css" rel="stylesheet" />
+<link href="/MAPCP2019U/assets/css/prismDefault.css" rel="stylesheet" />
+<link href="/MAPCP2019U/assets/css/prismCoy.css" rel="stylesheet" />
+-->
+<link href="/MAPCP2019U/assets/css/prismOkaidia.css" rel="stylesheet" />
+
+<!--header anchor links-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+</head>
+<body class="post-template" itemscope itemtype="https://schema.org/WebPage">  
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href=https://www.cdslab.org target="_blank"><img src="/MAPCP2019U/images/logo.png" alt="cdslab.org" /></a>
+
+                <div class="notepad-blog-menu">      
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="/MAPCP2019U/">Home</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/highlights">Highlights</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/categories">Categories</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/about">About</a>
+                 </li>
+            
+           <li><a href="/MAPCP2019U/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h2>Lecture 3: MATLAB for beginners</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-13T00:00:00-05:00">13 Jun 2019</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        
+            <article class="notepad-post-content post tag-simple">
+        
+            <div style="text-align:justify;">
+                <p>Goals: This lecture aims at providing an introduction to MATLAB programming for beginners, how to install it, different components of the Graphical Unit Interface of MATLAB, as well as how to perform simple arithmetic operations in MATLAB.</p>
+
+<div class="post_toc"></div>
+
+<h2 id="matlab-a-brief-history">MATLAB: a brief history</h2>
+
+<p>MATLAB was developed in the mid 1980’, by the collaborative works of <a href="https://en.wikipedia.org/wiki/Cleve_Moler" target="_blank">Cleve Moler</a>, a PhD graduate of Stanford University, and <a href="https://en.wikipedia.org/wiki/John_N._Little" target="_blank">John Little</a>, a graudate of MIT. Together they co-founded a private company named <a href="https://en.wikipedia.org/wiki/MathWorks" target="_blank">MathWorks</a>.</p>
+
+<p>The name of the language and software they developed, <a href="https://en.wikipedia.org/wiki/MATLAB" target="_blank">MATLAB</a> is an attribution to the original purpose of the software, that is, to serve as a <strong>mat</strong>rix <strong>lab</strong>oratory. Cleve Moler was among the developers of the popular Fortran libraries <a href="https://en.wikipedia.org/wiki/EISPACK" target="_blank">EISPACK</a> and <a href="https://en.wikipedia.org/wiki/LINPACK" target="_blank">LINPACK</a>. He wanted to provide his students with a higher-level environment so that they could use these high-performance Fortran libraries without the need to learn Fortran.</p>
+
+<p>Since MATLAB was developed by a scientist for scientists, its structure and syntax have more resemblance to the popular programming language of scientists, Fortran, than to any other language. You will soon notice this similarity when we get to learn modern Fortran later on in this course.</p>
+
+<p>An informative historical review of MATLAB by its own inventor is <a href="https://www.mathworks.com/videos/evolution-of-matlab-93125.html" target="_blank">available to watch on MathWork website</a>. A lower quality of the same video can be accessed on youtube, which I embed here for you:</p>
+
+<div class="center"><div class="video-wrapper"><div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fa-sUaKv56A" frameborder="0" allowfullscreen=""></iframe>
+</div></div></div>
+
+<h2 id="matlab-why-do-you-need-to-learn-it">MATLAB: Why do you need to learn it?</h2>
+
+<p>For the following reasons:</p>
+
+<ul>
+  <li>It targets engineers as well as natural and medical scientists as its main audience, just like Fortran.</li>
+  <li>It has an excellent <em>native</em> array/matrix representation and manipulation tools, just like Fortran.</li>
+  <li>It has extensive sets of high-level commands for numerical computing, like Fortran.</li>
+  <li>It is an interpreted language that makes it really easy to use anytime, unlike C, C++, Fortran which are compiled languages.</li>
+  <li>It has an excellent set of graphical tools for 2D and 3D plotting (in fact other languages like Python have tried to copy from and reverse-engineer the graphical tools and commands available in MATLAB).</li>
+  <li>It has one of the largest user-base (over 2,000,000 users) in all scientific communities.</li>
+  <li>There is an extensive list of numerical libraries written in MATLAB over the past decades by all those science/engineering -oriented users.</li>
+  <li>It has an excellent manual and user guide, with extensive illustrative examples. Basically, you might not even need to take a MATLAB class, if you could closely and carefully follow MATLAB’s user guide.</li>
+</ul>
+
+<h2 id="matlab-caveats">MATLAB caveats</h2>
+
+<p>Here is a personal list of MATLAB caveats that I can think of, at the moment:</p>
+
+<ul>
+  <li>It is not free.</li>
+  <li>It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in <a href="https://modelingguru.nasa.gov/docs/DOC-1762" target="_blank">NASA modeling guru web page</a>. As you can see there, the <strong>performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C</strong>.</li>
+  <li>If you have already coded in fully object-oriented programming (OOP) language, in particular, Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with <a href="xx" target="_blank">cell arrays</a> in MATLAB. We will see later on, what cell arrays are.</li>
+</ul>
+
+<h2 id="matlab-features">MATLAB features</h2>
+
+<p>MATLAB has the following features and attributes.</p>
+
+<ul>
+  <li><strong>MATLAB is a fourth-generation, high-level programming language.</strong> Remember from our <a href="/MAPCP2019U/lecture/2-programming-history" target="_blank">second lecture</a>, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C, and C++ are considered high, medium, and low -level programming languages respectively.<br />
+<br /></li>
+  <li><strong>MATLAB is an array-based programming language</strong>, meaning that it is designed to be with the goal of facilitating array manipulation for scientists and engineers.<br />
+<br /></li>
+  <li><strong>MATLAB is a multi-paradigm programming language</strong>. MATLAB allows the programmer to use the following major programming paradigms in their codes:<br />
+<br />
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank">functional programming</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Imperative_programming" target="_blank">imperative programming</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Procedural_programming" target="_blank">procedural programming</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank">object-oriented programming (OOP)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>   Later on, we will get to each of these programming paradigms in MATLAB.</p>
+<ul>
+  <li><strong>MATLAB is an interpreted language</strong>. A programming-language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:<br />
+<br />
+    <ul>
+      <li><strong>Interpretation</strong>: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.<br />
+<br /></li>
+      <li><strong>Compilation</strong>: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.<br />
+<br />MATLAB is an interpreted language, meaning that, as soon as you type a MATLAB command on the MATLAB’s command-line and press enter, the MATLAB interpreter executes the statement.  MATLAB programs can also be compiled using <a href="https://www.mathworks.com/products/compiler.html" target="_blank">MATLAB Compiler</a>, to create standalone applications to be executed later when desired.<br />
+<br /></li>
+    </ul>
+  </li>
+  <li><strong>The extension for human-readable MATLAB source code file is <code>.m</code></strong>.</li>
+</ul>
+
+<h2 id="some-useful-resources-for-matlab">Some useful resources for MATLAB</h2>
+
+<ul>
+  <li><a href="https://www.mathworks.com/matlabcentral/" target="_blank">MATLAB Central</a>: A repository of many codes, libraries written in MATLAB, as well as many MATLAB related questions with answers.</li>
+  <li><a href="https://www.mathworks.com/matlabcentral/newsreader/" target="_blank">comp.soft-sys.matlab</a>: MATLAB’s newsletter.</li>
+  <li><a href="https://www.mathworks.com/moler" target="_blank">https://www.mathworks.com/moler</a>: The original MATLAB developer’s page.</li>
+  <li><a href="https://www.mathworks.com/videos/search.html?q=&amp;page=1" target="_blank">MATLAB educational videos</a>: A long search-able list of educational MATLAB videos.</li>
+</ul>
+
+<h2 id="matlab-installation">MATLAB installation</h2>
+<p>Depending on your operating system, you can download and install a specific version of MATLAB for your personal computer. MATLAB is available to all students enrolled at UT Austin for free. It can be downloaded from <a href="https://www.engr.utexas.edu/itg/products/8017-matlab" target="_blank">here</a>.</p>
+
+<h3 id="alternative-replicas-of-matlab">Alternative replicas of MATLAB</h3>
+
+<p>Since MATLAB is not free, the GNU organization has started a project called <a href="https://en.wikipedia.org/wiki/GNU_Octave" target="_blank">GNU Octave</a> which is a reverse-engineering of MATLAB language and environment, hence mostly compatible with it, but <strong>at no cost</strong>!. You can download it from <a href="https://www.gnu.org/software/octave/" target="_blank">here</a>. GNU Octave is a free open source software (FOSS) package which is <em>mostly compatible</em> with MATLAB. It provides a very similar command line interpreter interface and implements most of the functionality as the commercial MATLAB product. Nevertheless, there are subtle differences which anyone attempting to switch to GNU Octave or to write MATLAB/GNU Octave-compatible scripts must appreciate. Octave was conceived in 1988 and has been under development since 1992, and over the years has made a great deal of progress, especially in the area of graphics and plotting.</p>
+
+<h3 id="matlab-script-editors">MATLAB script editors</h3>
+
+<p>I highly recommend you to use MATLAB’s own IDE for MATLAB scripting since it has fantastic features such as automatic debugging, indentation and syntax highlight. However, once you become proficient in MATLAB scripting, you may realize that the text-editing capabilities of MATLAB IDE are not that great compared to highly popular general-purpose text editors. In that case, I recommend you to use,</p>
+
+<ul>
+  <li><a href="https://www.sublimetext.com/" target="_blank">Sublime</a>  (available Windows, OS X, Linux)<br />
+Sublime is a sophisticated text editor for codes in many different languages, including MATLAB, C, C++, Fortran, etc. It has many advanced tools for code editing and syntax highlighting.<br />
+<br /></li>
+  <li><a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>  (available only on Windows)<br />
+Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for MATLAB. If you are a professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.<br />
+<br /></li>
+</ul>
+
+<h3 id="which-matlab-version-should-i-use">Which MATLAB version should I use?</h3>
+
+<p>Always try to use the latest version if possible, since new features are added to MATLAB every year.</p>
+
+<h3 id="using-matlab-online-in-your-web-browser">Using MATLAB online, in your web browser</h3>
+
+<p>Since as a UT student, you have a campus-wide MATLAB license, you can log in to your account to use MATLAB in your browser, on a remote server. For instructions on how to use MATLAB online, click <a href="https://www.mathworks.com/products/matlab-online.html" target="_blank">here</a>.</p>
+
+<h2 id="matlab-environment">MATLAB environment</h2>
+
+<p>As soon as you open MATLAB, you will likely encounter an environment like the following figure.</p>
+
+<figure>
+    <img src="/MAPCP2019U/lecture/3/matlab.png" width="900" />
+    <figcaption style="text-align:center">
+        A snapshot of MATLAB environment.
+    </figcaption>
+</figure>
+
+<p>The main compartments in the MATLAB environment are:</p>
+<ul>
+  <li><strong>command window</strong>: where you can type single or multiple line commands.</li>
+  <li><strong>script editor</strong>: which is where you can create new or open/edit existing MATLAB files.</li>
+  <li><strong>address bar</strong>: indicating the <strong>current working directory</strong>.</li>
+  <li><strong>folder tree window</strong>: showing all files in the current working directory.</li>
+  <li><strong>workspace window</strong>: which shows all the global variables currently defined in MATLAB.</li>
+</ul>
+
+<h2 id="useful-matlab-commands">Useful MATLAB commands</h2>
+
+<p>The following are some useful MATLAB commands  that allow you to get help on the command-line:</p>
+
+<ul>
+  <li><code>demo</code> will load MATLAB examples in the Help Browser, illustrating some features of MATLAB.<br />
+<br /></li>
+  <li><code>help &lt;keyword&gt;</code> will explain any function. For example,
+    <pre><code class="language-matlab">&gt;&gt; help sin
+sin    Sine of argument in radians.
+ sin(X) is the sine of the elements of X.
+
+ See also asin, sind.
+
+ Reference page for sin
+ Other functions named sin
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li><code>help help</code>  will explain how MATLAB help works.<br />
+<br /></li>
+  <li><code>lookfor &lt;keyword&gt;</code> searches through MATLAB help for a specific word or phrase. For example,
+    <pre><code class="language-matlab">&gt;&gt; lookfor gaussian
+hwv                            - Create a Hull-White/Vasicek mean-reverting Gaussian diffusion model
+xreggpr                        - xreggpm Gaussian Process model constructor
+gmdistribution                 - Gaussian mixture distribution class.
+awgn                           - Add white Gaussian noise to a signal.
+bigaussianir                   - Bi-Gaussian Doppler filter impulse response.
+gaussianir                     - Gaussian Doppler filter impulse response.
+intfiltgaussian_intfactor      - Support function used by @channel package for
+wgn                            - Generate white Gaussian noise.
+commblkgaussfilt               - Gaussian filter block helper function.
+commblkgaussiansrc2            - Mask function for Gaussian Noise Generator block
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li><code>doc &lt;keyword&gt;</code> will bring up a documentation page in the Help Browser for the given keyword.<br />
+<br /></li>
+  <li><code>dir &lt;path&gt;</code> lists the contents of the given path.
+    <pre><code class="language-matlab">&gt;&gt; dir
+.                lcdata.xml       m3iregistry      mcc.bat          mexext.bat       mw_mpiexec.bat   win64            
+..               lcdata.xsd       matlab.exe       mex.bat          mexsetup.pm      registry         worker.bat       
+deploytool.bat   lcdata_utf8.xml  mbuild.bat       mex.pl           mexutils.pm      util             
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li><code>pwd</code> outputs the current working directory.
+    <pre><code class="language-matlab">&gt;&gt; pwd
+ans =
+C:\Program Files\MATLAB\R2016a\bin
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li><code>quit</code> quits MATLAB by closing the application.<br />
+<br /></li>
+  <li><code>diary('filename')</code> (or <code>diary filename</code>) saves  all subsequent keyboard interactions with MATLAB Command Window to the file <code>filename</code>. <code>diary off</code> suspends the diary. <code>diary on</code> resumes diary mode using the current filename, or the default filename diary if none has yet been specified.</li>
+</ul>
+
+<h2 id="comments-in-matlab-scripts">Comments in MATLAB scripts</h2>
+
+<p>Comment lines in MATLAB begin with percent character <code>%</code>. Anything after <code>%</code> is ignored by MATLAB interpreter. The <code>%</code> character itself only tells the interpreter to ignore the remainder of the same line. In the MATLAB Editor, <font color="#00e600">commented areas are printed in green by default</font>. There are two useful keyboard shortcuts for adding and removing chunks of comments. Select the code you wish to comment or uncomment, and then press <code>Ctrl-R</code> to place one <code>%</code> symbol at the beginning of each line and `Ctrl-T to do the opposite.</p>
+
+<p>MATLAB also supports multi-line comments, akin to <code>/* ... */</code> in languages like C or C++, via the <code>%{ %}</code> delimiters. But there is a small and important difference. In MATLAB, the <strong>lines containing <code>%{</code> or <code>%}</code> should not contain any other text (except white spaces)</strong>. Otherwise, the multi-line comment would not work as you wish. For example,</p>
+<pre><code class="language-matlab">%{ x = 1;
+y=2;%}
+</code></pre>
+<p><br />
+You notice that in the above, <code>y=2;</code> is not commented. The correct syntax is,</p>
+<pre><code class="language-matlab">%{
+x = 1;
+y=2;
+%}
+</code></pre>
+<p><br />
+Comments are useful for explaining what function a certain piece of code performs especially if the code relies on implicit or subtle assumptions or otherwise perform subtle actions. Doing this is a good idea both for yourself and for others who try to read your code. It is highly recommended to include a block of comments at the beginning of your codes explaining what your MATLAB script or function does and how to use it. MATLAB will output the leading comments that appear at the beginning of a <code>.m</code> file, when you type,</p>
+<pre><code class="language-matlab">&gt;&gt; help &lt;my function name&gt;
+</code></pre>
+<p><br />
+All of MATLAB’s built-in functions written in MATLAB are documented this way.</p>
+
+<h2 id="matlabs-search-path">MATLAB’s search path</h2>
+
+<p>MATLAB has a search path and strategy that is used to find variables and MATLAB scripts. MATLAB’s current <strong>working directory</strong> is always displayed in the MATLAB address bar. When you enter a name in MATLAB’s command prompt, the MATLAB interpreter attempts to find an entity with that name in the following order:</p>
+<ol>
+  <li>First, it looks for a variable of the same name in MATLAB’s workspace and if it exists, MATLAB displays the value of the variable.</li>
+  <li>If not, then MATLAB looks for an M-file (a MATLAB script) in the working directory of MATLAB.</li>
+  <li>If not, then MATLAB looks for an M-file in MATLAB’s list of directories (the search path) to find the file. If no entity exists with the given name, then MATLAB gives an error.</li>
+</ol>
+
+<p><br /><br /></p>
+
+            </div>
+        </article>
+        <div class="cf"></div>
+<div class="row text-center">
+    <section class="notepad-post-share">
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Lecture 3: MATLAB for beginners&quot;%20/MAPCP2019U/lecture/3-matlab-for-beginners%20via%20&#64;AmirShahmoradi"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/lecture/3-matlab-for-beginners"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/lecture/3-matlab-for-beginners"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+            <i class="fa fa-google-plus"></i>
+        </a>
+    </section>
+</div>
+        <div class="cf"></div>
+        
+<div class="notepad-author-info">
+    <div class="row">
+        <section class="notepad-post-author small-12 columns">
+            <a href=https://www.shahmoradi.org target="_blank">
+                <img src="/MAPCP2019U/images/AmirShahmoradi.png" class="notepad-post-author-avatar" alt="Amir Shahmoradi's photo">
+            </a>
+            <span class="author-label">Author</span>
+            <h1>Amir Shahmoradi</h1>
+            <p><a href="mailto:shahmoradi@utexas.edu" class="author-website">shahmoradi@utexas.edu</a></p>
+            <p>Genius is 99% perspiration and 1% inspiration</p>
+        </section>
+    </div>
+</div> 
+        
+        <div class="cf"></div>
+        
+        <section class="notepad-disqus row">
+    <div class="small-12 columns">
+        <h1 class="notepad-comments-header">Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'shahmoradi'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+        <div class="cf"></div>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <!-- <section>Last updated 2019 / 06 / 10</section></br> -->
+         <section>Last updated Monday, 10 Jun 2019 at 02:34 PM CST</section></br>
+         <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
+         <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
+         <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
+         <section>SEIR 365 | Arlington TX 76010</section></br>
+    </div>
+    <div class="social-icons">
+        
+        <a href="https://twitter.com/AmirShahmoradi" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="https://github.com/shahmoradi" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <!-- start of statc -->
+        <div style="color: #000000; float: none; width: 100%; padding-top: 1rem;">
+            <span style="font-size:0.8em">visitor count: 
+                <script type="text/javascript">
+                    var sc_project=12021516; 
+                    var sc_invisible=0; 
+                    var sc_security="0c65ecca"; 
+                    var sc_text=3; 
+                    var scJsHost = "https://";
+                    document.write("<sc"+"ript type='text/javascript' src='" + scJsHost + 
+                    "statcounter.com/counter/counter.js'></"+"script>");
+                </script>
+            </span>
+        </div>
+        <!-- end of statc -->
+    </div>
+    <div class="cf"></div>
+</footer> 
+</main>    
+<!--dynamic page header-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/MAPCP2019U/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="/MAPCP2019U/assets/js/vendor/modernizr.js"></script>
+  <script src="/MAPCP2019U/assets/js/foundation.min.js"></script>
+  
+  <script src="/MAPCP2019U/assets/js/notepad.js"></script>
+  <script src="/MAPCP2019U/assets/js/scripts.min.js"></script>
+  <script src="/MAPCP2019U/assets/js/vendor/nprogress.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+  <script type='text/javascript'>console.log("N/A");</script>
+  <script type='text/javascript'>console.log("https://www.cdslab.org/");</script>
+
+<!--header anchor links-->
+<script src="/MAPCP2019U/assets/js/autoAnchorLink.js"></script>
+
+<!-- <script src="/MAPCP2019U/assets/js/prismOkaidia.js"></script>
+<script src="/MAPCP2019U/assets/js/prismTwilight.js"></script>
+<script src="/MAPCP2019U/assets/js/prismDefault.js"></script>
+ -->
+<script src="/MAPCP2019U/assets/js/prismCoy.js"></script> 
+<!--automatic Table of Content.-->
+<script src="/MAPCP2019U/assets/js/autoTOC.js"></script>
+</body>
+</html>

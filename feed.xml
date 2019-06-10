@@ -7,13 +7,1122 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-06T01:56:47-05:00</updated>
+<updated>2019-06-10T14:34:19-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/MAPCP2019U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 3: Python for beginners]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/lecture/3-python-for-beginners"/>
+  <id>http:/MAPCP2019U/lecture/3-python-for-beginners</id>
+  <published>2019-06-13T00:00:00-05:00</published>
+  <updated>2019-06-13T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This lecture aims at providing an introduction to Python programming for beginners, how to install it, different Python distributions available, how to write Jupyter notebooks, and how to perform simple arithmetic operations with Python.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;history&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;python-a-brief-history&quot;&gt;Python: a brief history&lt;/h2&gt;
+
+&lt;p&gt;Python was developed close to the beginning of the 1990’, by &lt;a href=&quot;https://en.wikipedia.org/wiki/Guido_van_Rossum&quot; target=&quot;_blank&quot;&gt;Guido van Rossum&lt;/a&gt;, a former employee of &lt;a href=&quot;https://en.wikipedia.org/wiki/Google&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;, who is now an employee of &lt;a href=&quot;https://en.wikipedia.org/wiki/Dropbox_(service)&quot; target=&quot;_blank&quot;&gt;Dropbox&lt;/a&gt;. The name of the language is attribution to the British sketch comedy &lt;a href=&quot;https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus&quot; target=&quot;_blank&quot;&gt;Monty Python’s Flying Circus&lt;/a&gt;. As of 2016 Python seems to be the fastest growing language for data science. Python has the following features and attributes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Python is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/MAPCP2019U/lecture/0-programming-history&quot; target=&quot;_blank&quot;&gt;zeroth lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C, and C++ are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Python is general-purpose programming language&lt;/strong&gt;, meaning that it is designed to be used for writing software in a wide variety of application domains, such as &lt;em&gt;scientific computation&lt;/em&gt;, &lt;em&gt;web and internet development&lt;/em&gt;, &lt;em&gt;education&lt;/em&gt;, &lt;em&gt;Software Development&lt;/em&gt;. For more information, visit &lt;a href=&quot;https://www.python.org/about/apps/&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Python is a multi-paradigm programming language&lt;/strong&gt;. A &lt;a href=&quot;https://en.wikipedia.org/wiki/Programming_paradigm&quot; target=&quot;_blank&quot;&gt;programming paradigm&lt;/a&gt; is the style of writing and development of a computer programming language. Python allows the programmer to use the following major programming paradigms.&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt;functional programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Structured_programming&quot; target=&quot;_blank&quot;&gt;structured programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot; target=&quot;_blank&quot;&gt;imperative programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;   Later on, we will get to each of these programming paradigms in Python.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The core philosophy of Python programming&lt;/strong&gt;: Simplicity, Readability, and complexity instead of complication.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Python is an interpreted language&lt;/strong&gt;. A programming-language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Compilation&lt;/strong&gt;: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.&lt;br /&gt;
+&lt;br /&gt;Python is an interpreted language, meaning that, as soon as you type a Python statement on the Python command line and press enter, the Python interpreter, executes the statement. Python programs can also be compiled, to be executed later when desired. This is a topic that will be covered later on in this course.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The most popular major implementation of Python is &lt;a href=&quot;https://en.wikipedia.org/wiki/CPython&quot; target=&quot;_blank&quot;&gt;CPython&lt;/a&gt;&lt;/strong&gt;. Other major implementations include &lt;em&gt;IronPython&lt;/em&gt;, &lt;em&gt;Jython&lt;/em&gt;, &lt;em&gt;MicroPython&lt;/em&gt;, &lt;em&gt;PyPy&lt;/em&gt;, each of which is designed for a specific purpose. Throughout this course, we will be using &lt;em&gt;CPython&lt;/em&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The extension for human-readable Python source code file is “&lt;em&gt;.py&lt;/em&gt;“&lt;/strong&gt;. There are other extensions for Python program files as well, each of which represents a specific type of Python file. For example, “&lt;em&gt;.pyc&lt;/em&gt;” represents compiled (binary) Python source code, and “&lt;em&gt;.pyo&lt;/em&gt;” is used for optimized Python files.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;installation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;python-installation&quot;&gt;Python installation&lt;/h2&gt;
+&lt;p&gt;Depending on your operating system, you can download and install a specific version of Python for your personal computer from one of the major Python vendors, for example, CPython. For this course, we will rely on CPython implementation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;installation-basic&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;basic-python-installation&quot;&gt;Basic Python installation&lt;/h3&gt;
+&lt;p&gt;The official CPython implementation of Python can be found at &lt;a href=&quot;https://www.python.org/downloads/&quot; target=&quot;_blank&quot;&gt;python.org&lt;/a&gt;. Once you go to this webpage, you will see that two versions of Python are available for download (for Windows systems):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.python.org/ftp/python/3.7.3/python-3.7.3.exe&quot; target=&quot;_blank&quot;&gt;Python 3.7.3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.python.org/ftp/python/2.7.16/python-2.7.16.msi&quot; target=&quot;_blank&quot;&gt;Python 2.7.16&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For operating systems other than Windows, the installation files can be found &lt;a href=&quot;https://www.python.org/downloads/source/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; for Linux, and &lt;a href=&quot;https://www.python.org/downloads/mac-osx/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; for Mac.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;installation-recommended&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;recommended-python-installation&quot;&gt;Recommended Python installation&lt;/h3&gt;
+&lt;p&gt;In addition to the basic Python distribution that you can obtain from CPython organization, there are also other popular Python &lt;em&gt;distributions&lt;/em&gt; that, by default, contain some highly useful Python libraries, advanced Python editors and &lt;a href=&quot;https://en.wikipedia.org/wiki/Integrated_development_environment&quot; target=&quot;_blank&quot;&gt;integrated development environments (IDEs)&lt;/a&gt;. A &lt;strong&gt;Python distributions&lt;/strong&gt; is basically the Basic Python core bundled together with many useful Python libraries and IDEs. For example, the basic Python distribution from CPython organization is bundled along with a simple primitive integrated development environment for Python coding, called &lt;a href=&quot;https://en.wikipedia.org/wiki/IDLE&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;IDLE&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aside from the official basic CPython distribution of Python available from python.org, there are other Python distributions based on CPython. A comprehensive list can be found &lt;a href=&quot;https://wiki.python.org/moin/PythonDistributions&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Some, among many, of the most popular and useful Python distributions for scientific computing purposes are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.continuum.io/downloads&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Anaconda&lt;/strong&gt;&lt;/a&gt; from &lt;a href=&quot;https://www.continuum.io/&quot; target=&quot;_blank&quot;&gt;Continuum Analytics&lt;/a&gt;. According to the company, Anaconda is the leading open data science platform powered by Python. The open source version of Anaconda is a high-performance distribution of Python and R and includes over 100 of the most popular Python, R and Scala packages for data science. Additionally, the Anaconda user has access to over 720 packages that can be easily installed with &lt;a href=&quot;https://en.wikipedia.org/wiki/Conda_(package_manager)&quot; target=&quot;_blank&quot;&gt;conda&lt;/a&gt;. Conda is a language-agnostic package manager and environment management system that is developed and maintained by Continuum Analytics. The package Conda is itself written in Python.&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;The Anaconda distribution of Python is the one that we will use throughout this course.&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;br /&gt;
+The latest version of Anaconda includes an easy installation of Python (2.7.13, 3.4.5, 3.5.2, and/or 3.6.0) and updates of over 100 pre-built and tested scientific and analytic Python packages. These packages include &lt;strong&gt;NumPy&lt;/strong&gt;, &lt;strong&gt;Pandas&lt;/strong&gt;, &lt;strong&gt;SciPy&lt;/strong&gt;, &lt;strong&gt;Matplotlib&lt;/strong&gt;, and &lt;strong&gt;Jupyter&lt;/strong&gt;. Over 620 more packages are available. You can install any of them with just one command,
+    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;conda install package-name
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;em&gt;(NOTE: Replace “package-name” with the name of the package you want to install.)&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.enthought.com/products/canopy/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Canopy Python&lt;/strong&gt;&lt;/a&gt; from &lt;a href=&quot;https://www.enthought.com/&quot; target=&quot;_blank&quot;&gt;Enthought Canopy&lt;/a&gt;. According to the company, Canopy Python is a comprehensive Python analysis environment that provides easy installation of over 450 core scientific analytic and Python packages, creating a robust platform you can explore, develop, and visualize on. In addition to its pre-built, tested Python distribution. Enthought Canopy has tools for iterative data analysis, visualization and application development. Like Anaconda, Canopy has free and licensed versions available for purchase.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;package-installation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;installing-external-python-packages&quot;&gt;Installing external Python packages&lt;/h3&gt;
+&lt;p&gt;One of the greatest advantages and reasons for the popularity of Python over other languages is the extensive set of libraries that have been written for Python over the past two decades. As a professional Python programmer, you will virtually always need some of these packages. In any event, you need a Python library that is not already installed on your device, you can get the instructions for Linux installation from &lt;a href=&quot;https://packaging.python.org/installing/&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;. For Windows devices, you can get precompiled version of Python external libraries, ready for installation, from &lt;a href=&quot;http://www.lfd.uci.edu/~gohlke/pythonlibs/&quot; target=&quot;_blank&quot;&gt;Christoph Gohlke’s personal website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;IDE&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;python-editors-and-ides&quot;&gt;Python editors and IDEs&lt;/h3&gt;
+&lt;p&gt;The simple Python code editor, IDLE, that comes with the basic CPython distribution of Python is mostly not helpful enough for educational and professional programming. As a result, a myriad of Python code editors and IDEs have been also developed over the past decade. A rather complete list of most popular Python IDEs can be found &lt;a href=&quot;https://wiki.python.org/moin/PythonEditors&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Some of the most useful for our class and your future professional use are likely the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Spyder_(software)&quot; target=&quot;_blank&quot;&gt;Spyder&lt;/a&gt;&lt;br /&gt;
+Spyder (formerly Pydee) is an open source cross-platform IDE for scientific Python programming. It probably has the highest design similarity to the MATLAB environment. Therefore, it likely a good start as IDE for those who are already familiar and comfortable with MATLAB environment design. Spyder integrates NumPy, SciPy, Matplotlib, and IPython, as well as other open source software.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jetbrains.com/pycharm/&quot; target=&quot;_blank&quot;&gt;PyCharm&lt;/a&gt;&lt;br /&gt;
+PyCharm is full-featured IDE for Python. It is available in Free and Open Source edition, fully supporting Python as well as proprietary Professional Edition with Django, Flask, Pyramid and Google App Engine support.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ipython.org/&quot; target=&quot;_blank&quot;&gt;IPython&lt;/a&gt;&lt;br /&gt;
+IPython is an enhanced interactive Python shell. It offers a significantly enhanced interactive shell for Python programming, such as tab completion (autocompletion), inline Python syntax highlighting, command history, etc. It is highly useful for testing small snippets of your big code immediately on the IPython shell. IPython is installed on your computer as part of the Anaconda package installation.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jupyter.org/about.html&quot; target=&quot;_blank&quot;&gt;Jupyter&lt;/a&gt;&lt;br /&gt;
+Project Jupyter was born out of the IPython Project in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter is an abbreviation for Julia, Python, and R programming languages. The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text. Uses include data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot; target=&quot;_blank&quot;&gt;Notepad++&lt;/a&gt;  (available only on Windows)&lt;br /&gt;
+The last, but in-my-opinion not least, important Python editor is Notepad++. It is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for Python. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++ that are not available in any other editor (including Python-specific editors) as of today, at least as far as I am aware.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;version&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;which-python-standard-version-should-you-use&quot;&gt;Which Python standard version should you use?&lt;/h3&gt;
+
+&lt;p&gt;Like any other programming language, Python has also evolved significantly since its inception in 1991. Normally, a good programming language should be backward-compatible, meaning that the newer programming standard should not violate the previous standards. For example, an old Python code should be executable on the most recent Python standard implementation. Sometimes, however, with some programming language evolutions, this is not the case. It probably happens to all languages that sometimes, the new standard violates the older standard syntax of the language, causing runtime and compile-time error for an old-standard code.&lt;/p&gt;
+
+&lt;p&gt;For Python standards, this backward-incompatibility occurred between Python versions 2.x and 3.x. A list of the key differences between the two standards can be found &lt;a href=&quot;http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. If you would like to know which Python version is likely most useful for your future professional project, consult &lt;a href=&quot;https://wiki.python.org/moin/Python2orPython3&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;. However, it is important to keep in mind that &lt;strong&gt;Python 2.x standard is legacy, and Python 3.x is the present and future of the Python language&lt;/strong&gt;. By the year 2020, the official plan is to cut the security updates and support for Python 2.x and most of the major Python packages have already started migrating to Python 3. Therefore, for the rest of this course, we will be using Python 3 syntax.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;jupyter-setup&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;setting-up-jupyter&quot;&gt;Setting up Jupyter&lt;/h2&gt;
+&lt;p&gt;There are two ways to set up and run a Jupyter notebook:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;on your personal device&lt;/li&gt;
+  &lt;li&gt;online on Jupyter website&lt;br /&gt;
+&lt;br /&gt;
+In the following, both methods will be explained.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;jupyter-setup-device&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;running-jupyter-on-personal-device&quot;&gt;Running Jupyter on Personal Device&lt;/h3&gt;
+
+&lt;p&gt;Now, if you have already installed Anaconda on your device, you should also have Jupyter and IPython installed automatically. To open a new Jupyter notebook, follow the instructions below (for Windows OS). For other OS, it would also be similar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Open Windows’ start menu and search for jupyter.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/3/jupyter1.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; By clicking on &lt;code&gt;Jupyter Notebook&lt;/code&gt;, a Windows Command Prompt for Jupyter will open up, initializing the Jupyter server. Then a web browser window will open up on your default web browser. The content of this web page is a list of the content of your home directory on your personal device, as in the following figure.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/3/jupyter2.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Now click on the &lt;code&gt;new&lt;/code&gt; tab on the top-right part of the page, and choose &lt;code&gt;python 3&lt;/code&gt;. If you have installed Python 2 as well, you will also see an option for &lt;code&gt;Python 2&lt;/code&gt;. But, for this course proceed with &lt;code&gt;Python 3&lt;/code&gt;.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/3/jupyter3.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Once you choose and click on your Python version, a new browser tab will open, which contains your &lt;strong&gt;Jupyter notebook&lt;/strong&gt;, as illustrated in the following figure.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/3/jupyter4.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Your Jupyter notebook file is stored in the home direcotry of your device, likely with the name &lt;code&gt;Untitled.ipynb&lt;/code&gt;. The very cool feature of Jupyter notebooks is that you can also export your notebook as a Markdown, PDF, HTML, or a single Python file (with &lt;code&gt;.py&lt;/code&gt; extension), as illustrated in the figure below.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/3/jupyter5.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a name=&quot;jupyter-setup-online&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;running-jupyter-online&quot;&gt;Running Jupyter online&lt;/h3&gt;
+&lt;p&gt;The instructions for setting up your online Jupyter notebooks are very similar to the above for your local device, except the very first step, for which, instead of searching in Windows for Jupyter, you have to visit Jupyter’s website at &lt;a href=&quot;https://try.jupyter.org/&quot; target=&quot;_blank&quot;&gt;https://try.jupyter.org/&lt;/a&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;jupyter-helpful-commands&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;ipython--jupyter-helpful-commands&quot;&gt;IPython / Jupyter helpful commands&lt;/h3&gt;
+
+&lt;p&gt;Every time you start IPython on your local device, the following list of IPython commands are shown on the command line.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;Amir@CCBB-Amir MINGW64 ~
+$ ipython
+Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
+Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+
+IPython 5.1.0 -- An enhanced Interactive Python.
+?         -&amp;gt; Introduction and overview of IPython's features.
+%quickref -&amp;gt; Quick reference.
+help      -&amp;gt; Python's own help system.
+object?   -&amp;gt; Details about 'object', use 'object??' for extra details.
+In [1]:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Since Jupyter is an extension of IPython, these commands are also executable in Jupyter notebooks. Here is an example for the last command &lt;code&gt;&amp;lt;object&amp;gt;?&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;In [14]: test = 'test'
+
+In [15]: test?
+Type:        str
+String form: test
+Length:      4
+Docstring:
+str(object='') -&amp;gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&amp;gt; str
+
+Create a new string object from the given object. If encoding or
+errors are specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;rcbox&quot;&gt;
+&lt;b&gt;ATTENTION&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+ Note that each cell in Jupyter notebook, can contain either Python code or Markdown code, or any other code that you can select from the &lt;i&gt;code&lt;/i&gt; dropdown menu at the top of the notebook.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;jupyter-shortcuts&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;jupyter-cheatsheet-and-keyboard-shortcuts&quot;&gt;Jupyter cheatsheet and keyboard shortcuts&lt;/h3&gt;
+&lt;p&gt;There are many useful keyboard shortcuts in  Jupyter that facilitate editing and revising your Jupyter notebook cells. A Jupyter cheatsheet can be downloaded from &lt;a href=&quot;https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/#downloads&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. The following table is a summary of some of the most useful shortcuts, adopted from Jupyter website.&lt;/p&gt;
+
+&lt;table class=&quot;center&quot;&gt;
+&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px&quot;&gt;
+Table 1: Some useful shortcuts for Jupyter cells in &lt;i&gt;view mode&lt;/i&gt; (Press &lt;code&gt;ESC&lt;/code&gt; to switch to view mode).
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;keyboard shortcut&lt;/th&gt;
+&lt;th&gt;Description of effect&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Enter&lt;/td&gt;
+    &lt;td&gt;enter edit mode&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Shift + Enter&lt;/td&gt;
+    &lt;td&gt;run cell, select below&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Enter&lt;/td&gt;
+    &lt;td&gt;run cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Alt + Enter&lt;/td&gt;
+    &lt;td&gt;run cell, insert below&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Y&lt;/td&gt;
+    &lt;td&gt;to code&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;M&lt;/td&gt;
+    &lt;td&gt;to markdown&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;R&lt;/td&gt;
+    &lt;td&gt;to raw&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;to heading 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;2,3,4,5,6&lt;/td&gt;
+    &lt;td&gt;to heading 2,3,4,5,6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Up/K&lt;/td&gt;
+    &lt;td&gt;select cell above&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Down/J&lt;/td&gt;
+    &lt;td&gt;select cell below&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;A/B&lt;/td&gt;
+    &lt;td&gt;insert cell above/below&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;X&lt;/td&gt;
+    &lt;td&gt;cut selected cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;C&lt;/td&gt;
+    &lt;td&gt;copy selected cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Shift + V&lt;/td&gt;
+    &lt;td&gt;paste cell above&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;V&lt;/td&gt;
+    &lt;td&gt;paste cell below&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Z&lt;/td&gt;
+    &lt;td&gt;undo last cell deletion&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;D,D&lt;/td&gt;
+    &lt;td&gt;delete selected cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Shift + M&lt;/td&gt;
+    &lt;td&gt;merge cell below&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + S&lt;/td&gt;
+    &lt;td&gt;Save and Checkpoint&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;L&lt;/td&gt;
+    &lt;td&gt;toggle line numbers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;O&lt;/td&gt;
+    &lt;td&gt;toggle output&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Shift + O&lt;/td&gt;
+    &lt;td&gt;toggle output scrolling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Esc&lt;/td&gt;
+    &lt;td&gt;close pager&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;H&lt;/td&gt;
+    &lt;td&gt;show keyboard shortcut help dialog&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;I,I&lt;/td&gt;
+    &lt;td&gt;interrupt kernel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;0,0&lt;/td&gt;
+    &lt;td&gt;restart kernel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Space&lt;/td&gt;
+    &lt;td&gt;scroll down&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Shift + Space&lt;/td&gt;
+    &lt;td&gt;scroll up&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Shift&lt;/td&gt;
+    &lt;td&gt;ignore&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table class=&quot;center&quot;&gt;
+&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px&quot;&gt;
+Table 2: Some useful shortcuts for Jupyter cells in &lt;i&gt;edit mode&lt;/i&gt; (Press &lt;code&gt;enter&lt;/code&gt; to switch to edit mode).
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;keyboard shortcut&lt;/th&gt;
+&lt;th&gt;Description of effect&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Tab&lt;/td&gt;
+    &lt;td&gt;code completion or indent&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Shift + Tab&lt;/td&gt;
+    &lt;td&gt;tooltip&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + ]&lt;/td&gt;
+    &lt;td&gt;indent&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + [&lt;/td&gt;
+    &lt;td&gt;dedent&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + A&lt;/td&gt;
+    &lt;td&gt;select all&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Z&lt;/td&gt;
+    &lt;td&gt;undo&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Shift + Z&lt;/td&gt;
+    &lt;td&gt;redo&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Y&lt;/td&gt;
+    &lt;td&gt;redo&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Home&lt;/td&gt;
+    &lt;td&gt;go to cell start&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Up&lt;/td&gt;
+    &lt;td&gt;go to cell start&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + End&lt;/td&gt;
+    &lt;td&gt;go to cell end&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Down&lt;/td&gt;
+    &lt;td&gt;go to cell end&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Left&lt;/td&gt;
+    &lt;td&gt;go one word left&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Right&lt;/td&gt;
+    &lt;td&gt;go one word right&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Backspace&lt;/td&gt;
+    &lt;td&gt;delete word before&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Delete&lt;/td&gt;
+    &lt;td&gt;delete word after&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Esc&lt;/td&gt;
+    &lt;td&gt;command mode&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + M&lt;/td&gt;
+    &lt;td&gt;command mode&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Shift + Enter&lt;/td&gt;
+    &lt;td&gt;run cell, select below&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Enter&lt;/td&gt;
+    &lt;td&gt;run cell&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Alt + Enter&lt;/td&gt;
+    &lt;td&gt;run cell, insert below&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Shift + Subtract&lt;/td&gt;
+    &lt;td&gt;split cell&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + Shift + -&lt;/td&gt;
+    &lt;td&gt;split cell&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + S&lt;/td&gt;
+    &lt;td&gt;Save and Checkpoint&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Up&lt;/td&gt;
+    &lt;td&gt;move cursor up or previous cell&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Down&lt;/td&gt;
+    &lt;td&gt;move cursor down or next cell&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Ctrl + /&lt;/td&gt;
+    &lt;td&gt;toggle comment on current or selected lines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/3-python-for-beginners&quot;&gt;Lecture 3: Python for beginners&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 13, 2019.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 3: MATLAB for beginners]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/lecture/3-matlab-for-beginners"/>
+  <id>http:/MAPCP2019U/lecture/3-matlab-for-beginners</id>
+  <published>2019-06-13T00:00:00-05:00</published>
+  <updated>2019-06-13T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;Goals: This lecture aims at providing an introduction to MATLAB programming for beginners, how to install it, different components of the Graphical Unit Interface of MATLAB, as well as how to perform simple arithmetic operations in MATLAB.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;matlab-a-brief-history&quot;&gt;MATLAB: a brief history&lt;/h2&gt;
+
+&lt;p&gt;MATLAB was developed in the mid 1980’, by the collaborative works of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cleve_Moler&quot; target=&quot;_blank&quot;&gt;Cleve Moler&lt;/a&gt;, a PhD graduate of Stanford University, and &lt;a href=&quot;https://en.wikipedia.org/wiki/John_N._Little&quot; target=&quot;_blank&quot;&gt;John Little&lt;/a&gt;, a graudate of MIT. Together they co-founded a private company named &lt;a href=&quot;https://en.wikipedia.org/wiki/MathWorks&quot; target=&quot;_blank&quot;&gt;MathWorks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The name of the language and software they developed, &lt;a href=&quot;https://en.wikipedia.org/wiki/MATLAB&quot; target=&quot;_blank&quot;&gt;MATLAB&lt;/a&gt; is an attribution to the original purpose of the software, that is, to serve as a &lt;strong&gt;mat&lt;/strong&gt;rix &lt;strong&gt;lab&lt;/strong&gt;oratory. Cleve Moler was among the developers of the popular Fortran libraries &lt;a href=&quot;https://en.wikipedia.org/wiki/EISPACK&quot; target=&quot;_blank&quot;&gt;EISPACK&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/LINPACK&quot; target=&quot;_blank&quot;&gt;LINPACK&lt;/a&gt;. He wanted to provide his students with a higher-level environment so that they could use these high-performance Fortran libraries without the need to learn Fortran.&lt;/p&gt;
+
+&lt;p&gt;Since MATLAB was developed by a scientist for scientists, its structure and syntax have more resemblance to the popular programming language of scientists, Fortran, than to any other language. You will soon notice this similarity when we get to learn modern Fortran later on in this course.&lt;/p&gt;
+
+&lt;p&gt;An informative historical review of MATLAB by its own inventor is &lt;a href=&quot;https://www.mathworks.com/videos/evolution-of-matlab-93125.html&quot; target=&quot;_blank&quot;&gt;available to watch on MathWork website&lt;/a&gt;. A lower quality of the same video can be accessed on youtube, which I embed here for you:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/fa-sUaKv56A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;matlab-why-do-you-need-to-learn-it&quot;&gt;MATLAB: Why do you need to learn it?&lt;/h2&gt;
+
+&lt;p&gt;For the following reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It targets engineers as well as natural and medical scientists as its main audience, just like Fortran.&lt;/li&gt;
+  &lt;li&gt;It has an excellent &lt;em&gt;native&lt;/em&gt; array/matrix representation and manipulation tools, just like Fortran.&lt;/li&gt;
+  &lt;li&gt;It has extensive sets of high-level commands for numerical computing, like Fortran.&lt;/li&gt;
+  &lt;li&gt;It is an interpreted language that makes it really easy to use anytime, unlike C, C++, Fortran which are compiled languages.&lt;/li&gt;
+  &lt;li&gt;It has an excellent set of graphical tools for 2D and 3D plotting (in fact other languages like Python have tried to copy from and reverse-engineer the graphical tools and commands available in MATLAB).&lt;/li&gt;
+  &lt;li&gt;It has one of the largest user-base (over 2,000,000 users) in all scientific communities.&lt;/li&gt;
+  &lt;li&gt;There is an extensive list of numerical libraries written in MATLAB over the past decades by all those science/engineering -oriented users.&lt;/li&gt;
+  &lt;li&gt;It has an excellent manual and user guide, with extensive illustrative examples. Basically, you might not even need to take a MATLAB class, if you could closely and carefully follow MATLAB’s user guide.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;matlab-caveats&quot;&gt;MATLAB caveats&lt;/h2&gt;
+
+&lt;p&gt;Here is a personal list of MATLAB caveats that I can think of, at the moment:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is not free.&lt;/li&gt;
+  &lt;li&gt;It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in &lt;a href=&quot;https://modelingguru.nasa.gov/docs/DOC-1762&quot; target=&quot;_blank&quot;&gt;NASA modeling guru web page&lt;/a&gt;. As you can see there, the &lt;strong&gt;performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;If you have already coded in fully object-oriented programming (OOP) language, in particular, Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;matlab-features&quot;&gt;MATLAB features&lt;/h2&gt;
+
+&lt;p&gt;MATLAB has the following features and attributes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/MAPCP2019U/lecture/2-programming-history&quot; target=&quot;_blank&quot;&gt;second lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C, and C++ are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is an array-based programming language&lt;/strong&gt;, meaning that it is designed to be with the goal of facilitating array manipulation for scientists and engineers.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is a multi-paradigm programming language&lt;/strong&gt;. MATLAB allows the programmer to use the following major programming paradigms in their codes:&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt;functional programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot; target=&quot;_blank&quot;&gt;imperative programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;   Later on, we will get to each of these programming paradigms in MATLAB.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is an interpreted language&lt;/strong&gt;. A programming-language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Compilation&lt;/strong&gt;: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.&lt;br /&gt;
+&lt;br /&gt;MATLAB is an interpreted language, meaning that, as soon as you type a MATLAB command on the MATLAB’s command-line and press enter, the MATLAB interpreter executes the statement.  MATLAB programs can also be compiled using &lt;a href=&quot;https://www.mathworks.com/products/compiler.html&quot; target=&quot;_blank&quot;&gt;MATLAB Compiler&lt;/a&gt;, to create standalone applications to be executed later when desired.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The extension for human-readable MATLAB source code file is &lt;code&gt;.m&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;some-useful-resources-for-matlab&quot;&gt;Some useful resources for MATLAB&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/matlabcentral/&quot; target=&quot;_blank&quot;&gt;MATLAB Central&lt;/a&gt;: A repository of many codes, libraries written in MATLAB, as well as many MATLAB related questions with answers.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/matlabcentral/newsreader/&quot; target=&quot;_blank&quot;&gt;comp.soft-sys.matlab&lt;/a&gt;: MATLAB’s newsletter.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/moler&quot; target=&quot;_blank&quot;&gt;https://www.mathworks.com/moler&lt;/a&gt;: The original MATLAB developer’s page.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/videos/search.html?q=&amp;amp;page=1&quot; target=&quot;_blank&quot;&gt;MATLAB educational videos&lt;/a&gt;: A long search-able list of educational MATLAB videos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;matlab-installation&quot;&gt;MATLAB installation&lt;/h2&gt;
+&lt;p&gt;Depending on your operating system, you can download and install a specific version of MATLAB for your personal computer. MATLAB is available to all students enrolled at UT Austin for free. It can be downloaded from &lt;a href=&quot;https://www.engr.utexas.edu/itg/products/8017-matlab&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;alternative-replicas-of-matlab&quot;&gt;Alternative replicas of MATLAB&lt;/h3&gt;
+
+&lt;p&gt;Since MATLAB is not free, the GNU organization has started a project called &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Octave&quot; target=&quot;_blank&quot;&gt;GNU Octave&lt;/a&gt; which is a reverse-engineering of MATLAB language and environment, hence mostly compatible with it, but &lt;strong&gt;at no cost&lt;/strong&gt;!. You can download it from &lt;a href=&quot;https://www.gnu.org/software/octave/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. GNU Octave is a free open source software (FOSS) package which is &lt;em&gt;mostly compatible&lt;/em&gt; with MATLAB. It provides a very similar command line interpreter interface and implements most of the functionality as the commercial MATLAB product. Nevertheless, there are subtle differences which anyone attempting to switch to GNU Octave or to write MATLAB/GNU Octave-compatible scripts must appreciate. Octave was conceived in 1988 and has been under development since 1992, and over the years has made a great deal of progress, especially in the area of graphics and plotting.&lt;/p&gt;
+
+&lt;h3 id=&quot;matlab-script-editors&quot;&gt;MATLAB script editors&lt;/h3&gt;
+
+&lt;p&gt;I highly recommend you to use MATLAB’s own IDE for MATLAB scripting since it has fantastic features such as automatic debugging, indentation and syntax highlight. However, once you become proficient in MATLAB scripting, you may realize that the text-editing capabilities of MATLAB IDE are not that great compared to highly popular general-purpose text editors. In that case, I recommend you to use,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sublimetext.com/&quot; target=&quot;_blank&quot;&gt;Sublime&lt;/a&gt;  (available Windows, OS X, Linux)&lt;br /&gt;
+Sublime is a sophisticated text editor for codes in many different languages, including MATLAB, C, C++, Fortran, etc. It has many advanced tools for code editing and syntax highlighting.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot; target=&quot;_blank&quot;&gt;Notepad++&lt;/a&gt;  (available only on Windows)&lt;br /&gt;
+Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for MATLAB. If you are a professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;which-matlab-version-should-i-use&quot;&gt;Which MATLAB version should I use?&lt;/h3&gt;
+
+&lt;p&gt;Always try to use the latest version if possible, since new features are added to MATLAB every year.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-matlab-online-in-your-web-browser&quot;&gt;Using MATLAB online, in your web browser&lt;/h3&gt;
+
+&lt;p&gt;Since as a UT student, you have a campus-wide MATLAB license, you can log in to your account to use MATLAB in your browser, on a remote server. For instructions on how to use MATLAB online, click &lt;a href=&quot;https://www.mathworks.com/products/matlab-online.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;matlab-environment&quot;&gt;MATLAB environment&lt;/h2&gt;
+
+&lt;p&gt;As soon as you open MATLAB, you will likely encounter an environment like the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/3/matlab.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A snapshot of MATLAB environment.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The main compartments in the MATLAB environment are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;command window&lt;/strong&gt;: where you can type single or multiple line commands.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;script editor&lt;/strong&gt;: which is where you can create new or open/edit existing MATLAB files.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;address bar&lt;/strong&gt;: indicating the &lt;strong&gt;current working directory&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;folder tree window&lt;/strong&gt;: showing all files in the current working directory.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;workspace window&lt;/strong&gt;: which shows all the global variables currently defined in MATLAB.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;useful-matlab-commands&quot;&gt;Useful MATLAB commands&lt;/h2&gt;
+
+&lt;p&gt;The following are some useful MATLAB commands  that allow you to get help on the command-line:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;demo&lt;/code&gt; will load MATLAB examples in the Help Browser, illustrating some features of MATLAB.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;help &amp;lt;keyword&amp;gt;&lt;/code&gt; will explain any function. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help sin
+sin    Sine of argument in radians.
+ sin(X) is the sine of the elements of X.
+
+ See also asin, sind.
+
+ Reference page for sin
+ Other functions named sin
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;help help&lt;/code&gt;  will explain how MATLAB help works.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;lookfor &amp;lt;keyword&amp;gt;&lt;/code&gt; searches through MATLAB help for a specific word or phrase. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; lookfor gaussian
+hwv                            - Create a Hull-White/Vasicek mean-reverting Gaussian diffusion model
+xreggpr                        - xreggpm Gaussian Process model constructor
+gmdistribution                 - Gaussian mixture distribution class.
+awgn                           - Add white Gaussian noise to a signal.
+bigaussianir                   - Bi-Gaussian Doppler filter impulse response.
+gaussianir                     - Gaussian Doppler filter impulse response.
+intfiltgaussian_intfactor      - Support function used by @channel package for
+wgn                            - Generate white Gaussian noise.
+commblkgaussfilt               - Gaussian filter block helper function.
+commblkgaussiansrc2            - Mask function for Gaussian Noise Generator block
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;doc &amp;lt;keyword&amp;gt;&lt;/code&gt; will bring up a documentation page in the Help Browser for the given keyword.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;dir &amp;lt;path&amp;gt;&lt;/code&gt; lists the contents of the given path.
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; dir
+.                lcdata.xml       m3iregistry      mcc.bat          mexext.bat       mw_mpiexec.bat   win64            
+..               lcdata.xsd       matlab.exe       mex.bat          mexsetup.pm      registry         worker.bat       
+deploytool.bat   lcdata_utf8.xml  mbuild.bat       mex.pl           mexutils.pm      util             
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;pwd&lt;/code&gt; outputs the current working directory.
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; pwd
+ans =
+C:\Program Files\MATLAB\R2016a\bin
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;quit&lt;/code&gt; quits MATLAB by closing the application.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;diary('filename')&lt;/code&gt; (or &lt;code&gt;diary filename&lt;/code&gt;) saves  all subsequent keyboard interactions with MATLAB Command Window to the file &lt;code&gt;filename&lt;/code&gt;. &lt;code&gt;diary off&lt;/code&gt; suspends the diary. &lt;code&gt;diary on&lt;/code&gt; resumes diary mode using the current filename, or the default filename diary if none has yet been specified.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;comments-in-matlab-scripts&quot;&gt;Comments in MATLAB scripts&lt;/h2&gt;
+
+&lt;p&gt;Comment lines in MATLAB begin with percent character &lt;code&gt;%&lt;/code&gt;. Anything after &lt;code&gt;%&lt;/code&gt; is ignored by MATLAB interpreter. The &lt;code&gt;%&lt;/code&gt; character itself only tells the interpreter to ignore the remainder of the same line. In the MATLAB Editor, &lt;font color=&quot;#00e600&quot;&gt;commented areas are printed in green by default&lt;/font&gt;. There are two useful keyboard shortcuts for adding and removing chunks of comments. Select the code you wish to comment or uncomment, and then press &lt;code&gt;Ctrl-R&lt;/code&gt; to place one &lt;code&gt;%&lt;/code&gt; symbol at the beginning of each line and `Ctrl-T to do the opposite.&lt;/p&gt;
+
+&lt;p&gt;MATLAB also supports multi-line comments, akin to &lt;code&gt;/* ... */&lt;/code&gt; in languages like C or C++, via the &lt;code&gt;%{ %}&lt;/code&gt; delimiters. But there is a small and important difference. In MATLAB, the &lt;strong&gt;lines containing &lt;code&gt;%{&lt;/code&gt; or &lt;code&gt;%}&lt;/code&gt; should not contain any other text (except white spaces)&lt;/strong&gt;. Otherwise, the multi-line comment would not work as you wish. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{ x = 1;
+y=2;%}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You notice that in the above, &lt;code&gt;y=2;&lt;/code&gt; is not commented. The correct syntax is,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{
+x = 1;
+y=2;
+%}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Comments are useful for explaining what function a certain piece of code performs especially if the code relies on implicit or subtle assumptions or otherwise perform subtle actions. Doing this is a good idea both for yourself and for others who try to read your code. It is highly recommended to include a block of comments at the beginning of your codes explaining what your MATLAB script or function does and how to use it. MATLAB will output the leading comments that appear at the beginning of a &lt;code&gt;.m&lt;/code&gt; file, when you type,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help &amp;lt;my function name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+All of MATLAB’s built-in functions written in MATLAB are documented this way.&lt;/p&gt;
+
+&lt;h2 id=&quot;matlabs-search-path&quot;&gt;MATLAB’s search path&lt;/h2&gt;
+
+&lt;p&gt;MATLAB has a search path and strategy that is used to find variables and MATLAB scripts. MATLAB’s current &lt;strong&gt;working directory&lt;/strong&gt; is always displayed in the MATLAB address bar. When you enter a name in MATLAB’s command prompt, the MATLAB interpreter attempts to find an entity with that name in the following order:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;First, it looks for a variable of the same name in MATLAB’s workspace and if it exists, MATLAB displays the value of the variable.&lt;/li&gt;
+  &lt;li&gt;If not, then MATLAB looks for an M-file (a MATLAB script) in the working directory of MATLAB.&lt;/li&gt;
+  &lt;li&gt;If not, then MATLAB looks for an M-file in MATLAB’s list of directories (the search path) to find the file. If no entity exists with the given name, then MATLAB gives an error.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/3-matlab-for-beginners&quot;&gt;Lecture 3: MATLAB for beginners&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 13, 2019.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 2: Programming history]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/lecture/2-programming-history"/>
+  <id>http:/MAPCP2019U/lecture/2-programming-history</id>
+  <published>2019-06-11T00:00:00-05:00</published>
+  <updated>0000-00-00T00:00:00-00:00</updated>
+  
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This lecture aims at providing a brief history of the development of computers and computer programming languages and their mutual interaction with rapid developments in natural sciences in the 20th century.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;programming-glossary&quot;&gt;Programming glossary&lt;/h3&gt;
+
+&lt;p&gt;The following table contains some technical programming phrases that are often used and heard in the field of computer science and programming, that you need to be familiar with as well.&lt;/p&gt;
+
+&lt;table class=&quot;center&quot;&gt;
+&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
+Table 1. Some programming phrases that are discussed in this lecture. The boldface words in the description column indicate items that are expressions with their own description in this table.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Expression&lt;/font&gt;&lt;/th&gt;
+&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Description&lt;/font&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;algorithm&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A general method for solving a class of problems.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;bug&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;An error in &lt;b&gt;program&lt;/b&gt; that has to be resolved for successful execution of the program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;compiled language&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A programming language whose programs need to be compiled by a &lt;b&gt;compiler&lt;/b&gt; in order to run.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;compiler&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A software that translates an entire high-level program into a lower-level language to make it &lt;b&gt;executable&lt;/b&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;debugging&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;The process of finding and removing any type of error in the program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;exception&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;An alternative name for &lt;b&gt;runtime error&lt;/b&gt; in the program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;executable&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;An &lt;b&gt;object code&lt;/b&gt;, ready to be executed. Generally has the file extension &lt;code&gt;.exe&lt;/code&gt; or &lt;code&gt;.out&lt;/code&gt; or no extension at all.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;formal language&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A language that is intentionally designed for specific purposes, which, unlike &lt;b&gt;natural languages&lt;/b&gt;, follows a strict standard.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;high-level language&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A programming language (e.g., MATLAB, Python, Fortran, Java, etc) that has high level of abstraction from the underlying hardware.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;interpreted language&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A programming language whose statements are interpreted line-by-line by an &lt;b&gt;interpreter&lt;/b&gt; and immediately executed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;low-level language&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A programming language that has a low-level of abstraction from computer hardware and architecture, such as Assembly. Very close to machine code.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;natural language&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A language that evolves naturally, and has looser &lt;b&gt;syntax&lt;/b&gt; rules and standard compared to &lt;b&gt;formal languages&lt;/b&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;object code&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;The output of a compiler after translating a program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;parsing&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;Reading and examining a file/program and analyzing the syntactic structure of the file/program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;portability&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A program's ability to be executable on more than one kind of computer architecture, without changing the code.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;problem solving&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;The process of formulating a problem and finding and expressing a solution to it.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;program&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A set of instructions in a that together specify an algorithm a computation.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;runtime error&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;An error that does not arise and cause the program to stop, until the program has started to execute.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;script&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A program in an &lt;b&gt;interpreted language&lt;/b&gt; stored in a file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;semantic error&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A type of error in a program that makes the program do something other than what was intended. Catching these errors can be very tricky.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;semantics&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;The meaning of a program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;source code&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A program in a high-level compiled language, before being compiled by the &lt;b&gt;compiler&lt;/b&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;syntax error&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;A type of error in program that violates the standard &lt;b&gt;syntax&lt;/b&gt; of the programming language, and hence, the program cannot be interpreted or compiled until the syntax error is resolved.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;syntax&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;The structure of a program.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;token&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;One of the basic elements of the syntactic structure of a program, in analogy with &lt;i&gt;word&lt;/i&gt; in a &lt;b&gt;natural language&lt;/b&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-rise-of-the-machines&quot;&gt;The rise of the machines&lt;/h3&gt;
+
+&lt;p&gt;Immediately after the first world war and during the second world war, many fields of science and engineering witnessed rapid growth. In particular, two fields of mathematical and physical sciences, &lt;strong&gt;mathematical programming&lt;/strong&gt; (a terminology used commonly in place of &lt;a href=&quot;https://en.wikipedia.org/wiki/Mathematical_optimization&quot; target=&quot;_blank&quot;&gt;mathematical optimization&lt;/a&gt;) (not to be confused with computer programming!) and &lt;a href=&quot;https://en.wikipedia.org/wiki/Monte_Carlo_method&quot; target=&quot;_blank&quot;&gt;Monte Carlo methods&lt;/a&gt; witnessed rapid exponential growth in both theory and practical applications. Parallel to progresses in natural sciences, a new field of science and technology, &lt;a href=&quot;https://en.wikipedia.org/wiki/History_of_computer_science&quot; target=&quot;_blank&quot;&gt;computer science&lt;/a&gt;, began to rise during the years of world-war-II, partly in response to the needs of war, but mostly in response to the exponential growth of natural sciences and engineering in the post-world-war-II era.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/2/wordFreq.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+        A word-usage relative frequency plot, illustrating the exponential growth of computer technology in the mid 20th century, as well as developments in the fields of deterministic and stochastic optimization techniques, which ultimately led to the emergence of &lt;a href=&quot;https://www.nibib.nih.gov/science-education/science-topics/computational-modeling&quot; target=&quot;_blank&quot;&gt;computational modeling&lt;/a&gt; as the third pillar of science. Advances in the computational methods and technology also led to the gradual popularity of Bayesian techniques in mathematical modeling toward the end of the 20th century, and the emergence of an important subfield of computational modeling, now known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Uncertainty_quantification&quot; target=&quot;_blank&quot;&gt;Uncertainty Quantification&lt;/a&gt;. Note that the positive-slope linear behavior on this semi-logarithmic plot indicates exponential growth.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The history of computer programming probably begins with the development of the first computer, &lt;a href=&quot;https://en.wikipedia.org/wiki/ENIAC&quot; target=&quot;_blank&quot;&gt;ENIAC&lt;/a&gt; (&lt;em&gt;Electronic Numerical Integrator And Computer&lt;/em&gt;), one of the earliest electronic general-purpose computers made.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/2/computer.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+        A diagram representing the basic underlying structure of every digital device, most importantly, desktop computers.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;how-to-express-algorithms-in-machine-language&quot;&gt;How to express algorithms in machine language?&lt;/h3&gt;
+
+&lt;p&gt;To answer this question, we have to first understand that all human knowledge can be divided into two classes: declarative and imperative (procedural). As implicitly described by their names, &lt;strong&gt;declarative knowledge&lt;/strong&gt; involves statements of fact. For example,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;J is the tenth letter of the alphabet, or,&lt;/li&gt;
+  &lt;li&gt;Washington is the capital of the USA, or,&lt;/li&gt;
+  &lt;li&gt;$x$ is square-root of $y$ only and only if $x*x=y$,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;are all declarative statements. By contrast, &lt;strong&gt;imperative knowledge&lt;/strong&gt; is about how to accomplish something, or basically, is a recipe on how to do something, known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Algorithm&quot; target=&quot;_blank&quot;&gt;algorithm&lt;/a&gt; in scientific terminology. In order for a computer to achieve a specific computational goal, it needs to be given a set of tasks, collectively called an &lt;strong&gt;algorithm&lt;/strong&gt;. For example, most calculators contain a rather complex &lt;a href=&quot;https://www.sistenix.com/sqrt.html&quot; target=&quot;_blank&quot;&gt;algorithm for calculating the square root of a given input number&lt;/a&gt;, like the following,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/2/sqrt.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As seen, the algorithm has a &lt;strong&gt;start&lt;/strong&gt;, a &lt;strong&gt;flow control&lt;/strong&gt;, and a &lt;strong&gt;stop&lt;/strong&gt;. These are the basic elements of an algorithm. In the early 20th century, the algorithms had to be physically and mechanically implemented in computers. Therefore, the earliest computing machines were often called &lt;strong&gt;fixed-program computers&lt;/strong&gt;. This means that they could only perform the algorithms for which they had been physically wired and built. An example of such machines is &lt;a href=&quot;https://en.wikipedia.org/wiki/ENIAC&quot; target=&quot;_blank&quot;&gt;ENIAC&lt;/a&gt;. &lt;strong&gt;Reprogramming&lt;/strong&gt; such computers, when possible at all, is a laborious process, starting with flowcharts and paper notes, followed by detailed engineering designs, and then the often-arduous process of physically rewiring and rebuilding the machine. For example, it could take almost a month to set up a program on ENIAC and get it working.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/2/eniac.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+        Portraits of The three giants behind the first US-made computer ENIAC and first computer simulations in history.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Even nowadays, some very simple computers still use this design, either for simplicity or training purposes. For example, a desk calculator (in principle) is a fixed program computer. It can do basic mathematics, but it cannot be used as a word processor or a gaming console. Changing the program of a fixed-program machine requires rewiring, restructuring, or redesigning the machine. The earliest computers were not so much “programmed” as they were “designed”.&lt;/p&gt;
+
+&lt;p&gt;It took a while until the early computer scientists noticed that they could design computers in such a way that the algorithm itself could be treated as part of the input data to the computer. In other words, one could build a &lt;a href=&quot;https://en.wikipedia.org/wiki/Turing_machine&quot; target=&quot;_blank&quot;&gt;general-purpose machine&lt;/a&gt;, that could take any computer algorithm as input and given its own basic set of operations (basically, if-conditional, goto, and memory access) could perform the algorithm. Such machines, which are nowadays in everyday use, are called &lt;strong&gt;stored-program computers&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;programming-language-generations&quot;&gt;Programming language generations&lt;/h3&gt;
+
+&lt;p&gt;Initially computers had to be programmed by what is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine_code&quot; target=&quot;_blank&quot;&gt;machine code&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine_code&quot; target=&quot;_blank&quot;&gt;machine language&lt;/a&gt;, a set of instructions for the Central Processing Unit (CPU)  of the computer, comprising a long sequence of binary digital zeros and ones. Any interaction with computer hardware, even nowadays, has to be first converted to machine code in order to become comprehensible by the computer hardware. The coding in this language is, however, very tedious and time-consuming, and non-portable. As a result, immediately after the development of the first generation of computers, the first generation of programming languages also came to exist, most notably, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Assembly_language&quot; target=&quot;_blank&quot;&gt;Assembly language&lt;/a&gt; in the late 1940s. Many more programming languages have been since developed that provide higher and higher levels of &lt;a href=&quot;https://en.wikipedia.org/wiki/Abstraction_(software_engineering)&quot; target=&quot;_blank&quot;&gt;programming abstraction&lt;/a&gt; by hiding more complexities of the machine code interaction with machine hardware from the front-end computer software and users.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http:/MAPCP2019U/lecture/2/proglang.png&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/proglang.png&quot; width=&quot;900&quot; /&gt;
+    &lt;/a&gt;&lt;!--
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A flowchart illustrating .
+    &lt;/figcaption&gt;--&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Depending on their levels of abstraction, programming languages are classified into different generations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;First generation:&lt;/strong&gt; The &lt;a href=&quot;https://en.wikipedia.org/wiki/First-generation_programming_language&quot; target=&quot;_blank&quot;&gt;First generation&lt;/a&gt; languages, or machine languages, are the lowest-level computer programming languages, which provide no abstraction in their interactions with computer hardware. These languages directly interact with computer hardware, and so there is no need for a &lt;a href=&quot;https://en.wikipedia.org/wiki/Compiler&quot; target=&quot;_blank&quot;&gt;compiler&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Assembly_language#Assembler&quot; target=&quot;_blank&quot;&gt;assembler&lt;/a&gt; to interpret these languages for the hardware.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Second generation:&lt;/strong&gt; The &lt;a href=&quot;https://en.wikipedia.org/wiki/Second-generation_programming_language&quot; target=&quot;_blank&quot;&gt;second generation&lt;/a&gt; languages, are at a higher level of abstraction from the machine hardware, meaning that they require an &lt;a href=&quot;https://en.wikipedia.org/wiki/Assembly_language#Assembler&quot; target=&quot;_blank&quot;&gt;assembler&lt;/a&gt; to interpret the code for the computer hardware. The most prominent and, to my understanding, the sole language of this generation is &lt;a href=&quot;https://en.wikipedia.org/wiki/Assembly_language&quot; target=&quot;_blank&quot;&gt;Assembly&lt;/a&gt;, which is the closest-possible compiled programming language to computer hardware.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Third generation:&lt;/strong&gt; The &lt;a href=&quot;https://en.wikipedia.org/wiki/Third-generation_programming_language&quot; target=&quot;_blank&quot;&gt;third generation&lt;/a&gt; languages, or &lt;a href=&quot;https://en.wikipedia.org/wiki/High-level_programming_language&quot; target=&quot;_blank&quot;&gt;high-level&lt;/a&gt; programming languages provide an even higher abstraction level than the second-generation languages. Third-generation languages make programming almost platform-independent, meaning that the content of the code does not depend directly on the current hardware being used. This helps the programmer to focus more on the problem of interest, rather than spending time to understand details of the specific computer and hardware being currently used. Examples of third-generation programming languages are: &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/ALGOL&quot; target=&quot;_blank&quot;&gt;ALGOL&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/COBOL&quot; target=&quot;_blank&quot;&gt;COBOL&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/BASIC&quot; target=&quot;_blank&quot;&gt;BASIC&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/C_(programming_language)&quot; target=&quot;_blank&quot;&gt;C&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/C_Sharp_(programming_language)&quot; target=&quot;_blank&quot;&gt;C#&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/C%2B%2B&quot; target=&quot;_blank&quot;&gt;C++&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Java_(programming_language)&quot; target=&quot;_blank&quot;&gt;Java&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Pascal_(programming_language)&quot; target=&quot;_blank&quot;&gt;Pascal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fourth generation:&lt;/strong&gt; The definition for the &lt;a href=&quot;https://en.wikipedia.org/wiki/Fourth-generation_programming_language&quot; target=&quot;_blank&quot;&gt;fourth generation&lt;/a&gt; and beyond is not very clear, however, it is generally as the set of languages that provide an even higher level of abstraction from the hardware and proximity to the user (programmer). Some prominent examples of this category include &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Python_(programming_language)&quot; target=&quot;_blank&quot;&gt;Python&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Perl&quot; target=&quot;_blank&quot;&gt;Perl&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Ruby_(programming_language)&quot; target=&quot;_blank&quot;&gt;Ruby&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/IDL_(programming_language)&quot; target=&quot;_blank&quot;&gt;IDL&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/R_programming_language&quot; target=&quot;_blank&quot;&gt;R&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/S_(programming_language)&quot; target=&quot;_blank&quot;&gt;S&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http:/MAPCP2019U/lecture/2/PLchart.png&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/PLchart.png&quot; width=&quot;900&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A diagram tracing the history of computer languages throughout the history of computer science.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;programming-language-paradigms&quot;&gt;Programming language paradigms&lt;/h3&gt;
+
+&lt;p&gt;Programming paradigms are a way to classify programming languages based on their features. There are several programming paradigms such as,
+&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Structured_programming&quot; target=&quot;_blank&quot;&gt;structured programming&lt;/a&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot; target=&quot;_blank&quot;&gt;imperative programming&lt;/a&gt; (allows side effects),&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt;functional programming&lt;/a&gt; (disallows side effects),&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt; (groups code into functions and subroutines),&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt; (groups code together with the data on which the code works).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http:/MAPCP2019U/lecture/2/progEvol.png&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/progEvol.png&quot; width=&quot;900&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A schematic representation of the evolution of programming techniques.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Among all, however, the last two programming paradigms are the most important and more widely used than the others. Historically all programming languages were &lt;strong&gt;imperative (or, procedural)&lt;/strong&gt; since this paradigm is more intuitive to the human mind, and indeed, what the computer hardware does. These languages are basically human-readable abstractions of the machine code.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http:/MAPCP2019U/lecture/2/imperative.gif&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/imperative.gif&quot; width=&quot;500&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A schematic representation of the structure of imperative (procedural) programming.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Imperative programs have a structure like in the figure above, with the following components and rules:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they must contain a &lt;strong&gt;main procedure&lt;/strong&gt; that determines the control flow for the program, and,&lt;/li&gt;
+  &lt;li&gt;they must contain a set of functions that are called to perform certain tasks during program execution, and,&lt;/li&gt;
+  &lt;li&gt;the main and sub-main procedures have a hierarchical structure, and,&lt;/li&gt;
+  &lt;li&gt;the source code for each procedure is compiled, and,&lt;/li&gt;
+  &lt;li&gt;all compiled procedures and the main procedure are linked together with other source codes to produce a complete &lt;strong&gt;executable program&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A few decades after the first imperative programming languages were developed, computer scientists came up with an alternative programming paradigm that resulted in higher levels of abstraction from the machine code, however, could also significantly reduce the cost of code development and increase the amount of code re-usability, from one program to the next. This programming paradigm is called &lt;strong&gt;object-oriented programming (OOP)&lt;/strong&gt;, since it looks at everything in the code, as an &lt;strong&gt;object&lt;/strong&gt;. Each object then has a &lt;strong&gt;type&lt;/strong&gt;, or, &lt;strong&gt;class&lt;/strong&gt;, to which it belongs. For example, one can define a class describing a car in general, which has some &lt;strong&gt;attributes&lt;/strong&gt; that specify its model, make, year, owner, … , as well as some &lt;em&gt;*methods&lt;/em&gt; that can act on these attributes and make the car do something,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;!--
+    &lt;a href=&quot;http:/MAPCP2019U/lecture/2/oop_car.png&quot; target=&quot;_blank&quot;&gt;
+    &lt;/a&gt;
+    --&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/oop_car.png&quot; width=&quot;500&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A example of a OOP class describing a car, with its attributes and methods.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;programming-language-purpose&quot;&gt;Programming language purpose&lt;/h3&gt;
+
+&lt;p&gt;Some programming languages have been designed to target a specific market. For example, in the mid 20th century, there were two prominent languages &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt; for numerical and scientific computation, and &lt;a href=&quot;https://en.wikipedia.org/wiki/COBOL&quot; target=&quot;_blank&quot;&gt;COBOL&lt;/a&gt; for business problems. In the field of scientific computation, Fortran (FORmula TRANslation), first released in 1956, is undoubtedly the most influential programming language of all human history and the oldest high-level programming language that is still in active everyday use. Among all programming languages, Fortran is the only one that specifically targets scientists and engineers as its audience. Here is a history of Fortran by its original developers:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/KohboWwrsXg?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And there is of course, no doubt about the importance of general-purpose programming language &lt;a href=&quot;https://en.wikipedia.org/wiki/C_(programming_language)&quot; target=&quot;_blank&quot;&gt;C&lt;/a&gt; and its descendant &lt;a href=&quot;https://en.wikipedia.org/wiki/C%2B%2B&quot; target=&quot;_blank&quot;&gt;C++&lt;/a&gt;. Specifically, C++ grew out of interest is developing a language that is universal, that is, can be used for any purpose (business, OS development, scientific computation), that could also reduce the cost of code maintenance and software development. In the beginning, C++ codes were rather slow and inefficient, but more recently the language has significantly caught up with the two high-performance computing (HPC) languages C and Fortran. Here is a short video describing the origin of C++ by its own inventor:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JBjjnqG0BP8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Both C and C++, as well as Fortran are still widely used every day. These three languages are anonymously present in the lives of virtually all humans every day. For example, all climate and weather prediction software, as of today, rely on HPC kernels that have been written and are still written in Fortran. Similarly, almost every operating system that you use on your electronic devices, has some connection to C or C++.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-final-personal-remark&quot;&gt;A final, personal remark&lt;/h3&gt;
+
+&lt;p&gt;Sometimes science acts like humans: it finds a matching partner (a programming language), then they flourish together, make a love story and occasionally decline together as well, with the only difference that polygamy is allowed in science, like Fortran’s marriage with Aerospace and &lt;a href=&quot;https://en.wikipedia.org/wiki/Plasma_(physics)&quot; target=&quot;_blank&quot;&gt;Plasma physics&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;https://books.google.com/ngrams/graph?content=fortran%2Cplasma%2Caerospace&amp;amp;case_insensitive=on&amp;amp;year_start=1920&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t4%3B%2Cfortran%3B%2Cc0%3B%2Cs0%3B%3BFORTRAN%3B%2Cc0%3B%3BFortran%3B%2Cc0%3B.t4%3B%2Cplasma%3B%2Cc0%3B%2Cs0%3B%3Bplasma%3B%2Cc0%3B%3BPlasma%3B%2Cc0%3B%3BPLASMA%3B%2Cc0%3B.t4%3B%2Caerospace%3B%2Cc0%3B%2Cs0%3B%3BAerospace%3B%2Cc0%3B%3Baerospace%3B%2Cc0%3B%3BAEROSPACE%3B%2Cc0&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/plasma-aerospace-fortran.png&quot; width=&quot;900&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+        A plot illustrating the co-evolution of two of the most challenging computationally-intensive fields of science (Aerospace and Plasma Physics) with the most popular high-performance scientific programming language in human history as of today. The vertical axis represents the relative word-usage frequency of the three keywords (Plasma, Aerospace, and Fortran) in all digital corpus, and the horizontal axis represents the year. Note that the downward slope of the curves in later times does NOT imply the decline of these fields of science or the decline of Fortran. It merely means that they have reached their exponential peak growth in the mid-1980s, and are now expanding steadily (linearly), whereas other newer fields (such as bioinformatics) are being more and more frequently referenced than the above three keywords every year in all digital corpus.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Many times throughout recent history, some specific fields of science have boosted and popularized some computer programming languages and vice versa, in a positive feedback loop. A younger just-married couple seems to be Bioinformatics-Python, both of which, as of today seems to be thriving:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;https://books.google.com/ngrams/graph?content=python%2Cbioinformatics&amp;amp;case_insensitive=on&amp;amp;year_start=1980&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t4%3B%2Cpython%3B%2Cc0%3B%2Cs0%3B%3BPython%3B%2Cc0%3B%3Bpython%3B%2Cc0%3B%3BPYTHON%3B%2Cc0%3B.t4%3B%2Cbioinformatics%3B%2Cc0%3B%2Cs0%3B%3BBioinformatics%3B%2Cc0%3B%3Bbioinformatics%3B%2Cc0%3B%3BBIOINFORMATICS%3B%2Cc0&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/bioinformatics-python.png&quot; width=&quot;900&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+        A plot illustrating the co-evolution and thriving of the field of bioinformatics with the popular programming language, Python. The vertical axis represents the relative word-usage frequency of the two keywords (Bioinformatics and Python) in all digital corpus, and the horizontal axis represents the year.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Sometimes, a programming language couples with a specific field of science and thrives for a few years, only to be soon replaced with a younger, more attractive, programming language. This is probably what happened to the co-evolution of Perl with bioinformatics, a language which was gradually replaced with Python at the beginning of the new millennium, at least in the field of bioinformatics.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;https://books.google.com/ngrams/graph?content=python%2Cbioinformatics%2Cperl&amp;amp;case_insensitive=on&amp;amp;year_start=1980&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t4%3B%2Cpython%3B%2Cc0%3B%2Cs0%3B%3BPython%3B%2Cc0%3B%3Bpython%3B%2Cc0%3B%3BPYTHON%3B%2Cc0%3B.t4%3B%2Cbioinformatics%3B%2Cc0%3B%2Cs0%3B%3BBioinformatics%3B%2Cc0%3B%3Bbioinformatics%3B%2Cc0%3B%3BBIOINFORMATICS%3B%2Cc0%3B.t4%3B%2Cperl%3B%2Cc0%3B%2Cs0%3B%3BPerl%3B%2Cc0%3B%3Bperl%3B%2Cc0%3B%3BPERL%3B%2Cc0&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/MAPCP2019U/lecture/2/bioinformatics-python-perl.png&quot; width=&quot;900&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption style=&quot;text-align:justify&quot;&gt;
+        A plot illustrating the evolution and steady expansion of the Perl programming language and its gradual replacement with Python, in the field of bioinformatics. The vertical axis represents the relative word-usage frequency of the three keywords (Bioinformatics, Python, and Perl) in all digital corpus, and the horizontal axis represents the year.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/2-programming-history&quot;&gt;Lecture 2: Programming history&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 11, 2019.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>

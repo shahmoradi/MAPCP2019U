@@ -1,6 +1,30 @@
 [
 	
 		{
+		  "title"      : "Lecture 3: Python for beginners",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/3-python-for-beginners",
+		  "date"       : "2019-06-13 00:00:00 -0500",
+		  "shortdate"  : "June 13, 2019"
+		} ,
+	
+		{
+		  "title"      : "Lecture 3: MATLAB for beginners",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/3-matlab-for-beginners",
+		  "date"       : "2019-06-13 00:00:00 -0500",
+		  "shortdate"  : "June 13, 2019"
+		} ,
+	
+		{
+		  "title"      : "Lecture 2: Programming history",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/2-programming-history",
+		  "date"       : "2019-06-11 00:00:00 -0500",
+		  "shortdate"  : "June 11, 2019"
+		} ,
+	
+		{
 		  "title"      : "Lecture 1: A professional programmer uses Version Control System (VCS)",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/lecture/1-version-control-system",

@@ -2,6 +2,21 @@
 callback([
 
   {
+    "text": "Lecture 3: Python for beginners",
+    "href": "/MAPCP2019U/lecture/3-python-for-beginners"
+  } ,
+
+  {
+    "text": "Lecture 3: MATLAB for beginners",
+    "href": "/MAPCP2019U/lecture/3-matlab-for-beginners"
+  } ,
+
+  {
+    "text": "Lecture 2: Programming history",
+    "href": "/MAPCP2019U/lecture/2-programming-history"
+  } ,
+
+  {
     "text": "Lecture 1: A professional programmer uses Version Control System (VCS)",
     "href": "/MAPCP2019U/lecture/1-version-control-system"
   } ,
