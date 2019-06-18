@@ -7,13 +7,122 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-18T10:36:58-05:00</updated>
+<updated>2019-06-18T10:57:06-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/MAPCP2019U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 1: Solutions - Version control system]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/1-solutions-version-control-system"/>
+  <id>http:/MAPCP2019U/quiz/1-solutions-version-control-system</id>
+  <published>2019-06-18T00:00:00-05:00</published>
+  <updated>2019-06-18T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;!--
+This is the solution to [Quiz 1: Problems - Version control system](1-problems-version-control-system.html){:target=&quot;_blank&quot;}.  
+
+The following figure illustrates the grade distribution for this quiz.  
+&lt;figure&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/quiz/gradeDist/gradeHistQuiz1.png&quot; width=&quot;700&quot;&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        Maximum possible points is 1.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+--&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Which of the following Git commands can add all the &lt;strong&gt;new&lt;/strong&gt; and &lt;strong&gt;modified-existing&lt;/strong&gt; files to the staging area? choose all that apply.&lt;br /&gt;
+(A) &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
+(B) &lt;code&gt;git add --A&lt;/code&gt;&lt;br /&gt;
+(C) &lt;code&gt;git add -all&lt;/code&gt;&lt;br /&gt;
+(D) &lt;code&gt;git add --all&lt;/code&gt;&lt;br /&gt;
+(E) &lt;code&gt;git add -u&lt;/code&gt;&lt;br /&gt;
+(F) &lt;code&gt;git add .&lt;/code&gt;&lt;br /&gt;
+(G) &lt;code&gt;git add .; git add -u&lt;/code&gt;&lt;br /&gt;
+(H) &lt;code&gt;git add .; git add --u&lt;/code&gt;&lt;br /&gt;
+(I) &lt;code&gt;git add -u; git add .&lt;/code&gt;&lt;br /&gt;
+(J) &lt;code&gt;git add --u; git add .&lt;/code&gt;&lt;br /&gt;
+ &lt;br /&gt;
+ &lt;strong&gt;Answer: A, D, G, F, I&lt;/strong&gt;
+ &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Which of the following Git commands &lt;strong&gt;both&lt;/strong&gt; stages and commits &lt;strong&gt;only modified and deleted files&lt;/strong&gt; but &lt;strong&gt;NOT&lt;/strong&gt; the &lt;em&gt;new files&lt;/em&gt; added to the repository since the last commit. Choose all that apply.&lt;br /&gt;
+(A) &lt;code&gt;git commit&lt;/code&gt;&lt;br /&gt;
+(B) &lt;code&gt;git commit -a&lt;/code&gt;&lt;br /&gt;
+(C) &lt;code&gt;git commit -am&lt;/code&gt;&lt;br /&gt;
+ &lt;br /&gt;
+ &lt;strong&gt;Answer: B, C&lt;/strong&gt;
+ &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Write down the Git command that lists all Git commands for you.&lt;br /&gt;
+ &lt;br /&gt;
+ &lt;strong&gt;Answer:&lt;/strong&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt; $ git help -a
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Assembly&lt;br /&gt;
+(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily use.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Fortran&lt;br /&gt;
+(B) Approximately how many decades is it old? ($\pm15$ years is acceptable answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+in 1950s&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Assembly  &lt;br /&gt;
+(B) Which language-generation are Fortran, C, C++, MATLAB, Python, R?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+third, third, third, fourth, fourth, fourth&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;In what decades C, C++, and MATLAB/Python were created, respectively?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+1970s, 1980s, 1980s, 1990s&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+B&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+C, Simula&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of MATLAB/Python.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Fortran/C&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;How would you distinguish exponential behavior vs. power-law behavior (relationship) in a 2-dimensional plot?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+An exponential curve looks like a line only when the X-axis is plotted on log-scale.&lt;br /&gt;
+A power-law curve looks like a line only when both the X- and Y- axes are plotted on log-scale.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/1-solutions-version-control-system&quot;&gt;Quiz 1: Solutions - Version control system&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
