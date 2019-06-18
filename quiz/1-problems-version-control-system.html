@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>HOMEWORK 1: PROBLEMS - VERSION CONTROL USING GIT AND GITHUB &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+<title>QUIZ 1: PROBLEMS - VERSION CONTROL SYSTEM &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
 <meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
-<meta name="twitter:title" content="Homework 1: Problems - Version Control Using Git and Github">
+<meta name="twitter:title" content="Quiz 1: Problems - Version control system">
 <meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homework 1: Problems - Version Control Using Git and Github">
+<meta property="og:title" content="Quiz 1: Problems - Version control system">
 <meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
-<meta property="og:url" content="/MAPCP2019U/homework/1-problems-version-control-using-git-github">
+<meta property="og:url" content="/MAPCP2019U/quiz/1-problems-version-control-system">
 <meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
 <meta property="og:image" content="/MAPCP2019U/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/MAPCP2019U/homework/1-problems-version-control-using-git-github">
+<link rel="canonical" href="/MAPCP2019U/quiz/1-problems-version-control-system">
 <!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
 
 
@@ -135,8 +135,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Homework 1: Problems - Version Control Using Git and Github</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-04T00:00:00-05:00">04 Jun 2019</time></strong></p>
+                            <h2>Quiz 1: Problems - Version control system</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-18T00:00:00-05:00">18 Jun 2019</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -146,287 +146,63 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>♣ <strong>Due Date: One week from the posting date @ 10:30 AM</strong>. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.</p>
-
-<p>First, use the following Markdown language references, or any other reference that you find or prefer, to design a Github-interpretable README file for each of folders in your project for this course, and a Github web-page for your project.</p>
-
-<ul>
-  <li><a href="/MAPCP2019U/lecture/1/markdown-cheatsheet-online.pdf" target="_blank">Markdown language cheat-sheet (pdf)</a></li>
-  <li><a href="https://blog.ghost.org/markdown/" target="_blank">Markdown language reference (web)</a></li>
-  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Adam Pritchard’s Markdown cheat-sheet (web)</a></li>
-</ul>
-
-<p>Write your code sections of your answer in Markdown syntax.
-For example,<br />
-<code>
-    ```bash  <br />
-    $ git branch -d test  <br />
-    error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'  <br />
-    ```
-</code>
-<br />
-will display the following text highlighted as <em>bash</em> code, in your <em>readme.md</em> file.</p>
-<pre><code class="language-bash">$ git branch -d test
-error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
-</code></pre>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>1.</strong> Include the following information with the following format and information in your main directory <code>readme.md</code> file:</p>
-
-<h2 id="beginning-of-the-readme-files-content"><em>Beginning of the README file’s content</em></h2>
-<hr />
-
-<p><br /></p>
-
-<h4 id="mapcp2019u---introduction-to-computer-programming-summer-2019">MAPCP2019U - Introduction to Computer Programming (Summer 2019)</h4>
-<p><br />
-<strong>Name:</strong> &lt;first name&gt; &lt;last name&gt;<br />
-<strong>UTA EID:</strong> &lt;your UTA EID&gt;<br />
-<strong>Email:</strong> &lt;your email&gt;<br />
-<strong>Department:</strong> <a href="https://www.uta.edu/physics/">Department of Physics</a><br />
-<strong>University:</strong> <a href="https://www.utexas.edu/">The University of Texas at Arlington</a><br />
-<strong>Level:</strong> graduate - &lt;Freshman (1st year) / Sophomore (2nd year) / Junior (3rd year) / Senior (4th year) / Dinosaur (5th year and above) &gt;<br />
-<strong>MAPCP-Class Title:</strong> Student<br />
-<strong>Course Webpage:</strong> <a href="https://www.cdslab.org/MAPCP2019U/">https://www.cdslab.org/MAPCP2019U/</a><br />
-<strong>Photo:</strong></p>
-
-<p><img src="/MAPCP2019U/images/AmirShahmoradi.png" alt="Amir Shahmoradi" /></p>
-
-<h4 id="description-of-the-projects-content">Description of the project’s content</h4>
-<p><br /> This repository contains my homework, quizzes, and virtually every effort that I have made for <a href="https://www.cdslab.org/MAPCP2019U/">MAPCP2019U class</a>. The structure of the project is the following:</p>
-
-<ul>
-  <li><strong><a href="#homework">homework</a>:</strong> (the homework hyperlink should take the reader to the homework folder)<br />
-  This directory contains all my homework submissions, each of which is a folder properly named with homework number, containing the homework submission.<br />
-  <br /></li>
-  <li><strong><a href="#quiz">quiz</a>:</strong> (the quiz hyperlink should take the reader to the quizzes folder)<br />
-  This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.<br />
-  <br /></li>
-  <li><strong><a href="#exam">exam</a>:</strong> (the exam hyperlink should take the reader to the exams folder)<br />
-  This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.<br />
-  <br /></li>
-</ul>
-
-<p>For questions and troubleshooting, please contact:</p>
-
-<p>&lt;your name&gt;<br />
-&lt;your email&gt;<br />
-&lt;any other contact or signature information that you would like to add&gt;</p>
-
-<blockquote>
-  <p>I have not failed. I’ve just found 10,000 ways that won’t work.<br />
-<a href="https://en.wikipedia.org/wiki/Thomas_Edison" target="_blank">Thomas A. Edison</a></p>
-</blockquote>
-
-<p><br /></p>
-
-<hr />
-
-<h2 id="end-of-the-readme-files-content"><em>End of the README file’s content</em></h2>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>2. </strong> Create two additional test branches in your project, each of which is branched directly from <em>master</em>. <strong>For each of the following cases, write the command and the corresponding output message of Git, in Markdown language in a <code>readme.md</code> file inside your <code>homework/1/</code> folder in your master branch</strong>. If you don’t have this folder in your project, then create the folder and then place your initial <code>readme.md</code> file in this folder with your signature as the content of the file. Then stage and commit this file together with homework-1 folder to your local repository. Throughout the rest of this homework, you will fill this <code>readme.md</code> file with your answers.</p>
-
-<p>(A) Create two branches, <strong>both from your <em>master</em> branch</strong>, with names <em>test1</em> and <em>test2</em>.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(B) Now checkout the <em>test1</em> branch and create a new text file named <code>test.txt</code> in the <code>homework/1/</code> directory of this branch.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(C) Inside <code>test.txt</code> in <em>test1</em> branch write this message: <em>This is some example text for branch test1</em>, and save it.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(D) Now stage and commit <code>test.txt</code> file to branch <em>test1</em>.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(E) Checkout the branch <em>test2</em>. Do you still see <code>test.txt</code> that you just created in your <code>homework/1/</code> directory? You can search for it by the <em>bash</em> command <code>ls</code>. Explain why you see/don’t see the file in your working directory anymore.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(F) Create a new text file named <code>test.txt</code> in the <code>homework/1/</code> directory of this branch as well, and add <em>This is some example text for branch test2</em> to its content.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(G) Now try to checkout <em>test1</em>. What error/warning message do you get? Fix the source of error and then checkout <em>test1</em> branch.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(H) Now merge the content of <em>test1</em> with <em>master</em> branch. (Hint: Note from which branch you doing this merge!)</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(I) Now what do you see as the content of <em>master</em> branch? (Hint: Use <code>ls</code> <em>bash</em> command, to list the files in the working directory.)</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(J) Now merge the content of <em>test2</em> with <em>master</em> branch. What error/warning message do you get? Why does this error arise?</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(K) Now checkout <em>test2</em>. What error/warning message do you get?</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(L) Run the Git command <code>git status</code>. Why does such a conflict exist, as mentioned in <code>git status</code> output?</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(M) At this stage, you have two options: Either 1. stage and commit the combined conlifting <code>test.txt</code> file to Git repository (but this is not recommended), or, 2. open the file <code>test.txt</code> using <em>vim</em> editor on the command line and reslve the conflict by editing the content of the file to only this sentence: <em>. Then save and quit *vim</em>.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(N) Now, run <code>git status</code>, then stage and commit your conflict-resolved file. Then checkout <em>test2</em> branch.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(O) Now, try deleting branch <em>test1</em>, while on branch <em>test2</em>. What error/warning message do you get?</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(P) Now, switch back to <em>master</em> branch. Now, try deleting branch <em>test1</em>, while on <em>master</em> branch. What message do you get from Git? List all the existing branches using <code>git branch</code> command.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(Q) Why is there such a difference in Git messages between when you tried deleting <em>test1</em> branch from <em>test2</em> branch, and when you tried deleting <em>test1</em> branch from <em>master</em> branch?</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(R) Now checkout <em>test2</em> branch. While on <em>test2</em>, try to delete branch <em>test2</em>. What error/message do you get?</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(S) Switch back to <em>master</em> and delete <em>test2</em> branch. List all your project branches by the appropriate Git command.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<p>(T) Stage and commit all the changes (including the file <code>test.txt</code>) to your project’s <em>master</em> branch. Now push it all to the remote repository by Wednesday Feb 15 2017, 9:00 a.m. CDT.</p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>3. </strong> (Bonus, not mandatory) Design a simple Github page for your project, using the main directory’s <code>readme.md</code> file. Submit the link to the page as your answer. Note that you don’t need to add anything extra to your readme file.</p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>4. </strong> (Bonus, not mandatory) Create a website for your project, such that your project is accessible through its web address based on the content of your project’s website, not based on the content of <em>master</em> branch.</p>
-
-<p><br /></p>
+                <p>This quiz aims at testing your basic knowledge of Git version control system. Don’t forget to push your answers to your remote repository by the end of quiz time.<br />
+Push all your answers to <strong>quiz/1/</strong> folder in your Github project.</p>
+
+<ol>
+  <li>Which of the following Git commands can add all the <strong>new</strong> and <strong>modified-existing</strong> files to the staging area? choose all that apply.<br />
+(A) <code>git add -A</code><br />
+(B) <code>git add --A</code><br />
+(C) <code>git add -all</code><br />
+(D) <code>git add --all</code><br />
+(E) <code>git add -u</code><br />
+(E) <code>git add --u</code><br />
+(F) <code>git add .</code><br />
+(G) <code>git add .; git add -u</code><br />
+(H) <code>git add .; git add --u</code><br />
+(I) <code>git add -u; git add .</code><br />
+(J) <code>git add --u; git add .</code><br />
+<br /><br /></li>
+  <li>Which of the following Git commands <strong>both</strong> stages and commits <strong>only modified and deleted files</strong> but <strong>NOT</strong> the <em>new files</em> added to the repository since the last commit. Choose all that apply.<br />
+(A) <code>git commit</code><br />
+(B) <code>git commit -a</code><br />
+(C) <code>git commit -am</code><br />
+<br /><br /></li>
+  <li>Write down the Git command that lists all Git commands for you.</li>
+  <li>(A) What is the closest programming language to machine code (i.e., binary code)?<br />
+(B) Does it need interpretation in order to become machine-comprehensible?<br />
+<br /><br /></li>
+  <li>(A) Name the oldest high-level programming language that is still in active daily use.<br />
+(B) Approximately how many decades is it old? ($\pm15$ years is an acceptable answer. the decade it was created is also an acceptable answer)<br />
+<br /><br /></li>
+  <li>(A) Name a second-generation programming language.<br />
+(B) Which language-generation are Fortran, C, C++, MATLAB, Python, R?<br />
+<br /><br /></li>
+  <li>In what decades C, C++, and MATLAB/Python were created, respectively?<br />
+<br /><br /></li>
+  <li>Name an ancestor programming language of C.<br />
+<br /><br /></li>
+  <li>Name a programming language ancestor of C++.<br />
+<br /><br /></li>
+  <li>Name a programming language ancestor of MATLAB/Python.<br />
+<br /><br /></li>
+  <li>How would you distinguish exponential behavior vs. power-law behavior (relationship) in a 2-dimensional plot?</li>
+</ol>
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 1: Problems - Version Control Using Git and Github&quot;%20/MAPCP2019U/homework/1-problems-version-control-using-git-github%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 1: Problems - Version control system&quot;%20/MAPCP2019U/quiz/1-problems-version-control-system%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/homework/1-problems-version-control-using-git-github"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/quiz/1-problems-version-control-system"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/homework/1-problems-version-control-using-git-github"
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/quiz/1-problems-version-control-system"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>

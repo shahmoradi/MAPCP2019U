@@ -48,6 +48,22 @@
 
     
     <url>
+        <loc>/MAPCP2019U/quiz/1-problems-version-control-system</loc>
+    </url>
+    
+    <url>
+        <loc>/MAPCP2019U/lecture/4-python-values-variables-types</loc>
+    </url>
+    
+    <url>
+        <loc>/MAPCP2019U/lecture/4-matlab-values-variables-types</loc>
+    </url>
+    
+    <url>
+        <loc>/MAPCP2019U/homework/1-solutions-version-control-using-git-github</loc>
+    </url>
+    
+    <url>
         <loc>/MAPCP2019U/lecture/3-python-for-beginners</loc>
     </url>
     
@@ -68,11 +84,11 @@
     </url>
     
     <url>
-        <loc>/MAPCP2019U/announcement/0-student-professor-connection-day</loc>
+        <loc>/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests</loc>
     </url>
     
     <url>
-        <loc>/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests</loc>
+        <loc>/MAPCP2019U/announcement/0-student-professor-connection-day</loc>
     </url>
     
 </urlset>

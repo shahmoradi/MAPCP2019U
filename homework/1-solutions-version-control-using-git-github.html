@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>HOMEWORK 1: PROBLEMS - VERSION CONTROL USING GIT AND GITHUB &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+<title>HOMEWORK 1: SOLUTIONS - VERSION CONTROL USING GIT AND GITHUB &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
 <meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
-<meta name="twitter:title" content="Homework 1: Problems - Version Control Using Git and Github">
+<meta name="twitter:title" content="Homework 1: Solutions - Version Control Using Git and Github">
 <meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homework 1: Problems - Version Control Using Git and Github">
+<meta property="og:title" content="Homework 1: Solutions - Version Control Using Git and Github">
 <meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
-<meta property="og:url" content="/MAPCP2019U/homework/1-problems-version-control-using-git-github">
+<meta property="og:url" content="/MAPCP2019U/homework/1-solutions-version-control-using-git-github">
 <meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
 <meta property="og:image" content="/MAPCP2019U/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/MAPCP2019U/homework/1-problems-version-control-using-git-github">
+<link rel="canonical" href="/MAPCP2019U/homework/1-solutions-version-control-using-git-github">
 <!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
 
 
@@ -135,8 +135,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Homework 1: Problems - Version Control Using Git and Github</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-04T00:00:00-05:00">04 Jun 2019</time></strong></p>
+                            <h2>Homework 1: Solutions - Version Control Using Git and Github</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-18T00:00:00-05:00">18 Jun 2019</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,24 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>♣ <strong>Due Date: One week from the posting date @ 10:30 AM</strong>. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.</p>
+                <p>This is the solution to <a href="1-problems-version-control-using-git-github.html" target="_blank">Homework 1: Problems - Version Control Using Git and Github</a>.<br />
+&lt;!–
+The following figure illustrates the grade distribution for this homework.</p>
+<figure>
+	<img src="/MAPCP2019U/homework/gradeDist/gradeHistHomework1.png" width="700" />
+    <figcaption style="text-align:center">
+        Maximum possible points, excluding bonus questions, is 1.<br />
+        Maximum possible points, including bonus questions, is 1.5.
+    </figcaption>
+</figure>
+<p>–&gt;</p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p>♣ <strong>Due Date: One week from the posting date @ 10:30 AM</strong>. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.</p>
 
 <p>First, use the following Markdown language references, or any other reference that you find or prefer, to design a Github-interpretable README file for each of folders in your project for this course, and a Github web-page for your project.</p>
 
@@ -237,9 +254,75 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p><br /></p>
 
+<p><strong>Answer:</strong></p>
+
+<hr />
+
+<p><strong>Use the following Markdown code in your <code>readme.md</code> file to get the exact same behavior as requested above:</strong></p>
+
+<pre><code class="language-markdown">#### MAPCP2019U - Introduction to Computer Programming (Summer 2019)
+&lt;br&gt;
+**Name:** \&lt;first name&gt; \&lt;last name&gt;  
+**UT EID:** \&lt;your UTA EID&gt;  
+**Email:** \&lt;your email&gt;  
+**Department:** [Department of Physics](https://www.uta.edu/physics/)    
+**University:** [The University of Texas at Arlington](https://www.utexas.edu/)  
+**Level:** graduate - \&lt;Freshman (1st year) / Sophomore (2nd year) / Junior (3rd year) / Senior (4th year) / Dinosaur (5th year and above) &gt;  
+**MAPCP-Class Title:** Student  
+**Course Webpage:** &lt;https://www.cdslab.org/MAPCP2019U/&gt;  
+**Photo:**  
+
+![Amir Shahmoradi](../../images/AmirShahmoradi.png)  
+
+#### Description of the project's content
+&lt;br&gt; This repository contains my homework, quizzes, and virtually every effort that I have made for [MAPCP2019U class](https://www.cdslab.org/MAPCP2019U/). The structure of the project is the following:
+
+* **[homework](#homework):** (the homework hyperlink should take the reader to the homework folder)  
+    This directory contains all my homework submissions, each of which is a folder properly named with homework number, containing the homework submission.  
+    &lt;br&gt;
+* **[quiz](#quiz):** (the quiz hyperlink should take the reader to the quizzes folder)  
+    This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.  
+    &lt;br&gt;
+* **[exam](#exam):** (the exam hyperlink should take the reader to the exams folder)  
+    This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.  
+    &lt;br&gt;
+
+For questions and troubleshooting, please contact:  
+
+\&lt;your name&gt;  
+\&lt;your email&gt;  
+\&lt;any other contact or signature information that you would like to add&gt;
+
+&gt;I have not failed. I've just found 10,000 ways that won't work.  
+&gt;[Thomas A. Edison](https://en.wikipedia.org/wiki/Thomas_Edison){:target="_blank"}
+</code></pre>
+<p><br />
+<strong>Note that you will have to change the relevant information and hyper-references in the above Mardown code to those that match your own information in your own repository (including your own photo).</strong></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
 <p><strong>2. </strong> Create two additional test branches in your project, each of which is branched directly from <em>master</em>. <strong>For each of the following cases, write the command and the corresponding output message of Git, in Markdown language in a <code>readme.md</code> file inside your <code>homework/1/</code> folder in your master branch</strong>. If you don’t have this folder in your project, then create the folder and then place your initial <code>readme.md</code> file in this folder with your signature as the content of the file. Then stage and commit this file together with homework-1 folder to your local repository. Throughout the rest of this homework, you will fill this <code>readme.md</code> file with your answers.</p>
 
 <p>(A) Create two branches, <strong>both from your <em>master</em> branch</strong>, with names <em>test1</em> and <em>test2</em>.</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git branch
+* master
+
+$ git branch test1
+
+$ git branch test2
+
+$ git branch
+* master
+  test1
+  test2
+</code></pre>
 
 <p><br /></p>
 
@@ -249,6 +332,23 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(B) Now checkout the <em>test1</em> branch and create a new text file named <code>test.txt</code> in the <code>homework/1/</code> directory of this branch.</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout test1
+Switched to branch 'test1'
+
+$ git status
+On branch test1
+nothing to commit, working tree clean
+
+$ ls
+readme.md
+
+$ touch test.txt
+
+$ ls
+readme.md  test.txt
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -256,6 +356,10 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(C) Inside <code>test.txt</code> in <em>test1</em> branch write this message: <em>This is some example text for branch test1</em>, and save it.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Use <code>vim test.txt</code> to open <em>vim</em> editor. Press <code>shift + I</code> to switch to <em>vim insert mode</em>. write <em>This is some example text for branch test1</em> in <code>test.txt</code> file. Now, Press <code>ESC</code> key and write <code>:wq</code> on the <em>vim</em> command line to save the file and quit <em>vim</em>.</p>
 
 <p><br /></p>
 
@@ -265,6 +369,30 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(D) Now stage and commit <code>test.txt</code> file to branch <em>test1</em>.</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git status
+On branch test1
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add --all
+warning: LF will be replaced by CRLF in test.txt.
+The file will have its original line endings in your working directory.
+
+$ git commit -m"commiting the test.txt file in test1 branch"
+[test1 715ca59] commiting the test.txt file in test1 branch
+1 file changed, 1 insertion(+)
+create mode 100644 test.txt
+
+$ git status
+On branch test1
+nothing to commit, working tree clean
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -272,6 +400,16 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(E) Checkout the branch <em>test2</em>. Do you still see <code>test.txt</code> that you just created in your <code>homework/1/</code> directory? You can search for it by the <em>bash</em> command <code>ls</code>. Explain why you see/don’t see the file in your working directory anymore.</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout test2
+Switched to branch 'test2'
+
+$ ls
+readme.md
+</code></pre>
+<p><br />
+The <code>test.txt</code> files is not in the project’s working directory, since I just chaecked out a new branch <em>test2</em> that does not contain any files that were generated and committed in <em>test1</em> branch.</p>
 
 <p><br /></p>
 
@@ -281,6 +419,23 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(F) Create a new text file named <code>test.txt</code> in the <code>homework/1/</code> directory of this branch as well, and add <em>This is some example text for branch test2</em> to its content.</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ touch test.txt
+
+$ vim test.txt
+
+$ git status
+On branch test2
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre>
+<p><br />
+The procedure for adding content to the file is very similar to that in part (C) of the problem, explained above.</p>
+
 <p><br /></p>
 
 <hr />
@@ -288,6 +443,30 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(G) Now try to checkout <em>test1</em>. What error/warning message do you get? Fix the source of error and then checkout <em>test1</em> branch.</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout test1
+error: The following untracked working tree files would be overwritten by checkout:
+        test.txt
+Please move or remove them before you switch branches.
+Aborting
+
+$ git add --all
+warning: LF will be replaced by CRLF in test.txt.
+The file will have its original line endings in your working directory.
+
+$ git commit -m"commtting the test2 branch changes"
+[test2 fce6a94] commtting the test2 branch changes
+1 file changed, 1 insertion(+)
+create mode 100644 test.txt
+
+$ git status
+On branch test2
+nothing to commit, working tree clean
+
+$ git checkout test1
+Switched to branch 'test1'
+</code></pre>
 
 <p><br /></p>
 
@@ -297,6 +476,25 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(H) Now merge the content of <em>test1</em> with <em>master</em> branch. (Hint: Note from which branch you doing this merge!)</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout master
+Switched to branch 'master'
+
+$ ls
+readme.md
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git merge test1
+Updating a661e87..715ca59
+Fast-forward
+ test.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -304,6 +502,15 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(I) Now what do you see as the content of <em>master</em> branch? (Hint: Use <code>ls</code> <em>bash</em> command, to list the files in the working directory.)</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ ls
+readme.md  test.txt
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+</code></pre>
 
 <p><br /></p>
 
@@ -313,6 +520,13 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(J) Now merge the content of <em>test2</em> with <em>master</em> branch. What error/warning message do you get? Why does this error arise?</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git merge test2
+Auto-merging test.txt
+CONFLICT (add/add): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -320,6 +534,12 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(K) Now checkout <em>test2</em>. What error/warning message do you get?</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout test2
+test.txt: needs merge
+error: you need to resolve your current index first
+</code></pre>
 
 <p><br /></p>
 
@@ -329,6 +549,9 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(L) Run the Git command <code>git status</code>. Why does such a conflict exist, as mentioned in <code>git status</code> output?</p>
 
+<p><strong>Answer:</strong><br />
+Basically, by running <code>git merge test2</code> command, we attempted to merge test.txt file of <em>test2</em> branch with the existing <code>test.txt</code> file of <em>master</em> branch. But the content of the two is different.</p>
+
 <p><br /></p>
 
 <hr />
@@ -336,6 +559,15 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(M) At this stage, you have two options: Either 1. stage and commit the combined conlifting <code>test.txt</code> file to Git repository (but this is not recommended), or, 2. open the file <code>test.txt</code> using <em>vim</em> editor on the command line and reslve the conflict by editing the content of the file to only this sentence: <em>. Then save and quit *vim</em>.</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ vim test.txt
+
+$ cat test.txt
+This is some example text from both test1 and test2 branches combined.
+</code></pre>
+<p><br />
+The <em>bash</em> command <code>cat</code> shows the content of <code>text.txt</code> file.</p>
 
 <p><br /></p>
 
@@ -345,6 +577,33 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(N) Now, run <code>git status</code>, then stage and commit your conflict-resolved file. Then checkout <em>test2</em> branch.</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add &lt;file&gt;..." to mark resolution)
+
+        both added:      test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add test.txt
+
+$ git commit -m"adding the test.txt resolution file"
+[master 4c74098] adding the test.txt resolution file
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git checkout test2
+Switched to branch 'test2'
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -352,6 +611,12 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(O) Now, try deleting branch <em>test1</em>, while on branch <em>test2</em>. What error/warning message do you get?</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git branch -d test1
+error: The branch 'test1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D test1'.
+</code></pre>
 
 <p><br /></p>
 
@@ -361,6 +626,15 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(P) Now, switch back to <em>master</em> branch. Now, try deleting branch <em>test1</em>, while on <em>master</em> branch. What message do you get from Git? List all the existing branches using <code>git branch</code> command.</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout master
+Switched to branch 'master'
+
+$ git branch
+* master
+  test2
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -368,6 +642,10 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(Q) Why is there such a difference in Git messages between when you tried deleting <em>test1</em> branch from <em>test2</em> branch, and when you tried deleting <em>test1</em> branch from <em>master</em> branch?</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>The difference arises, because whichever branch you are in, Git assumes that the content of any other branch should be first merged for the current branch before deteting the other branch. Therefore, in the first case, Git warns that there is unmerged data between <em>test1</em> and <em>test2</em> branches. But the delete command from <em>master</em> branch gives no error, since the content of <em>test1</em> branch has been previously appropriately merged with <em>master</em> branch.</p>
 
 <p><br /></p>
 
@@ -377,6 +655,14 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(R) Now checkout <em>test2</em> branch. While on <em>test2</em>, try to delete branch <em>test2</em>. What error/message do you get?</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout test2
+Switched to branch 'test2'
+
+$ git branch -d test2
+error: Cannot delete branch 'test2' checked out at '~/test'
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -385,6 +671,17 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p>(S) Switch back to <em>master</em> and delete <em>test2</em> branch. List all your project branches by the appropriate Git command.</p>
 
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git checkout master
+Switched to branch 'master'
+
+$ git branch -d test2
+Deleted branch test2 (was fce6a94).
+
+$ git branch
+* master
+</code></pre>
+
 <p><br /></p>
 
 <hr />
@@ -392,6 +689,16 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 <p><br /></p>
 
 <p>(T) Stage and commit all the changes (including the file <code>test.txt</code>) to your project’s <em>master</em> branch. Now push it all to the remote repository by Wednesday Feb 15 2017, 9:00 a.m. CDT.</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-bash">$ git add --all
+
+$ git commit
+On branch master
+nothing to commit, working tree clean
+
+$ git push --all
+</code></pre>
 
 <p><br /></p>
 
@@ -402,6 +709,9 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p><strong>3. </strong> (Bonus, not mandatory) Design a simple Github page for your project, using the main directory’s <code>readme.md</code> file. Submit the link to the page as your answer. Note that you don’t need to add anything extra to your readme file.</p>
 
+<p><strong>Answer:</strong><br />
+Ask me in class to teach you how to do it.</p>
+
 <p><br /></p>
 
 <hr />
@@ -411,6 +721,9 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 <p><strong>4. </strong> (Bonus, not mandatory) Create a website for your project, such that your project is accessible through its web address based on the content of your project’s website, not based on the content of <em>master</em> branch.</p>
 
+<p><strong>Answer:</strong><br />
+Ask me in class and I will explain how to do it.</p>
+
 <p><br /></p>
 
             </div>
@@ -418,15 +731,15 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 1: Problems - Version Control Using Git and Github&quot;%20/MAPCP2019U/homework/1-problems-version-control-using-git-github%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 1: Solutions - Version Control Using Git and Github&quot;%20/MAPCP2019U/homework/1-solutions-version-control-using-git-github%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/homework/1-problems-version-control-using-git-github"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/homework/1-solutions-version-control-using-git-github"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/homework/1-problems-version-control-using-git-github"
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/homework/1-solutions-version-control-using-git-github"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>

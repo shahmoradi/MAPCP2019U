@@ -1,6 +1,38 @@
 [
 	
 		{
+		  "title"      : "Quiz 1: Problems - Version control system",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/quiz/1-problems-version-control-system",
+		  "date"       : "2019-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2019"
+		} ,
+	
+		{
+		  "title"      : "Lecture 4: Python - values, variables, and types",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/4-python-values-variables-types",
+		  "date"       : "2019-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2019"
+		} ,
+	
+		{
+		  "title"      : "Lecture 4: MATLAB - values, variables, and types",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/4-matlab-values-variables-types",
+		  "date"       : "2019-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2019"
+		} ,
+	
+		{
+		  "title"      : "Homework 1: Solutions - Version Control Using Git and Github",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/homework/1-solutions-version-control-using-git-github",
+		  "date"       : "2019-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2019"
+		} ,
+	
+		{
 		  "title"      : "Lecture 3: Python for beginners",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/lecture/3-python-for-beginners",
@@ -41,19 +73,19 @@
 		} ,
 	
 		{
-		  "title"      : "Announcement 0: Student-professor connection day",
+		  "title"      : "Announcement 1: Assessing your programming knowledge and interests",
 		  "category"   : "",
-		  "url"        : "/MAPCP2019U/announcement/0-student-professor-connection-day",
+		  "url"        : "/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests",
 		  "date"       : "2019-06-04 00:00:00 -0500",
 		  "shortdate"  : "June 04, 2019"
 		} ,
 	
 		{
-		  "title"      : "Announcement 1: Assessing your programming knowledge and interests",
+		  "title"      : "Announcement 0: Student-professor connection day",
 		  "category"   : "",
-		  "url"        : "/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests",
-		  "date"       : "2017-06-04 00:00:00 -0500",
-		  "shortdate"  : "June 04, 2017"
+		  "url"        : "/MAPCP2019U/announcement/0-student-professor-connection-day",
+		  "date"       : "2019-06-04 00:00:00 -0500",
+		  "shortdate"  : "June 04, 2019"
 		} 
 	
 ]
