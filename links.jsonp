@@ -12,6 +12,11 @@ callback([
   } ,
 
   {
+    "text": "Lecture 5: Python - variables and assignment statements",
+    "href": "/MAPCP2019U/lecture/5-python-variables-assignments"
+  } ,
+
+  {
     "text": "Lecture 4: Python - values, variables, and types",
     "href": "/MAPCP2019U/lecture/4-python-values-variables-types"
   } ,
@@ -39,6 +44,11 @@ callback([
   {
     "text": "Lecture 1: A professional programmer uses Version Control System (VCS)",
     "href": "/MAPCP2019U/lecture/1-version-control-system"
+  } ,
+
+  {
+    "text": "Homework 2: Problems - Variables, Values, and Types",
+    "href": "/MAPCP2019U/homework/2-problems-variables-values-types"
   } ,
 
   {

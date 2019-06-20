@@ -48,6 +48,10 @@
 
     
     <url>
+        <loc>/MAPCP2019U/lecture/5-python-variables-assignments</loc>
+    </url>
+    
+    <url>
         <loc>/MAPCP2019U/quiz/1-solutions-version-control-system</loc>
     </url>
     
@@ -61,6 +65,10 @@
     
     <url>
         <loc>/MAPCP2019U/lecture/4-matlab-values-variables-types</loc>
+    </url>
+    
+    <url>
+        <loc>/MAPCP2019U/homework/2-problems-variables-values-types</loc>
     </url>
     
     <url>

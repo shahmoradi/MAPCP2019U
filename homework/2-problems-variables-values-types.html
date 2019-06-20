@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="/MAPCP2019U/assets/js/mdHeaderCollapse.js"></script>
+-->
+
+<meta charset="utf-8">
+<title>HOMEWORK 2: PROBLEMS - VARIABLES, VALUES, AND TYPES &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+<meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
+<meta name="twitter:title" content="Homework 2: Problems - Variables, Values, and Types">
+<meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta name="twitter:creator" content="@AmirShahmoradi">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Homework 2: Problems - Variables, Values, and Types">
+<meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta property="og:url" content="/MAPCP2019U/homework/2-problems-variables-values-types">
+<meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
+<meta property="og:image" content="/MAPCP2019U/images/">
+
+
+
+
+
+<link rel="canonical" href="/MAPCP2019U/homework/2-problems-variables-values-types">
+<!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/font-awesome.min.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/normalize.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/nprogress.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/foundation.min.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/style.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/post.css">
+
+<!--Mathjax-->
+
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/MAPCP2019U/favicon.ico">
+<!--
+<link rel="shortcut icon" href="/MAPCP2019U/favicon.png">
+-->
+
+
+<!-- prism
+<link href="/MAPCP2019U/assets/css/prismTwilight.css" rel="stylesheet" />
+<link href="/MAPCP2019U/assets/css/prismDefault.css" rel="stylesheet" />
+<link href="/MAPCP2019U/assets/css/prismCoy.css" rel="stylesheet" />
+-->
+<link href="/MAPCP2019U/assets/css/prismOkaidia.css" rel="stylesheet" />
+
+<!--header anchor links-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+</head>
+<body class="post-template" itemscope itemtype="https://schema.org/WebPage">  
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href=https://www.cdslab.org target="_blank"><img src="/MAPCP2019U/images/logo.png" alt="cdslab.org" /></a>
+
+                <div class="notepad-blog-menu">      
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="/MAPCP2019U/">Home</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/highlights">Highlights</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/categories">Categories</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/about">About</a>
+                 </li>
+            
+           <li><a href="/MAPCP2019U/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h2>Homework 2: Problems - Variables, Values, and Types</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-18T00:00:00-05:00">18 Jun 2019</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        
+            <article class="notepad-post-content post tag-simple">
+        
+            <div style="text-align:justify;">
+                <p>♣ <strong>Due Date: One week from the posting date @ 10:30 AM</strong>. This homework aims at giving you some experience with values, variables, types, and assignments in programming.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>1. </strong> Type the following in the command window and submit the results. Briefly explain what each assignment does.<br />
+<br /></p>
+
+<pre><code class="language-matlab">a = 1
+b = 'x'
+c = true
+whos a b c
+a == c
+a + c
+d = [1 2 3 4]
+e = ['a' 'b' 'c' 'd']
+f = ['a','b','c','d']
+g = ['abcd']
+h = {‘a’ ‘b’ ‘c’ ‘d’}
+i = { a b c d}
+whos d e f g h i
+class(a)
+type(a)
+True
+true
+False
+false
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>2. </strong> <strong><a href="https://en.wikipedia.org/wiki/Integer_overflow" target="blank">Overflow</a>.</strong> What would happen if you go beyond the range for a particular type? For example, the largest integer that can be stored in <strong>int8</strong> is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type <strong>int8</strong>? Smaller integer? Use the MATLAB built-in functions <code>intmin</code> and <code>intmax</code> or Python’s numpy package command <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.iinfo.html" target="blank"><code>iinfo</code></a> to find the largest and smallest integers that can be stored in <strong>int16</strong> and <strong>int32</strong>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>3. </strong> <strong><a href="https://en.wikipedia.org/wiki/Order_of_operations" target="blank">Operator Precedence</a>.</strong> Think about what the results would be for the following expressions, and then type them in to the terminal to verify your answers. Briefly explain the results for each one.</p>
+
+<pre><code class="language-matlab">&gt;&gt; 1\2 
+&gt;&gt; 1/2
+&gt;&gt; int8(1/2)
+&gt;&gt; int8(1/3)
+&gt;&gt; -5^2  
+&gt;&gt; -5**2  
+&gt;&gt; (-5) ^ 2 
+&gt;&gt; (-5) ** 2 
+&gt;&gt; 10-6/2 
+&gt;&gt; 5*4/2*3
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>4. </strong> Provide three different methods of generating the matrix <strong>a</strong>, one method should use the <code>diag()</code> function, one should use the <strong>eye</strong> function, and one should use the <strong>zeros</strong> function.</p>
+<pre><code class="language-matlab">&gt;&gt; a
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>5. </strong> <strong>MATLAB.</strong> Download this <a href="../homework/2-problems/script_full_of_errors.m" target="_blank">code</a>. This code is full syntax errors. Fix the errors and submit the corrected code with name <code>script_full_of_errors_fixed.m</code> in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,</p>
+<pre><code class="language-matlab">&gt;&gt; Persian
+Persian =
+Persian is a human language
+&gt;&gt; Spanish
+Spanish = 
+    'Spanish '    'is '    ' another'    'language'
+</code></pre>
+<p><br />
+Modify the last line such that for the last line the code displays,</p>
+<pre><code class="language-matlab">Persian is not the same as Spanish
+</code></pre>
+<p><br />
+Explain these results.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>6. </strong> <strong>Python.</strong> Download <a href="/MAPCP2019U/homework/2/python_script_full_of_errors.pi" target="_blank">this Python script</a>. This Python script is full of syntax, runtime, and semantic errors. Please identify and corrent these errors, such that code becomes fully executable and outputs the following message on the screen, when run from the Git Bash command line:</p>
+
+<pre><code class="language-text">The life expectancy for the millennials is projected to be 120 years! (But don't believe it...)
+
+
+    A recent study published in the journal of Nature, discovered that over the past century,
+    although the life expectancy has significantly increased due to technological advances,
+    the maximum life span of the oldest people in the world has not changed much.
+
+
+Cardano was the first to introduce complex numbers of the form a + sqrt(-b) into algebra, but he had misgivings about it.
+In his solution to an algebra equation he encountered the solution 5 + sqrt(-15) for the unknown, which is now mathematically represented by
+
+       (5+3.872983346207417j)
+
+in Python, which can also be obtained as an addition of real and imaginary numbers in Python like this
+
+
+      5 + sqrt(-15) = (5+3.872983346207417j),
+
+
+      which can also be manually stated as
+
+
+      (5+3.872983346207417j)
+
+
+
+
+
+One final note:
+
+        In python the sqrt function from math and cmath modules are different.
+        The sqrt function that returns "float" results is sqrt from math module.
+        Therefore, if using math module, then,
+
+                sqrt(25) = 5.0000,
+
+        which is obviously a float (real number).
+
+
+
+
+Also note that by convention, 0**0 = 1 in Python.
+And division by 0, will give you a runtime exception: 1/0 = NaN
+
+</code></pre>
+<p><br />
+Identify at least one example in the code for each of the error types.</p>
+
+<p>Here are a few hints:</p>
+
+<ul>
+  <li>You need to get familiar with string formatting in <code>print</code> function. See <a href="https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types" target="_blank">Lecture 4</a>.<br />
+<br /></li>
+  <li>Note that in Python, the interpreter is sensitive to <a href="https://www.python.org/dev/peps/pep-0008/#indentation" target="_blank">indentations</a> in your codes. All lines must be aligned at the beginning (except for looping and branching, … which we will get to them later on).<br />
+<br /></li>
+  <li>Become familiar with <a href="https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html" target="_blank">escape characters</a> in Python, such as <code>'\n'</code>, <code>'\t'</code>, and <code>'\t'</code>.</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>7. </strong> <strong>MATLAB.</strong> Use MATLAB help to find out how you can create a new directory named <code>mynewdir</code> from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named <code>myscript.m</code> with the following code in it,</p>
+
+<pre><code class="language-matlab">% First create an array from -2*pi to 2:pi
+x = -2*pi:pi/20:2*pi;
+
+% Calculate |sin(x)|
+y = abs(sin(x));
+
+plot(x,y);
+</code></pre>
+<p><br />
+Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>8. </strong> <strong>MATLAB.</strong> Now change your working directory to the original directory before you created <code>mynewdir</code> directory. Try to run the script <code>myscript</code> you had created again, from MATLAB command line. What do you get? and why?</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>9. </strong> <strong>Python</strong> Write a Python script that is directly executable from the Git Bash command line, without any need to invoke <code>python</code> interpreter. The script should produce <strong>exactly</strong> the following output, including line breaks and separations. Each part of the output (separated by a line-break, or a new-line character <code>'\n'</code> from the rest) is generated by <strong>only and only one call</strong> to print function.</p>
+
+<pre><code class="language-text">This is Python version 3.5.2 
+
+Python is the best language for String manipulation!
+
+!noitalupinam gnirtS rof egaugnal tseb eht si nohtyP
+
+!otlpnmgit o gunlte h inhy
+
+pYTHON IS THE BEST LANGUAGE FOR sTRING MANIPULATION!
+
+
+The sentence 'Python is the best language for String manipulation!' contains 
+4 'a' letters, and
+0 'A' letters!
+
+Python
+is
+the
+best
+language
+for
+String
+manipulation!
+
+PYTHON
+IS
+THE
+BEST
+LANGUAGE
+FOR
+STRING
+MANIPULATION!
+</code></pre>
+<p><br /></p>
+
+<p>Here are some hints (all the information you need to answer this question can be found in <a href="https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types" target="_blank">Lecture 4</a>):</p>
+
+<ul>
+  <li>To make the script executable, add the appropriate shebang to the script’s file.<br />
+<br /></li>
+  <li>Import the appropriate module to get the python version command, as we did in class. Use <code>print</code> function to print the Python version.<br />
+<br /></li>
+  <li>Define a String variable <code>my_string</code> which contains the string value “Python is the best language for String manipulation!” ( Of course, you can totally accomplish this question without defining a string variable, by only using the string value itself wherever needed… This is also totally fine at this point in our course, if your prefer this method).<br />
+<br /></li>
+  <li>Then use the appropriate examples and external links provided in <a href="https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types" target="_blank">Lecture 4</a>, to find the proper <strong>string methods</strong> that can manipulate this string variable/value in order to generate each of the outputs printed above.<br />
+<br /></li>
+  <li>Again, note that for each output, the entire output must result from <strong>one single call</strong> to function <code>print</code>.<br />
+<br /></li>
+  <li>Wherever needed, use the <a href="https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html" target="_blank">escape character</a> value <code>'\n'</code> in <code>print</code> input arguments, in order to generate a line-break (or new line) in the output.</li>
+</ul>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>10. </strong> The bell-shaped <a href="https://en.wikipedia.org/wiki/Normal_distribution" target="_blank">Gaussian probability density function</a>,</p>
+
+<script type="math/tex; mode=display">f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\bigg[ -\frac{1}{2}\bigg( \frac{x-\mu}{\sigma} \bigg)^2 \bigg]</script>
+
+<p><br />
+is one of the most widely used functions in science and technology. The parameters of the function (mu,sigma&gt;0) are prescribed real numbers. Write a program for evaluating this function when $\mu=0$, $\sigma=2$, $x = 1$.</p>
+
+<p><strong>Hint:</strong> The value <code>pi</code>, and <code>exp()</code> , <code>sqrt()</code> function are built-in in MATLAB, but are not so in Python. You will need to export them using the following command in Python,</p>
+<pre><code class="language-python">from math import pi, exp, sqrt
+</code></pre>
+<p><br />
+Verify your answer by getting the same result from <a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a> mathematical search engine.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>11. </strong> <strong>Python.</strong> Download <a href="/MAPCP2019U/homework/2/script_full_of_errors.py" target="_blank">this code</a>. This code is full syntax errors. Fix the errors and submit the corrected code with name <code>script_full_of_errors_corrected.py</code> in your hw4 folder of your project. Explain in front of each corrected Python statement, why the error occurred.  On the last line of the script,</p>
+<pre><code class="language-python">true = fox is rev in Persian
+</code></pre>
+<p><br />
+the statement runs without error. But can you explain what it does? (Hint: For this part you need to understand operation precedence. You can find more information <a href="https://www.mathcs.emory.edu/~valerie/courses/fall10/155/resources/op_precedence.html" target="_blank">here</a>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>12. </strong> As an egg cooks, the proteins first denature and then coagulate. When the temperature exceeds a critical point, reactions begin and proceed faster as the temperature increases. In the egg white, the proteins start to coagulate for temperatures above $63^\circ\rm{C}$, while in the yolk the proteins start to coagulate for temperatures above $70^\circ\rm{C}$. For a soft boiled egg, the white needs to have been heated long enough to coagulate at a temperature above $63^\circ\rm{C}$, but the yolk should not be heated above $70^\circ\rm{C}$. For a hard boiled egg, the center of the yolk should be allowed to reach $70^\circ\rm{C}$.</p>
+
+<p>The following formula expresses the time $t$ it takes (in seconds) for the center of the yolk to reach the temperature Ty (in Celsius degrees):</p>
+
+<script type="math/tex; mode=display">t = \frac
+{ M^{2/3} ~ c ~ \rho^{1/3} }
+{ K\pi^2 ~ (4\pi/3)^{2/3} }
+~\ln
+\bigg[
+0.76 \frac{T_0 - T_w}{T_y-T_w}
+\bigg]</script>
+
+<p><br />
+where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat capacity, and $K$ is thermal conductivity. Relevant values are $M=47~[g]$ for a small egg and $M=67~[g]$ for a large egg, $\rho=1.038 ~[g~cm^{-3}]$, $c = 3.7 ~[J~g^{-1}~K^{-1}]$, and $K = 5.4\times10^{-3} ~[Wcm^{-1}K^{-1}]$. Furthermore, $T_w$ is the temperature
+(in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a Python program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (<strong>Hint</strong>: Note that for this problem you will need to import <code>log, pi</code> from <code>math</code> module in Python.)</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>13.  Python: Aliasing vs. Copying variables.</strong> Run the following python statements and briefly explain why you get the behavior printed by the <code>print</code> functions.</p>
+
+<p>(A)</p>
+<pre><code class="language-python">a = 5
+b = a
+print (id(a), id(b))
+ 
+c = b
+b = 3
+print (a,b,c)
+print (id(a),id(b),id(c))
+ 
+b = a
+b = 5
+print (id(a), id(b))
+</code></pre>
+<p><br />
+(B)</p>
+<pre><code class="language-python">a = [5]
+b = a
+print (id(a), id(b))
+ 
+b.append(1)
+print a,b
+print (id(a),id(b))
+</code></pre>
+<p><br />
+(C)</p>
+<pre><code class="language-python">a = [5]
+b = list(a)
+print (a,b)
+print (id(a), id(b))
+ 
+b = a[:]
+print (a,b)
+print (id(a), id(b))
+</code></pre>
+<p><br />
+(D)</p>
+<pre><code class="language-python">a = (5,)
+b = tuple(a)
+print (id(a), id(b))
+ 
+b = a[:]
+print (id(a), id(b))
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>14.  Python.</strong> The following is the name list of all people in our class.</p>
+<pre><code class="language-text">Christian-Andrew Bagby-wright
+Matthew Chrysler
+Niyousha Davachi
+Pauline Dredger
+Marcos Guillen
+Lauren Kuffel
+Shashank Kumbhare
+Hany Mahdy
+Sarah Moorman
+Andrew Myers
+Joshua Osborne
+Rebecca Proni
+Amir Shahmoradi
+Carolina Vedovato
+</code></pre>
+<p><br />
+We want to create a dictionary of members of this class with individuals’ full names serving as dictionary keys, and their roles in class as the corresponding values of the keys. The naive way of generating this dictionary would be to use one of the methods for generating dictionary discussed in <a href="/MAPCP2019U/lecture/5-python-variables-assignments" target="_blank">Lecture 5</a>. For example,</p>
+<pre><code class="language-python">class_dict  = { 
+            , 'Christian-Andrew Bagby-wright' : 'student'
+            , 'Matthew Chrysler'              : 'student'
+            , 'Niyousha Davachi'              : 'student'
+            , 'Pauline Dredger'               : 'student'
+            , 'Marcos Guillen'                : 'student'
+            , 'Lauren Kuffel'                 : 'student'
+            , 'Shashank Kumbhare'             : 'student'
+            , 'Hany Mahdy'                    : 'student'
+            , 'Sarah Moorman'                 : 'student'
+            , 'Andrew Myers'                  : 'student'
+            , 'Joshua Osborne'                : 'student'
+            , 'Rebecca Proni'                 : 'student'
+            , 'Amir Shahmoradi'               : 'instructor'
+            , 'Carolina Vedovato'             : 'student'
+            }
+</code></pre>
+<p><br />
+However, the problem is that, except me (Amir, the instructor), everyone else has a student role in this class. So it would be a very painful process to type all ‘student’ values by hand manually. Now, the goal is to come up with a shortcut method that avoids the aforementioned problem. Can you find a way of creating this dictionary, without having to type the value ‘student’ 18 times? Note that in order to achieve this, you don’t need anything beyond what you learned in Lecture 5. (<strong>Hint:</strong> Have a look at the section for simultaneous assignments in Lecture 5.)</p>
+
+<p><br /><br /></p>
+
+            </div>
+        </article>
+        <div class="cf"></div>
+<div class="row text-center">
+    <section class="notepad-post-share">
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 2: Problems - Variables, Values, and Types&quot;%20/MAPCP2019U/homework/2-problems-variables-values-types%20via%20&#64;AmirShahmoradi"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/homework/2-problems-variables-values-types"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/homework/2-problems-variables-values-types"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+            <i class="fa fa-google-plus"></i>
+        </a>
+    </section>
+</div>
+        <div class="cf"></div>
+        
+<div class="notepad-author-info">
+    <div class="row">
+        <section class="notepad-post-author small-12 columns">
+            <a href=https://www.shahmoradi.org target="_blank">
+                <img src="/MAPCP2019U/images/AmirShahmoradi.png" class="notepad-post-author-avatar" alt="Amir Shahmoradi's photo">
+            </a>
+            <span class="author-label">Author</span>
+            <h1>Amir Shahmoradi</h1>
+            <p><a href="mailto:shahmoradi@utexas.edu" class="author-website">shahmoradi@utexas.edu</a></p>
+            <p>Genius is 99% perspiration and 1% inspiration</p>
+        </section>
+    </div>
+</div> 
+        
+        <div class="cf"></div>
+        
+        <section class="notepad-disqus row">
+    <div class="small-12 columns">
+        <h1 class="notepad-comments-header">Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'shahmoradi'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+        <div class="cf"></div>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <!-- <section>Last updated 2019 / 06 / 20</section></br> -->
+         <section>Last updated Thursday, 20 Jun 2019 at 10:34 AM CST</section></br>
+         <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
+         <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
+         <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
+         <section>SEIR 365 | Arlington TX 76010</section></br>
+    </div>
+    <div class="social-icons">
+        
+        <a href="https://twitter.com/AmirShahmoradi" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="https://github.com/shahmoradi" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <!-- start of statc -->
+        <div style="color: #000000; float: none; width: 100%; padding-top: 1rem;">
+            <span style="font-size:0.8em">visitor count: 
+                <script type="text/javascript">
+                    var sc_project=12021516; 
+                    var sc_invisible=0; 
+                    var sc_security="0c65ecca"; 
+                    var sc_text=3; 
+                    var scJsHost = "https://";
+                    document.write("<sc"+"ript type='text/javascript' src='" + scJsHost + 
+                    "statcounter.com/counter/counter.js'></"+"script>");
+                </script>
+            </span>
+        </div>
+        <!-- end of statc -->
+    </div>
+    <div class="cf"></div>
+</footer> 
+</main>    
+<!--dynamic page header-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/MAPCP2019U/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="/MAPCP2019U/assets/js/vendor/modernizr.js"></script>
+  <script src="/MAPCP2019U/assets/js/foundation.min.js"></script>
+  
+  <script src="/MAPCP2019U/assets/js/notepad.js"></script>
+  <script src="/MAPCP2019U/assets/js/scripts.min.js"></script>
+  <script src="/MAPCP2019U/assets/js/vendor/nprogress.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+  <script type='text/javascript'>console.log("N/A");</script>
+  <script type='text/javascript'>console.log("https://www.cdslab.org/");</script>
+
+<!--header anchor links-->
+<script src="/MAPCP2019U/assets/js/autoAnchorLink.js"></script>
+
+<!-- <script src="/MAPCP2019U/assets/js/prismOkaidia.js"></script>
+<script src="/MAPCP2019U/assets/js/prismTwilight.js"></script>
+<script src="/MAPCP2019U/assets/js/prismDefault.js"></script>
+ -->
+<script src="/MAPCP2019U/assets/js/prismCoy.js"></script> 
+<!--automatic Table of Content.-->
+<script src="/MAPCP2019U/assets/js/autoTOC.js"></script>
+</body>
+</html>

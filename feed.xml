@@ -7,13 +7,1091 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-18T10:57:06-05:00</updated>
+<updated>2019-06-20T10:34:22-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/MAPCP2019U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 5: Python - variables and assignment statements]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/lecture/5-python-variables-assignments"/>
+  <id>http:/MAPCP2019U/lecture/5-python-variables-assignments</id>
+  <published>2019-06-20T00:00:00-05:00</published>
+  <updated>2019-06-20T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This lecture further explains different types of variables in Python, branching statements, how to define functions, and what Python modules are.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;programming-glossary&quot;&gt;Programming glossary&lt;/h2&gt;
+&lt;p&gt;The following table summarizes some of the important keywords in this lecture for you.&lt;/p&gt;
+
+&lt;table class=&quot;center&quot;&gt;
+&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
+Table 1. Some programming phrases that are discussed in this lecture.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+    &lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Expression&lt;/font&gt;&lt;/th&gt;
+    &lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Description&lt;/font&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;dictionary&lt;/b&gt;&lt;/td&gt;&lt;td&gt;A collection of `key:value` mapping pairs, in which the values can be obtained by calling the value's key.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;hashable&lt;/b&gt;&lt;/td&gt;&lt;td&gt;A Python object (e.g., variable) that has a &lt;a href=&quot;https://en.wikipedia.org/wiki/Hash_function&quot; target=&quot;_blank&quot;&gt;hash value&lt;/a&gt; which never changes during its lifetime.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;immutable&lt;/b&gt;&lt;/td&gt;&lt;td&gt;A variable or value that cannot be modified. Assignments to elements of immutable values cause a runtime error. Example immutable Python entities are tuples and strings.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;invocation&lt;/b&gt;&lt;/td&gt;&lt;td&gt;The process of calling an object's method, usually done through &lt;code&gt;&amp;#60;object name&amp;#62;.&amp;#60;method name&amp;#62;&lt;/code&gt; notation.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;list&lt;/b&gt;&lt;/td&gt;&lt;td&gt;A sequence of comma-separated heterogenous values next to each other.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;method&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Similar to a function, a method is a predefined built-in Python script that performs a specific task on the data object to which the method belongs.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;mutable&lt;/b&gt;&lt;/td&gt;&lt;td&gt;A variable or value that can be modified. Examples of mutables in Python are lists, and dictionaries.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;set&lt;/b&gt;&lt;/td&gt;&lt;td&gt;An unordered collection of unique elements, just like the mathemtical sets.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;string&lt;/b&gt;&lt;/td&gt;&lt;td&gt;A sequence of characters next to each other.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;tuple&lt;/b&gt;&lt;/td&gt;&lt;td&gt;An immutable data value that contains related elements. Tuples are used to group together related data, such as a person’s name, their age, and their gender.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;variables-in-python-continued&quot;&gt;Variables in Python (continued)&lt;/h2&gt;
+&lt;p&gt;A variable is simply a name that we assign to a specific value, in order to avoid repeating the same value frequently in the code, thus writing a cleaner, less error-prone script/code. As we discussed before, Python has 6 main variable types:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Number&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;String&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;List&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tuple&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dictionary&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Set and Frozenset&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will get to each of these below. But before that, here are some official and unofficial tips on the variable naming conventions in Python.&lt;/p&gt;
+
+&lt;h3 id=&quot;variable-naming-convention-in-python&quot;&gt;Variable naming convention in Python&lt;/h3&gt;
+
+&lt;p&gt;A Python variable can only begin with letter or underscore _. Numbers are only valid if they appear inside or at the end of the variable name. Other symbols are syntactically invalid anywhere in a variable name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;123new_var = 2.5 # This is an invalid name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;  File &quot;&amp;lt;ipython-input-10-0e3e63931842&amp;gt;&quot;, line 1
+    123new_var = 2.5 # This is an invalid name
+             ^
+SyntaxError: invalid syntax
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;new_var$ = 2.5 # symbols are not valid in Python variable names
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;  File &quot;&amp;lt;ipython-input-12-71f3fbc68938&amp;gt;&quot;, line 1
+    new_var$ = 2.5 # symbols are not valid in Python variable names
+           ^
+SyntaxError: invalid syntax
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;amir = &quot;teacher&quot;
+print('Amir is a', amir)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Amir is a teacher
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;123amir = &quot;teacher&quot; # Wrong name for variable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;  File &quot;&amp;lt;ipython-input-38-85ed673cd303&amp;gt;&quot;, line 1
+    123amir = &quot;teacher&quot;
+          ^
+SyntaxError: invalid syntax
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;life_expectancy = 120; print( &quot;The life expectancy for the millennials is projected to be %d years! (But don't believe it...)&quot; % (life_expectancy) );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;The life expectancy for the millennials is projected to be 120 years! (But don't believe it...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;python-reserved-names-keywords&quot;&gt;Python reserved names (keywords)&lt;/h3&gt;
+&lt;p&gt;There are some limitation as what names you can choose for your variables, even if they completely obey the Python syntax standard. Variable names in Python cannot be the same as &lt;strong&gt;Python keywords&lt;/strong&gt;, which are simply names that reserved for a specific purpose in Python programming.  A keyword as variable name, function name or any other identifier. They are used to define the syntax and structure of the Python language. Note that &lt;strong&gt;Python keywords are case-sensitive&lt;/strong&gt;.  There are already more than 30 keywords in Python 3. In order to see a complete list of all keywords use the following python codes,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [38]: import keyword
+
+In [39]: print(keyword.
+keyword.iskeyword keyword.kwlist    keyword.main
+
+In [39]: print(keyword.kwlist)
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+In [40]: keyword.kwlist # same thing as above, but each keyword printed on a new line.
+Out[40]:
+['False',
+ 'None',
+ 'True',
+ 'and',
+ 'as',
+ 'assert',
+ 'break',
+ 'class',
+ 'continue',
+ 'def',
+ 'del',
+ 'elif',
+ 'else',
+ 'except',
+ 'finally',
+ 'for',
+ 'from',
+ 'global',
+ 'if',
+ 'import',
+ 'in',
+ 'is',
+ 'lambda',
+ 'nonlocal',
+ 'not',
+ 'or',
+ 'pass',
+ 'raise',
+ 'return',
+ 'try',
+ 'while',
+ 'with',
+ 'yield']
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that all keywords except &lt;code&gt;True&lt;/code&gt;, &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;None&lt;/code&gt; are in lowercase and they must be written as lowercase. To understand the meaning and function of each of these keywords, see &lt;a href=&quot;https://www.programiz.com/python-programming/keyword-list&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;meaning-of-underscore-_-in-python&quot;&gt;Meaning of underscore _ in Python&lt;/h3&gt;
+
+&lt;p&gt;Frequently, as you learn more about Python, you will notice the presence of underscores in Python variables, function and method names. Depending on where and how underscore appears in a Python name, it can have a different meaning.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Underscore as word separator in variable/function naming&lt;/strong&gt;&lt;br /&gt;
+The convention in Python programming is to separate multiple words in Python variable names by underscore. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;an_example_long_variable_name = 123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Of course, this is totally a convension. But I highly recommend you to follow the conventions that everyone else follows, so that you can understand other people’s codes and others can understand your code easily. 
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Underscore meaning in Python interpreter&lt;/strong&gt;&lt;br /&gt;
+A variable named solely by underscore &lt;strong&gt;_&lt;/strong&gt; in Python interpreter points to the result of the &lt;strong&gt;last executed statement&lt;/strong&gt; in the interactive interpreter session. This convention was first implemented by the standard CPython interpreter, but now other implementations are also following the convention.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [1]: _
+Out[1]: ''
+
+In [2]: a = 120
+
+In [3]: _
+Out[3]: ''
+
+In [4]: a + a
+Out[4]: 240
+
+In [5]: _
+Out[5]: 240
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;3. _ as a dummy name in Python scripts&lt;/strong&gt;&lt;br /&gt;
+The underscore _ can be used as a dummy name in Python scripts, a name for an entity that does play an important role in the code, for example, the index of a loop. This allows the next person who reads the code to know which entites (variables, …) are dummy and not intended to be used.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;a = 1
+b = 2
+print(&quot;a =&quot;,a,&quot;b =&quot;,b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;a = 1 b = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;_ = a
+a = b
+b = _
+print(&quot;a =&quot;,a,&quot;b =&quot;,b) # the values are swapped. _ is just a dummy indtermediate variable.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;a = 2 b = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Underscore as an indicator of the local-scope of a variable/function&lt;/strong&gt;&lt;br /&gt;
+A single underscore that appears at the beginning of a name in Python code indicates that the name has to be treated as &lt;em&gt;private&lt;/em&gt; by the programmer. In other words, a name starting with _ is for internal use. In Python documentation the following note exist about such names:&lt;/p&gt;
+
+&lt;blockquote&gt;
+    A name prefixed with an underscore (e.g. _spam) should be treated as a non-public part of the API (whether it is a function, a method or a data member). It should be considered an implementation detail and subject to change without notice.  
+&lt;/blockquote&gt;
+
+&lt;p&gt;For Python module functions, if you use &lt;code&gt;from module_name import __all__&lt;/code&gt; instead of &lt;code&gt;from module_name import *&lt;/code&gt;, then all internal names in the module (that begin with _) will be imported to your environment as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Double Underscore Before and After a Name (e.g., &lt;code&gt;__init__&lt;/code&gt;)&lt;/strong&gt;&lt;br /&gt;
+Such names are special method names used by Python. This is just a convention, that is, a way for the Python system to use names that won’t conflict with user-defined names. These names can be typically overridden to define the desired behaviour for when Python calls them. For example, the &lt;code&gt;__init__&lt;/code&gt; method is often overridden when writing a Python class. We will get to these topics later on in this course.&lt;/p&gt;
+
+&lt;p&gt;A good review of underscore in Python can be found &lt;a href=&quot;https://shahriar.svbtle.com/underscores-in-python&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;number-variables&quot;&gt;Number variables&lt;/h3&gt;
+
+&lt;p&gt;We have already extensively discussed number values in the previous lecture. Basically, everything that we have said about number values, holds also for variables of type number. But here is a very cool fear of number values and variables, that we skipped over in our previous lecture. When you define a Python number variable (or value), then python interpreter automatically allows you to perform some pre-defined operations on the variable/value by default. To access these operations, the dot &lt;code&gt;.&lt;/code&gt; syntax has to be used. Type the variable name, followed by &lt;code&gt;.&lt;/code&gt;, and then press &lt;code&gt;tab&lt;/code&gt; in your IPython/Jupyter editor.  Depending on the type of number (integer/float/complex) you will get a different set of operations that are allowed on the variable. The following shows some examples in IPython environment.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [18]: a = 120 # This is an integer variable
+
+In [19]: a.
+a.bit_length  a.conjugate   a.denominator a.from_bytes  a.imag        a.numerator   a.real        a.to_bytes
+
+In [19]: a.conjugate
+Out[19]: &amp;lt;function int.conjugate&amp;gt;
+
+In [20]: a.conjugate()
+Out[20]: 120
+
+In [21]: a.imag
+Out[21]: 0
+
+In [22]: a.real
+Out[22]: 120
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [23]: a = 120.5  # Now 'a' is a float variable
+
+In [24]: a.
+a.as_integer_ratio a.conjugate        a.fromhex          a.hex              a.imag             a.is_integer       a.real
+
+In [25]: a.as_integer_ratio()  # Gives out the two numbers whose division is the value of the variable 'a'.
+Out[25]: (241, 2)
+
+In [28]: a.is_integer()   # 120.5 is not a whole number! (it would be True if a = 120.0)
+Out[28]: False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You can repeat the above for a complex number and see what you get.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [33]: a = 1+1j
+
+In [34]: a.
+a.conjugate a.imag      a.real
+
+In [34]: a.conjugate()
+Out[34]: (1-1j)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;string-variables&quot;&gt;String variables&lt;/h3&gt;
+&lt;p&gt;Just as with numbers, string is another variable/value type in Python with many handy features that come withit. For example, if you create a string variable or value, fllowed by &lt;code&gt;.&lt;/code&gt; and then press &lt;code&gt;tab&lt;/code&gt; you will see a long list of methods that can be applied on the string,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [8]: my_string = 'this is a String'
+
+In [9]: my_string.
+my_string.capitalize   my_string.find         my_string.isdigit      my_string.isupper      my_string.replace      my_string.split        my_string.upper
+my_string.casefold     my_string.format       my_string.isidentifier my_string.join         my_string.rfind        my_string.splitlines   my_string.zfill
+my_string.center       my_string.format_map   my_string.islower      my_string.ljust        my_string.rindex       my_string.startswith
+my_string.count        my_string.index        my_string.isnumeric    my_string.lower        my_string.rjust        my_string.strip
+my_string.encode       my_string.isalnum      my_string.isprintable  my_string.lstrip       my_string.rpartition   my_string.swapcase
+my_string.endswith     my_string.isalpha      my_string.isspace      my_string.maketrans    my_string.rsplit       my_string.title
+my_string.expandtabs   my_string.isdecimal    my_string.istitle      my_string.partition    my_string.rstrip       my_string.translate
+
+In [9]: my_string.upper()
+Out[9]: 'THIS IS A STRING'
+
+In [10]: my_string.swapcase()
+Out[10]: 'THIS IS A sTRING'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;strings-are-immutable&quot;&gt;Strings are immutable&lt;/h4&gt;
+&lt;p&gt;Although strings (both values and variables) can be indexed letter by letter, keep in mind that they cannot be changed (mutated) to something new. In other words, string are immutable.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [11]: my_string = 'Amir Shahmoradi'
+
+In [13]: my_string[0] = 'a'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&amp;lt;ipython-input-13-27fc86283e06&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 my_string[0] = 'a'
+
+TypeError: 'str' object does not support item assignment
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The correct way of doing this would be through the indirect use of string methods or string slicing.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [18]: my_string = my_string[:4] + ' ' + my_string[4:] # mutating my_string: add a space between first and last names.
+
+In [19]: my_string
+Out[19]: 'Amir  Shahmoradi'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+It is often very useful to know the length of a string. This can be done using &lt;code&gt;len()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [32]: len(my_string)
+Out[32]: 16
+
+In [33]: len(my_string[0:5])
+Out[33]: 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;testing-if-a-string-is-part-of-another-string&quot;&gt;Testing if a string is part of another string&lt;/h4&gt;
+
+&lt;p&gt;We have already discussed some boolean string operations in Lecture 4. There are howver two more boolean operations that deserve to be mentioned here.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [48]: text = &quot;Engineering Computation program at UT Austin, is the first of its kind in the nation&quot;
+
+In [49]: &quot;comp&quot; in text     # test if &quot;comp&quot; is part of the &quot;text&quot; string variable.
+Out[49]: False
+
+In [50]: &quot;Comp&quot; in text
+Out[50]: True
+
+In [51]: &quot;comp&quot; not in text     # test if &quot;comp&quot; is NOT part of the &quot;text&quot; string variable.
+Out[51]: True
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+To know more about string values and variables in general, visit &lt;a href=&quot;https://docs.python.org/2/tutorial/introduction.html#strings&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;list-variables&quot;&gt;List variables&lt;/h3&gt;
+&lt;p&gt;List is another standard variable in type in Python and is composed of an ordered set of values (elements), each of which is identified by an index. Lists are defined by brackets &lt;code&gt;[]&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [47]: emptyList = [] # initiate an empty list
+
+In [48]: emptyList
+Out[48]: []
+
+In [40]: myList = [ 0,1,2,'Amir',complex(1,2j) ]
+
+In [41]: myList
+Out[41]: [0, 1, 2, 'Amir', (-1+0j)]
+
+In [42]: myList[0] # note that list index always begins with 0
+Out[42]: 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;list-slices&quot;&gt;List slices&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [43]: myList[:-1] # all list elements from beginning to end, similar to myList, or myList[:]
+Out[43]: [0, 1, 2, 'Amir']
+
+In [44]: myList[:]
+Out[44]: [0, 1, 2, 'Amir', (-1+0j)]
+
+In [45]: myList[-1:] # select only the last element in list
+Out[45]: [(-1+0j)]
+
+In [46]: myList[::-1] # Creat list in reverse order.
+Out[46]: [(-1+0j), 'Amir', 2, 1, 0]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+    &lt;b&gt;Lists vs. Strings&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+    You may have already noticed that lists behave very similar to strings in Python. In fact, both List and String are examples of ordered sets in Python known as &lt;b&gt;sequence&lt;/b&gt;. The only difference between list and python is that the elements of strings have to be all of type character, whereas lists do not have such restriction, as seen in the example above.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--
+&lt;br&gt;
+&lt;div class=&quot;center&quot;&gt;
+    &lt;div class=&quot;rcbox&quot; style=&quot;text-align:justify;&quot;&gt;
+        &lt;b&gt;Lists vs. Strings&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+        You may have already noticed that lists behave very similar to strings in Python. In fact, both List and String are examples of ordered sets in Python known as &lt;b&gt;sequence&lt;/b&gt;. The only difference between list and python is that the elements of strings have to be all of type character, whereas lists do not have such restriction, as seen in the example above.
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+--&gt;
+
+&lt;h4 id=&quot;nested-lists&quot;&gt;Nested lists&lt;/h4&gt;
+&lt;p&gt;Lists can also contain other lists as elements. This way you can create matrices of numbers as well.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [53]: smallList = [1,2,3]
+
+In [54]: list_of_lists = [ 10 , 100.0 , ['amir','shahmoradi'] , smallList ]
+
+In [55]: list_of_lists
+Out[55]: [10, 100.0, ['amir', 'shahmoradi'], [1, 2, 3]]
+
+In [56]: my_matrix = [ [1,2,3] , [4,5,6] , [7,8,9] ]
+
+In [57]: my_matrix[0][2] # the first index points to the 0th element in the list of lists, and the second index calls the list that is the first element of the big list. 
+Out[57]: 3
+
+In [68]: my_matrix[5-5][(2+2)//2]  # note that list indices can be the result of arithmetic operations too.
+Out[68]: 3
+
+In [61]: len(my_matrix) # This function gives the length of the list of lists.
+Out[61]: 3
+
+In [62]: list_of_lists
+Out[62]: [10, 100.0, ['amir', 'shahmoradi'], [1, 2, 3]]
+
+In [63]: len(list_of_lists[0]) # The first element, being an integer, does not have a length
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&amp;lt;ipython-input-63-11f2bd3dda3d&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 len(list_of_lists[0])
+
+TypeError: object of type 'int' has no len()
+
+In [64]: len(list_of_lists[2]) # but the third element in the list, is itself a list, so it does have a length
+Out[64]: 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;operations-on-lists&quot;&gt;Operations on lists&lt;/h4&gt;
+&lt;p&gt;Two mathematics operations &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;*&lt;/code&gt; are also meaningful for lists, just as it is for string sequences.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [8]: list1 = [1,2,3]
+
+In [9]: list2 = [4,5,6]
+
+In [10]: list1 + list2
+Out[10]: [1, 2, 3, 4, 5, 6]
+
+In [11]: list1 * 3
+Out[11]: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+In [12]: (list1 + list2) * 3
+Out[12]: [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+In addition, once a list is created, by default, a list of pre-defined operations (methods) are available to act on the list content. To access these methods, again use &lt;code&gt;.&lt;/code&gt; notation, just as you did for strings before.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [13]: list1.
+list1.append  list1.clear   list1.copy    list1.count   list1.extend  list1.index   list1.insert  list1.pop     list1.remove  list1.reverse list1.sort
+
+In [13]: list1
+Out[13]: [1, 2, 3]
+
+In [14]: list1.append(4) # append number 4 to the end of list1
+
+In [15]: list1
+Out[15]: [1, 2, 3, 4]
+
+In [16]: list1.append([1,1,1]) # append the given list to the end of list1
+
+In [17]: list1
+Out[17]: [1, 2, 3, 4, [1, 1, 1]]
+
+In [18]: list1.count(1) # count the number of times 1 appears as element of list1
+Out[18]: 1
+
+In [19]: list1[-1].count(1) # count the number of times 1 appears as element in the list appearing as the element in list1.
+Out[19]: 3
+
+In [20]: list1[-2].count(4)  # Note that count is a method only for lists, and therefore cannot be applied to numbers.
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+&amp;lt;ipython-input-21-2add981bfc56&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 list1[-2].count(4)
+
+AttributeError: 'int' object has no attribute 'count'
+
+In [23]: list1.extend([1,1,1])  # extend list1 by 3 more members
+
+In [24]: list1
+Out[24]: [1, 2, 3, 4, [1, 1, 1], 1, 1, 1]
+
+In [25]: list1.count(1) # This time counting 1, gives 4, since the list was extended by 3 more '1'.
+Out[25]: 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;https://linuxconfig.org/python-list-methods&quot; target=&quot;_blank&quot;&gt;Here&lt;/a&gt; is a useful reference for available list methods in Python.&lt;/p&gt;
+
+&lt;h4 id=&quot;lists-are-mutable-unlike-strings&quot;&gt;Lists are mutable (unlike Strings)&lt;/h4&gt;
+&lt;p&gt;Another major difference between list sequences and string sequences in Python is that the elements of lists can be changed (mutated) to something new.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [26]: people = [ 'Amir' , 'Jake' , 'Travis' ]
+
+In [27]: people
+Out[27]: ['Amir', 'Jake', 'Travis']
+
+In [28]: people[0] = 'Brandon'
+
+In [29]: people
+Out[29]: ['Brandon', 'Jake', 'Travis']
+
+In [30]: people.remove('Brandon')
+
+In [31]: people
+Out[31]: ['Jake', 'Travis']
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;deleting-list-elements&quot;&gt;Deleting list elements&lt;/h4&gt;
+&lt;p&gt;Deleting list elements can be done by either value of the element, or using its index, like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [138]: a = [1,2,3,1,2,3]
+
+In [139]: a.remove(1)   # remove the first element correponding to value of 1.
+
+In [140]: a
+Out[140]: [2, 3, 1, 2, 3]
+
+In [141]: a.remove(1)   # remove the first element correponding to value of 1.
+
+In [142]: a
+Out[142]: [2, 3, 2, 3]
+
+In [143]: del a[0:3:2]      # delete element indices 0, 2
+
+In [144]: a
+Out[144]: [3, 3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;concatenating-a-list-of-strings&quot;&gt;Concatenating a list of strings&lt;/h4&gt;
+&lt;p&gt;If a list is all string values, you can use the following string method &lt;code&gt;.join()&lt;/code&gt; to concatenate the content og the list.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [155]: mylist = ['The' , 'weather' , 'is' , 'rainy' , 'today' , 'and' , 'cold' , 'only' , '22' , 'F.']
+
+In [156]: &quot; &quot;.join(mylist)
+Out[156]: 'The weather is rainy today and cold only 22 F.'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tuple-variables&quot;&gt;Tuple variables&lt;/h3&gt;
+&lt;p&gt;Tuples are a type of Python variables very similar to list sequences, except that they are &lt;strong&gt;immutable&lt;/strong&gt;, meaning that, once generated, they cannot be changed. Another difference is that, tuples use parentheses for definition, whereas lists use square brackets.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [33]: emptyTuple = ()
+
+In [34]: single_element_tuple = (1,)  # ATTN: note the comma after the element
+
+In [35]: tuple1 = (1, 2, 3, 'amir', 'Jake')
+
+In [36]: single_element_tuple
+Out[36]: (1,)
+
+In [37]: type(single_element_tuple)
+Out[37]: tuple
+
+In [38]: single_element_tuple = (1)
+
+In [39]: single_element_tuple
+Out[39]: 1
+
+In [40]: type(single_element_tuple)
+Out[40]: int
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Creating a tuple is as simple as putting different comma-separated values. Optionally you can put these comma-separated values between parentheses also.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [46]: tuple2 = 1,2,3,4   # another way of creating a tuple
+
+In [47]: type(tuple2)
+Out[47]: tuple
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;modifying-the-content-of-tuples&quot;&gt;Modifying the content of Tuples&lt;/h4&gt;
+&lt;p&gt;Tuples are an example of data structure in Python, used for organizing and grouping data. Once a tuple is created, its content cannot be changed or manipulated anymore. However, its elements can be called just like lists.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [48]: tuple2[0]
+Out[48]: 1
+
+In [49]: tuple2[1:3]
+Out[49]: (2, 3)
+
+In [50]: tuple2.    # press tab key to get the list methods
+tuple2.count tuple2.index
+
+In [51]: tuple2.count(2) # count the number of members that are 2
+Out[51]: 1
+
+In [52]: tuple2.count(5) # count the number of members that are 5
+Out[52]: 0
+
+In [53]: tuple2.index(2) # get the index of the first member in tuple that is 2
+Out[53]: 1
+
+In [54]: tuple2.index(5) # get the index of the first member in tuple that is 5. (error! 5 is not a member)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+&amp;lt;ipython-input-54-f0077f9af98b&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 tuple2.index(5)
+
+ValueError: tuple.index(x): x not in tuple
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Moreover, although the content of tuple cannot be changed, there is nothing to prevent the programmer from redefining the tuple with new content,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [106]: tuple1 = (1, 2, 3, 'amir', 'Jake')
+
+In [107]: tuple1
+Out[107]: (1, 2, 3, 'amir', 'Jake')
+
+In [108]: tuple1 = ('Travis','Caleb','Lucero') + tuple1[-1:]    # redefining tuple1
+
+In [109]: tuple1
+Out[109]: ('Travis', 'Caleb', 'Lucero', 'Jake')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+But pay attention that the above, all the terms in the assigment must be a tuple, otherwise you will get an error like the following (e.g., a single member of a tuple, is not a tuple by itself),&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [110]: tuple1 = (1, 2, 3, 'amir', 'Jake')
+
+In [111]: tuple1 = ('Travis','Caleb','Lucero') + tuple1[-1] # Note that tuple1[-1] is a string, and not a tuple!
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&amp;lt;ipython-input-111-4c6018fb7529&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 tuple1 = ('Travis','Caleb','Lucero') + tuple1[-1]
+
+TypeError: can only concatenate tuple (not &quot;str&quot;) to tuple
+
+In [112]: type(tuple1[-1])
+Out[112]: str
+
+In [113]: type(tuple1[-1:])
+Out[113]: tuple
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note also the difference between &lt;code&gt;+&lt;/code&gt; operations in the above tuple redefinition, and &lt;code&gt;,&lt;/code&gt; operations below,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [126]: tuple1 = (1, 2, 3, 'amir', 'Jake')
+
+In [127]: tuple1 = ('Travis','Caleb','Lucero') + tuple1[-1:]
+
+In [128]: tuple1
+Out[128]: ('Travis', 'Caleb', 'Lucero', 'Jake')
+
+In [129]: tuple1 = (1, 2, 3, 'amir', 'Jake')
+
+In [130]: tuple1 = ('Travis','Caleb','Lucero') , tuple1[-1:]
+
+In [131]: tuple1
+Out[131]: (('Travis', 'Caleb', 'Lucero'), ('Jake',))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Tuples can be &lt;strong&gt;heterogeneous&lt;/strong&gt;, as in the above example, meaning that each member of tuple can be a tuple itself, a list, or any other variable type.&lt;/p&gt;
+
+&lt;h3 id=&quot;dictionary-variables&quot;&gt;Dictionary variables&lt;/h3&gt;
+&lt;p&gt;The past three data types discussed in the previous secitons — strings, lists, and tuples — are of type &lt;strong&gt;sequence&lt;/strong&gt;. For sequences, we have seen above that we use integers as indices to access the values these variables contain. Dictionaries are yet another built-in variable type in Python. A dictionary variable is a sequence of pairs of {key: value}. Instead of using numbers to index elements (as in list, string, tuple), dictionaries use keys in order to retrieve the key’s value.  The keys can be any immutable type (string, number and tuple). Values can be any type (heterogeneous, mutable), just like the elements of a list or tuple. Dictionaries are also called &lt;strong&gt;associative arrays&lt;/strong&gt; since they associate a key with a value. One way to create a dictionary is to start with the empty dictionary and add &lt;code&gt;key:value&lt;/code&gt; pairs.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [161]: age = {}   # empty dictionary
+
+In [162]: age
+Out[162]: {}
+
+In [163]: type(age)
+Out[163]: dict
+
+In [164]: age = { 'amir':120 , 'jake':22 , 'Lucero':19 , 'Travis':20 }
+
+In [165]: age
+Out[165]: {'Lucero': 19, 'Travis': 20, 'amir': 120, 'jake': 22}
+
+In [166]: age['Lucero']
+Out[166]: 19
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Some important features of dictionaries are the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A dictionary is a collection of key-value pairs.&lt;/li&gt;
+  &lt;li&gt;A dictionary is a set of key:value pairs.&lt;/li&gt;
+  &lt;li&gt;All keys in a dictionary must be unique.&lt;/li&gt;
+  &lt;li&gt;In a dictionary, a key and its value are separated by a colon (:).&lt;/li&gt;
+  &lt;li&gt;Each key-value pair is separated by a comma from another pair in dictionary.&lt;/li&gt;
+  &lt;li&gt;All the key-value pairs together are listed between curly brackets &lt;code&gt;{ }&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Query the dictionary using square brackets &lt;code&gt;[ ]&lt;/code&gt;, inside of which you type the key, and the output will be the value correponding to the key.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;three-ways-of-constructing-distionaries&quot;&gt;Three ways of constructing distionaries&lt;/h4&gt;
+&lt;p&gt;The are three basic ways for creating dictionaries in Python.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create empty dictionary and then add key-value pairs to it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [1]: dic = {}
+
+In [2]: dic['amir'] = 'teacher'
+
+In [3]: dic
+Out[3]: {'amir': 'teacher'}
+
+In [4]: dic['Jake'] = 'student'
+
+In [5]: dic['Travis'] = 'student'
+
+In [6]: dic
+Out[6]: {'Jake': 'student', 'Travis': 'student', 'amir': 'teacher'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;2.&lt;/strong&gt; Create a dictionary from a list if tuples, using Python’s built-in function &lt;code&gt;dict()&lt;/code&gt;. The input argument of &lt;code&gt;dict()&lt;/code&gt; is &lt;strong&gt;a list of tuples&lt;/strong&gt;,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [7]: month = dict( [ ( 1 , 'Jan') \
+   ...:               , ( 2 , 'Feb') \
+   ...:               , ( 3 , 'Mar') \
+   ...:               , ( 4 , 'Apr') \
+   ...:               , ( 5 , 'May') \
+   ...:               , ( 6 , 'Jun') \
+   ...:               , ( 7 , 'Jul') \
+   ...:               , ( 8 , 'Aug') \
+   ...:               , ( 9 , 'Sep') \
+   ...:               , (10 , 'Oct') \
+   ...:               , (11 , 'Nov') \
+   ...:               , (12 , 'Dec') ] )
+
+In [8]: month
+Out[8]:
+{1: 'Jan',
+ 2: 'Feb',
+ 3: 'Mar',
+ 4: 'Apr',
+ 5: 'May',
+ 6: 'Jun',
+ 7: 'Jul',
+ 8: 'Aug',
+ 9: 'Sep',
+ 10: 'Oct',
+ 11: 'Nov',
+ 12: 'Dec'}
+
+In [9]: month[5]
+Out[9]: 'May'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+But, be careful to not override the Python’s function &lt;code&gt;dict()&lt;/code&gt; by your user-defined variable or function of the same name, otherwise you will get an error like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [10]: dict = 5
+
+In [11]: new_dic = dict([('amir','teacher')])   # This will give error because dict is not pointing to the built-in function dict() anymore! It was overridden by the above assignment.
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&amp;lt;ipython-input-10-271a21fe772b&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 new_dic = dict([('amir','teacher')])
+
+TypeError: 'int' object is not callable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;3.&lt;/strong&gt; Create a dictionary from two lists in parallel. Let’s say the keys and values of our desired dictionary, each are in the form of a list. The question is now, if there is an easy Pythonic way to combine these two lists of keys and values to get a dictionary? The answer is yes, and it is achieved by a Python function named &lt;a href=&quot;https://docs.python.org/2/library/functions.html#zip&quot; target=&quot;_blank&quot;&gt;&lt;code&gt;zip()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [1]: person = ['amir','jake','travis']
+
+In [2]: role = ['teacher','student','student']
+
+In [3]: person_role_dict = dict( zip( person , role ) )
+
+In [4]: type(person_role_dict)
+Out[4]: dict
+
+In [5]: person_role_dict
+Out[5]: {'amir': 'teacher', 'jake': 'student', 'travis': 'student'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;manipulating-dictionary-variables&quot;&gt;Manipulating dictionary variables&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. Removing a dictionary key-value pair&lt;/strong&gt;&lt;br /&gt;
+This can be done using Python’s &lt;code&gt;del&lt;/code&gt; command,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [10]: person_role_dict
+Out[10]: {'amir': 'teacher', 'jake': 'student', 'travis': 'student'}
+
+In [11]: del person_role_dict['amir']
+
+In [12]: person_role_dict
+Out[12]: {'jake': 'student', 'travis': 'student'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;2. Adding a dictionary key&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [14]: person_role_dict
+Out[14]: {'jake': 'student', 'travis': 'student'}
+
+In [15]: person_role_dict['amir'] = 'teacher'  # adding a new key-value pair ('amir' : 'teacher')
+
+In [16]: person_role_dict
+Out[16]: {'amir': 'teacher', 'jake': 'student', 'travis': 'student'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;2. Changing the value of a key&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [17]: person_role_dict['amir'] = 'instructor' # changing the value of the key 'amir'
+
+In [18]: person_role_dict
+Out[18]: {'amir': 'instructor', 'jake': 'student', 'travis': 'student'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;3. Getting the length of dictionary (number of key-value pairs)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [19]: len(person_role_dict)
+Out[19]: 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;4. Using dictionary methods&lt;/strong&gt;&lt;br /&gt;
+Just as with other Python variable types, typing the name of a dictionary that is already defined, followed by &lt;code&gt;.&lt;/code&gt; followed by pressing the &lt;code&gt;tab&lt;/code&gt; key (in a good Python editor) will show you the list of methods that can act on the dictionary.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [20]: person_role_dict.
+                           person_role_dict.clear      person_role_dict.get        person_role_dict.pop        person_role_dict.update
+                           person_role_dict.copy       person_role_dict.items      person_role_dict.popitem    person_role_dict.values
+                           person_role_dict.fromkeys   person_role_dict.keys       person_role_dict.setdefault
+
+In [20]: person_role_dict.keys()
+Out[20]: dict_keys(['amir', 'jake', 'travis'])
+
+In [21]: list ( person_role_dict.keys() )
+Out[21]: ['amir', 'jake', 'travis']
+
+In [22]: type ( person_role_dict.keys() )
+Out[22]: dict_keys
+
+In [23]: type ( list ( person_role_dict.keys() ) )
+Out[23]: list
+
+In [24]: person_role_dict.values()
+Out[24]: dict_values(['instructor', 'student', 'student'])
+
+In [10]: person_role_dict
+Out[10]: {'amir': 'teacher', 'jake': 'student', 'travis': 'student'}
+
+In [27]: person_role_dict.pop('amir')  # remove the key-value pair ('amir':'teacher') and return the corresponding value of the key as output.
+Out[27]: 'instructor'
+
+In [28]: person_role_dict
+Out[28]: {'jake': 'student', 'travis': 'student'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;dictionary-representation-of-sparse-matrices&quot;&gt;Dictionary representation of sparse matrices&lt;/h4&gt;
+&lt;p&gt;We already discussed in the above, the usefulness of nested lists in creating matrices. Now suppose we have a sparse matrix, whose most elements are zero, except a few non-zero elements. An alternative to using nested lists, which can also take less memory of the device, is to use a dictionary representation of the sparse matrix.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [16]: sparseMatrixList = [ [ 0 , 0 , 0 , 1 ]
+   ....:                    , [ 2 , 0 , 0 , 0 ]
+   ....:                    , [ 0 , 5 , 0 , 0 ]
+   ....:                    , [ 0 , 0 , 0 , 3 ]
+   ....:                    , [ 0 , 0 , 8 , 0 ]
+   ....:                    ]
+
+In [17]: sparseMatrixList
+Out[17]: [[0, 0, 0, 1], [2, 0, 0, 0], [0, 5, 0, 0], [0, 0, 0, 3], [0, 0, 8, 0]]
+
+In [18]: sparseMatrixDict = { (0,3): 1 , (1,0): 2 , (2,1): 5 , (3,3): 3 , (4,2): 8 }
+
+In [19]: sparseMatrixDict
+Out[19]: {(0, 3): 1, (1, 0): 2, (2, 1): 5, (3, 3): 3, (4, 2): 8}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;set-variables&quot;&gt;Set variables&lt;/h3&gt;
+&lt;p&gt;Besides all the aforementioned variable types in Python, there is another Python variable type that is useful for constructing and manipulating &lt;strong&gt;unordered collection of unique elements&lt;/strong&gt;. Common uses of sets include &lt;strong&gt;membership testing&lt;/strong&gt;, &lt;strong&gt;removing duplicates from a sequence&lt;/strong&gt;, and &lt;strong&gt;computing standard math operations on sets&lt;/strong&gt; such as intersection, union, difference, and symmetric difference.&lt;/p&gt;
+
+&lt;p&gt;Like other collections, sets support &lt;code&gt;x in set&lt;/code&gt; and &lt;code&gt;len(set)&lt;/code&gt; operations. Being an unordered collection, &lt;strong&gt;sets do not record element position or order of insertion&lt;/strong&gt;. Accordingly, sets do not support indexing, slicing, or other sequence-like behavior.&lt;/p&gt;
+
+&lt;p&gt;There are currently &lt;strong&gt;two built-in set types&lt;/strong&gt;, &lt;strong&gt;set&lt;/strong&gt; and &lt;strong&gt;frozenset&lt;/strong&gt;. The set type is mutable — the contents can be changed using methods like add() and remove().&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [61]: a = set( [ 1,2,3,(1,2),'amir' ] )
+
+In [62]: a.
+a.add                         a.difference                  a.intersection                a.issubset                    a.remove                      a.union
+a.clear                       a.difference_update           a.intersection_update         a.issuperset                  a.symmetric_difference        a.update
+a.copy                        a.discard                     a.isdisjoint                  a.pop                         a.symmetric_difference_update
+
+In [62]: a.add('jake')
+
+In [63]: a
+Out[63]: {(1, 2), 1, 2, 3, 'jake', 'amir'}
+
+In [64]: a.add([1,3])   # Note that mutable types cannot appear in a set!
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&amp;lt;ipython-input-64-2a5b54498213&amp;gt; in &amp;lt;module&amp;gt;()
+----&amp;gt; 1 a.add([1,3])
+
+TypeError: unhashable type: 'list'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Sets can be also simply created by &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [71]: a = {1,2,3}
+
+In [72]: type(a)
+Out[72]: set
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The &lt;strong&gt;frozenset type&lt;/strong&gt; is &lt;strong&gt;immutable&lt;/strong&gt; and &lt;strong&gt;hashable&lt;/strong&gt; (i.e., its contents cannot be altered after it is created). It can therefore be used as a dictionary key or as an element of another set.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [69]: a = frozenset( [ 1,2,3,(1,2),'amir' ] )
+
+In [70]: a.
+a.copy                 a.intersection         a.issubset             a.symmetric_difference
+a.difference           a.isdisjoint           a.issuperset           a.union
+
+In [70]: type(a)
+Out[70]: frozenset
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Note&lt;/strong&gt; that mutable types can neither appear in a set nor a frozenset. You can obtain more information about sets and frozensets and the methods that can act on them in the &lt;a href=&quot;https://docs.python.org/2.4/lib/types-set.html&quot; target=&quot;_blank&quot;&gt;Python library reference&lt;/a&gt;.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;assignment-statements-in-python&quot;&gt;Assignment statements in Python&lt;/h2&gt;
+
+&lt;p&gt;In Python, an assignment statement is one line of Python code that contains &lt;strong&gt;at least&lt;/strong&gt; one equal sign &lt;code&gt;=&lt;/code&gt; and the purpose of it is to associate name(s) with a certain value in the program. &lt;strong&gt;Assignment statements are the only Python statements that do not start with a keyword&lt;/strong&gt;. In most cases, the assignment statement will only contain one target name, one equal sign, and one expression (reduced to one single value that is assigned to the name).&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;binding&lt;/strong&gt; is an association between a name and a value. Note that in Python, unlike many other languages, &lt;strong&gt;names themselves are not associated with a specific variable types&lt;/strong&gt;. A name is just a label, and therefore it can be bound to any value of any type at any time. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [50]: a = 'some text'
+
+In [51]: a
+Out[51]: 'some text'
+
+In [52]: a = 2
+
+In [53]: a
+Out[53]: 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;aliasing-vs-copying&quot;&gt;Aliasing vs. copying&lt;/h3&gt;
+&lt;p&gt;It is very important to understand the difference between &lt;strong&gt;alias&lt;/strong&gt; assignment statements and &lt;strong&gt;copy&lt;/strong&gt; assignment statements. As far as assignments are concerned, all data types in Python can be divided into two categories:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;simple data types (e.g., int, float, string, tuple)&lt;/li&gt;
+  &lt;li&gt;container data types (e.g., list, dict, set, …)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For &lt;strong&gt;simple data types&lt;/strong&gt;, an assignment means that their value is &lt;strong&gt;copied&lt;/strong&gt; to the assigned variable.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [80]: x = 1
+
+In [81]: y = x   # An assignment statement that copies the value of x into y.
+
+In [82]: x = 2   # Now changing the value of x, won't change the value of y.
+
+In [83]: x
+Out[83]: 2
+
+In [84]: y
+Out[84]: 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For &lt;strong&gt;container data types&lt;/strong&gt;, an assignment in the form of copy can be computationally and memory-wise very expensive, and so it makes sense, when an assignment involves container types as values, then the new name would only &lt;strong&gt;point&lt;/strong&gt; to the original container. In other words, the new assignment provides an &lt;strong&gt;alias&lt;/strong&gt; for the container value.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [85]: a = [1,2,3]
+
+In [86]: b = a      # In this assignment, b is simply an alias for a. The value of a is NOT copied into b
+
+In [87]: a
+Out[87]: [1, 2, 3]
+
+In [88]: b
+Out[88]: [1, 2, 3]
+
+In [89]: a is b     # a and b have the same identity
+Out[89]: True
+
+In [90]: a == b     # a and b have the same value
+Out[90]: True
+
+In [91]: a = [1,2,3]
+
+In [92]: b = [1,2,3]
+
+In [93]: a is b     # a and b don't have the same identity anymore, since they are not pointing to the same value anymore.
+Out[93]: False
+
+In [94]: a == b     # Despite not being identical, a and b still have the same value.
+Out[94]: True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+If you want to get a copy of a container object, instead of an alias for it, you should use the &lt;code&gt;copy&lt;/code&gt; method of the container object.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [97]: a = [1,2,3]
+
+In [98]: b = a.copy()   # Copy the content of a into b
+
+In [99]: a is b
+Out[99]: False
+
+In [100]: a == b
+Out[100]: True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;b&gt;Conclusion:&lt;/b&gt;&lt;br /&gt;
+So, keep in mind that, assignments in which the value to be assigned is a container type (e.g., list, dict, set) will result in an alias, and not a fresh copy of the original value.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;multiple-simultaneous-assignments-in-one-line&quot;&gt;Multiple simultaneous assignments in one line&lt;/h3&gt;
+&lt;p&gt;A shortcut way of aliasing multiple variables with one single value is the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [101]: a = b = c = 3
+
+In [102]: a is b
+Out[102]: True
+
+In [103]: a is b is c
+Out[103]: True
+
+In [104]: a == b == c
+Out[104]: True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. This is also true for container variable types.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [105]: a = b = c = [1,2,3]
+
+In [106]: a is b is c
+Out[106]: True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You can also assign multiple objects to multiple variables all in the same asignment statement. But keep in mind that the number of assignments on both sides of equal sign must be equal.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [1]: a, b, c = 1, 2, &quot;amir&quot;
+
+In [2]: a
+Out[2]: 1
+
+In [3]: b
+Out[3]: 2
+
+In [4]: c
+Out[4]: 'amir'
+&amp;lt;br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one string object with the value “amir” is assigned to the variable c. This form of assignment in the above is basically like setting the tuple &lt;code&gt;(a,b,c) = (1,2,&quot;amir&quot;)&lt;/code&gt;. This is why it is important that both sides of the equal sign have the same number of elements. Here are some other examples:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [5]: a, b, c = 3, 3, 3
+
+In [6]: a is b
+Out[6]: True
+
+In [7]: a == b
+Out[7]: True
+
+In [57]: [ a , b ] = [ 5 , 4 ]
+
+In [58]: a
+Out[58]: 5
+
+In [59]: [ a , b ] = ( 5 , 4 )
+
+In [60]: a
+Out[60]: 5
+
+In [61]: [a,b] = [c,d] = [4,5]
+
+In [62]: a is b
+Out[62]: False
+
+In [63]: a is c
+Out[63]: True
+
+In [64]: [a,b] is [c,d]
+Out[64]: False
+
+In [65]: [a,b] is [4,5]
+Out[65]: False
+
+In [66]: [a,b] == [c,d]
+Out[66]: True
+
+In [67]: [a,b] == [4,5]
+Out[67]: True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;value-swapping&quot;&gt;Value swapping&lt;/h3&gt;
+&lt;p&gt;The traditional way of swapping values of two variables in mostprogramming languages is like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [68]: a = 5
+
+In [69]: b = 7
+
+In [70]: _ = a
+
+In [71]: a = b
+
+In [72]: b = _
+
+In [73]: a
+Out[73]: 7
+
+In [74]: b
+Out[74]: 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+With either Python lists or tuples, this swapping can be achived neatly in just one line of code,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;In [75]: (a,b) = (b,a)
+
+In [76]: a
+Out[76]: 5
+
+In [77]: b
+Out[77]: 7
+
+In [78]: [a,b] = [b,a]
+
+In [79]: a
+Out[79]: 7
+
+In [80]: b
+Out[80]: 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/5-python-variables-assignments&quot;&gt;Lecture 5: Python - variables and assignment statements&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 20, 2019.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -2614,6 +3692,443 @@ Since slicing the cell array by `{}` returns a comma-separated list, MATLAB's `c
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/4-matlab-values-variables-types&quot;&gt;Lecture 4: MATLAB - values, variables, and types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 2: Problems - Variables, Values, and Types]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/2-problems-variables-values-types"/>
+  <id>http:/MAPCP2019U/homework/2-problems-variables-values-types</id>
+  <published>2019-06-18T00:00:00-05:00</published>
+  <updated>2019-06-18T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;♣ &lt;strong&gt;Due Date: One week from the posting date @ 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience with values, variables, types, and assignments in programming.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; Type the following in the command window and submit the results. Briefly explain what each assignment does.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = 1
+b = 'x'
+c = true
+whos a b c
+a == c
+a + c
+d = [1 2 3 4]
+e = ['a' 'b' 'c' 'd']
+f = ['a','b','c','d']
+g = ['abcd']
+h = {‘a’ ‘b’ ‘c’ ‘d’}
+i = { a b c d}
+whos d e f g h i
+class(a)
+type(a)
+True
+true
+False
+false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Integer_overflow&quot; target=&quot;blank&quot;&gt;Overflow&lt;/a&gt;.&lt;/strong&gt; What would happen if you go beyond the range for a particular type? For example, the largest integer that can be stored in &lt;strong&gt;int8&lt;/strong&gt; is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type &lt;strong&gt;int8&lt;/strong&gt;? Smaller integer? Use the MATLAB built-in functions &lt;code&gt;intmin&lt;/code&gt; and &lt;code&gt;intmax&lt;/code&gt; or Python’s numpy package command &lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.iinfo.html&quot; target=&quot;blank&quot;&gt;&lt;code&gt;iinfo&lt;/code&gt;&lt;/a&gt; to find the largest and smallest integers that can be stored in &lt;strong&gt;int16&lt;/strong&gt; and &lt;strong&gt;int32&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Order_of_operations&quot; target=&quot;blank&quot;&gt;Operator Precedence&lt;/a&gt;.&lt;/strong&gt; Think about what the results would be for the following expressions, and then type them in to the terminal to verify your answers. Briefly explain the results for each one.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 1\2 
+&amp;gt;&amp;gt; 1/2
+&amp;gt;&amp;gt; int8(1/2)
+&amp;gt;&amp;gt; int8(1/3)
+&amp;gt;&amp;gt; -5^2  
+&amp;gt;&amp;gt; -5**2  
+&amp;gt;&amp;gt; (-5) ^ 2 
+&amp;gt;&amp;gt; (-5) ** 2 
+&amp;gt;&amp;gt; 10-6/2 
+&amp;gt;&amp;gt; 5*4/2*3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; Provide three different methods of generating the matrix &lt;strong&gt;a&lt;/strong&gt;, one method should use the &lt;code&gt;diag()&lt;/code&gt; function, one should use the &lt;strong&gt;eye&lt;/strong&gt; function, and one should use the &lt;strong&gt;zeros&lt;/strong&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; &lt;strong&gt;MATLAB.&lt;/strong&gt; Download this &lt;a href=&quot;../homework/2-problems/script_full_of_errors.m&quot; target=&quot;_blank&quot;&gt;code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_fixed.m&lt;/code&gt; in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; Persian
+Persian =
+Persian is a human language
+&amp;gt;&amp;gt; Spanish
+Spanish = 
+    'Spanish '    'is '    ' another'    'language'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Modify the last line such that for the last line the code displays,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;Persian is not the same as Spanish
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Explain these results.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Download &lt;a href=&quot;http:/MAPCP2019U/homework/2/python_script_full_of_errors.pi&quot; target=&quot;_blank&quot;&gt;this Python script&lt;/a&gt;. This Python script is full of syntax, runtime, and semantic errors. Please identify and corrent these errors, such that code becomes fully executable and outputs the following message on the screen, when run from the Git Bash command line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;The life expectancy for the millennials is projected to be 120 years! (But don't believe it...)
+
+
+    A recent study published in the journal of Nature, discovered that over the past century,
+    although the life expectancy has significantly increased due to technological advances,
+    the maximum life span of the oldest people in the world has not changed much.
+
+
+Cardano was the first to introduce complex numbers of the form a + sqrt(-b) into algebra, but he had misgivings about it.
+In his solution to an algebra equation he encountered the solution 5 + sqrt(-15) for the unknown, which is now mathematically represented by
+
+       (5+3.872983346207417j)
+
+in Python, which can also be obtained as an addition of real and imaginary numbers in Python like this
+
+
+      5 + sqrt(-15) = (5+3.872983346207417j),
+
+
+      which can also be manually stated as
+
+
+      (5+3.872983346207417j)
+
+
+
+
+
+One final note:
+
+        In python the sqrt function from math and cmath modules are different.
+        The sqrt function that returns &quot;float&quot; results is sqrt from math module.
+        Therefore, if using math module, then,
+
+                sqrt(25) = 5.0000,
+
+        which is obviously a float (real number).
+
+
+
+
+Also note that by convention, 0**0 = 1 in Python.
+And division by 0, will give you a runtime exception: 1/0 = NaN
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Identify at least one example in the code for each of the error types.&lt;/p&gt;
+
+&lt;p&gt;Here are a few hints:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You need to get familiar with string formatting in &lt;code&gt;print&lt;/code&gt; function. See &lt;a href=&quot;https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types&quot; target=&quot;_blank&quot;&gt;Lecture 4&lt;/a&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Note that in Python, the interpreter is sensitive to &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/#indentation&quot; target=&quot;_blank&quot;&gt;indentations&lt;/a&gt; in your codes. All lines must be aligned at the beginning (except for looping and branching, … which we will get to them later on).&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Become familiar with &lt;a href=&quot;https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html&quot; target=&quot;_blank&quot;&gt;escape characters&lt;/a&gt; in Python, such as &lt;code&gt;'\n'&lt;/code&gt;, &lt;code&gt;'\t'&lt;/code&gt;, and &lt;code&gt;'\t'&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; &lt;strong&gt;MATLAB.&lt;/strong&gt; Use MATLAB help to find out how you can create a new directory named &lt;code&gt;mynewdir&lt;/code&gt; from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named &lt;code&gt;myscript.m&lt;/code&gt; with the following code in it,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;% First create an array from -2*pi to 2:pi
+x = -2*pi:pi/20:2*pi;
+
+% Calculate |sin(x)|
+y = abs(sin(x));
+
+plot(x,y);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; &lt;strong&gt;MATLAB.&lt;/strong&gt; Now change your working directory to the original directory before you created &lt;code&gt;mynewdir&lt;/code&gt; directory. Try to run the script &lt;code&gt;myscript&lt;/code&gt; you had created again, from MATLAB command line. What do you get? and why?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. &lt;/strong&gt; &lt;strong&gt;Python&lt;/strong&gt; Write a Python script that is directly executable from the Git Bash command line, without any need to invoke &lt;code&gt;python&lt;/code&gt; interpreter. The script should produce &lt;strong&gt;exactly&lt;/strong&gt; the following output, including line breaks and separations. Each part of the output (separated by a line-break, or a new-line character &lt;code&gt;'\n'&lt;/code&gt; from the rest) is generated by &lt;strong&gt;only and only one call&lt;/strong&gt; to print function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;This is Python version 3.5.2 
+
+Python is the best language for String manipulation!
+
+!noitalupinam gnirtS rof egaugnal tseb eht si nohtyP
+
+!otlpnmgit o gunlte h inhy
+
+pYTHON IS THE BEST LANGUAGE FOR sTRING MANIPULATION!
+
+
+The sentence 'Python is the best language for String manipulation!' contains 
+4 'a' letters, and
+0 'A' letters!
+
+Python
+is
+the
+best
+language
+for
+String
+manipulation!
+
+PYTHON
+IS
+THE
+BEST
+LANGUAGE
+FOR
+STRING
+MANIPULATION!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some hints (all the information you need to answer this question can be found in &lt;a href=&quot;https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types&quot; target=&quot;_blank&quot;&gt;Lecture 4&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To make the script executable, add the appropriate shebang to the script’s file.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Import the appropriate module to get the python version command, as we did in class. Use &lt;code&gt;print&lt;/code&gt; function to print the Python version.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Define a String variable &lt;code&gt;my_string&lt;/code&gt; which contains the string value “Python is the best language for String manipulation!” ( Of course, you can totally accomplish this question without defining a string variable, by only using the string value itself wherever needed… This is also totally fine at this point in our course, if your prefer this method).&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Then use the appropriate examples and external links provided in &lt;a href=&quot;https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types&quot; target=&quot;_blank&quot;&gt;Lecture 4&lt;/a&gt;, to find the proper &lt;strong&gt;string methods&lt;/strong&gt; that can manipulate this string variable/value in order to generate each of the outputs printed above.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Again, note that for each output, the entire output must result from &lt;strong&gt;one single call&lt;/strong&gt; to function &lt;code&gt;print&lt;/code&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Wherever needed, use the &lt;a href=&quot;https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html&quot; target=&quot;_blank&quot;&gt;escape character&lt;/a&gt; value &lt;code&gt;'\n'&lt;/code&gt; in &lt;code&gt;print&lt;/code&gt; input arguments, in order to generate a line-break (or new line) in the output.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;10. &lt;/strong&gt; The bell-shaped &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_distribution&quot; target=&quot;_blank&quot;&gt;Gaussian probability density function&lt;/a&gt;,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\bigg[ -\frac{1}{2}\bigg( \frac{x-\mu}{\sigma} \bigg)^2 \bigg]&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+is one of the most widely used functions in science and technology. The parameters of the function (mu,sigma&amp;gt;0) are prescribed real numbers. Write a program for evaluating this function when $\mu=0$, $\sigma=2$, $x = 1$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; The value &lt;code&gt;pi&lt;/code&gt;, and &lt;code&gt;exp()&lt;/code&gt; , &lt;code&gt;sqrt()&lt;/code&gt; function are built-in in MATLAB, but are not so in Python. You will need to export them using the following command in Python,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;from math import pi, exp, sqrt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Verify your answer by getting the same result from &lt;a href=&quot;https://www.wolframalpha.com/&quot; target=&quot;_blank&quot;&gt;Wolfram Alpha&lt;/a&gt; mathematical search engine.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;11. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Download &lt;a href=&quot;http:/MAPCP2019U/homework/2/script_full_of_errors.py&quot; target=&quot;_blank&quot;&gt;this code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_corrected.py&lt;/code&gt; in your hw4 folder of your project. Explain in front of each corrected Python statement, why the error occurred.  On the last line of the script,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;true = fox is rev in Persian
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+the statement runs without error. But can you explain what it does? (Hint: For this part you need to understand operation precedence. You can find more information &lt;a href=&quot;https://www.mathcs.emory.edu/~valerie/courses/fall10/155/resources/op_precedence.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;12. &lt;/strong&gt; As an egg cooks, the proteins first denature and then coagulate. When the temperature exceeds a critical point, reactions begin and proceed faster as the temperature increases. In the egg white, the proteins start to coagulate for temperatures above $63^\circ\rm{C}$, while in the yolk the proteins start to coagulate for temperatures above $70^\circ\rm{C}$. For a soft boiled egg, the white needs to have been heated long enough to coagulate at a temperature above $63^\circ\rm{C}$, but the yolk should not be heated above $70^\circ\rm{C}$. For a hard boiled egg, the center of the yolk should be allowed to reach $70^\circ\rm{C}$.&lt;/p&gt;
+
+&lt;p&gt;The following formula expresses the time $t$ it takes (in seconds) for the center of the yolk to reach the temperature Ty (in Celsius degrees):&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;t = \frac
+{ M^{2/3} ~ c ~ \rho^{1/3} }
+{ K\pi^2 ~ (4\pi/3)^{2/3} }
+~\ln
+\bigg[
+0.76 \frac{T_0 - T_w}{T_y-T_w}
+\bigg]&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat capacity, and $K$ is thermal conductivity. Relevant values are $M=47~[g]$ for a small egg and $M=67~[g]$ for a large egg, $\rho=1.038 ~[g~cm^{-3}]$, $c = 3.7 ~[J~g^{-1}~K^{-1}]$, and $K = 5.4\times10^{-3} ~[Wcm^{-1}K^{-1}]$. Furthermore, $T_w$ is the temperature
+(in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a Python program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (&lt;strong&gt;Hint&lt;/strong&gt;: Note that for this problem you will need to import &lt;code&gt;log, pi&lt;/code&gt; from &lt;code&gt;math&lt;/code&gt; module in Python.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;13.  Python: Aliasing vs. Copying variables.&lt;/strong&gt; Run the following python statements and briefly explain why you get the behavior printed by the &lt;code&gt;print&lt;/code&gt; functions.&lt;/p&gt;
+
+&lt;p&gt;(A)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;a = 5
+b = a
+print (id(a), id(b))
+ 
+c = b
+b = 3
+print (a,b,c)
+print (id(a),id(b),id(c))
+ 
+b = a
+b = 5
+print (id(a), id(b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(B)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;a = [5]
+b = a
+print (id(a), id(b))
+ 
+b.append(1)
+print a,b
+print (id(a),id(b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(C)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;a = [5]
+b = list(a)
+print (a,b)
+print (id(a), id(b))
+ 
+b = a[:]
+print (a,b)
+print (id(a), id(b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(D)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;a = (5,)
+b = tuple(a)
+print (id(a), id(b))
+ 
+b = a[:]
+print (id(a), id(b))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;14.  Python.&lt;/strong&gt; The following is the name list of all people in our class.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;Christian-Andrew Bagby-wright
+Matthew Chrysler
+Niyousha Davachi
+Pauline Dredger
+Marcos Guillen
+Lauren Kuffel
+Shashank Kumbhare
+Hany Mahdy
+Sarah Moorman
+Andrew Myers
+Joshua Osborne
+Rebecca Proni
+Amir Shahmoradi
+Carolina Vedovato
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+We want to create a dictionary of members of this class with individuals’ full names serving as dictionary keys, and their roles in class as the corresponding values of the keys. The naive way of generating this dictionary would be to use one of the methods for generating dictionary discussed in &lt;a href=&quot;http:/MAPCP2019U/lecture/5-python-variables-assignments&quot; target=&quot;_blank&quot;&gt;Lecture 5&lt;/a&gt;. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class_dict  = { 
+            , 'Christian-Andrew Bagby-wright' : 'student'
+            , 'Matthew Chrysler'              : 'student'
+            , 'Niyousha Davachi'              : 'student'
+            , 'Pauline Dredger'               : 'student'
+            , 'Marcos Guillen'                : 'student'
+            , 'Lauren Kuffel'                 : 'student'
+            , 'Shashank Kumbhare'             : 'student'
+            , 'Hany Mahdy'                    : 'student'
+            , 'Sarah Moorman'                 : 'student'
+            , 'Andrew Myers'                  : 'student'
+            , 'Joshua Osborne'                : 'student'
+            , 'Rebecca Proni'                 : 'student'
+            , 'Amir Shahmoradi'               : 'instructor'
+            , 'Carolina Vedovato'             : 'student'
+            }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+However, the problem is that, except me (Amir, the instructor), everyone else has a student role in this class. So it would be a very painful process to type all ‘student’ values by hand manually. Now, the goal is to come up with a shortcut method that avoids the aforementioned problem. Can you find a way of creating this dictionary, without having to type the value ‘student’ 18 times? Note that in order to achieve this, you don’t need anything beyond what you learned in Lecture 5. (&lt;strong&gt;Hint:&lt;/strong&gt; Have a look at the section for simultaneous assignments in Lecture 5.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/2-problems-variables-values-types&quot;&gt;Homework 2: Problems - Variables, Values, and Types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
 </entry>
 
 

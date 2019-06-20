@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Lecture 5: Python - variables and assignment statements",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/5-python-variables-assignments",
+		  "date"       : "2019-06-20 00:00:00 -0500",
+		  "shortdate"  : "June 20, 2019"
+		} ,
+	
+		{
 		  "title"      : "Quiz 1: Solutions - Version control system",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/quiz/1-solutions-version-control-system",
@@ -28,6 +36,14 @@
 		  "title"      : "Lecture 4: MATLAB - values, variables, and types",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/lecture/4-matlab-values-variables-types",
+		  "date"       : "2019-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2019"
+		} ,
+	
+		{
+		  "title"      : "Homework 2: Problems - Variables, Values, and Types",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/homework/2-problems-variables-values-types",
 		  "date"       : "2019-06-18 00:00:00 -0500",
 		  "shortdate"  : "June 18, 2019"
 		} ,
