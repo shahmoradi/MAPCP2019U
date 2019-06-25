@@ -1,9 +1,17 @@
 [
 	
 		{
-		  "title"      : "Lecture 5: Python - variables and assignment statements",
+		  "title"      : "Lecture 5: Python - branching and functions",
 		  "category"   : "",
-		  "url"        : "/MAPCP2019U/lecture/5-python-variables-assignments",
+		  "url"        : "/MAPCP2019U/lecture/5-python-branching-functions",
+		  "date"       : "2019-06-20 00:00:00 -0500",
+		  "shortdate"  : "June 20, 2019"
+		} ,
+	
+		{
+		  "title"      : "Lecture 5: MATLAB - operators, branching, and control statements",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/5-matlab-operators-branching",
 		  "date"       : "2019-06-20 00:00:00 -0500",
 		  "shortdate"  : "June 20, 2019"
 		} ,

@@ -12,8 +12,13 @@ callback([
   } ,
 
   {
-    "text": "Lecture 5: Python - variables and assignment statements",
-    "href": "/MAPCP2019U/lecture/5-python-variables-assignments"
+    "text": "Lecture 5: Python - branching and functions",
+    "href": "/MAPCP2019U/lecture/5-python-branching-functions"
+  } ,
+
+  {
+    "text": "Lecture 5: MATLAB - operators, branching, and control statements",
+    "href": "/MAPCP2019U/lecture/5-matlab-operators-branching"
   } ,
 
   {
