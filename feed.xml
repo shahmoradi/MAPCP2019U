@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-26T14:53:49-05:00</updated>
+<updated>2019-06-26T15:33:50-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -5228,7 +5228,7 @@ the statement runs without error. But can you explain what it does? (Hint: For t
 
 &lt;p&gt;&lt;br /&gt;
 where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat capacity, and $K$ is thermal conductivity. Relevant values are $M=47~[g]$ for a small egg and $M=67~[g]$ for a large egg, $\rho=1.038 ~[g~cm^{-3}]$, $c = 3.7 ~[J~g^{-1}~K^{-1}]$, and $K = 5.4\times10^{-3} ~[Wcm^{-1}K^{-1}]$. Furthermore, $T_w$ is the temperature
-(in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a Python program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (&lt;strong&gt;Hint&lt;/strong&gt;: Note that for this problem you will need to import &lt;code&gt;log, pi&lt;/code&gt; from &lt;code&gt;math&lt;/code&gt; module in Python.)&lt;/p&gt;
+(in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a Python/MATLAB program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (&lt;strong&gt;Hint&lt;/strong&gt;: Note that for this problem you will need to import &lt;code&gt;log, pi&lt;/code&gt; from &lt;code&gt;math&lt;/code&gt; module in Python, but these are intrinsic in MATLAB.)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
