@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-06-26T15:33:50-05:00</updated>
+<updated>2019-06-27T00:06:46-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -981,24 +981,22 @@ Table of Logical operators in MATLAB.
 &lt;/table&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;!--
-&lt;figure&gt;
-    &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html&quot; target=&quot;_blank&quot;&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/lecture/5/logicop.png&quot; width=&quot;900&quot;&gt;
-    &lt;/a&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Logical operators in MATLAB.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;h3 id=&quot;logical-operator-short-circuit-in-matlab&quot;&gt;Logical operator short-circuit in MATLAB&lt;/h3&gt;
 
-### Logical operator short-circuit in MATLAB
-
-Note that there are two types of logical operators, one of which is called [short-circuit](http:/MAPCP2019U/lecture/5/shortCircuit.mp4){:target=&quot;_blank&quot;}. More information about them and their meanings can be found [here](https://www.mathworks.com/help/matlab/ref/logicaloperatorsshortcircuit.html#bt_0nai-1){:target=&quot;_blank&quot;}.
+&lt;p&gt;Note that there are two types of logical operators, one of which is called &lt;a href=&quot;http:/MAPCP2019U/lecture/5/shortCircuit.mp4&quot; target=&quot;_blank&quot;&gt;short-circuit&lt;/a&gt;. More information about them and their meanings can be found &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/logicaloperatorsshortcircuit.html#bt_0nai-1&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;video width=&quot;100%&quot; src=&quot;http:/MAPCP2019U/lecture/5/shortCircuit.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/video&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&quot;center&quot;&gt;
+    &lt;div class=&quot;video-wrapper&quot;&gt;
+        &lt;div class=&quot;video-container&quot;&gt;
+             &lt;video width=&quot;100%&quot; autoplay&gt;
+                &lt;source src=&quot;http:/MAPCP2019U/lecture/5/shortCircuit.mp4&quot; type=&quot;video/mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
+                Your browser does not support the video tag.
+            &lt;/video&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;  
 --&gt;
 
 &lt;h3 id=&quot;special-characters-in-matlab&quot;&gt;Special characters in MATLAB&lt;/h3&gt;
@@ -4044,43 +4042,41 @@ ans =
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here is a complete list of options that format can take,&lt;/p&gt;
+
 &lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table 2. A list of MATLAB &lt;code&gt;format&lt;/code&gt; options.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Style&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Result&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Example&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+    &lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
+        Table 2. A list of MATLAB &lt;code&gt;format&lt;/code&gt; options.
+    &lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Style&lt;/font&gt;&lt;/th&gt;
+        &lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Result&lt;/font&gt;&lt;/th&gt;
+        &lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Example&lt;/font&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;short (default)&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short, fixed-decimal format with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.1416&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;long&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long, fixed-decimal format with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.&lt;/td&gt;&lt;td&gt;3.141592654&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortE&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short scientific notation with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longE&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long scientific notation with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortG&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short, fixed-decimal format or scientific notation, whichever is more compact, with a total of 5 digits.&lt;/td&gt;&lt;td&gt;3.1416&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longG&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long, fixed-decimal format or scientific notation, whichever is more compact, with a total of 15 digits for double values, and 7 digits for singlevalues.&lt;/td&gt;&lt;td&gt;3.141592654&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortEng&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short engineering notation (exponent is a multiple of 3) with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longEng&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long engineering notation (exponent is a multiple of 3) with 15 significant digits.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;+&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Positive/Negative format with +, -, and blank characters displayed for positive, negative, and zero elements.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;bank&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Currency format with 2 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;hex&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Hexadecimal representation of a binary double-precision number.&lt;/td&gt;&lt;td&gt;400921fb54442d18&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;rat&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Ratio of small integers.&lt;/td&gt;&lt;td&gt;355/113&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;tbody&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;short (default)&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short, fixed-decimal format with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.1416&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;long&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long, fixed-decimal format with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.&lt;/td&gt;&lt;td&gt;3.141592654&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortE&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short scientific notation with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longE&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long scientific notation with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortG&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short, fixed-decimal format or scientific notation, whichever is more compact, with a total of 5 digits.&lt;/td&gt;&lt;td&gt;3.1416&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longG&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long, fixed-decimal format or scientific notation, whichever is more compact, with a total of 15 digits for double values, and 7 digits for singlevalues.&lt;/td&gt;&lt;td&gt;3.141592654&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortEng&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short engineering notation (exponent is a multiple of 3) with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longEng&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long engineering notation (exponent is a multiple of 3) with 15 significant digits.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;+&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Positive/Negative format with +, -, and blank characters displayed for positive, negative, and zero elements.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;bank&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Currency format with 2 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;hex&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Hexadecimal representation of a binary double-precision number.&lt;/td&gt;&lt;td&gt;400921fb54442d18&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;rat&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Ratio of small integers.&lt;/td&gt;&lt;td&gt;355/113&lt;/td&gt;&lt;/tr&gt;
+&lt;h2 id=&quot;variables-in-matlab&quot;&gt;Variables in MATLAB&lt;/h2&gt;
 
+&lt;p&gt;A variable is simply a name that we assign to a specific value, in order to avoid repeating the same value frequently in the code, thus writing a cleaner, less error-prone script/code. We discussed above the main value types (classes) in MATLAB. The same also holds for variables, because they are simply names assigned to each value or a set of values. In order to define a variable, the variable name must always appear on the left of equality, like the following,&lt;/p&gt;
 
-&lt;br /&gt;&lt;br /&gt;
-
-
-## Variables in MATLAB
-
-A variable is simply a name that we assign to a specific value, in order to avoid repeating the same value frequently in the code, thus writing a cleaner, less error-prone script/code. We discussed above the main value types (classes) in MATLAB. The same also holds for variables, because they are simply names assigned to each value or a set of values. In order to define a variable, the variable name must always appear on the left of equality, like the following,
-
-```matlab
-&amp;gt;&amp;gt; format compact
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; format compact
 &amp;gt;&amp;gt; a = 1 % assign value 1 to a
 a =
      1
@@ -4091,47 +4087,46 @@ double
  1 = b
    ↑
 Error: The expression to the left of the equals sign is not a valid target for an assignment.
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-We will get to each of these below. But before that, here are some official and unofficial tips on the variable naming conventions in MATLAB.
+&lt;p&gt;We will get to each of these below. But before that, here are some official and unofficial tips on the variable naming conventions in MATLAB.&lt;/p&gt;
 
-### Variable naming convention in MATLAB
+&lt;h3 id=&quot;variable-naming-convention-in-matlab&quot;&gt;Variable naming convention in MATLAB&lt;/h3&gt;
 
-A MATLAB variable can only begin with a letter followed by underscore `_` and numbers inside or at the end of the variable name. MATLAB is case sensitive, so `A` and `a` are not the same variable. Other symbols are syntactically invalid anywhere in a variable name. Examples of valid names:
-  - `x6`
-  - `lastValue`
-  - `n_factorial`
+&lt;p&gt;A MATLAB variable can only begin with a letter followed by underscore &lt;code&gt;_&lt;/code&gt; and numbers inside or at the end of the variable name. MATLAB is case sensitive, so &lt;code&gt;A&lt;/code&gt; and &lt;code&gt;a&lt;/code&gt; are not the same variable. Other symbols are syntactically invalid anywhere in a variable name. Examples of valid names:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;x6&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;lastValue&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;n_factorial&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-Invalid names:
-  - `6x`
-  - `n!`
-  - `end` (see below for the reason)
+&lt;p&gt;Invalid names:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;6x&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;n!&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;end&lt;/code&gt; (see below for the reason)&lt;/li&gt;
+&lt;/ul&gt;
 
-```matlab
-&amp;gt;&amp;gt; new_var$
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; new_var$
  new_var$
         ↑
 Error: The input character is not valid in MATLAB statements or expressions.
-```
-    
-```matlab
-&amp;gt;&amp;gt; amir = 'teacher';
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; amir = 'teacher';
 disp(['Amir is a', amir])
 Amir is ateacher
-```
-    
-```matlab
-&amp;gt;&amp;gt; life_expectancy = 120; disp( ['The life expectancy for the millennials is projected to be ',life_expectancy,' years! (But don''t believe it...)'] )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; life_expectancy = 120; disp( ['The life expectancy for the millennials is projected to be ',life_expectancy,' years! (But don''t believe it...)'] )
 The life expectancy for the millennials is projected to be x years! (But don't believe it...)
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;h4 id=&quot;matlab-reserved-names-keywords&quot;&gt;MATLAB reserved names (keywords)&lt;/h4&gt;
+&lt;p&gt;There are some limitation as to what names you can choose for your variables, even if they completely obey MATLAB syntax standard. Variable names in MATLAB cannot be the same as &lt;strong&gt;MATLAB keywords&lt;/strong&gt;, which are simply names that reserved for a specific purpose in MATLAB programming.  They are used to define the syntax and structure of the MATLAB language. Note that &lt;strong&gt;MATLAB keywords are case-sensitive&lt;/strong&gt;.  You &lt;strong&gt;cannot&lt;/strong&gt; define variables with the exact same names as &lt;strong&gt;MATLAB keywords&lt;/strong&gt;, such as &lt;code&gt;if&lt;/code&gt; or &lt;code&gt;end&lt;/code&gt;. For a complete list of MATLAB keyword, run the &lt;code&gt;iskeyword&lt;/code&gt; command,&lt;/p&gt;
 
-#### MATLAB reserved names (keywords)  
-There are some limitation as to what names you can choose for your variables, even if they completely obey MATLAB syntax standard. Variable names in MATLAB cannot be the same as **MATLAB keywords**, which are simply names that reserved for a specific purpose in MATLAB programming.  They are used to define the syntax and structure of the MATLAB language. Note that **MATLAB keywords are case-sensitive**.  You **cannot** define variables with the exact same names as **MATLAB keywords**, such as `if` or `end`. For a complete list of MATLAB keyword, run the `iskeyword` command,
-
-```matlab
-&amp;gt;&amp;gt; iskeyword
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; iskeyword
 ans = 
     'break'
     'case'
@@ -4153,15 +4148,14 @@ ans =
     'switch'
     'try'
     'while'
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-#### Predefined variables in MATLAB
+&lt;h4 id=&quot;predefined-variables-in-matlab&quot;&gt;Predefined variables in MATLAB&lt;/h4&gt;
 
-Note that there are some predefined variables in MATLAB, that are not considered as keywords. Therefore you can change their values and use them for your own purposes. But, **be very careful with predefined variables and in general**, it is better to not mess with them, as they can lead to confusion and catastrophe. For example,
+&lt;p&gt;Note that there are some predefined variables in MATLAB, that are not considered as keywords. Therefore you can change their values and use them for your own purposes. But, &lt;strong&gt;be very careful with predefined variables and in general&lt;/strong&gt;, it is better to not mess with them, as they can lead to confusion and catastrophe. For example,&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; true % true is a predefined MATLAB logical variable
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true % true is a predefined MATLAB logical variable
 ans =
      1
 &amp;gt;&amp;gt; class(true)
@@ -4186,10 +4180,9 @@ nan =
 &amp;gt;&amp;gt; class(nan)
 ans =
 logical
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-```matlab
-&amp;gt;&amp;gt; who
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; who
 
 Your variables are:
 
@@ -4227,9 +4220,9 @@ ans =
 &amp;gt;&amp;gt; j
 ans =
    0.0000 + 1.0000i
-```
-&lt;br /&gt;
-Here is a list of some of the most important predefined variables in MATLAB.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Here is a list of some of the most important predefined variables in MATLAB.&lt;/p&gt;
 
 &lt;table class=&quot;center&quot;&gt;
 &lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
@@ -4256,19 +4249,15 @@ Table 1. A list of predefined values and variables in MATLAB.
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;h3 id=&quot;numeric-variables&quot;&gt;Numeric variables&lt;/h3&gt;
 
+&lt;p&gt;We have already extensively discussed number values in the previous lecture. Basically, everything that we have said about number values, holds also for variables of type number.&lt;/p&gt;
 
+&lt;h3 id=&quot;vector-and-matrix-variables&quot;&gt;Vector and matrix variables&lt;/h3&gt;
 
-### Numeric variables  
+&lt;p&gt;Again, similar to vector and matrix values, everything holds for the same type variables.&lt;/p&gt;
 
-We have already extensively discussed number values in the previous lecture. Basically, everything that we have said about number values, holds also for variables of type number.  
-
-### Vector and matrix variables  
-
-Again, similar to vector and matrix values, everything holds for the same type variables.
-
-```matlab
-&amp;gt;&amp;gt; a = [1,2,3,4]
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = [1,2,3,4]
 a =
      1     2     3     4
 &amp;gt;&amp;gt; class(a)
@@ -4280,32 +4269,29 @@ a =
      2
      3
      4
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-#### The colon operator `:`
+&lt;h4 id=&quot;the-colon-operator-&quot;&gt;The colon operator &lt;code&gt;:&lt;/code&gt;&lt;/h4&gt;
 
-MATLAB has a special character shortcut notation for occasions when you want to create a numeric vector of a specific range with a predefined fixed spacing between the values of the vector. This shortcut has the following form,
+&lt;p&gt;MATLAB has a special character shortcut notation for occasions when you want to create a numeric vector of a specific range with a predefined fixed spacing between the values of the vector. This shortcut has the following form,&lt;/p&gt;
 
-```bash
-begin:increment:end
-```
-&lt;br /&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;begin:increment:end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-For example,
-```matlab
-&amp;gt;&amp;gt; x = 0:10:100
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; x = 0:10:100
 x =
      0    10    20    30    40    50    60    70    80    90   100
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-#### The transpose operator `'`
+&lt;h4 id=&quot;the-transpose-operator-&quot;&gt;The transpose operator &lt;code&gt;'&lt;/code&gt;&lt;/h4&gt;
 
-Now as you may have noticed, MATLAB by default creates row-wise vectors, just as `x` was generated above. If you want to initialize `x` as a column-wise vector, all you need to do is to add the transpose operator `'` at the end of the vector or the variable name (but now, you would also need the vector constructor `[]`),
+&lt;p&gt;Now as you may have noticed, MATLAB by default creates row-wise vectors, just as &lt;code&gt;x&lt;/code&gt; was generated above. If you want to initialize &lt;code&gt;x&lt;/code&gt; as a column-wise vector, all you need to do is to add the transpose operator &lt;code&gt;'&lt;/code&gt; at the end of the vector or the variable name (but now, you would also need the vector constructor &lt;code&gt;[]&lt;/code&gt;),&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; x = [0:10:100]'
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; x = [0:10:100]'
 x =
      0
     10
@@ -4322,48 +4308,43 @@ x =
   Name       Size            Bytes  Class     Attributes
 
   x         11x1                88  double
-```
-&lt;br /&gt;
-Now, pay attention to the size of the vector `x`. What does it mean when it says `88 Bytes`?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Now, pay attention to the size of the vector &lt;code&gt;x&lt;/code&gt;. What does it mean when it says &lt;code&gt;88 Bytes&lt;/code&gt;?&lt;/p&gt;
 
+&lt;h4 id=&quot;creating-matrices&quot;&gt;Creating matrices&lt;/h4&gt;
 
-#### Creating matrices
+&lt;p&gt;There are a number of functions in MATLAB that can help you build predefined matrices or vectors.&lt;/p&gt;
 
-There are a number of functions in MATLAB that can help you build predefined matrices or vectors.
+&lt;h5 id=&quot;zeros&quot;&gt;zeros&lt;/h5&gt;
 
-##### zeros
+&lt;p&gt;Creates array of all zeros (with optionally given &lt;a href=&quot;https://en.wikipedia.org/wiki/Fixed-point_arithmetic&quot; target=&quot;_blank&quot;&gt;fixed-point&lt;/a&gt; properties. For more information, see &lt;a href=&quot;https://www.mathworks.com/help/fixedpoint/ref/zeros.html#inputarg_p&quot; target=&quot;_blank&quot;&gt;MATLAB’s manual&lt;/a&gt;.&lt;/p&gt;
 
-Creates array of all zeros (with optionally given [fixed-point](https://en.wikipedia.org/wiki/Fixed-point_arithmetic){:target=&quot;_blank&quot;} properties. For more information, see [MATLAB's manual](https://www.mathworks.com/help/fixedpoint/ref/zeros.html#inputarg_p){:target=&quot;_blank&quot;}.
-
-```matlab
-&amp;gt;&amp;gt; zeros(2,2)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; zeros(2,2)
 ans =
      0     0
      0     0
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-```matlab
-&amp;gt;&amp;gt; a = zeros(1,3)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = zeros(1,3)
 a =
      0     0     0
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-##### ones
+&lt;h5 id=&quot;ones&quot;&gt;ones&lt;/h5&gt;
 
-Creates an array of all ones with fixed-point properties.
+&lt;p&gt;Creates an array of all ones with fixed-point properties.&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; a = ones(1,3)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = ones(1,3)
 a =
      1     1     1
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-##### eye
+&lt;h5 id=&quot;eye&quot;&gt;eye&lt;/h5&gt;
 
-Creates an identity matrix with fixed-point properties
+&lt;p&gt;Creates an identity matrix with fixed-point properties&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; I = eye(3,3)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; I = eye(3,3)
 I =
      1     0     0
      0     1     0
@@ -4373,14 +4354,13 @@ I =
      1     0     0     0
      0     1     0     0
      0     0     1     0
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-##### diag
+&lt;h5 id=&quot;diag&quot;&gt;diag&lt;/h5&gt;
 
-Creates a diagonal matrix from a given input vector,
+&lt;p&gt;Creates a diagonal matrix from a given input vector,&lt;/p&gt;
 
-```matlab
-v = [2 1 -1 -2 -5];
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;v = [2 1 -1 -2 -5];
 &amp;gt;&amp;gt; D = diag(v)
 D =
      2     0     0     0     0
@@ -4406,12 +4386,11 @@ D =
      0     0    -1     0     0     0     0
      0     0     0    -2     0     0     0
      0     0     0     0    -5     0     0
-```
-&lt;br /&gt;
-`diag` can also get diagonal elements of an input matrix, if it already exists.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;code&gt;diag&lt;/code&gt; can also get diagonal elements of an input matrix, if it already exists.&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; a = eye(3,5)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = eye(3,5)
 a =
      1     0     0     0     0
      0     1     0     0     0
@@ -4430,14 +4409,13 @@ ans =
      0
      0
      0
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-##### ndgrid
+&lt;h5 id=&quot;ndgrid&quot;&gt;ndgrid&lt;/h5&gt;
 
-Creates rectangular grid in N-D space.
+&lt;p&gt;Creates rectangular grid in N-D space.&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; [X,Y] = ndgrid(1:2:19,2:2:12)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; [X,Y] = ndgrid(1:2:19,2:2:12)
 X =
      1     1     1     1     1     1
      3     3     3     3     3     3
@@ -4460,33 +4438,33 @@ Y =
      2     4     6     8    10    12
      2     4     6     8    10    12
      2     4     6     8    10    12
-```
-&lt;br /&gt;
-Later on, we will see how this function can be used to generate fancy looking graphs like the following,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Later on, we will see how this function can be used to generate fancy looking graphs like the following,&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img src=&quot;http:/MAPCP2019U/lecture/5/2dgrid.png&quot; width=&quot;700&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/4/2dgrid.png&quot; width=&quot;700&quot; /&gt;
 &lt;/figure&gt;
 
-#### Matrix concatenation functions
+&lt;h4 id=&quot;matrix-concatenation-functions&quot;&gt;Matrix concatenation functions&lt;/h4&gt;
 
-The following functions combine existing matrices to form a new matrix.
-  - **cat**: Concatenate matrices along the specified dimension
-  - **horzcat**: Horizontally concatenate matrices
-  - **vertcat**: Vertically concatenate matrices
-  - **repmat**: Create a new matrix by replicating and tiling existing matrices
-  - **blkdiag**: Create a block diagonal matrix from existing matrices
+&lt;p&gt;The following functions combine existing matrices to form a new matrix.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;cat&lt;/strong&gt;: Concatenate matrices along the specified dimension&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;horzcat&lt;/strong&gt;: Horizontally concatenate matrices&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;vertcat&lt;/strong&gt;: Vertically concatenate matrices&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;repmat&lt;/strong&gt;: Create a new matrix by replicating and tiling existing matrices&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;blkdiag&lt;/strong&gt;: Create a block diagonal matrix from existing matrices&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;h3 id=&quot;cell-variables&quot;&gt;Cell variables&lt;/h3&gt;
 
-### Cell variables
+&lt;p&gt;When we want to define a variable whose elements are not all of the same types, we need an entity that goes beyond the capabilities of matrices, which can only contain numeric values. Just as with cell values in the previous lecture, a cell array is a data type with indexed data containers called cells. Each cell can contain any type of data. Cell arrays commonly contain &lt;strong&gt;pieces of text (string)&lt;/strong&gt;, &lt;strong&gt;combinations of text and numbers&lt;/strong&gt; from spreadsheets or text files, or they can contain arrays of numeric arrays of different sizes.&lt;/p&gt;
 
-When we want to define a variable whose elements are not all of the same types, we need an entity that goes beyond the capabilities of matrices, which can only contain numeric values. Just as with cell values in the previous lecture, a cell array is a data type with indexed data containers called cells. Each cell can contain any type of data. Cell arrays commonly contain **pieces of text (string)**, **combinations of text and numbers** from spreadsheets or text files, or they can contain arrays of numeric arrays of different sizes.
+&lt;p&gt;There are two ways to refer to the elements of a cell array. Enclose indices in smooth parentheses, (), to refer to sets of cells — for example, to define a subset of the array. Enclose indices in curly braces, {}, to refer to the text, numbers, or other data within individual cells.&lt;/p&gt;
 
-There are two ways to refer to the elements of a cell array. Enclose indices in smooth parentheses, (), to refer to sets of cells — for example, to define a subset of the array. Enclose indices in curly braces, {}, to refer to the text, numbers, or other data within individual cells.
+&lt;h4 id=&quot;creating-cell-arrays&quot;&gt;Creating cell arrays&lt;/h4&gt;
 
-#### Creating cell arrays
-
-```matlab
-&amp;gt;&amp;gt; C = {} % empty cell array
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C = {} % empty cell array
 C = 
      {}
 &amp;gt;&amp;gt; class(C)
@@ -4498,10 +4476,9 @@ ans =
 &amp;gt;&amp;gt; length(C)
 ans =
      0
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-```matlab
-&amp;gt;&amp;gt; emptyCell = cell(3,4)
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; emptyCell = cell(3,4)
 emptyCell = 
     []    []    []    []
     []    []    []    []
@@ -4515,10 +4492,9 @@ emptyCell(:,:,2) =
     []    []    []    []
     []    []    []    []
     []    []    []    []
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-```matlab
-&amp;gt;&amp;gt; a = {'Hi', ' ', 'World!'} % a cell array of strings
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = {'Hi', ' ', 'World!'} % a cell array of strings
 a = 
     'Hi'    ' '    'World!'
 &amp;gt;&amp;gt; class(a)
@@ -4530,19 +4506,17 @@ ans =
 &amp;gt;&amp;gt; length(a) % the length of a, along the longest dimension
 ans =
      3
-```
-&lt;br /&gt;
-To call a specific element, use `()`.
-```matlab
-&amp;gt;&amp;gt; names = {'Bloggs', 'San', 'Andersen'};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+To call a specific element, use &lt;code&gt;()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; names = {'Bloggs', 'San', 'Andersen'};
 &amp;gt;&amp;gt; first_cell = names(1);
 &amp;gt;&amp;gt; rest_of_cells = names(2:3);
 &amp;gt;&amp;gt; third_string = names{3};
-```
-&lt;br /&gt;
-You can see what the type of each element is by using `who` and `whos`,
-```matlab
-&amp;gt;&amp;gt; whos
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You can see what the type of each element is by using &lt;code&gt;who&lt;/code&gt; and &lt;code&gt;whos&lt;/code&gt;,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; whos
   Name               Size            Bytes  Class     Attributes
 
   a                  1x3               354  cell                
@@ -4552,40 +4526,37 @@ You can see what the type of each element is by using `who` and `whos`,
   names              1x3               370  cell                
   rest_of_cells      1x2               246  cell                
   third_string       1x8                16  char     
-```  
-&lt;br /&gt;
-Note that `who` only gives you the names of the variables,
-```matlab
-&amp;gt;&amp;gt; who
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note that &lt;code&gt;who&lt;/code&gt; only gives you the names of the variables,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; who
 
 Your variables are:
 
 a              ans            chr            first_cell     names          rest_of_cells  third_string  
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-#### Cell array concatenation functions
+&lt;h4 id=&quot;cell-array-concatenation-functions&quot;&gt;Cell array concatenation functions&lt;/h4&gt;
 
-There are a wide range of MATLAB functions that act on cells, which can be found [here](https://www.mathworks.com/help/matlab/cell-arrays.html){:target=&quot;_blank&quot;}.
+&lt;p&gt;There are a wide range of MATLAB functions that act on cells, which can be found &lt;a href=&quot;https://www.mathworks.com/help/matlab/cell-arrays.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-### String (char) variables
+&lt;h3 id=&quot;string-char-variables&quot;&gt;String (char) variables&lt;/h3&gt;
 
-Just as explained in the last lecture,
+&lt;p&gt;Just as explained in the last lecture,&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; newChr = 'You''re right'
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; newChr = 'You''re right'
 newChr =
 You're right
 &amp;gt;&amp;gt; class(newChr)
 ans =
 char
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-#### Creating string arrays
+&lt;h4 id=&quot;creating-string-arrays&quot;&gt;Creating string arrays&lt;/h4&gt;
 
-Creating string arrays is rather complex and confusing in MATLAB. Here is [MATLAB's own manual for creating string arrays](https://www.mathworks.com/help/matlab/matlab_prog/creating-character-arrays.html){:target=&quot;_blank&quot;}. Note that a string is a vector by itself. So you can fetch its characters as elements,
+&lt;p&gt;Creating string arrays is rather complex and confusing in MATLAB. Here is &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/creating-character-arrays.html&quot; target=&quot;_blank&quot;&gt;MATLAB’s own manual for creating string arrays&lt;/a&gt;. Note that a string is a vector by itself. So you can fetch its characters as elements,&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; newChr = 'You''re right'
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; newChr = 'You''re right'
 newChr =
 You're right
 &amp;gt;&amp;gt; newChr(1)
@@ -4594,47 +4565,47 @@ Y
 &amp;gt;&amp;gt; newChr(1:4)
 ans =
 You'
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-### Structure variables
+&lt;h3 id=&quot;structure-variables&quot;&gt;Structure variables&lt;/h3&gt;
 
-Let's first review the meanings of Arrays and Cells:  
+&lt;p&gt;Let’s first review the meanings of Arrays and Cells:&lt;/p&gt;
 
-- An **array** is a MATLAB data type in which there is a name for the whole data object, and the individual elements in the array can be accessed only through their indices, which are integer numbers. For example,
-```matlab
-&amp;gt;&amp;gt; arr = [1,2,3,4]
+&lt;ul&gt;
+  &lt;li&gt;An &lt;strong&gt;array&lt;/strong&gt; is a MATLAB data type in which there is a name for the whole data object, and the individual elements in the array can be accessed only through their indices, which are integer numbers. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; arr = [1,2,3,4]
 arr =
-     1     2     3     4
-```
-&lt;br /&gt;
-But, notice that **all the elements in a MATLAB array must be of the same data type**. For example, you cannot combine numeric and string data types,
-```matlab
-&amp;gt;&amp;gt; arr = [1,'Amir',3,4]
+   1     2     3     4
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;
+But, notice that &lt;strong&gt;all the elements in a MATLAB array must be of the same data type&lt;/strong&gt;. For example, you cannot combine numeric and string data types,&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; arr = [1,'Amir',3,4]
 arr =
 Amir
-```
-&lt;br /&gt;
-- By contrast, a **cell array** is a MATLAB data type in which again, there is a name for the whole data object, and the individual elements in the array can be accessed only via their indices, but unlike regular arrays **cell elements do not need to be all of the same type**,
-```matlab
-&amp;gt;&amp;gt; arr = {1,'Amir',3,4}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;By contrast, a &lt;strong&gt;cell array&lt;/strong&gt; is a MATLAB data type in which again, there is a name for the whole data object, and the individual elements in the array can be accessed only via their indices, but unlike regular arrays &lt;strong&gt;cell elements do not need to be all of the same type&lt;/strong&gt;,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; arr = {1,'Amir',3,4}
 arr = 
-    [1]    'Amir'    [3]    [4]
-```
-&lt;br /&gt;
-- There is yet another data type in MATLAB called **structure**, which has also counterparts in most other programming languages such as Fortran, C, C++. This is the topic of this section below.  
-&lt;br /&gt;
+  [1]    'Amir'    [3]    [4]
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There is yet another data type in MATLAB called &lt;strong&gt;structure&lt;/strong&gt;, which has also counterparts in most other programming languages such as Fortran, C, C++. This is the topic of this section below.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-A **structure** is a MATLAB data type in which the whole object has a name, just like regular and cell arrays. However, unlike cells and regular arrays, the elements of a structure object can be accessed by their assigned **field names** instead of a numerical index, as in numeric arrays and cells.  
+&lt;p&gt;A &lt;strong&gt;structure&lt;/strong&gt; is a MATLAB data type in which the whole object has a name, just like regular and cell arrays. However, unlike cells and regular arrays, the elements of a structure object can be accessed by their assigned &lt;strong&gt;field names&lt;/strong&gt; instead of a numerical index, as in numeric arrays and cells.&lt;/p&gt;
 
-Like cell arrays, structures can contain data of varying types and sizes. A **structure** object is a MATLAB data type that groups related data using data containers called **fields** (instead of cells as in cell arrays). **Each field can contain any type of data**. You can access data in a structure using **dot notation** of the form `structName.fieldName`. Here is [MATLAB video](https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html){:target=&quot;_blank&quot;} about cell and structure arrays.
+&lt;p&gt;Like cell arrays, structures can contain data of varying types and sizes. A &lt;strong&gt;structure&lt;/strong&gt; object is a MATLAB data type that groups related data using data containers called &lt;strong&gt;fields&lt;/strong&gt; (instead of cells as in cell arrays). &lt;strong&gt;Each field can contain any type of data&lt;/strong&gt;. You can access data in a structure using &lt;strong&gt;dot notation&lt;/strong&gt; of the form &lt;code&gt;structName.fieldName&lt;/code&gt;. Here is &lt;a href=&quot;https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html&quot; target=&quot;_blank&quot;&gt;MATLAB video&lt;/a&gt; about cell and structure arrays.&lt;/p&gt;
 
-#### Creating structures
+&lt;h4 id=&quot;creating-structures&quot;&gt;Creating structures&lt;/h4&gt;
 
-To create a structure, you can use function `struct`,
+&lt;p&gt;To create a structure, you can use function &lt;code&gt;struct&lt;/code&gt;,&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; field = 'f';
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; field = 'f';
 value = {'some text';
          [10, 20, 30];
          magic(5)};
@@ -4642,25 +4613,22 @@ s = struct(field,value)
 s = 
 3x1 struct array with fields:
     f
-```
-&lt;br /&gt;
-You can also create empty structure (which can be manipulated later),
-```matlab
-&amp;gt;&amp;gt; s = struct()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You can also create empty structure (which can be manipulated later),&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; s = struct()
 s = 
 struct with no fields.
-```
-&lt;br /&gt;
-One can also create structure objects by simply using the dot notation,
-```matlab
-&amp;gt;&amp;gt; amir.univ = 'UT Austin'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+One can also create structure objects by simply using the dot notation,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; amir.univ = 'UTA'
 amir = 
-    univ: 'UT Austin'
-```
-&lt;br /&gt;
-Structure objects described above are examples of **scalar objects** meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating **structure arrays**. You might think of structure array, as a cell array, whose columns are indexed by character names (field names) instead of integer indices, and whose rows represent the elements of the structure array. For example,  
-```matlab
-&amp;gt;&amp;gt; student.name = 'Marshall'
+    univ: 'UTA'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Structure objects described above are examples of &lt;strong&gt;scalar objects&lt;/strong&gt; meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating &lt;strong&gt;structure arrays&lt;/strong&gt;. You might think of structure array, as a cell array, whose columns are indexed by character names (field names) instead of integer indices, and whose rows represent the elements of the structure array. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; student.name = 'Marshall'
 student = 
     name: 'Marshall'
 &amp;gt;&amp;gt; student.grade = 4.0
@@ -4671,20 +4639,18 @@ student =
 student = 
      name: 'Marshall'
     grade: 4
-```
-&lt;br /&gt;
-would create a scalar structure `student` with two fields. However, as soon as you add another name to this structure, using array notation like the following,
-```matlab
-&amp;gt;&amp;gt; student(2).name = 'Vivek'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+would create a scalar structure &lt;code&gt;student&lt;/code&gt; with two fields. However, as soon as you add another name to this structure, using array notation like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; student(2).name = 'Vivek'
 student = 
 1x2 struct array with fields:
     name
     grade
-```
-&lt;br /&gt;
-the scalar structure `student` is automatically converted to a **structure array**, that has two rows indexed by integer numbers, and each row has two fields `name` and `grade`. Note that, even though we added only the `name` field for the second structure element, the other field name is also automatically created for the second structure element, although with no content (the content of the field `grade` for the second element of the structure is empty). There is even no need to add the elements in increasing order. For example,
-```matlab
-&amp;gt;&amp;gt; student(4).name = 'Travis'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+the scalar structure &lt;code&gt;student&lt;/code&gt; is automatically converted to a &lt;strong&gt;structure array&lt;/strong&gt;, that has two rows indexed by integer numbers, and each row has two fields &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;grade&lt;/code&gt;. Note that, even though we added only the &lt;code&gt;name&lt;/code&gt; field for the second structure element, the other field name is also automatically created for the second structure element, although with no content (the content of the field &lt;code&gt;grade&lt;/code&gt; for the second element of the structure is empty). There is even no need to add the elements in increasing order. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; student(4).name = 'Travis'
 student = 
 1x4 struct array with fields:
     name
@@ -4693,29 +4659,28 @@ student =
   Name         Size            Bytes  Class     Attributes
 
   student      1x4               654  struct          
-```
-&lt;br /&gt;
-will automatically add (initialize) the third structure element, even though we did not ask for it.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+will automatically add (initialize) the third structure element, even though we did not ask for it.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http:/MAPCP2019U/lecture/5/structure.png&quot; width=&quot;600&quot; /&gt;
+    &lt;img src=&quot;http:/MAPCP2019U/lecture/4/structure.png&quot; width=&quot;600&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         The content of the structure array &lt;code&gt;student&lt;/code&gt; in MATLAB workspace. Note that the rows correspond to the structure elements, and the columns correspond to the structure fields, which are the same for all structure elements. 
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-So, if there is so much similarity between MATLAB **cell arrays** and **structure arrays**, then what the advantage of defining or using structure arrays instead of cell arrays? The main advantage is that, in the case of structures, the content of the structure element is identified by a set of tags (labels) called **field names**. This becomes very helpful in understanding the content of complex data when they are written as structures instead of cell arrays.  
+&lt;p&gt;So, if there is so much similarity between MATLAB &lt;strong&gt;cell arrays&lt;/strong&gt; and &lt;strong&gt;structure arrays&lt;/strong&gt;, then what the advantage of defining or using structure arrays instead of cell arrays? The main advantage is that, in the case of structures, the content of the structure element is identified by a set of tags (labels) called &lt;strong&gt;field names&lt;/strong&gt;. This becomes very helpful in understanding the content of complex data when they are written as structures instead of cell arrays.&lt;/p&gt;
 
-There is a long list of functions that can manipulate structures. A list of them is available on MATLAB website [here](https://www.mathworks.com/help/matlab/structures.html){:target=&quot;_blank&quot;}.
+&lt;p&gt;There is a long list of functions that can manipulate structures. A list of them is available on MATLAB website &lt;a href=&quot;https://www.mathworks.com/help/matlab/structures.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-### MATLAB tables
+&lt;h3 id=&quot;matlab-tables&quot;&gt;MATLAB tables&lt;/h3&gt;
 
-Tables are arrays in a tabular form whose named columns can have different types. A table is a data type suitable for column-oriented or tabular data that is often stored as columns in a text file or in a spreadsheet. Tables consist of rows and column-oriented variables. Each variable in a table can have a different data type and a different size **with the one restriction** that **each variable must have the same number of rows**. For more information, see [MATLAB's educational video on Tables](https://www.mathworks.com/videos/tables-and-categorical-arrays-in-release-2013b-101607.html){:target=&quot;_blank&quot;}.
+&lt;p&gt;Tables are arrays in a tabular form whose named columns can have different types. A table is a data type suitable for column-oriented or tabular data that is often stored as columns in a text file or in a spreadsheet. Tables consist of rows and column-oriented variables. Each variable in a table can have a different data type and a different size &lt;strong&gt;with the one restriction&lt;/strong&gt; that &lt;strong&gt;each variable must have the same number of rows&lt;/strong&gt;. For more information, see &lt;a href=&quot;https://www.mathworks.com/videos/tables-and-categorical-arrays-in-release-2013b-101607.html&quot; target=&quot;_blank&quot;&gt;MATLAB’s educational video on Tables&lt;/a&gt;.&lt;/p&gt;
 
-To create a table, you can use the function `table`:
+&lt;p&gt;To create a table, you can use the function &lt;code&gt;table&lt;/code&gt;:&lt;/p&gt;
 
-```matlab
-&amp;gt;&amp;gt; LastName = {'Smith';'Johnson';'Williams';'Jones';'Brown'};
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; LastName = {'Smith';'Johnson';'Williams';'Jones';'Brown'};
 &amp;gt;&amp;gt; Age = [38;43;38;40;49];
 &amp;gt;&amp;gt; Height = [71;69;64;67;64];
 &amp;gt;&amp;gt; Weight = [176;163;131;133;119];
@@ -4729,35 +4694,38 @@ T =
     Williams    38     64        131       125     83   
     Jones       40     67        133       117     75   
     Brown       49     64        119       122     80   
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-There is also a long list of functions that act on tables, a summary of which is available [here](https://www.mathworks.com/help/matlab/tables.html){:target=&quot;_blank&quot;}.
+&lt;p&gt;There is also a long list of functions that act on tables, a summary of which is available &lt;a href=&quot;https://www.mathworks.com/help/matlab/tables.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-## The Different Kinds of Brackets: Recap
+&lt;h2 id=&quot;the-different-kinds-of-brackets-recap&quot;&gt;The Different Kinds of Brackets: Recap&lt;/h2&gt;
 
-To recap, perhaps the two most two basic operations relating to arrays are,
-  - Creating the array.
-  - Accessing elements in the array.
+&lt;p&gt;To recap, perhaps the two most two basic operations relating to arrays are,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Creating the array.&lt;/li&gt;
+  &lt;li&gt;Accessing elements in the array.&lt;/li&gt;
+&lt;/ul&gt;
 
-Depending on whether we have a cell array or a standard array of a basic data type (e.g. char), we can distinguish the different behavior of each of the types of brackets: `[]`, `{}` and `()`.
+&lt;p&gt;Depending on whether we have a cell array or a standard array of a basic data type (e.g. char), we can distinguish the different behavior of each of the types of brackets: &lt;code&gt;[]&lt;/code&gt;, &lt;code&gt;{}&lt;/code&gt; and &lt;code&gt;()&lt;/code&gt;.&lt;/p&gt;
 
-### Creating an Array
+&lt;h3 id=&quot;creating-an-array&quot;&gt;Creating an Array&lt;/h3&gt;
 
-- **Square brackets `[ ]`**: Creates an array where all entries have the same type, e.g. double or char. For example,  
-```matlab
-numArray = [5, 62.7, 3];
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Square brackets &lt;code&gt;[ ]&lt;/code&gt;&lt;/strong&gt;: Creates an array where all entries have the same type, e.g. double or char. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;numArray = [5, 62.7, 3];
 charArray = ['a', 'b', 'c'];
-```
-- **Curly brackets `{ }`**: Creates a cell array. Its cells can contain any type. They can contain items of the same type or a mixture of types. For example,
-```matlab
-sameTypeCells = {'Once', 'upon', 'a', 'time'}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Curly brackets &lt;code&gt;{ }&lt;/code&gt;&lt;/strong&gt;: Creates a cell array. Its cells can contain any type. They can contain items of the same type or a mixture of types. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;sameTypeCells = {'Once', 'upon', 'a', 'time'}
 diffTypeCells = {'Number', 17}
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-Note that in order to create a vector, you don't necessarily need ',' between the elements. For example,  
-```matlab
-&amp;gt;&amp;gt; [1 4]
+&lt;p&gt;Note that in order to create a vector, you don’t necessarily need ‘,’ between the elements. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; [1 4]
   ans =
      1     4
 &amp;gt;&amp;gt; whos ans
@@ -4772,54 +4740,53 @@ ans =
   Name      Size            Bytes  Class     Attributes
 
   ans       1x2                16  double              
-```
-&lt;br /&gt;
-The same is also true for cell arrays,
-```matlab
-&amp;gt;&amp;gt; sameTypeCells = {'Once'  'upon'  'a'  'time'}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The same is also true for cell arrays,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; sameTypeCells = {'Once'  'upon'  'a'  'time'}
 sameTypeCells = 
     'Once'    'upon'    'a'    'time'
 &amp;gt;&amp;gt; whos sameTypeCells
   Name               Size            Bytes  Class    Attributes
 
   sameTypeCells      1x4               474  cell               
-```
-&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-### Accessing Elements
+&lt;h3 id=&quot;accessing-elements&quot;&gt;Accessing Elements&lt;/h3&gt;
 
-  - **Round brackets `( )`**: These can be used to access one or more elements from any type of array. The elements returned always have the same type as the array, i.e. for an array of doubles the round bracket will return doubles, for an array of cells they will return cells. For example, using the arrays created above:
-  ```matlab
-  &amp;gt;&amp;gt; numArray(2:3) % Second and third elements.
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Round brackets &lt;code&gt;( )&lt;/code&gt;&lt;/strong&gt;: These can be used to access one or more elements from any type of array. The elements returned always have the same type as the array, i.e. for an array of doubles the round bracket will return doubles, for an array of cells they will return cells. For example, using the arrays created above:
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;  &amp;gt;&amp;gt; numArray(2:3) % Second and third elements.
   ans =
-     62.7000    3.0000
-  ```
-  ```matlab
-  &amp;gt;&amp;gt; y = sameTypeCells([1, 3]) % first and third
+ 62.7000    3.0000
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;  &amp;gt;&amp;gt; y = sameTypeCells([1, 3]) % first and third
   y = 
-      'Once'    'a'
-  ```
-  - **Curly brackets `{ }`**: When used for accessing elements, curly brackets are specific to cell arrays. They can be used to obtain the content of a cell in its native data type, i.e. not in the form of a cell. For example,
-  ```matlab
-  &amp;gt;&amp;gt; sameTypeCells{2}
+  'Once'    'a'
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Curly brackets &lt;code&gt;{ }&lt;/code&gt;&lt;/strong&gt;: When used for accessing elements, curly brackets are specific to cell arrays. They can be used to obtain the content of a cell in its native data type, i.e. not in the form of a cell. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;  &amp;gt;&amp;gt; sameTypeCells{2}
   ans =
-      upon
+  upon
   &amp;gt;&amp;gt; class(sameTypeCells{2})
   ans =
-      char
+  char
   &amp;gt;&amp;gt; sameTypeCells(2)
   ans = 
-      'upon'
+  'upon'
   &amp;gt;&amp;gt; class(sameTypeCells(2))
   ans =
-      cell
-  ```
+  cell
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-### Array slicing (indexing)
+&lt;h3 id=&quot;array-slicing-indexing&quot;&gt;Array slicing (indexing)&lt;/h3&gt;
 
-Like Fortran and R, MATLAB has powerful built-in array manipulation capabilities. For example,
-```matlab
-&amp;gt;&amp;gt; test = [ 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 ]
+&lt;p&gt;Like Fortran and R, MATLAB has powerful built-in array manipulation capabilities. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; test = [ 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 ]
 test =
      1     2     3     4
      1     2     4     5
@@ -4829,36 +4796,32 @@ ans =
      1     2     3     4
      1     2     4     5
      3     5     6     7
-```
-&lt;br /&gt;
-The symbol `:` means all the elements. But, you could also specify a range to only get a slice of the array,
-```matlab
-&amp;gt;&amp;gt; test(1:2,2:3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The symbol &lt;code&gt;:&lt;/code&gt; means all the elements. But, you could also specify a range to only get a slice of the array,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; test(1:2,2:3)
 ans =
      2     3
      2     4
-```
-&lt;br /&gt;
-Now, suppose you only wanted to get the first and the last column of the array, and the rows two and three. You could do,
-```matlab
-&amp;gt;&amp;gt; test(2:3,[1 4])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Now, suppose you only wanted to get the first and the last column of the array, and the rows two and three. You could do,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; test(2:3,[1 4])
 ans =
      1     5
      3     7
-```
-&lt;br /&gt;
-Amazing, isn't it? You can also slice cell arrays in a similar way. However, note that you can only slice the elements of a cell array in this way, **not the contents of the elements of a cell array**. To explain this further, consider the following cell array,
-```matlab
-&amp;gt;&amp;gt; test = { 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Amazing, isn’t it? You can also slice cell arrays in a similar way. However, note that you can only slice the elements of a cell array in this way, &lt;strong&gt;not the contents of the elements of a cell array&lt;/strong&gt;. To explain this further, consider the following cell array,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; test = { 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 }
 test = 
     [1]    [2]    [3]    [4]
     [1]    [2]    [4]    [5]
     [3]    [5]    [6]    [7]
-```
-&lt;br /&gt;
-Now, note that slicing this cell, would give you a cell slice, not a matrix of the values, and note that to do this, you have to access the elements using `()` instead of `{}`.
-```matlab
-&amp;gt;&amp;gt; test(:,:)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Now, note that slicing this cell, would give you a cell slice, not a matrix of the values, and note that to do this, you have to access the elements using &lt;code&gt;()&lt;/code&gt; instead of &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; test(:,:)
 ans = 
     [1]    [2]    [3]    [4]
     [1]    [2]    [4]    [5]
@@ -4870,11 +4833,10 @@ ans =
 &amp;gt;&amp;gt; class(test(2:3,[1 4]))
 ans =
 cell
-```
-&lt;br /&gt;
-If you try slicing the cell  array using `{}`, you won't get a slice anymore, but a MATLAB [comma-separated list](https://www.mathworks.com/help/matlab/matlab_prog/comma-separated-lists.html){:target=&quot;_blank&quot;},
-```matlab
-&amp;gt;&amp;gt; test{2:3,[1 4]}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+If you try slicing the cell  array using &lt;code&gt;{}&lt;/code&gt;, you won’t get a slice anymore, but a MATLAB &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/comma-separated-lists.html&quot; target=&quot;_blank&quot;&gt;comma-separated list&lt;/a&gt;,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; test{2:3,[1 4]}
 ans =
      1
 ans =
@@ -4886,13 +4848,11 @@ ans =
 &amp;gt;&amp;gt; class(test{2:3,[1 4]})
 Error using class
 The CLASS function must be called from a class constructor. 
-```
-&lt;br /&gt;
-Since slicing the cell array by `{}` returns a comma-separated list, MATLAB's `class()` function gives an error, since it cannot take as input, a list of values.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Since slicing the cell array by &lt;code&gt;{}&lt;/code&gt; returns a comma-separated list, MATLAB’s &lt;code&gt;class()&lt;/code&gt; function gives an error, since it cannot take as input, a list of values.&lt;/p&gt;
 
-
-&lt;br /&gt;&lt;br /&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/4-matlab-values-variables-types&quot;&gt;Lecture 4: MATLAB - values, variables, and types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>

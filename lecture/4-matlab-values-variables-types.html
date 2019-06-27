@@ -720,43 +720,41 @@ ans =
 <p><br /></p>
 
 <p>Here is a complete list of options that format can take,</p>
+
 <table class="center">
-<caption class="title" style="padding-bottom:10px;text-align:center;">
-Table 2. A list of MATLAB <code>format</code> options.
-</caption>
-<thead>
-<tr>
-<th><font size="4rm" color="red">Style</font></th>
-<th><font size="4rm" color="red">Result</font></th>
-<th><font size="4rm" color="red">Example</font></th>
-</tr>
-</thead>
+    <caption class="title" style="padding-bottom:10px;text-align:center;">
+        Table 2. A list of MATLAB <code>format</code> options.
+    </caption>
+    <thead>
+        <tr>
+        <th><font size="4rm" color="red">Style</font></th>
+        <th><font size="4rm" color="red">Result</font></th>
+        <th><font size="4rm" color="red">Example</font></th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr><td><b><code>short (default)</code></b></td><td>Short, fixed-decimal format with 4 digits after the decimal point.</td><td>3.1416</td></tr>
+        <tr><td><b><code>long</code></b></td><td>Long, fixed-decimal format with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.</td><td>3.141592654</td></tr>
+        <tr><td><b><code>shortE</code></b></td><td>Short scientific notation with 4 digits after the decimal point.</td><td>3.14E+00</td></tr>
+        <tr><td><b><code>longE</code></b></td><td>Long scientific notation with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.</td><td>3.14E+00</td></tr>
+        <tr><td><b><code>shortG</code></b></td><td>Short, fixed-decimal format or scientific notation, whichever is more compact, with a total of 5 digits.</td><td>3.1416</td></tr>
+        <tr><td><b><code>longG</code></b></td><td>Long, fixed-decimal format or scientific notation, whichever is more compact, with a total of 15 digits for double values, and 7 digits for singlevalues.</td><td>3.141592654</td></tr>
+        <tr><td><b><code>shortEng</code></b></td><td>Short engineering notation (exponent is a multiple of 3) with 4 digits after the decimal point.</td><td>3.14E+00</td></tr>
+        <tr><td><b><code>longEng</code></b></td><td>Long engineering notation (exponent is a multiple of 3) with 15 significant digits.</td><td>3.14E+00</td></tr>
+        <tr><td><b><code>+</code></b></td><td>Positive/Negative format with +, -, and blank characters displayed for positive, negative, and zero elements.</td><td>+</td></tr>
+        <tr><td><b><code>bank</code></b></td><td>Currency format with 2 digits after the decimal point.</td><td>3.14</td></tr>
+        <tr><td><b><code>hex</code></b></td><td>Hexadecimal representation of a binary double-precision number.</td><td>400921fb54442d18</td></tr>
+        <tr><td><b><code>rat</code></b></td><td>Ratio of small integers.</td><td>355/113</td></tr>
+    </tbody>
+</table>
 
-<tbody>
+<p><br /><br /></p>
 
-<tr><td><b><code>short (default)</code></b></td><td>Short, fixed-decimal format with 4 digits after the decimal point.</td><td>3.1416</td></tr>
-<tr><td><b><code>long</code></b></td><td>Long, fixed-decimal format with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.</td><td>3.141592654</td></tr>
-<tr><td><b><code>shortE</code></b></td><td>Short scientific notation with 4 digits after the decimal point.</td><td>3.14E+00</td></tr>
-<tr><td><b><code>longE</code></b></td><td>Long scientific notation with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.</td><td>3.14E+00</td></tr>
-<tr><td><b><code>shortG</code></b></td><td>Short, fixed-decimal format or scientific notation, whichever is more compact, with a total of 5 digits.</td><td>3.1416</td></tr>
-<tr><td><b><code>longG</code></b></td><td>Long, fixed-decimal format or scientific notation, whichever is more compact, with a total of 15 digits for double values, and 7 digits for singlevalues.</td><td>3.141592654</td></tr>
-<tr><td><b><code>shortEng</code></b></td><td>Short engineering notation (exponent is a multiple of 3) with 4 digits after the decimal point.</td><td>3.14E+00</td></tr>
-<tr><td><b><code>longEng</code></b></td><td>Long engineering notation (exponent is a multiple of 3) with 15 significant digits.</td><td>3.14E+00</td></tr>
-<tr><td><b><code>+</code></b></td><td>Positive/Negative format with +, -, and blank characters displayed for positive, negative, and zero elements.</td><td>+</td></tr>
-<tr><td><b><code>bank</code></b></td><td>Currency format with 2 digits after the decimal point.</td><td>3.14</td></tr>
-<tr><td><b><code>hex</code></b></td><td>Hexadecimal representation of a binary double-precision number.</td><td>400921fb54442d18</td></tr>
-<tr><td><b><code>rat</code></b></td><td>Ratio of small integers.</td><td>355/113</td></tr>
+<h2 id="variables-in-matlab">Variables in MATLAB</h2>
 
+<p>A variable is simply a name that we assign to a specific value, in order to avoid repeating the same value frequently in the code, thus writing a cleaner, less error-prone script/code. We discussed above the main value types (classes) in MATLAB. The same also holds for variables, because they are simply names assigned to each value or a set of values. In order to define a variable, the variable name must always appear on the left of equality, like the following,</p>
 
-<br /><br />
-
-
-## Variables in MATLAB
-
-A variable is simply a name that we assign to a specific value, in order to avoid repeating the same value frequently in the code, thus writing a cleaner, less error-prone script/code. We discussed above the main value types (classes) in MATLAB. The same also holds for variables, because they are simply names assigned to each value or a set of values. In order to define a variable, the variable name must always appear on the left of equality, like the following,
-
-```matlab
-&gt;&gt; format compact
+<pre><code class="language-matlab">&gt;&gt; format compact
 &gt;&gt; a = 1 % assign value 1 to a
 a =
      1
@@ -767,47 +765,46 @@ double
  1 = b
    ↑
 Error: The expression to the left of the equals sign is not a valid target for an assignment.
-```
+</code></pre>
 
-We will get to each of these below. But before that, here are some official and unofficial tips on the variable naming conventions in MATLAB.
+<p>We will get to each of these below. But before that, here are some official and unofficial tips on the variable naming conventions in MATLAB.</p>
 
-### Variable naming convention in MATLAB
+<h3 id="variable-naming-convention-in-matlab">Variable naming convention in MATLAB</h3>
 
-A MATLAB variable can only begin with a letter followed by underscore `_` and numbers inside or at the end of the variable name. MATLAB is case sensitive, so `A` and `a` are not the same variable. Other symbols are syntactically invalid anywhere in a variable name. Examples of valid names:
-  - `x6`
-  - `lastValue`
-  - `n_factorial`
+<p>A MATLAB variable can only begin with a letter followed by underscore <code>_</code> and numbers inside or at the end of the variable name. MATLAB is case sensitive, so <code>A</code> and <code>a</code> are not the same variable. Other symbols are syntactically invalid anywhere in a variable name. Examples of valid names:</p>
+<ul>
+  <li><code>x6</code></li>
+  <li><code>lastValue</code></li>
+  <li><code>n_factorial</code></li>
+</ul>
 
-Invalid names:
-  - `6x`
-  - `n!`
-  - `end` (see below for the reason)
+<p>Invalid names:</p>
+<ul>
+  <li><code>6x</code></li>
+  <li><code>n!</code></li>
+  <li><code>end</code> (see below for the reason)</li>
+</ul>
 
-```matlab
-&gt;&gt; new_var$
+<pre><code class="language-matlab">&gt;&gt; new_var$
  new_var$
         ↑
 Error: The input character is not valid in MATLAB statements or expressions.
-```
-    
-```matlab
-&gt;&gt; amir = 'teacher';
+</code></pre>
+
+<pre><code class="language-matlab">&gt;&gt; amir = 'teacher';
 disp(['Amir is a', amir])
 Amir is ateacher
-```
-    
-```matlab
-&gt;&gt; life_expectancy = 120; disp( ['The life expectancy for the millennials is projected to be ',life_expectancy,' years! (But don''t believe it...)'] )
+</code></pre>
+
+<pre><code class="language-matlab">&gt;&gt; life_expectancy = 120; disp( ['The life expectancy for the millennials is projected to be ',life_expectancy,' years! (But don''t believe it...)'] )
 The life expectancy for the millennials is projected to be x years! (But don't believe it...)
-```
-<br />
+</code></pre>
+<p><br /></p>
 
+<h4 id="matlab-reserved-names-keywords">MATLAB reserved names (keywords)</h4>
+<p>There are some limitation as to what names you can choose for your variables, even if they completely obey MATLAB syntax standard. Variable names in MATLAB cannot be the same as <strong>MATLAB keywords</strong>, which are simply names that reserved for a specific purpose in MATLAB programming.  They are used to define the syntax and structure of the MATLAB language. Note that <strong>MATLAB keywords are case-sensitive</strong>.  You <strong>cannot</strong> define variables with the exact same names as <strong>MATLAB keywords</strong>, such as <code>if</code> or <code>end</code>. For a complete list of MATLAB keyword, run the <code>iskeyword</code> command,</p>
 
-#### MATLAB reserved names (keywords)  
-There are some limitation as to what names you can choose for your variables, even if they completely obey MATLAB syntax standard. Variable names in MATLAB cannot be the same as **MATLAB keywords**, which are simply names that reserved for a specific purpose in MATLAB programming.  They are used to define the syntax and structure of the MATLAB language. Note that **MATLAB keywords are case-sensitive**.  You **cannot** define variables with the exact same names as **MATLAB keywords**, such as `if` or `end`. For a complete list of MATLAB keyword, run the `iskeyword` command,
-
-```matlab
-&gt;&gt; iskeyword
+<pre><code class="language-matlab">&gt;&gt; iskeyword
 ans = 
     'break'
     'case'
@@ -829,15 +826,14 @@ ans =
     'switch'
     'try'
     'while'
-```
-<br />
+</code></pre>
+<p><br /></p>
 
-#### Predefined variables in MATLAB
+<h4 id="predefined-variables-in-matlab">Predefined variables in MATLAB</h4>
 
-Note that there are some predefined variables in MATLAB, that are not considered as keywords. Therefore you can change their values and use them for your own purposes. But, **be very careful with predefined variables and in general**, it is better to not mess with them, as they can lead to confusion and catastrophe. For example,
+<p>Note that there are some predefined variables in MATLAB, that are not considered as keywords. Therefore you can change their values and use them for your own purposes. But, <strong>be very careful with predefined variables and in general</strong>, it is better to not mess with them, as they can lead to confusion and catastrophe. For example,</p>
 
-```matlab
-&gt;&gt; true % true is a predefined MATLAB logical variable
+<pre><code class="language-matlab">&gt;&gt; true % true is a predefined MATLAB logical variable
 ans =
      1
 &gt;&gt; class(true)
@@ -862,10 +858,9 @@ nan =
 &gt;&gt; class(nan)
 ans =
 logical
-```
+</code></pre>
 
-```matlab
-&gt;&gt; who
+<pre><code class="language-matlab">&gt;&gt; who
 
 Your variables are:
 
@@ -903,9 +898,9 @@ ans =
 &gt;&gt; j
 ans =
    0.0000 + 1.0000i
-```
-<br />
-Here is a list of some of the most important predefined variables in MATLAB.
+</code></pre>
+<p><br />
+Here is a list of some of the most important predefined variables in MATLAB.</p>
 
 <table class="center">
 <caption class="title" style="padding-bottom:10px;text-align:center;">
@@ -932,19 +927,15 @@ Table 1. A list of predefined values and variables in MATLAB.
 </tbody>
 </table>
 
+<h3 id="numeric-variables">Numeric variables</h3>
 
+<p>We have already extensively discussed number values in the previous lecture. Basically, everything that we have said about number values, holds also for variables of type number.</p>
 
+<h3 id="vector-and-matrix-variables">Vector and matrix variables</h3>
 
-### Numeric variables  
+<p>Again, similar to vector and matrix values, everything holds for the same type variables.</p>
 
-We have already extensively discussed number values in the previous lecture. Basically, everything that we have said about number values, holds also for variables of type number.  
-
-### Vector and matrix variables  
-
-Again, similar to vector and matrix values, everything holds for the same type variables.
-
-```matlab
-&gt;&gt; a = [1,2,3,4]
+<pre><code class="language-matlab">&gt;&gt; a = [1,2,3,4]
 a =
      1     2     3     4
 &gt;&gt; class(a)
@@ -956,32 +947,29 @@ a =
      2
      3
      4
-```
-<br />
+</code></pre>
+<p><br /></p>
 
-#### The colon operator `:`
+<h4 id="the-colon-operator-">The colon operator <code>:</code></h4>
 
-MATLAB has a special character shortcut notation for occasions when you want to create a numeric vector of a specific range with a predefined fixed spacing between the values of the vector. This shortcut has the following form,
+<p>MATLAB has a special character shortcut notation for occasions when you want to create a numeric vector of a specific range with a predefined fixed spacing between the values of the vector. This shortcut has the following form,</p>
 
-```bash
-begin:increment:end
-```
-<br />
+<pre><code class="language-bash">begin:increment:end
+</code></pre>
+<p><br /></p>
 
-For example,
-```matlab
-&gt;&gt; x = 0:10:100
+<p>For example,</p>
+<pre><code class="language-matlab">&gt;&gt; x = 0:10:100
 x =
      0    10    20    30    40    50    60    70    80    90   100
-```
-<br />
+</code></pre>
+<p><br /></p>
 
-#### The transpose operator `'`
+<h4 id="the-transpose-operator-">The transpose operator <code>'</code></h4>
 
-Now as you may have noticed, MATLAB by default creates row-wise vectors, just as `x` was generated above. If you want to initialize `x` as a column-wise vector, all you need to do is to add the transpose operator `'` at the end of the vector or the variable name (but now, you would also need the vector constructor `[]`),
+<p>Now as you may have noticed, MATLAB by default creates row-wise vectors, just as <code>x</code> was generated above. If you want to initialize <code>x</code> as a column-wise vector, all you need to do is to add the transpose operator <code>'</code> at the end of the vector or the variable name (but now, you would also need the vector constructor <code>[]</code>),</p>
 
-```matlab
-&gt;&gt; x = [0:10:100]'
+<pre><code class="language-matlab">&gt;&gt; x = [0:10:100]'
 x =
      0
     10
@@ -998,48 +986,43 @@ x =
   Name       Size            Bytes  Class     Attributes
 
   x         11x1                88  double
-```
-<br />
-Now, pay attention to the size of the vector `x`. What does it mean when it says `88 Bytes`?
+</code></pre>
+<p><br />
+Now, pay attention to the size of the vector <code>x</code>. What does it mean when it says <code>88 Bytes</code>?</p>
 
+<h4 id="creating-matrices">Creating matrices</h4>
 
-#### Creating matrices
+<p>There are a number of functions in MATLAB that can help you build predefined matrices or vectors.</p>
 
-There are a number of functions in MATLAB that can help you build predefined matrices or vectors.
+<h5 id="zeros">zeros</h5>
 
-##### zeros
+<p>Creates array of all zeros (with optionally given <a href="https://en.wikipedia.org/wiki/Fixed-point_arithmetic" target="_blank">fixed-point</a> properties. For more information, see <a href="https://www.mathworks.com/help/fixedpoint/ref/zeros.html#inputarg_p" target="_blank">MATLAB’s manual</a>.</p>
 
-Creates array of all zeros (with optionally given [fixed-point](https://en.wikipedia.org/wiki/Fixed-point_arithmetic){:target="_blank"} properties. For more information, see [MATLAB's manual](https://www.mathworks.com/help/fixedpoint/ref/zeros.html#inputarg_p){:target="_blank"}.
-
-```matlab
-&gt;&gt; zeros(2,2)
+<pre><code class="language-matlab">&gt;&gt; zeros(2,2)
 ans =
      0     0
      0     0
-```
+</code></pre>
 
-```matlab
-&gt;&gt; a = zeros(1,3)
+<pre><code class="language-matlab">&gt;&gt; a = zeros(1,3)
 a =
      0     0     0
-```
+</code></pre>
 
-##### ones
+<h5 id="ones">ones</h5>
 
-Creates an array of all ones with fixed-point properties.
+<p>Creates an array of all ones with fixed-point properties.</p>
 
-```matlab
-&gt;&gt; a = ones(1,3)
+<pre><code class="language-matlab">&gt;&gt; a = ones(1,3)
 a =
      1     1     1
-```
+</code></pre>
 
-##### eye
+<h5 id="eye">eye</h5>
 
-Creates an identity matrix with fixed-point properties
+<p>Creates an identity matrix with fixed-point properties</p>
 
-```matlab
-&gt;&gt; I = eye(3,3)
+<pre><code class="language-matlab">&gt;&gt; I = eye(3,3)
 I =
      1     0     0
      0     1     0
@@ -1049,14 +1032,13 @@ I =
      1     0     0     0
      0     1     0     0
      0     0     1     0
-```
+</code></pre>
 
-##### diag
+<h5 id="diag">diag</h5>
 
-Creates a diagonal matrix from a given input vector,
+<p>Creates a diagonal matrix from a given input vector,</p>
 
-```matlab
-v = [2 1 -1 -2 -5];
+<pre><code class="language-matlab">v = [2 1 -1 -2 -5];
 &gt;&gt; D = diag(v)
 D =
      2     0     0     0     0
@@ -1082,12 +1064,11 @@ D =
      0     0    -1     0     0     0     0
      0     0     0    -2     0     0     0
      0     0     0     0    -5     0     0
-```
-<br />
-`diag` can also get diagonal elements of an input matrix, if it already exists.
+</code></pre>
+<p><br />
+<code>diag</code> can also get diagonal elements of an input matrix, if it already exists.</p>
 
-```matlab
-&gt;&gt; a = eye(3,5)
+<pre><code class="language-matlab">&gt;&gt; a = eye(3,5)
 a =
      1     0     0     0     0
      0     1     0     0     0
@@ -1106,14 +1087,13 @@ ans =
      0
      0
      0
-```
+</code></pre>
 
-##### ndgrid
+<h5 id="ndgrid">ndgrid</h5>
 
-Creates rectangular grid in N-D space.
+<p>Creates rectangular grid in N-D space.</p>
 
-```matlab
-&gt;&gt; [X,Y] = ndgrid(1:2:19,2:2:12)
+<pre><code class="language-matlab">&gt;&gt; [X,Y] = ndgrid(1:2:19,2:2:12)
 X =
      1     1     1     1     1     1
      3     3     3     3     3     3
@@ -1136,33 +1116,33 @@ Y =
      2     4     6     8    10    12
      2     4     6     8    10    12
      2     4     6     8    10    12
-```
-<br />
-Later on, we will see how this function can be used to generate fancy looking graphs like the following,
+</code></pre>
+<p><br />
+Later on, we will see how this function can be used to generate fancy looking graphs like the following,</p>
 <figure>
-    <img src="/MAPCP2019U/lecture/5/2dgrid.png" width="700" />
+    <img src="/MAPCP2019U/lecture/4/2dgrid.png" width="700" />
 </figure>
 
-#### Matrix concatenation functions
+<h4 id="matrix-concatenation-functions">Matrix concatenation functions</h4>
 
-The following functions combine existing matrices to form a new matrix.
-  - **cat**: Concatenate matrices along the specified dimension
-  - **horzcat**: Horizontally concatenate matrices
-  - **vertcat**: Vertically concatenate matrices
-  - **repmat**: Create a new matrix by replicating and tiling existing matrices
-  - **blkdiag**: Create a block diagonal matrix from existing matrices
+<p>The following functions combine existing matrices to form a new matrix.</p>
+<ul>
+  <li><strong>cat</strong>: Concatenate matrices along the specified dimension</li>
+  <li><strong>horzcat</strong>: Horizontally concatenate matrices</li>
+  <li><strong>vertcat</strong>: Vertically concatenate matrices</li>
+  <li><strong>repmat</strong>: Create a new matrix by replicating and tiling existing matrices</li>
+  <li><strong>blkdiag</strong>: Create a block diagonal matrix from existing matrices</li>
+</ul>
 
+<h3 id="cell-variables">Cell variables</h3>
 
-### Cell variables
+<p>When we want to define a variable whose elements are not all of the same types, we need an entity that goes beyond the capabilities of matrices, which can only contain numeric values. Just as with cell values in the previous lecture, a cell array is a data type with indexed data containers called cells. Each cell can contain any type of data. Cell arrays commonly contain <strong>pieces of text (string)</strong>, <strong>combinations of text and numbers</strong> from spreadsheets or text files, or they can contain arrays of numeric arrays of different sizes.</p>
 
-When we want to define a variable whose elements are not all of the same types, we need an entity that goes beyond the capabilities of matrices, which can only contain numeric values. Just as with cell values in the previous lecture, a cell array is a data type with indexed data containers called cells. Each cell can contain any type of data. Cell arrays commonly contain **pieces of text (string)**, **combinations of text and numbers** from spreadsheets or text files, or they can contain arrays of numeric arrays of different sizes.
+<p>There are two ways to refer to the elements of a cell array. Enclose indices in smooth parentheses, (), to refer to sets of cells — for example, to define a subset of the array. Enclose indices in curly braces, {}, to refer to the text, numbers, or other data within individual cells.</p>
 
-There are two ways to refer to the elements of a cell array. Enclose indices in smooth parentheses, (), to refer to sets of cells — for example, to define a subset of the array. Enclose indices in curly braces, {}, to refer to the text, numbers, or other data within individual cells.
+<h4 id="creating-cell-arrays">Creating cell arrays</h4>
 
-#### Creating cell arrays
-
-```matlab
-&gt;&gt; C = {} % empty cell array
+<pre><code class="language-matlab">&gt;&gt; C = {} % empty cell array
 C = 
      {}
 &gt;&gt; class(C)
@@ -1174,10 +1154,9 @@ ans =
 &gt;&gt; length(C)
 ans =
      0
-```
+</code></pre>
 
-```matlab
-&gt;&gt; emptyCell = cell(3,4)
+<pre><code class="language-matlab">&gt;&gt; emptyCell = cell(3,4)
 emptyCell = 
     []    []    []    []
     []    []    []    []
@@ -1191,10 +1170,9 @@ emptyCell(:,:,2) =
     []    []    []    []
     []    []    []    []
     []    []    []    []
-```
+</code></pre>
 
-```matlab
-&gt;&gt; a = {'Hi', ' ', 'World!'} % a cell array of strings
+<pre><code class="language-matlab">&gt;&gt; a = {'Hi', ' ', 'World!'} % a cell array of strings
 a = 
     'Hi'    ' '    'World!'
 &gt;&gt; class(a)
@@ -1206,19 +1184,17 @@ ans =
 &gt;&gt; length(a) % the length of a, along the longest dimension
 ans =
      3
-```
-<br />
-To call a specific element, use `()`.
-```matlab
-&gt;&gt; names = {'Bloggs', 'San', 'Andersen'};
+</code></pre>
+<p><br />
+To call a specific element, use <code>()</code>.</p>
+<pre><code class="language-matlab">&gt;&gt; names = {'Bloggs', 'San', 'Andersen'};
 &gt;&gt; first_cell = names(1);
 &gt;&gt; rest_of_cells = names(2:3);
 &gt;&gt; third_string = names{3};
-```
-<br />
-You can see what the type of each element is by using `who` and `whos`,
-```matlab
-&gt;&gt; whos
+</code></pre>
+<p><br />
+You can see what the type of each element is by using <code>who</code> and <code>whos</code>,</p>
+<pre><code class="language-matlab">&gt;&gt; whos
   Name               Size            Bytes  Class     Attributes
 
   a                  1x3               354  cell                
@@ -1228,40 +1204,37 @@ You can see what the type of each element is by using `who` and `whos`,
   names              1x3               370  cell                
   rest_of_cells      1x2               246  cell                
   third_string       1x8                16  char     
-```  
-<br />
-Note that `who` only gives you the names of the variables,
-```matlab
-&gt;&gt; who
+</code></pre>
+<p><br />
+Note that <code>who</code> only gives you the names of the variables,</p>
+<pre><code class="language-matlab">&gt;&gt; who
 
 Your variables are:
 
 a              ans            chr            first_cell     names          rest_of_cells  third_string  
-```
+</code></pre>
 
-#### Cell array concatenation functions
+<h4 id="cell-array-concatenation-functions">Cell array concatenation functions</h4>
 
-There are a wide range of MATLAB functions that act on cells, which can be found [here](https://www.mathworks.com/help/matlab/cell-arrays.html){:target="_blank"}.
+<p>There are a wide range of MATLAB functions that act on cells, which can be found <a href="https://www.mathworks.com/help/matlab/cell-arrays.html" target="_blank">here</a>.</p>
 
-### String (char) variables
+<h3 id="string-char-variables">String (char) variables</h3>
 
-Just as explained in the last lecture,
+<p>Just as explained in the last lecture,</p>
 
-```matlab
-&gt;&gt; newChr = 'You''re right'
+<pre><code class="language-matlab">&gt;&gt; newChr = 'You''re right'
 newChr =
 You're right
 &gt;&gt; class(newChr)
 ans =
 char
-```
+</code></pre>
 
-#### Creating string arrays
+<h4 id="creating-string-arrays">Creating string arrays</h4>
 
-Creating string arrays is rather complex and confusing in MATLAB. Here is [MATLAB's own manual for creating string arrays](https://www.mathworks.com/help/matlab/matlab_prog/creating-character-arrays.html){:target="_blank"}. Note that a string is a vector by itself. So you can fetch its characters as elements,
+<p>Creating string arrays is rather complex and confusing in MATLAB. Here is <a href="https://www.mathworks.com/help/matlab/matlab_prog/creating-character-arrays.html" target="_blank">MATLAB’s own manual for creating string arrays</a>. Note that a string is a vector by itself. So you can fetch its characters as elements,</p>
 
-```matlab
-&gt;&gt; newChr = 'You''re right'
+<pre><code class="language-matlab">&gt;&gt; newChr = 'You''re right'
 newChr =
 You're right
 &gt;&gt; newChr(1)
@@ -1270,47 +1243,47 @@ Y
 &gt;&gt; newChr(1:4)
 ans =
 You'
-```
-<br />
+</code></pre>
+<p><br /></p>
 
-### Structure variables
+<h3 id="structure-variables">Structure variables</h3>
 
-Let's first review the meanings of Arrays and Cells:  
+<p>Let’s first review the meanings of Arrays and Cells:</p>
 
-- An **array** is a MATLAB data type in which there is a name for the whole data object, and the individual elements in the array can be accessed only through their indices, which are integer numbers. For example,
-```matlab
-&gt;&gt; arr = [1,2,3,4]
+<ul>
+  <li>An <strong>array</strong> is a MATLAB data type in which there is a name for the whole data object, and the individual elements in the array can be accessed only through their indices, which are integer numbers. For example,
+    <pre><code class="language-matlab">&gt;&gt; arr = [1,2,3,4]
 arr =
-     1     2     3     4
-```
-<br />
-But, notice that **all the elements in a MATLAB array must be of the same data type**. For example, you cannot combine numeric and string data types,
-```matlab
-&gt;&gt; arr = [1,'Amir',3,4]
+   1     2     3     4
+</code></pre>
+    <p><br />
+But, notice that <strong>all the elements in a MATLAB array must be of the same data type</strong>. For example, you cannot combine numeric and string data types,</p>
+    <pre><code class="language-matlab">&gt;&gt; arr = [1,'Amir',3,4]
 arr =
 Amir
-```
-<br />
-- By contrast, a **cell array** is a MATLAB data type in which again, there is a name for the whole data object, and the individual elements in the array can be accessed only via their indices, but unlike regular arrays **cell elements do not need to be all of the same type**,
-```matlab
-&gt;&gt; arr = {1,'Amir',3,4}
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li>By contrast, a <strong>cell array</strong> is a MATLAB data type in which again, there is a name for the whole data object, and the individual elements in the array can be accessed only via their indices, but unlike regular arrays <strong>cell elements do not need to be all of the same type</strong>,
+    <pre><code class="language-matlab">&gt;&gt; arr = {1,'Amir',3,4}
 arr = 
-    [1]    'Amir'    [3]    [4]
-```
-<br />
-- There is yet another data type in MATLAB called **structure**, which has also counterparts in most other programming languages such as Fortran, C, C++. This is the topic of this section below.  
-<br />
+  [1]    'Amir'    [3]    [4]
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li>There is yet another data type in MATLAB called <strong>structure</strong>, which has also counterparts in most other programming languages such as Fortran, C, C++. This is the topic of this section below.<br />
+<br /></li>
+</ul>
 
-A **structure** is a MATLAB data type in which the whole object has a name, just like regular and cell arrays. However, unlike cells and regular arrays, the elements of a structure object can be accessed by their assigned **field names** instead of a numerical index, as in numeric arrays and cells.  
+<p>A <strong>structure</strong> is a MATLAB data type in which the whole object has a name, just like regular and cell arrays. However, unlike cells and regular arrays, the elements of a structure object can be accessed by their assigned <strong>field names</strong> instead of a numerical index, as in numeric arrays and cells.</p>
 
-Like cell arrays, structures can contain data of varying types and sizes. A **structure** object is a MATLAB data type that groups related data using data containers called **fields** (instead of cells as in cell arrays). **Each field can contain any type of data**. You can access data in a structure using **dot notation** of the form `structName.fieldName`. Here is [MATLAB video](https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html){:target="_blank"} about cell and structure arrays.
+<p>Like cell arrays, structures can contain data of varying types and sizes. A <strong>structure</strong> object is a MATLAB data type that groups related data using data containers called <strong>fields</strong> (instead of cells as in cell arrays). <strong>Each field can contain any type of data</strong>. You can access data in a structure using <strong>dot notation</strong> of the form <code>structName.fieldName</code>. Here is <a href="https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html" target="_blank">MATLAB video</a> about cell and structure arrays.</p>
 
-#### Creating structures
+<h4 id="creating-structures">Creating structures</h4>
 
-To create a structure, you can use function `struct`,
+<p>To create a structure, you can use function <code>struct</code>,</p>
 
-```matlab
-&gt;&gt; field = 'f';
+<pre><code class="language-matlab">&gt;&gt; field = 'f';
 value = {'some text';
          [10, 20, 30];
          magic(5)};
@@ -1318,25 +1291,22 @@ s = struct(field,value)
 s = 
 3x1 struct array with fields:
     f
-```
-<br />
-You can also create empty structure (which can be manipulated later),
-```matlab
-&gt;&gt; s = struct()
+</code></pre>
+<p><br />
+You can also create empty structure (which can be manipulated later),</p>
+<pre><code class="language-matlab">&gt;&gt; s = struct()
 s = 
 struct with no fields.
-```
-<br />
-One can also create structure objects by simply using the dot notation,
-```matlab
-&gt;&gt; amir.univ = 'UT Austin'
+</code></pre>
+<p><br />
+One can also create structure objects by simply using the dot notation,</p>
+<pre><code class="language-matlab">&gt;&gt; amir.univ = 'UTA'
 amir = 
-    univ: 'UT Austin'
-```
-<br />
-Structure objects described above are examples of **scalar objects** meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating **structure arrays**. You might think of structure array, as a cell array, whose columns are indexed by character names (field names) instead of integer indices, and whose rows represent the elements of the structure array. For example,  
-```matlab
-&gt;&gt; student.name = 'Marshall'
+    univ: 'UTA'
+</code></pre>
+<p><br />
+Structure objects described above are examples of <strong>scalar objects</strong> meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating <strong>structure arrays</strong>. You might think of structure array, as a cell array, whose columns are indexed by character names (field names) instead of integer indices, and whose rows represent the elements of the structure array. For example,</p>
+<pre><code class="language-matlab">&gt;&gt; student.name = 'Marshall'
 student = 
     name: 'Marshall'
 &gt;&gt; student.grade = 4.0
@@ -1347,20 +1317,18 @@ student =
 student = 
      name: 'Marshall'
     grade: 4
-```
-<br />
-would create a scalar structure `student` with two fields. However, as soon as you add another name to this structure, using array notation like the following,
-```matlab
-&gt;&gt; student(2).name = 'Vivek'
+</code></pre>
+<p><br />
+would create a scalar structure <code>student</code> with two fields. However, as soon as you add another name to this structure, using array notation like the following,</p>
+<pre><code class="language-matlab">&gt;&gt; student(2).name = 'Vivek'
 student = 
 1x2 struct array with fields:
     name
     grade
-```
-<br />
-the scalar structure `student` is automatically converted to a **structure array**, that has two rows indexed by integer numbers, and each row has two fields `name` and `grade`. Note that, even though we added only the `name` field for the second structure element, the other field name is also automatically created for the second structure element, although with no content (the content of the field `grade` for the second element of the structure is empty). There is even no need to add the elements in increasing order. For example,
-```matlab
-&gt;&gt; student(4).name = 'Travis'
+</code></pre>
+<p><br />
+the scalar structure <code>student</code> is automatically converted to a <strong>structure array</strong>, that has two rows indexed by integer numbers, and each row has two fields <code>name</code> and <code>grade</code>. Note that, even though we added only the <code>name</code> field for the second structure element, the other field name is also automatically created for the second structure element, although with no content (the content of the field <code>grade</code> for the second element of the structure is empty). There is even no need to add the elements in increasing order. For example,</p>
+<pre><code class="language-matlab">&gt;&gt; student(4).name = 'Travis'
 student = 
 1x4 struct array with fields:
     name
@@ -1369,29 +1337,28 @@ student =
   Name         Size            Bytes  Class     Attributes
 
   student      1x4               654  struct          
-```
-<br />
-will automatically add (initialize) the third structure element, even though we did not ask for it.
+</code></pre>
+<p><br />
+will automatically add (initialize) the third structure element, even though we did not ask for it.</p>
 
 <figure>
-    <img src="/MAPCP2019U/lecture/5/structure.png" width="600" />
+    <img src="/MAPCP2019U/lecture/4/structure.png" width="600" />
     <figcaption style="text-align:center">
         The content of the structure array <code>student</code> in MATLAB workspace. Note that the rows correspond to the structure elements, and the columns correspond to the structure fields, which are the same for all structure elements. 
     </figcaption>
 </figure>
 
-So, if there is so much similarity between MATLAB **cell arrays** and **structure arrays**, then what the advantage of defining or using structure arrays instead of cell arrays? The main advantage is that, in the case of structures, the content of the structure element is identified by a set of tags (labels) called **field names**. This becomes very helpful in understanding the content of complex data when they are written as structures instead of cell arrays.  
+<p>So, if there is so much similarity between MATLAB <strong>cell arrays</strong> and <strong>structure arrays</strong>, then what the advantage of defining or using structure arrays instead of cell arrays? The main advantage is that, in the case of structures, the content of the structure element is identified by a set of tags (labels) called <strong>field names</strong>. This becomes very helpful in understanding the content of complex data when they are written as structures instead of cell arrays.</p>
 
-There is a long list of functions that can manipulate structures. A list of them is available on MATLAB website [here](https://www.mathworks.com/help/matlab/structures.html){:target="_blank"}.
+<p>There is a long list of functions that can manipulate structures. A list of them is available on MATLAB website <a href="https://www.mathworks.com/help/matlab/structures.html" target="_blank">here</a>.</p>
 
-### MATLAB tables
+<h3 id="matlab-tables">MATLAB tables</h3>
 
-Tables are arrays in a tabular form whose named columns can have different types. A table is a data type suitable for column-oriented or tabular data that is often stored as columns in a text file or in a spreadsheet. Tables consist of rows and column-oriented variables. Each variable in a table can have a different data type and a different size **with the one restriction** that **each variable must have the same number of rows**. For more information, see [MATLAB's educational video on Tables](https://www.mathworks.com/videos/tables-and-categorical-arrays-in-release-2013b-101607.html){:target="_blank"}.
+<p>Tables are arrays in a tabular form whose named columns can have different types. A table is a data type suitable for column-oriented or tabular data that is often stored as columns in a text file or in a spreadsheet. Tables consist of rows and column-oriented variables. Each variable in a table can have a different data type and a different size <strong>with the one restriction</strong> that <strong>each variable must have the same number of rows</strong>. For more information, see <a href="https://www.mathworks.com/videos/tables-and-categorical-arrays-in-release-2013b-101607.html" target="_blank">MATLAB’s educational video on Tables</a>.</p>
 
-To create a table, you can use the function `table`:
+<p>To create a table, you can use the function <code>table</code>:</p>
 
-```matlab
-&gt;&gt; LastName = {'Smith';'Johnson';'Williams';'Jones';'Brown'};
+<pre><code class="language-matlab">&gt;&gt; LastName = {'Smith';'Johnson';'Williams';'Jones';'Brown'};
 &gt;&gt; Age = [38;43;38;40;49];
 &gt;&gt; Height = [71;69;64;67;64];
 &gt;&gt; Weight = [176;163;131;133;119];
@@ -1405,35 +1372,38 @@ T =
     Williams    38     64        131       125     83   
     Jones       40     67        133       117     75   
     Brown       49     64        119       122     80   
-```
+</code></pre>
 
-There is also a long list of functions that act on tables, a summary of which is available [here](https://www.mathworks.com/help/matlab/tables.html){:target="_blank"}.
+<p>There is also a long list of functions that act on tables, a summary of which is available <a href="https://www.mathworks.com/help/matlab/tables.html" target="_blank">here</a>.</p>
 
-## The Different Kinds of Brackets: Recap
+<h2 id="the-different-kinds-of-brackets-recap">The Different Kinds of Brackets: Recap</h2>
 
-To recap, perhaps the two most two basic operations relating to arrays are,
-  - Creating the array.
-  - Accessing elements in the array.
+<p>To recap, perhaps the two most two basic operations relating to arrays are,</p>
+<ul>
+  <li>Creating the array.</li>
+  <li>Accessing elements in the array.</li>
+</ul>
 
-Depending on whether we have a cell array or a standard array of a basic data type (e.g. char), we can distinguish the different behavior of each of the types of brackets: `[]`, `{}` and `()`.
+<p>Depending on whether we have a cell array or a standard array of a basic data type (e.g. char), we can distinguish the different behavior of each of the types of brackets: <code>[]</code>, <code>{}</code> and <code>()</code>.</p>
 
-### Creating an Array
+<h3 id="creating-an-array">Creating an Array</h3>
 
-- **Square brackets `[ ]`**: Creates an array where all entries have the same type, e.g. double or char. For example,  
-```matlab
-numArray = [5, 62.7, 3];
+<ul>
+  <li><strong>Square brackets <code>[ ]</code></strong>: Creates an array where all entries have the same type, e.g. double or char. For example,
+    <pre><code class="language-matlab">numArray = [5, 62.7, 3];
 charArray = ['a', 'b', 'c'];
-```
-- **Curly brackets `{ }`**: Creates a cell array. Its cells can contain any type. They can contain items of the same type or a mixture of types. For example,
-```matlab
-sameTypeCells = {'Once', 'upon', 'a', 'time'}
+</code></pre>
+  </li>
+  <li><strong>Curly brackets <code>{ }</code></strong>: Creates a cell array. Its cells can contain any type. They can contain items of the same type or a mixture of types. For example,
+    <pre><code class="language-matlab">sameTypeCells = {'Once', 'upon', 'a', 'time'}
 diffTypeCells = {'Number', 17}
-```
-<br />
+</code></pre>
+    <p><br /></p>
+  </li>
+</ul>
 
-Note that in order to create a vector, you don't necessarily need ',' between the elements. For example,  
-```matlab
-&gt;&gt; [1 4]
+<p>Note that in order to create a vector, you don’t necessarily need ‘,’ between the elements. For example,</p>
+<pre><code class="language-matlab">&gt;&gt; [1 4]
   ans =
      1     4
 &gt;&gt; whos ans
@@ -1448,54 +1418,53 @@ ans =
   Name      Size            Bytes  Class     Attributes
 
   ans       1x2                16  double              
-```
-<br />
-The same is also true for cell arrays,
-```matlab
-&gt;&gt; sameTypeCells = {'Once'  'upon'  'a'  'time'}
+</code></pre>
+<p><br />
+The same is also true for cell arrays,</p>
+<pre><code class="language-matlab">&gt;&gt; sameTypeCells = {'Once'  'upon'  'a'  'time'}
 sameTypeCells = 
     'Once'    'upon'    'a'    'time'
 &gt;&gt; whos sameTypeCells
   Name               Size            Bytes  Class    Attributes
 
   sameTypeCells      1x4               474  cell               
-```
-<br />
+</code></pre>
+<p><br /></p>
 
-### Accessing Elements
+<h3 id="accessing-elements">Accessing Elements</h3>
 
-  - **Round brackets `( )`**: These can be used to access one or more elements from any type of array. The elements returned always have the same type as the array, i.e. for an array of doubles the round bracket will return doubles, for an array of cells they will return cells. For example, using the arrays created above:
-  ```matlab
-  &gt;&gt; numArray(2:3) % Second and third elements.
+<ul>
+  <li><strong>Round brackets <code>( )</code></strong>: These can be used to access one or more elements from any type of array. The elements returned always have the same type as the array, i.e. for an array of doubles the round bracket will return doubles, for an array of cells they will return cells. For example, using the arrays created above:
+    <pre><code class="language-matlab">  &gt;&gt; numArray(2:3) % Second and third elements.
   ans =
-     62.7000    3.0000
-  ```
-  ```matlab
-  &gt;&gt; y = sameTypeCells([1, 3]) % first and third
+ 62.7000    3.0000
+</code></pre>
+    <pre><code class="language-matlab">  &gt;&gt; y = sameTypeCells([1, 3]) % first and third
   y = 
-      'Once'    'a'
-  ```
-  - **Curly brackets `{ }`**: When used for accessing elements, curly brackets are specific to cell arrays. They can be used to obtain the content of a cell in its native data type, i.e. not in the form of a cell. For example,
-  ```matlab
-  &gt;&gt; sameTypeCells{2}
+  'Once'    'a'
+</code></pre>
+  </li>
+  <li><strong>Curly brackets <code>{ }</code></strong>: When used for accessing elements, curly brackets are specific to cell arrays. They can be used to obtain the content of a cell in its native data type, i.e. not in the form of a cell. For example,
+    <pre><code class="language-matlab">  &gt;&gt; sameTypeCells{2}
   ans =
-      upon
+  upon
   &gt;&gt; class(sameTypeCells{2})
   ans =
-      char
+  char
   &gt;&gt; sameTypeCells(2)
   ans = 
-      'upon'
+  'upon'
   &gt;&gt; class(sameTypeCells(2))
   ans =
-      cell
-  ```
+  cell
+</code></pre>
+  </li>
+</ul>
 
-### Array slicing (indexing)
+<h3 id="array-slicing-indexing">Array slicing (indexing)</h3>
 
-Like Fortran and R, MATLAB has powerful built-in array manipulation capabilities. For example,
-```matlab
-&gt;&gt; test = [ 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 ]
+<p>Like Fortran and R, MATLAB has powerful built-in array manipulation capabilities. For example,</p>
+<pre><code class="language-matlab">&gt;&gt; test = [ 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 ]
 test =
      1     2     3     4
      1     2     4     5
@@ -1505,36 +1474,32 @@ ans =
      1     2     3     4
      1     2     4     5
      3     5     6     7
-```
-<br />
-The symbol `:` means all the elements. But, you could also specify a range to only get a slice of the array,
-```matlab
-&gt;&gt; test(1:2,2:3)
+</code></pre>
+<p><br />
+The symbol <code>:</code> means all the elements. But, you could also specify a range to only get a slice of the array,</p>
+<pre><code class="language-matlab">&gt;&gt; test(1:2,2:3)
 ans =
      2     3
      2     4
-```
-<br />
-Now, suppose you only wanted to get the first and the last column of the array, and the rows two and three. You could do,
-```matlab
-&gt;&gt; test(2:3,[1 4])
+</code></pre>
+<p><br />
+Now, suppose you only wanted to get the first and the last column of the array, and the rows two and three. You could do,</p>
+<pre><code class="language-matlab">&gt;&gt; test(2:3,[1 4])
 ans =
      1     5
      3     7
-```
-<br />
-Amazing, isn't it? You can also slice cell arrays in a similar way. However, note that you can only slice the elements of a cell array in this way, **not the contents of the elements of a cell array**. To explain this further, consider the following cell array,
-```matlab
-&gt;&gt; test = { 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 }
+</code></pre>
+<p><br />
+Amazing, isn’t it? You can also slice cell arrays in a similar way. However, note that you can only slice the elements of a cell array in this way, <strong>not the contents of the elements of a cell array</strong>. To explain this further, consider the following cell array,</p>
+<pre><code class="language-matlab">&gt;&gt; test = { 1,2,3,4 ; 1,2,4,5 ; 3,5,6,7 }
 test = 
     [1]    [2]    [3]    [4]
     [1]    [2]    [4]    [5]
     [3]    [5]    [6]    [7]
-```
-<br />
-Now, note that slicing this cell, would give you a cell slice, not a matrix of the values, and note that to do this, you have to access the elements using `()` instead of `{}`.
-```matlab
-&gt;&gt; test(:,:)
+</code></pre>
+<p><br />
+Now, note that slicing this cell, would give you a cell slice, not a matrix of the values, and note that to do this, you have to access the elements using <code>()</code> instead of <code>{}</code>.</p>
+<pre><code class="language-matlab">&gt;&gt; test(:,:)
 ans = 
     [1]    [2]    [3]    [4]
     [1]    [2]    [4]    [5]
@@ -1546,11 +1511,10 @@ ans =
 &gt;&gt; class(test(2:3,[1 4]))
 ans =
 cell
-```
-<br />
-If you try slicing the cell  array using `{}`, you won't get a slice anymore, but a MATLAB [comma-separated list](https://www.mathworks.com/help/matlab/matlab_prog/comma-separated-lists.html){:target="_blank"},
-```matlab
-&gt;&gt; test{2:3,[1 4]}
+</code></pre>
+<p><br />
+If you try slicing the cell  array using <code>{}</code>, you won’t get a slice anymore, but a MATLAB <a href="https://www.mathworks.com/help/matlab/matlab_prog/comma-separated-lists.html" target="_blank">comma-separated list</a>,</p>
+<pre><code class="language-matlab">&gt;&gt; test{2:3,[1 4]}
 ans =
      1
 ans =
@@ -1562,13 +1526,11 @@ ans =
 &gt;&gt; class(test{2:3,[1 4]})
 Error using class
 The CLASS function must be called from a class constructor. 
-```
-<br />
-Since slicing the cell array by `{}` returns a comma-separated list, MATLAB's `class()` function gives an error, since it cannot take as input, a list of values.
+</code></pre>
+<p><br />
+Since slicing the cell array by <code>{}</code> returns a comma-separated list, MATLAB’s <code>class()</code> function gives an error, since it cannot take as input, a list of values.</p>
 
-
-<br /><br />
-</tbody></table>
+<p><br /><br /></p>
 
             </div>
         </article>
@@ -1638,8 +1600,8 @@ Since slicing the cell array by `{}` returns a comma-separated list, MATLAB's `c
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2019 / 06 / 26</section></br> -->
-         <section>Last updated Wednesday, 26 Jun 2019 at 03:33 PM CST</section></br>
+         <!-- <section>Last updated 2019 / 06 / 27</section></br> -->
+         <section>Last updated Thursday, 27 Jun 2019 at 12:06 AM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
