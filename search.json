@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 2: Problems - Values and Variables",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/quiz/2-problems-version-control-system",
+		  "date"       : "2019-06-26 00:00:00 -0500",
+		  "shortdate"  : "June 26, 2019"
+		} ,
+	
+		{
 		  "title"      : "Lecture 5: Python - branching and functions",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/lecture/5-python-branching-functions",
