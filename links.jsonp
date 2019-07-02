@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 2: Problems - Values and Variables",
+    "href": "/MAPCP2019U/quiz/2-problems-version-control-system"
+  } ,
+
+  {
     "text": "Quiz 1: Solutions - Version control system",
     "href": "/MAPCP2019U/quiz/1-solutions-version-control-system"
   } ,
