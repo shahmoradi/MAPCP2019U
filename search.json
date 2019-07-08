@@ -1,11 +1,27 @@
 [
 	
 		{
-		  "title"      : "Quiz 2: Problems - Values and Variables",
+		  "title"      : "Quiz 2: Solutions - Value, variables, types",
 		  "category"   : "",
-		  "url"        : "/MAPCP2019U/quiz/2-problems-version-control-system",
+		  "url"        : "/MAPCP2019U/quiz/2-solutions-values-variables-types",
 		  "date"       : "2019-06-26 00:00:00 -0500",
 		  "shortdate"  : "June 26, 2019"
+		} ,
+	
+		{
+		  "title"      : "Quiz 2: Problems - Value, variables, and types",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/quiz/2-problems-values-variables-types",
+		  "date"       : "2019-06-26 00:00:00 -0500",
+		  "shortdate"  : "June 26, 2019"
+		} ,
+	
+		{
+		  "title"      : "Scientific Computing with Python",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/lecture/scientific-inference-with-python",
+		  "date"       : "2019-06-20 00:00:00 -0500",
+		  "shortdate"  : "June 20, 2019"
 		} ,
 	
 		{

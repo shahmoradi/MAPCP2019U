@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-<!--
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="/MAPCP2019U/assets/js/mdHeaderCollapse.js"></script>
--->
-
-<meta charset="utf-8">
-<title>LECTURE 5: PYTHON - BRANCHING AND FUNCTIONS &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+    <head>
+        <meta charset="utf-8">
+<title>SCIENTIFIC COMPUTING WITH PYTHON &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
 <meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
-<meta name="twitter:title" content="Lecture 5: Python - branching and functions">
+<meta name="twitter:title" content="Scientific Computing with Python">
 <meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lecture 5: Python - branching and functions">
+<meta property="og:title" content="Scientific Computing with Python">
 <meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
-<meta property="og:url" content="/MAPCP2019U/lecture/5-python-branching-functions">
+<meta property="og:url" content="/MAPCP2019U/lecture/scientific-inference-with-python">
 <meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
 <meta property="og:image" content="/MAPCP2019U/images/">
 
@@ -35,7 +26,7 @@
 
 
 
-<link rel="canonical" href="/MAPCP2019U/lecture/5-python-branching-functions">
+<link rel="canonical" href="/MAPCP2019U/lecture/scientific-inference-with-python">
 <!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
 
 
@@ -91,51 +82,72 @@ MathJax.Hub.Queue(function() {
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
-</head>
-<body class="post-template" itemscope itemtype="https://schema.org/WebPage">  
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+        <style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+    </head>
+    <body class="post-template" itemscope itemtype="https://schema.org/WebPage">  
+        
         <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
             <header class="notepad-post-header-simple">
                 <div class="notepad-post-menu-header-simple">
-
-                    <a class="notepad-blog-logo" href=https://www.cdslab.org target="_blank"><img src="/MAPCP2019U/images/logo.png" alt="cdslab.org" /></a>
-
-                <div class="notepad-blog-menu">      
-    <div class="notepad-mobile-menu show-for-small">
-        <a href="#"><i class="fa fa-bars"></i></a>
-    </div>
-    <ul class="notepad-menu">
-        <li class="notepad-mobile-close-btn show-for-small text-right">
-            <a href="#"><i class="fa fa-times"></i></a>
-        </li>
-
-            <li>
-                    <a href="/MAPCP2019U/">Home</a>
-                 </li>
-
-            <li>
-                    <a href="/MAPCP2019U/highlights">Highlights</a>
-                 </li>
-
-            <li>
-                    <a href="/MAPCP2019U/categories">Categories</a>
-                 </li>
-
-            <li>
-                    <a href="/MAPCP2019U/about">About</a>
-                 </li>
-            
-           <li><a href="/MAPCP2019U/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
-    </ul>
-
+        
+                    <a class="notepad-blog-logo" href=https://www.cdslab.org target="_blank">
+                        <img src="/MAPCP2019U/images/logo.png" alt="cdslab.org" />
+                    </a>
+    <div class="post_toc"></div>
+    
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
-            </div>
 
-                <div class="notepad-post-title-simple row">
+                    <div class="notepad-blog-menu">      
+                        <div class="notepad-mobile-menu show-for-small">
+                            <a href="#"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="notepad-menu">
+                            <li class="notepad-mobile-close-btn show-for-small text-right">
+                                <a href="#"><i class="fa fa-times"></i></a>
+                            </li>
+                            
+                                <li>
+                                    
+                                        <a href="/MAPCP2019U/">Home</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    
+                                        <a href="/MAPCP2019U/highlights">Highlights</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    
+                                        <a href="/MAPCP2019U/categories">Categories</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    
+                                        <a href="/MAPCP2019U/about">About</a>
+                                    
+                                </li>
+                            
+                            <li>
+                                <a href="/MAPCP2019U/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Lecture 5: Python - branching and functions</h2>
+                            <h2>Scientific Computing with Python</h2>
                             <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-20T00:00:00-05:00">20 Jun 2019</time></strong></p>
                         </div>
                     </div>
@@ -146,11 +158,7 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>This lecture explains branching statements, how to define functions in Python, and all other important details of functions in Python.</p>
-
-<div class="post_toc"></div>
-
-<p><br /></p>
+                <p><br /></p>
 
 <h2 id="branching-in-python">Branching in Python</h2>
 <p>Consider the problem that we encountered in the last homework, where we defined a dictionary of people names and their roles in our class.</p>
@@ -974,15 +982,15 @@ This format is particularly useful, if the lambda function contains a constant t
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Lecture 5: Python - branching and functions&quot;%20/MAPCP2019U/lecture/5-python-branching-functions%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Scientific Computing with Python&quot;%20/MAPCP2019U/lecture/scientific-inference-with-python%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/lecture/5-python-branching-functions"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/lecture/scientific-inference-with-python"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/lecture/5-python-branching-functions"
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/lecture/scientific-inference-with-python"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>
@@ -1109,5 +1117,6 @@ This format is particularly useful, if the lambda function contains a constant t
 <script src="/MAPCP2019U/assets/js/prismCoy.js"></script> 
 <!--automatic Table of Content.-->
 <script src="/MAPCP2019U/assets/js/autoTOC.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 </body>
 </html>

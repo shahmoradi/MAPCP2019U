@@ -48,7 +48,15 @@
 
     
     <url>
-        <loc>/MAPCP2019U/quiz/2-problems-version-control-system</loc>
+        <loc>/MAPCP2019U/quiz/2-solutions-values-variables-types</loc>
+    </url>
+    
+    <url>
+        <loc>/MAPCP2019U/quiz/2-problems-values-variables-types</loc>
+    </url>
+    
+    <url>
+        <loc>/MAPCP2019U/lecture/scientific-inference-with-python</loc>
     </url>
     
     <url>

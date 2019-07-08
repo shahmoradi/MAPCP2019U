@@ -2,8 +2,18 @@
 callback([
 
   {
-    "text": "Quiz 2: Problems - Values and Variables",
-    "href": "/MAPCP2019U/quiz/2-problems-version-control-system"
+    "text": "Scientific Computing with Python",
+    "href": "/MAPCP2019U/lecture/scientific-inference-with-python"
+  } ,
+
+  {
+    "text": "Quiz 2: Solutions - Value, variables, types",
+    "href": "/MAPCP2019U/quiz/2-solutions-values-variables-types"
+  } ,
+
+  {
+    "text": "Quiz 2: Problems - Value, variables, and types",
+    "href": "/MAPCP2019U/quiz/2-problems-values-variables-types"
   } ,
 
   {
