@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-08T18:24:03-05:00</updated>
+<updated>2019-07-08T18:39:09-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -51,21 +51,21 @@ The following figure illustrates the grade distribution for this quiz.
 
 &lt;ol&gt;
   &lt;li&gt;Name three different levels of the computer memory.&lt;br /&gt;
-**Answer: Register (L1 Cache), L2 Cache, L3 Cache, RAM (Random-Access Memory), HDD (Hard Drive Disk).
+&lt;strong&gt;Answer:&lt;/strong&gt; Register (L1 Cache), L2 Cache, L3 Cache, RAM (Random-Access Memory), HDD (Hard Drive Disk).
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Suppose that you have a matrix of rank 2 to store in the computer memory. How would each one of the following languages store this matrix (column-wise vs. row-wise):&lt;br /&gt;
 b) C&lt;br /&gt;
 a) Fortran&lt;br /&gt;
 c) MATLAB&lt;br /&gt;
 d) Python&lt;br /&gt;
-**Answer:&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;  &lt;br /&gt;
 a) row-wise&lt;br /&gt;
 b) column-wise&lt;br /&gt;
 c) column-wise&lt;br /&gt;
 d) row-wise&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;What are the three fundamental components of a Turing-complete language?&lt;br /&gt;
-**Answer:
+&lt;strong&gt;Answer:&lt;/strong&gt;
     &lt;ol&gt;
       &lt;li&gt;a way for accessing the memory&lt;/li&gt;
       &lt;li&gt;a way for iteration&lt;/li&gt;
@@ -74,7 +74,7 @@ d) row-wise&lt;br /&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;What are the three common types of errors in computer programs?&lt;br /&gt;
-**Answer:
+&lt;strong&gt;Answer:&lt;/strong&gt;
     &lt;ol&gt;
       &lt;li&gt;syntax errors&lt;/li&gt;
       &lt;li&gt;runtime errors&lt;/li&gt;
@@ -83,13 +83,13 @@ d) row-wise&lt;br /&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;Suppose you write a program that has memory leak. What type of programming error you dealing with?&lt;br /&gt;
-**Answer:  runtime error
+&lt;strong&gt;Answer:&lt;/strong&gt; runtime error
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;What is the biggest integer (in base 10) that you could store in an &lt;code&gt;int32&lt;/code&gt; type?&lt;br /&gt;
-**Answer:  2147483647&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt; 2,147,483,647&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;What is the difference between &lt;code&gt;int16&lt;/code&gt; and &lt;code&gt;uint64&lt;/code&gt; types (two major differences is enough)?&lt;br /&gt;
-**Answer:&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
 1) &lt;code&gt;int16&lt;/code&gt; is only 16 bits storage, whereas &lt;code&gt;uint64&lt;/code&gt; is 64 bits storage.&lt;br /&gt;
 2) &lt;code&gt;int16&lt;/code&gt; is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas &lt;code&gt;uint64&lt;/code&gt; can only represent positive integers.&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
