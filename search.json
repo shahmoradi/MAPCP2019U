@@ -17,14 +17,6 @@
 		} ,
 	
 		{
-		  "title"      : "Scientific Computing with Python",
-		  "category"   : "",
-		  "url"        : "/MAPCP2019U/lecture/scientific-inference-with-python",
-		  "date"       : "2019-06-20 00:00:00 -0500",
-		  "shortdate"  : "June 20, 2019"
-		} ,
-	
-		{
 		  "title"      : "Lecture 5: Python - branching and functions",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/lecture/5-python-branching-functions",
