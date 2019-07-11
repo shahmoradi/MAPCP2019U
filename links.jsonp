@@ -67,6 +67,11 @@ callback([
   } ,
 
   {
+    "text": "Final exam: semester project",
+    "href": "/MAPCP2019U/exam/1-semester-project"
+  } ,
+
+  {
     "text": "Announcement 1: Assessing your programming knowledge and interests",
     "href": "/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests"
   } ,

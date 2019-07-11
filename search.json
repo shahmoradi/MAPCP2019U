@@ -9,6 +9,14 @@
 		} ,
 	
 		{
+		  "title"      : "Final exam: semester project",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/exam/1-semester-project",
+		  "date"       : "2019-07-11 00:00:00 -0500",
+		  "shortdate"  : "July 11, 2019"
+		} ,
+	
+		{
 		  "title"      : "Quiz 2: Value, variables, types",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/quiz/2-values-variables-types",
