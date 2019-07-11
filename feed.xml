@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-11T03:23:30-05:00</updated>
+<updated>2019-07-11T03:37:04-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -444,11 +444,11 @@ def get_primes(n):
 
 &lt;h2 id=&quot;data-reduction-and-visualization&quot;&gt;Data reduction and visualization&lt;/h2&gt;
 
-&lt;p&gt;Our goal in this project is to fit a mathematical model of the growth of living cells to real experimental data for the growth of a cancer tumor in the brain of a rat. You can download the data in the form of a MATLAB data file for this project from &lt;a href=&quot;http:/MAPCP2019U/exam/1-problems/cells.mat&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Write a set of separate MATLAB codes that perform the following tasks one after the other, and output all the results to the &lt;code&gt;results&lt;/code&gt; folder described above. Since you have multiple MATLAB codes each in a separate file for different purposes, you should also write a &lt;code&gt;main.m&lt;/code&gt; MATLAB code, such that when the user of your codes runs on MATLAB command line,&lt;/p&gt;
+&lt;p&gt;Our goal in this project is to fit a mathematical model of the growth of living cells to real experimental data for the growth of a cancer tumor in the brain of a rat. You can download the data in the form of a MATLAB data file for this project from &lt;a href=&quot;http:/MAPCP2019U/exam/1-problems/cells.mat&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Write a set of separate MATLAB/Python codes that perform the following tasks one after the other, and output all the results to the &lt;code&gt;results&lt;/code&gt; folder described above. Since you have multiple MATLAB/Python codes each in a separate file for different purposes, you should also write a &lt;code&gt;main&lt;/code&gt; MATLAB/Python code, such that when the user of your codes runs on MATLAB command line,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&amp;gt;&amp;gt; main
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-then all the necessary MATLAB codes to generate all the results will be called by this &lt;code&gt;main.m&lt;/code&gt; script.&lt;/p&gt;
+then all the necessary MATLAB/Python codes to generate all the results will be called by this &lt;code&gt;main&lt;/code&gt; script.&lt;/p&gt;
 
 &lt;p&gt;Initially at time $t=0 ~\mathrm{[days]}$, $100,000\pm10,000$ brain tumor cells are injected to the brain of the rat. These cells are then allowed to grow for 10 days. Then starting at day 10, the brain of the rat is imaged using an &lt;a href=&quot;https://en.wikipedia.org/wiki/Magnetic_resonance_imaging&quot; target=&quot;_blank&quot;&gt;MRI machine&lt;/a&gt;.&lt;/p&gt;
 
@@ -460,9 +460,9 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 &lt;p&gt;in units of days. Given this data set,&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; First write a MATLAB script that reads the input MATLAB file containing cell numbers at different positions in the rat’s brain measured by MRI, on different days.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; First write a MATLAB/Python script that reads the input MATLAB binary file containing cell numbers at different positions in the rat’s brain measured by MRI, on different days.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Write MATLAB codes that generate a set of figures as similar as possible to the following figures (specific color-codes of the curves and figures do not matter, focus more on the format of the plots and its parts). For this part of the project you will MATLAB plotting functions such as &lt;code&gt;plot()&lt;/code&gt;, &lt;code&gt;imagesc()&lt;/code&gt; and the concept subplots in MATLAB.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Write MATLAB/Python codes that generate a set of figures as similar as possible to the following figures (specific color-codes of the curves and figures do not matter, focus more on the format of the plots and its parts). For this part of the project you will MATLAB plotting functions such as &lt;code&gt;plot()&lt;/code&gt;, &lt;code&gt;imagesc()&lt;/code&gt; and the concept subplots in MATLAB/Python.&lt;/p&gt;
 
 &lt;figure&gt;
 	&lt;img src=&quot;http:/MAPCP2019U/exam/1-problems/figures/tvccZSliceSubplotWithXYlab_rad_00gy_1_t10.0.png&quot; width=&quot;900&quot; /&gt;
@@ -491,7 +491,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 &lt;h2 id=&quot;obtaining-the-error-in-tumor-cell-count&quot;&gt;Obtaining the error in tumor cell count&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; Our assumption here is that the uncertainty in the total number of tumor cells at each time point is given by the number of tumor cells at the boundary of tumor. Therefore, you will have to write a MATLAB code that identifies the boundary of tumor at each time point and then sums over the count cells in all boundary points and uses that as the error in number of tumor cell counts. For this part, you will need MATLAB functions such as &lt;code&gt;bwboundaries()&lt;/code&gt; and &lt;code&gt;errorbar()&lt;/code&gt;. In the end, you should get and save a figure in your project’s figure folder like the following figure,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; Our assumption here is that the uncertainty in the total number of tumor cells at each time point is given by the number of tumor cells at the boundary of tumor. Therefore, you will have to write a MATLAB code that identifies the boundary of tumor at each time point and then sums over the count cells in all boundary points and uses that as the error in number of tumor cell counts. For this part, you will need MATLAB/Python functions such as &lt;code&gt;bwboundaries()&lt;/code&gt; and &lt;code&gt;errorbar()&lt;/code&gt;. In the end, you should get and save a figure in your project’s figure folder like the following figure,&lt;/p&gt;
 
 &lt;figure&gt;
 	&lt;img src=&quot;http:/MAPCP2019U/exam/1-problems/figures/growthCurve.png&quot; width=&quot;900&quot; /&gt;
@@ -508,7 +508,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 &lt;p&gt;where $N(t,\lambda,c)$ is the &lt;strong&gt;predicted number&lt;/strong&gt; of tumor cells at time $t$, $N_0$ is the initial number of tumor cells at time $t=0$ days, $\lambda$ is the growth rate parameter of the model, and $c$ is just another parameter of the model. We already know the initial value of the number of tumor cells, $N_0=100,000\pm10,000$. Therefore, we can fix $N_0$ to $100,000$ in the equation of the model given above.&lt;/p&gt;
 
-&lt;p&gt;However, we don’t know the values of the parameters $\lambda$ and $c$. Thus, we would like to find their best values given the input tumor cell data using some MATLAB optimization algorithm.&lt;/p&gt;
+&lt;p&gt;However, we don’t know the values of the parameters $\lambda$ and $c$. Thus, we would like to find their best values given the input tumor cell data using some MATLAB/Python optimization algorithm.&lt;/p&gt;
 
 &lt;p&gt;This Gompertzian growth model is called our &lt;strong&gt;physical model&lt;/strong&gt; for this problem, because it describes the physics of our problem (The physics/biology of the tumor growth).&lt;/p&gt;
 
@@ -545,7 +545,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt;
-Now the goal is to use an optimization algorithm in MATLAB, such as &lt;code&gt;fminsearch()&lt;/code&gt;, to find the most likely set of the parameters of the model $\lambda,c,\sigma$ that give the highest likelihood of obtaining the available data, which is given by the number $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ from the above equation. So we want to find the set of parameters for which this number given by the above equation is maximized. You can also use any MATLAB optimization function or method that you wish, to obtain the best parameters.&lt;/p&gt;
+Now the goal is to use an optimization algorithm in MATLAB/Python, such as &lt;code&gt;fminsearch()&lt;/code&gt;, to find the most likely set of the parameters of the model $\lambda,c,\sigma$ that give the highest likelihood of obtaining the available data, which is given by the number $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ from the above equation. So we want to find the set of parameters for which this number given by the above equation is maximized. You can also use any MATLAB/Python optimization function or method that you wish, to obtain the best parameters.&lt;/p&gt;
 
 &lt;p&gt;However, if you use &lt;code&gt;fminsearch()&lt;/code&gt;, then note that this function finds the minimum of an input function, not the maximum. What we want is to find the maximum of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$.
 What is the solution then? Very simple.

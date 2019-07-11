@@ -154,11 +154,11 @@ MathJax.Hub.Queue(function() {
 
 <h2 id="data-reduction-and-visualization">Data reduction and visualization</h2>
 
-<p>Our goal in this project is to fit a mathematical model of the growth of living cells to real experimental data for the growth of a cancer tumor in the brain of a rat. You can download the data in the form of a MATLAB data file for this project from <a href="/MAPCP2019U/exam/1-problems/cells.mat" target="_blank">here</a>. Write a set of separate MATLAB codes that perform the following tasks one after the other, and output all the results to the <code>results</code> folder described above. Since you have multiple MATLAB codes each in a separate file for different purposes, you should also write a <code>main.m</code> MATLAB code, such that when the user of your codes runs on MATLAB command line,</p>
+<p>Our goal in this project is to fit a mathematical model of the growth of living cells to real experimental data for the growth of a cancer tumor in the brain of a rat. You can download the data in the form of a MATLAB data file for this project from <a href="/MAPCP2019U/exam/1-problems/cells.mat" target="_blank">here</a>. Write a set of separate MATLAB/Python codes that perform the following tasks one after the other, and output all the results to the <code>results</code> folder described above. Since you have multiple MATLAB/Python codes each in a separate file for different purposes, you should also write a <code>main</code> MATLAB/Python code, such that when the user of your codes runs on MATLAB command line,</p>
 <pre><code class="language-bash">&gt;&gt; main
 </code></pre>
 <p><br />
-then all the necessary MATLAB codes to generate all the results will be called by this <code>main.m</code> script.</p>
+then all the necessary MATLAB/Python codes to generate all the results will be called by this <code>main</code> script.</p>
 
 <p>Initially at time $t=0 ~\mathrm{[days]}$, $100,000\pm10,000$ brain tumor cells are injected to the brain of the rat. These cells are then allowed to grow for 10 days. Then starting at day 10, the brain of the rat is imaged using an <a href="https://en.wikipedia.org/wiki/Magnetic_resonance_imaging" target="_blank">MRI machine</a>.</p>
 
@@ -170,9 +170,9 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 <p>in units of days. Given this data set,</p>
 
-<p><strong>1. </strong> First write a MATLAB script that reads the input MATLAB file containing cell numbers at different positions in the rat’s brain measured by MRI, on different days.</p>
+<p><strong>1. </strong> First write a MATLAB/Python script that reads the input MATLAB binary file containing cell numbers at different positions in the rat’s brain measured by MRI, on different days.</p>
 
-<p><strong>2. </strong> Write MATLAB codes that generate a set of figures as similar as possible to the following figures (specific color-codes of the curves and figures do not matter, focus more on the format of the plots and its parts). For this part of the project you will MATLAB plotting functions such as <code>plot()</code>, <code>imagesc()</code> and the concept subplots in MATLAB.</p>
+<p><strong>2. </strong> Write MATLAB/Python codes that generate a set of figures as similar as possible to the following figures (specific color-codes of the curves and figures do not matter, focus more on the format of the plots and its parts). For this part of the project you will MATLAB plotting functions such as <code>plot()</code>, <code>imagesc()</code> and the concept subplots in MATLAB/Python.</p>
 
 <figure>
 	<img src="/MAPCP2019U/exam/1-problems/figures/tvccZSliceSubplotWithXYlab_rad_00gy_1_t10.0.png" width="900" />
@@ -201,7 +201,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 <h2 id="obtaining-the-error-in-tumor-cell-count">Obtaining the error in tumor cell count</h2>
 
-<p><strong>3. </strong> Our assumption here is that the uncertainty in the total number of tumor cells at each time point is given by the number of tumor cells at the boundary of tumor. Therefore, you will have to write a MATLAB code that identifies the boundary of tumor at each time point and then sums over the count cells in all boundary points and uses that as the error in number of tumor cell counts. For this part, you will need MATLAB functions such as <code>bwboundaries()</code> and <code>errorbar()</code>. In the end, you should get and save a figure in your project’s figure folder like the following figure,</p>
+<p><strong>3. </strong> Our assumption here is that the uncertainty in the total number of tumor cells at each time point is given by the number of tumor cells at the boundary of tumor. Therefore, you will have to write a MATLAB code that identifies the boundary of tumor at each time point and then sums over the count cells in all boundary points and uses that as the error in number of tumor cell counts. For this part, you will need MATLAB/Python functions such as <code>bwboundaries()</code> and <code>errorbar()</code>. In the end, you should get and save a figure in your project’s figure folder like the following figure,</p>
 
 <figure>
 	<img src="/MAPCP2019U/exam/1-problems/figures/growthCurve.png" width="900" />
@@ -218,7 +218,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 <p>where $N(t,\lambda,c)$ is the <strong>predicted number</strong> of tumor cells at time $t$, $N_0$ is the initial number of tumor cells at time $t=0$ days, $\lambda$ is the growth rate parameter of the model, and $c$ is just another parameter of the model. We already know the initial value of the number of tumor cells, $N_0=100,000\pm10,000$. Therefore, we can fix $N_0$ to $100,000$ in the equation of the model given above.</p>
 
-<p>However, we don’t know the values of the parameters $\lambda$ and $c$. Thus, we would like to find their best values given the input tumor cell data using some MATLAB optimization algorithm.</p>
+<p>However, we don’t know the values of the parameters $\lambda$ and $c$. Thus, we would like to find their best values given the input tumor cell data using some MATLAB/Python optimization algorithm.</p>
 
 <p>This Gompertzian growth model is called our <strong>physical model</strong> for this problem, because it describes the physics of our problem (The physics/biology of the tumor growth).</p>
 
@@ -255,7 +255,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 <p><br /></p>
 
 <p><strong>5. </strong>
-Now the goal is to use an optimization algorithm in MATLAB, such as <code>fminsearch()</code>, to find the most likely set of the parameters of the model $\lambda,c,\sigma$ that give the highest likelihood of obtaining the available data, which is given by the number $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ from the above equation. So we want to find the set of parameters for which this number given by the above equation is maximized. You can also use any MATLAB optimization function or method that you wish, to obtain the best parameters.</p>
+Now the goal is to use an optimization algorithm in MATLAB/Python, such as <code>fminsearch()</code>, to find the most likely set of the parameters of the model $\lambda,c,\sigma$ that give the highest likelihood of obtaining the available data, which is given by the number $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ from the above equation. So we want to find the set of parameters for which this number given by the above equation is maximized. You can also use any MATLAB/Python optimization function or method that you wish, to obtain the best parameters.</p>
 
 <p>However, if you use <code>fminsearch()</code>, then note that this function finds the minimum of an input function, not the maximum. What we want is to find the maximum of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$.
 What is the solution then? Very simple.
@@ -343,7 +343,7 @@ We can multiply the value of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ by 
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2019 / 07 / 11</section></br> -->
-         <section>Last updated Thursday, 11 Jul 2019 at 03:23 AM CST</section></br>
+         <section>Last updated Thursday, 11 Jul 2019 at 03:37 AM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
