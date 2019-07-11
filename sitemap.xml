@@ -48,11 +48,11 @@
 
     
     <url>
-        <loc>/MAPCP2019U/quiz/2-solutions-values-variables-types</loc>
+        <loc>/MAPCP2019U/homework/3-branching-looping-functions</loc>
     </url>
     
     <url>
-        <loc>/MAPCP2019U/quiz/2-problems-values-variables-types</loc>
+        <loc>/MAPCP2019U/quiz/2-values-variables-types</loc>
     </url>
     
     <url>
@@ -64,11 +64,7 @@
     </url>
     
     <url>
-        <loc>/MAPCP2019U/quiz/1-solutions-version-control-system</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/quiz/1-problems-version-control-system</loc>
+        <loc>/MAPCP2019U/quiz/1-version-control-system</loc>
     </url>
     
     <url>
@@ -80,11 +76,11 @@
     </url>
     
     <url>
-        <loc>/MAPCP2019U/homework/2-problems-variables-values-types</loc>
+        <loc>/MAPCP2019U/homework/2-variables-values-types</loc>
     </url>
     
     <url>
-        <loc>/MAPCP2019U/homework/1-solutions-version-control-using-git-github</loc>
+        <loc>/MAPCP2019U/homework/1-version-control-using-git-github</loc>
     </url>
     
     <url>
@@ -101,10 +97,6 @@
     
     <url>
         <loc>/MAPCP2019U/lecture/1-version-control-system</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/homework/1-problems-version-control-using-git-github</loc>
     </url>
     
     <url>

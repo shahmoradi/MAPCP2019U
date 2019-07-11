@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 2: SOLUTIONS - VALUE, VARIABLES, TYPES &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+<title>QUIZ 2: VALUE, VARIABLES, TYPES &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
 <meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
-<meta name="twitter:title" content="Quiz 2: Solutions - Value, variables, types">
+<meta name="twitter:title" content="Quiz 2: Value, variables, types">
 <meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 2: Solutions - Value, variables, types">
+<meta property="og:title" content="Quiz 2: Value, variables, types">
 <meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
-<meta property="og:url" content="/MAPCP2019U/quiz/2-solutions-values-variables-types">
+<meta property="og:url" content="/MAPCP2019U/quiz/2-values-variables-types">
 <meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
 <meta property="og:image" content="/MAPCP2019U/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/MAPCP2019U/quiz/2-solutions-values-variables-types">
+<link rel="canonical" href="/MAPCP2019U/quiz/2-values-variables-types">
 <!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
 
 
@@ -135,7 +135,7 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 2: Solutions - Value, variables, types</h2>
+                            <h2>Quiz 2: Value, variables, types</h2>
                             <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-06-26T00:00:00-05:00">26 Jun 2019</time></strong></p>
                         </div>
                     </div>
@@ -158,73 +158,86 @@ The following figure illustrates the grade distribution for this quiz.
 </figure>
 -->
 
+<p>This quiz aims at testing your basic knowledge of values and variables. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to <strong>quiz/2/</strong> folder in your Github project.</p>
+
 <hr />
 <hr />
 
 <p><br /></p>
 
-<p>This is the solution to Quiz 2. This quiz aims at testing your basic knowledge of values and variables. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to <strong>quiz/2/</strong> folder in your Github project.</p>
-
 <ol>
-  <li>Name three different levels of the computer memory.<br />
-<strong>Answer:</strong> Register (L1 Cache), L2 Cache, L3 Cache, RAM (Random-Access Memory), HDD (Hard Drive Disk).
-<br /><br /></li>
-  <li>Suppose that you have a matrix of rank 2 to store in the computer memory. How would each one of the following languages store this matrix (column-wise vs. row-wise):<br />
+  <li>
+    <p>Name three different levels of the computer memory.</p>
+
+    <p><strong>Answer:</strong> Register (L1 Cache), L2 Cache, L3 Cache, RAM (Random-Access Memory), HDD (Hard Drive Disk).</p>
+  </li>
+  <li>
+    <p>Suppose that you have a matrix of rank 2 to store in the computer memory. How would each one of the following languages store this matrix (column-wise vs. row-wise):<br />
 b) C<br />
 a) Fortran<br />
 c) MATLAB<br />
-d) Python<br />
-<strong>Answer:</strong>  <br />
+d) Python</p>
+
+    <p><strong>Answer:</strong>  <br />
 a) row-wise<br />
 b) column-wise<br />
 c) column-wise<br />
-d) row-wise<br />
-<br /><br /></li>
-  <li>What are the three fundamental components of a Turing-complete language?<br />
-<strong>Answer:</strong>
+d) row-wise</p>
+  </li>
+  <li>
+    <p>What are the three fundamental components of a Turing-complete language?</p>
+
+    <p><strong>Answer:</strong></p>
     <ol>
       <li>a way for accessing the memory</li>
       <li>a way for iteration</li>
-      <li>a way for branching<br />
-<br /><br /></li>
+      <li>a way for branching</li>
     </ol>
   </li>
-  <li>What are the three common types of errors in computer programs?<br />
-<strong>Answer:</strong>
+  <li>
+    <p>What are the three common types of errors in computer programs?</p>
+
+    <p><strong>Answer:</strong></p>
     <ol>
       <li>syntax errors</li>
       <li>runtime errors</li>
-      <li>semantic errors<br />
-<br /><br /></li>
+      <li>semantic errors</li>
     </ol>
   </li>
-  <li>Suppose you write a program that has memory leak. What type of programming error you dealing with?<br />
-<strong>Answer:</strong> runtime error
-<br /><br /></li>
-  <li>What is the biggest integer (in base 10) that you could store in an <code>int32</code> type?<br />
-<strong>Answer:</strong> 2,147,483,647<br />
-<br /><br /></li>
-  <li>What is the difference between <code>int16</code> and <code>uint64</code> types (two major differences is enough)?<br />
-<strong>Answer:</strong><br />
+  <li>
+    <p>Suppose you write a program that has memory leak. What type of programming error you dealing with?</p>
+
+    <p><strong>Answer:</strong> runtime error</p>
+  </li>
+  <li>
+    <p>What is the biggest integer (in base 10) that you could store in an <code>int32</code> type?</p>
+
+    <p><strong>Answer:</strong> 2,147,483,647</p>
+  </li>
+  <li>
+    <p>What is the difference between <code>int16</code> and <code>uint64</code> types (two major differences is enough)?</p>
+
+    <p><strong>Answer:</strong><br />
 1) <code>int16</code> is only 16 bits storage, whereas <code>uint64</code> is 64 bits storage.<br />
-2) <code>int16</code> is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas <code>uint64</code> can only represent positive integers.<br />
-<br /><br /></li>
+2) <code>int16</code> is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas <code>uint64</code> can only represent positive integers.</p>
+  </li>
 </ol>
+
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 2: Solutions - Value, variables, types&quot;%20/MAPCP2019U/quiz/2-solutions-values-variables-types%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 2: Value, variables, types&quot;%20/MAPCP2019U/quiz/2-values-variables-types%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/quiz/2-solutions-values-variables-types"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/quiz/2-values-variables-types"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/quiz/2-solutions-values-variables-types"
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/quiz/2-values-variables-types"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>
@@ -279,8 +292,8 @@ d) row-wise<br />
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2019 / 07 / 09</section></br> -->
-         <section>Last updated Tuesday, 09 Jul 2019 at 04:16 AM CST</section></br>
+         <!-- <section>Last updated 2019 / 07 / 11</section></br> -->
+         <section>Last updated Thursday, 11 Jul 2019 at 03:05 AM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>

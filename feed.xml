@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-09T04:16:51-05:00</updated>
+<updated>2019-07-11T03:05:07-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -17,9 +17,415 @@
 
 
 <entry>
-  <title type="html"><![CDATA[Quiz 2: Solutions - Value, variables, types]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/2-solutions-values-variables-types"/>
-  <id>http:/MAPCP2019U/quiz/2-solutions-values-variables-types</id>
+  <title type="html"><![CDATA[Homework 3: Branching, looping, and functions]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/3-branching-looping-functions"/>
+  <id>http:/MAPCP2019U/homework/3-branching-looping-functions</id>
+  <published>2019-07-11T00:00:00-05:00</published>
+  <updated>2019-07-11T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/MAPCP2019U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;♣ &lt;strong&gt;Due Date: One week from the posting date @ 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience with branching, looping, and functions in both MATLAB and Python. Write your scripts with the corresponding &lt;code&gt;*.py&lt;/code&gt; or &lt;code&gt;*.m&lt;/code&gt; file names, and add a readme.md file in HW 3 folder of your project if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).&lt;/p&gt;
+
+&lt;!--
+The following figure illustrates the grade distribution for this homework.  
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/gradeDist/gradeHistHomework5.png&quot; width=&quot;700&quot;&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        Maximum possible points is 100.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+--&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, that are characterized by the fact that every number after the first two is the sum of the two preceding ones:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;0,~1,~1,~2,~3,~5,~8,~13,~21,~34,~55,~89,~144,~\dots&lt;/script&gt;
+
+&lt;p&gt;with the following sequence equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+     Fib(n) &amp;=&amp; Fib(n-1) + Fib(n-2) ~, \\
+     Fib(0) &amp;=&amp; 0 ~, \\
+     Fib(1) &amp;=&amp; 1 ~.
+\end{eqnarray} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Write a Python function named &lt;code&gt;fib&lt;/code&gt; that takes in an input argument which should be integer number &lt;code&gt;n&lt;/code&gt;, and then calculates the $n^{th}$ number in the Fibonacci sequence and outputs it on the screen. Also, if the input argument is not a non-negative integer, it prints an error message on the screen and asks the user to re-enter a non-negative integer number. Also, when it is done with finding the requested Fibonacci number, it asks again the user to either input a new non-negative integer, or enter ‘stop’ to end the function, like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&amp;gt;&amp;gt;&amp;gt; fib('amir')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;The input argument amir is not a non-negative integer!
+Please enter a non-negative integer: -123
+The input argument -123 is not a non-negative integer!
+Please enter a non-negative integer: 12.4
+The input argument 12.4 is not a non-negative integer!
+Please enter a non-negative integer: 0
+Fib(0) = 0
+Please enter another non-negative integer or type stop: 1
+Fib(1) = 1
+Please enter another non-negative integer or type stop: 2
+Fib(2) = 1
+Please enter another non-negative integer or type stop: 3
+Fib(3) = 2
+Please enter another non-negative integer or type stop: 4
+Fib(4) = 3
+Please enter another non-negative integer or type stop: 5
+Fib(5) = 5
+Please enter another non-negative integer or type stop: 6
+Fib(6) = 8
+Please enter another non-negative integer or type stop: 7
+Fib(7) = 13
+Please enter another non-negative integer or type stop: 8
+Fib(8) = 21
+Please enter another non-negative integer or type stop: 9
+Fib(9) = 34
+Please enter another non-negative integer or type stop: 10
+Fib(10) = 55
+Please enter another non-negative integer or type stop: 11
+Fib(11) = 89
+Please enter another non-negative integer or type stop: 12
+Fib(12) = 144
+Please enter another non-negative integer or type stop: stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;First write a function &lt;code&gt;fibo(n_int)&lt;/code&gt; that finds the requested Fibonacci number for you, given a non-negative integer input (for example, name it &lt;code&gt;n_int&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;Then put this function &lt;strong&gt;inside another Python function &lt;code&gt;fib(n)&lt;/code&gt;&lt;/strong&gt; that checks the type of the input argument &lt;code&gt;n&lt;/code&gt; and prints the appropriate error message as in the above and then asks the user to enter another number (and then again checks for its type to be integer).&lt;/li&gt;
+  &lt;li&gt;Then if this number is an integer, this function &lt;code&gt;fib(n)&lt;/code&gt; passes the integer number &lt;code&gt;n&lt;/code&gt; to the function &lt;code&gt;fibo(n_int)&lt;/code&gt; which is inside of itself (it is a &lt;strong&gt;nested function&lt;/strong&gt;), in order to get the requested Fibonacci number.&lt;/li&gt;
+  &lt;li&gt;Finally, once the requested Fibonaccy number is obtained, it prints the number value with the requested format as in the above example, AND then asks again the user to input a new non-negative integer, or simply type &lt;code&gt;stop&lt;/code&gt; to stop the function.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note that, if you call the function as &lt;code&gt;fib('stop')&lt;/code&gt; in the Python interpreter, it should return nothing to you, just like the following example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;fib('stop')
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+I highly recommend you to write your function in Jupyter notebook, test it there, and then get the results for the same input arguments as in the above example (a string, negative integer, float, and n=1,…,12, and also ‘stop’) and download all of the notebook as a Markdown file, and put it in your repository folder for this homework. Name the notebook, &lt;code&gt;fib.md&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also note that, you don’t need to know or use anything beyond Python function syntax, Python built-in functions and methods (like &lt;code&gt;input&lt;/code&gt;, &lt;code&gt;isdigit()&lt;/code&gt;, &lt;code&gt;print&lt;/code&gt;, &lt;code&gt;str()&lt;/code&gt;, &lt;code&gt;int()&lt;/code&gt;, …), and Python if-blocks.&lt;/p&gt;
+&lt;blockquote&gt;
+    I recommend you to use Jupyter notebook on your device, since the online version of notebook, can be interrupted repeatedly because of internet connection.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Branching…, the Pythonic way.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Change the &lt;strong&gt;first&lt;/strong&gt; if statement in the following script to an equivalent &lt;strong&gt;one-line&lt;/strong&gt; if-expression. Test the resulting new script, and make sure it behaves as the original,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;#!/usr/bin/env python
+
+abbr = input (&quot;What is the three letter abbreviation of this course? &quot;)
+
+answer_status = 'wrong'
+if abbr == 'ECL':
+    answer_status = 'correct'
+
+if answer_status=='correct':
+    print('Your answer is correct!')
+else:
+    print(&quot;wrong buddy...try again&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;(B)&lt;/strong&gt; Can you acheive the same goal as in &lt;strong&gt;(A)&lt;/strong&gt; without if-expression or block, but instead using only tuple notation? Explain why your solution works.&lt;/p&gt;
+
+&lt;p&gt;Modify the if block and the print statements that are only in the last part of the code,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;if answer_status=='correct':
+    print('Your answer is correct!')
+else:
+    print(&quot;wrong buddy...try again&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+to write a single-line Python statement that only uses &lt;code&gt;print&lt;/code&gt; and tuple or list notations, to perform the exact same task as the original print and if-block statement.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.  Python.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a &lt;strong&gt;single-line&lt;/strong&gt; Python code that reads a string containing comma-separated first-name, last-name, and the city in which a person lives from the Python interpreter command line, and simultaneouly, in the same line of Python code, removes all white-space characters from the input string, and converts all letters of the input variables to lower-case, and converts the string to a tuple and saves in a tuple &lt;code&gt;(first,last,city)&lt;/code&gt;, such that, for example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;Enter the first name, last name, and the city of the person (comma-separated): Amir, Shahmoradi  ,  Austin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+would give,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;(first,last,city)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;('amir', 'shahmoradi', 'austin')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; Use &lt;code&gt;input&lt;/code&gt; function for this purpose. The output of &lt;code&gt;input&lt;/code&gt; is a string, which can be manipulated repeatedly on the same line, using multiple string methods that you learned about in the previous lectures.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; As discuss in our lecture 6, the one-line if-expression syntax does not provide a functionality like &lt;code&gt;elif&lt;/code&gt; keyword as in the if-statement syntax. Our goal here is to learn how to convert a Python if-statement containing &lt;code&gt;elif&lt;/code&gt; to a one-line Python expression. Convert the following if-block to a single line if-expression. Modify the if-block inside the following function to one-line if-expression:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def dummy(i):
+    if i==0:
+        j=0
+    elif i==1:
+        j=1
+    elif i==2:
+        j=2
+    else: j = 'j is not in [0,1,2]' 
+    return j
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; 
+An arbitrary triangle can be described by the coordinates of its three vertices: $(x1,y1),(x2,y2),(x3,y3)$, numbered in a counterclockwise direction. The area of the triangle is given by the formula,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;A = \frac{1}{2} \bigg| x2y3 - x3y2 - x1y3 + x3y1 + x1y2 - x2y1j \bigg|&lt;/script&gt;
+
+&lt;p&gt;Write a function &lt;code&gt;get_triangle_area(vertices)&lt;/code&gt; that returns the area of a triangle whose vertices are specified by the argument vertices, which is a nested list of the vertex coordinates. Test your implementation with the following test function, which also illustrates how the &lt;code&gt;get_triangle_area&lt;/code&gt; function works.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def test_get_triangle_area():
+    &quot;&quot;&quot;
+    Verify the area of a triangle with vertex coordinates
+    (0,0), (1,0), and (0,2).
+    &quot;&quot;&quot;
+    v1 = (0,0); v2 = (1,0); v3 = (0,2)
+    vertices = [v1, v2, v3]
+    expected = 1
+    computed = get_triangle_area(vertices)
+    tol = 1E-14
+    success = abs(expected - computed) &amp;lt; tol
+    msg = 'computed area=%g != %g (expected)' % (computed, expected)
+    assert success, msg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; Write a logical (boolean) function named &lt;code&gt;is_prime(n)&lt;/code&gt; that takes in an integer number &lt;code&gt;n&lt;/code&gt;, and finds whether it is a Prime number or not. Example output is the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;is_prime(n=23)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;is_prime(12)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;False
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you do not need and don’t have to use &lt;code&gt;for-loop&lt;/code&gt; for this problem (we have not yet discussed loops in our class!). All of it can be done using recursive function concept.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; &lt;strong&gt;MATLAB Function generators.&lt;/strong&gt; Write a nested function that evaluates a polynomial of the form $y = ax^2+bx+c$. The host function &lt;code&gt;genFunc()&lt;/code&gt; should be able to take varying number of arguments using &lt;code&gt;varargin&lt;/code&gt; with maximum of 3 arguments (&lt;code&gt;a,b,c&lt;/code&gt;) to initialize the coefficients of the polynomial. If there is only one argument, then &lt;code&gt;b&lt;/code&gt; and &lt;code&gt;c&lt;/code&gt; must be set to zero. If there are two input arguments, then &lt;code&gt;c&lt;/code&gt; is set to zero. If none are given on input, then the returned function should be zero. If more than 3 arguments exist, then the function should display an error and stop. Also, if the input arguments are not real numbers, then the function should return and error and stop.&lt;/p&gt;
+
+&lt;p&gt;On output, the host function should create and return a function handle for the nested function &lt;code&gt;evalFunc()&lt;/code&gt;. The nested function should calculate a value of $y$ for a given value of $x$, using the values of $a$, $b$, and $c$ stored in the host function. This is called a &lt;strong&gt;function generator&lt;/strong&gt;, since the host function generates and outputs another function that can be called and used later on in the program. Once you create your function generator, test it in the following way: Call &lt;code&gt;genFunc(1,2,0)&lt;/code&gt; and save the output function handle in a variable, say &lt;code&gt;h1&lt;/code&gt;. Call &lt;code&gt;genFunc(1,2)&lt;/code&gt; and save the output function handle in a variable, say &lt;code&gt;h2&lt;/code&gt;. Then these two function handles, should give the same result, given the same input &lt;code&gt;x&lt;/code&gt; values.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; Consider the following nested list,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;q = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h']]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Write a for-loop that extracts all the letters in the list and finally prints them all as a single string,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;abcdefgh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt;  &lt;strong&gt;The significant impact of round-off errors in numerical computation.&lt;/strong&gt;  Consider the following program in Python,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;from math import sqrt
+for n in range(1, 60):
+    r_org = 2.0
+    r = r_org
+    for i in range(n):
+        r = sqrt(r)
+    for i in range(n):
+        r = r ** 2
+    print ('With {} times sqrt and then {} times **2, the number {} becomes: {:.16f}'.format(n,n,r_org,r))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+or its equivalent in MATLAB,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
+for n = 1:60
+    r_original = 2.0;
+    r = r_original;
+    for i = 1:n
+        r = sqrt(r);
+    end
+    for i = 1:n
+        r = r^2;
+    end
+    fprintf(formatSpec,n,n,r_original,r);
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Explain what this code does. Then run the code, and explain why do you the behavior observed. In particular, why do you not recover the original value $2$ after many repetitions of the same forward and reverse task?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. &lt;/strong&gt; Consider the following code,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;eps = 1.0
+while 1.0 != 1.0 + eps:
+    print ('...............', eps)
+    eps /= 2.0
+print ('final eps:', eps)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+or its equivalent in MATLAB,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;eps = 1.0;
+while 1.0 ~= 1.0 + eps
+    disp(num2str(eps));
+    eps = eps / 2.0;
+end
+disp(['final eps:', num2str(eps)]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Explain what the code is doing. Run the code and observe the output. How could &lt;code&gt;1.0 != 1.0 + eps&lt;/code&gt; be False?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;10.  MATLAB.&lt;/strong&gt; Suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function named &lt;code&gt;getLargestPrime&lt;/code&gt; that does so, using for-loop, break, and MATLAB’s intrinsic function isprime(). Here is a test,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; getLargestPrime(123)
+ans =
+   113
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;11.  Python&lt;/strong&gt; Consider the following list,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;numbers = list(range(10))
+print(numbers)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now run the following code, given the above list. Explain the weird behavior that you observe.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;for n in numbers:
+    i = len(numbers)//2
+    del numbers[i]
+    print ('n={}, del {}'.format(n,i), numbers)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;12.  MATLAB.&lt;/strong&gt; Suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function named &lt;code&gt;getLargestPrime&lt;/code&gt; that does so, using for-loop, break, and MATLAB’s intrinsic function &lt;code&gt;isprime()&lt;/code&gt;. Here is a test,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; getLargestPrime(123)
+ans =
+   113
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;13.  Python&lt;/strong&gt; Write a Python function that when executed, asks the user to enter an integer number, then the function count and outputs the number of prime numbers that are smaller than the given input integer number. Here is the answer to this question using only the knowledge of recursive functions and if-blocks,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def is_prime(n):
+    
+    is_prime = True
+    
+    def is_divisible(n,divisor):
+        if n&amp;lt;(divisor-1)*divisor: return False
+        if n%divisor==0: return True
+        else:
+            divisor += 1
+            return is_divisible(n,divisor)
+
+    if is_divisible(n,divisor=2): is_prime=False
+    return is_prime
+
+def get_primes(n):
+    count = 0
+    if n == 1:
+        return count
+    else:
+        if is_prime(n):
+            count = 1
+        n -= 1
+        return count + get_primes(n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;get_primes(13)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(A) Now rewrite &lt;code&gt;get_primes(n)&lt;/code&gt; and the other functions in the above code using for-loop this time. Name the new functions &lt;code&gt;get_prime_for(n)&lt;/code&gt; and &lt;code&gt;is_prime_for(n)&lt;/code&gt;, with &lt;em&gt;for&lt;/em&gt; in the names indicating that the functions now use for-loops.&lt;/p&gt;
+
+&lt;p&gt;(B) Now compare the performance of the two functions &lt;code&gt;get_primes(n=500)&lt;/code&gt; and &lt;code&gt;get_primes_for(n500)&lt;/code&gt; using Jupyter’s or IPython’s &lt;code&gt;%timeit&lt;/code&gt; magic function. Which one is faster?&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/3-branching-looping-functions&quot;&gt;Homework 3: Branching, looping, and functions&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on July 11, 2019.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 2: Value, variables, types]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/2-values-variables-types"/>
+  <id>http:/MAPCP2019U/quiz/2-values-variables-types</id>
   <published>2019-06-26T00:00:00-05:00</published>
   <updated>2019-06-26T00:00:00-05:00</updated>
   <author>
@@ -42,104 +448,74 @@ The following figure illustrates the grade distribution for this quiz.
 &lt;/figure&gt;
 --&gt;
 
+&lt;p&gt;This quiz aims at testing your basic knowledge of values and variables. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to &lt;strong&gt;quiz/2/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
+
 &lt;hr /&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is the solution to Quiz 2. This quiz aims at testing your basic knowledge of values and variables. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to &lt;strong&gt;quiz/2/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;Name three different levels of the computer memory.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt; Register (L1 Cache), L2 Cache, L3 Cache, RAM (Random-Access Memory), HDD (Hard Drive Disk).
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Suppose that you have a matrix of rank 2 to store in the computer memory. How would each one of the following languages store this matrix (column-wise vs. row-wise):&lt;br /&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name three different levels of the computer memory.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; Register (L1 Cache), L2 Cache, L3 Cache, RAM (Random-Access Memory), HDD (Hard Drive Disk).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Suppose that you have a matrix of rank 2 to store in the computer memory. How would each one of the following languages store this matrix (column-wise vs. row-wise):&lt;br /&gt;
 b) C&lt;br /&gt;
 a) Fortran&lt;br /&gt;
 c) MATLAB&lt;br /&gt;
-d) Python&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;  &lt;br /&gt;
+d) Python&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;  &lt;br /&gt;
 a) row-wise&lt;br /&gt;
 b) column-wise&lt;br /&gt;
 c) column-wise&lt;br /&gt;
-d) row-wise&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What are the three fundamental components of a Turing-complete language?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;
+d) row-wise&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What are the three fundamental components of a Turing-complete language?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
     &lt;ol&gt;
       &lt;li&gt;a way for accessing the memory&lt;/li&gt;
       &lt;li&gt;a way for iteration&lt;/li&gt;
-      &lt;li&gt;a way for branching&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;a way for branching&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;What are the three common types of errors in computer programs?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;
+  &lt;li&gt;
+    &lt;p&gt;What are the three common types of errors in computer programs?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
     &lt;ol&gt;
       &lt;li&gt;syntax errors&lt;/li&gt;
       &lt;li&gt;runtime errors&lt;/li&gt;
-      &lt;li&gt;semantic errors&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;semantic errors&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;Suppose you write a program that has memory leak. What type of programming error you dealing with?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt; runtime error
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What is the biggest integer (in base 10) that you could store in an &lt;code&gt;int32&lt;/code&gt; type?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt; 2,147,483,647&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What is the difference between &lt;code&gt;int16&lt;/code&gt; and &lt;code&gt;uint64&lt;/code&gt; types (two major differences is enough)?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+  &lt;li&gt;
+    &lt;p&gt;Suppose you write a program that has memory leak. What type of programming error you dealing with?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; runtime error&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is the biggest integer (in base 10) that you could store in an &lt;code&gt;int32&lt;/code&gt; type?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; 2,147,483,647&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is the difference between &lt;code&gt;int16&lt;/code&gt; and &lt;code&gt;uint64&lt;/code&gt; types (two major differences is enough)?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
 1) &lt;code&gt;int16&lt;/code&gt; is only 16 bits storage, whereas &lt;code&gt;uint64&lt;/code&gt; is 64 bits storage.&lt;br /&gt;
-2) &lt;code&gt;int16&lt;/code&gt; is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas &lt;code&gt;uint64&lt;/code&gt; can only represent positive integers.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+2) &lt;code&gt;int16&lt;/code&gt; is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas &lt;code&gt;uint64&lt;/code&gt; can only represent positive integers.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-  
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/2-solutions-values-variables-types&quot;&gt;Quiz 2: Solutions - Value, variables, types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 26, 2019.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Quiz 2: Problems - Value, variables, and types]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/2-problems-values-variables-types"/>
-  <id>http:/MAPCP2019U/quiz/2-problems-values-variables-types</id>
-  <published>2019-06-26T00:00:00-05:00</published>
-  <updated>2019-06-26T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/MAPCP2019U</uri>
-    <email>shahmoradi@utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This quiz aims at testing your basic knowledge of values and variables. Don’t forget to push your answers to your remote repository by the end of quiz time.&lt;br /&gt;
-Push all your answers to &lt;strong&gt;quiz/2/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Name three different levels of the computer memory.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Suppose that you have a matrix of rank 2 to store in the computer memory. How would each one of the following languages store this matrix (column-wise vs. row-wise):&lt;br /&gt;
-b) C&lt;br /&gt;
-a) Fortran&lt;br /&gt;
-d) MATLAB&lt;br /&gt;
-c) Python&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What are the three fundamental components of a Turing-complete language?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What are the three common types of errors in computer programs?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Suppose you write a program that has memory leak. What type of programming error you dealing with?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What is the biggest integer (in base 10) that you could store in an &lt;code&gt;int32&lt;/code&gt; type?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What is the difference between &lt;code&gt;int16&lt;/code&gt; and &lt;code&gt;uint64&lt;/code&gt; types (two major differences is enough)?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/2-problems-values-variables-types&quot;&gt;Quiz 2: Problems - Value, variables, and types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 26, 2019.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/2-values-variables-types&quot;&gt;Quiz 2: Value, variables, types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 26, 2019.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1525,9 +1901,9 @@ For more information on each individual function, see &lt;a href=&quot;https://w
 
 
 <entry>
-  <title type="html"><![CDATA[Quiz 1: Solutions - Version control system]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/1-solutions-version-control-system"/>
-  <id>http:/MAPCP2019U/quiz/1-solutions-version-control-system</id>
+  <title type="html"><![CDATA[Quiz 1: Version control system]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/1-version-control-system"/>
+  <id>http:/MAPCP2019U/quiz/1-version-control-system</id>
   <published>2019-06-18T00:00:00-05:00</published>
   <updated>2019-06-18T00:00:00-05:00</updated>
   <author>
@@ -1550,148 +1926,115 @@ The following figure illustrates the grade distribution for this quiz.
 &lt;/figure&gt;
 --&gt;
 
+&lt;p&gt;This quiz aims at testing your basic knowledge of Version Control System. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to &lt;strong&gt;quiz/1/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
+
 &lt;hr /&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Which of the following Git commands can add all the &lt;strong&gt;new&lt;/strong&gt; and &lt;strong&gt;modified-existing&lt;/strong&gt; files to the staging area? choose all that apply.&lt;br /&gt;
-(A) &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
-(B) &lt;code&gt;git add --A&lt;/code&gt;&lt;br /&gt;
-(C) &lt;code&gt;git add -all&lt;/code&gt;&lt;br /&gt;
-(D) &lt;code&gt;git add --all&lt;/code&gt;&lt;br /&gt;
-(E) &lt;code&gt;git add -u&lt;/code&gt;&lt;br /&gt;
-(F) &lt;code&gt;git add .&lt;/code&gt;&lt;br /&gt;
-(G) &lt;code&gt;git add .; git add -u&lt;/code&gt;&lt;br /&gt;
-(H) &lt;code&gt;git add .; git add --u&lt;/code&gt;&lt;br /&gt;
-(I) &lt;code&gt;git add -u; git add .&lt;/code&gt;&lt;br /&gt;
-(J) &lt;code&gt;git add --u; git add .&lt;/code&gt;&lt;br /&gt;
+  &lt;li&gt;
+    &lt;p&gt;Which of the following Git commands can add all the &lt;strong&gt;new&lt;/strong&gt; and &lt;strong&gt;modified-existing&lt;/strong&gt; files to the staging area? choose all that apply.&lt;br /&gt;
  &lt;br /&gt;
- &lt;strong&gt;Answer: A, D, G, F, I&lt;/strong&gt;
- &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Which of the following Git commands &lt;strong&gt;both&lt;/strong&gt; stages and commits &lt;strong&gt;only modified and deleted files&lt;/strong&gt; but &lt;strong&gt;NOT&lt;/strong&gt; the &lt;em&gt;new files&lt;/em&gt; added to the repository since the last commit. Choose all that apply.&lt;br /&gt;
-(A) &lt;code&gt;git commit&lt;/code&gt;&lt;br /&gt;
-(B) &lt;code&gt;git commit -a&lt;/code&gt;&lt;br /&gt;
-(C) &lt;code&gt;git commit -am&lt;/code&gt;&lt;br /&gt;
+ (A) &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
+ (B) &lt;code&gt;git add --A&lt;/code&gt;&lt;br /&gt;
+ (C) &lt;code&gt;git add -all&lt;/code&gt;&lt;br /&gt;
+ (D) &lt;code&gt;git add --all&lt;/code&gt;&lt;br /&gt;
+ (E) &lt;code&gt;git add -u&lt;/code&gt;&lt;br /&gt;
+ (F) &lt;code&gt;git add .&lt;/code&gt;&lt;br /&gt;
+ (G) &lt;code&gt;git add .; git add -u&lt;/code&gt;&lt;br /&gt;
+ (H) &lt;code&gt;git add .; git add --u&lt;/code&gt;&lt;br /&gt;
+ (I) &lt;code&gt;git add -u; git add .&lt;/code&gt;&lt;br /&gt;
+ (J) &lt;code&gt;git add --u; git add .&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer: A, D, G, F, I&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Which of the following Git commands &lt;strong&gt;both&lt;/strong&gt; stages and commits &lt;strong&gt;only modified and deleted files&lt;/strong&gt; but &lt;strong&gt;NOT&lt;/strong&gt; the &lt;em&gt;new files&lt;/em&gt; added to the repository since the last commit. Choose all that apply.&lt;br /&gt;
  &lt;br /&gt;
- &lt;strong&gt;Answer: B, C&lt;/strong&gt;
- &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Write down the Git command that lists all Git commands for you.&lt;br /&gt;
- &lt;br /&gt;
- &lt;strong&gt;Answer:&lt;/strong&gt;
+ (A) &lt;code&gt;git commit&lt;/code&gt;&lt;br /&gt;
+ (B) &lt;code&gt;git commit -a&lt;/code&gt;&lt;br /&gt;
+ (C) &lt;code&gt;git commit -am&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer: B, C&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Write down the Git command that lists all Git commands for you.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
     &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt; $ git help -a
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly&lt;br /&gt;
-(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily use.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran&lt;br /&gt;
-(B) Approximately how many decades is it old? ($\pm15$ years is acceptable answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-in 1950s&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly  &lt;br /&gt;
-(B) Which language-generation are Fortran, C, C++, MATLAB, Python, R?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-third, third, third, fourth, fourth, fourth&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;In what decades C, C++, and MATLAB/Python were created, respectively?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-1970s, 1980s, 1980s, 1990s&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-B&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-C, Simula&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of MATLAB/Python.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran/C&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;How would you distinguish exponential behavior vs. power-law behavior (relationship) in a 2-dimensional plot?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+  &lt;li&gt;
+    &lt;p&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Assembly&lt;/p&gt;
+
+    &lt;p&gt;(B) Does it need interpretation in order to become machine-comprehensible?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(A) Name the oldest high-level programming language that is still in active daily use.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Fortran&lt;/p&gt;
+
+    &lt;p&gt;(B) Approximately how many decades is it old? ($\pm15$ years is acceptable answer. the decade it was created is also an acceptable answer)&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+in 1950s&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(A) Name a second-generation programming language.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Assembly&lt;/p&gt;
+
+    &lt;p&gt;(B) Which language-generation are Fortran, C, C++, MATLAB, Python, R?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+third, third, third, fourth, fourth, fourth&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In what decades C, C++, and MATLAB/Python were created, respectively?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+1970s, 1980s, 1980s, 1990s&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name an ancestor programming language of C.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+B&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name a programming language ancestor of C++.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+C, Simula&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name a programming language ancestor of MATLAB/Python.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Fortran/C&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How would you distinguish exponential behavior vs. power-law behavior (relationship) in a 2-dimensional plot?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
 An exponential curve looks like a line only when the X-axis is plotted on log-scale.&lt;br /&gt;
-A power-law curve looks like a line only when both the X- and Y- axes are plotted on log-scale.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+A power-law curve looks like a line only when both the X- and Y- axes are plotted on log-scale.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-  
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/1-solutions-version-control-system&quot;&gt;Quiz 1: Solutions - Version control system&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Quiz 1: Problems - Version control system]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/quiz/1-problems-version-control-system"/>
-  <id>http:/MAPCP2019U/quiz/1-problems-version-control-system</id>
-  <published>2019-06-18T00:00:00-05:00</published>
-  <updated>2019-06-18T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/MAPCP2019U</uri>
-    <email>shahmoradi@utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This quiz aims at testing your basic knowledge of Git version control system. Don’t forget to push your answers to your remote repository by the end of quiz time.&lt;br /&gt;
-Push all your answers to &lt;strong&gt;quiz/1/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Which of the following Git commands can add all the &lt;strong&gt;new&lt;/strong&gt; and &lt;strong&gt;modified-existing&lt;/strong&gt; files to the staging area? choose all that apply.&lt;br /&gt;
-(A) &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
-(B) &lt;code&gt;git add --A&lt;/code&gt;&lt;br /&gt;
-(C) &lt;code&gt;git add -all&lt;/code&gt;&lt;br /&gt;
-(D) &lt;code&gt;git add --all&lt;/code&gt;&lt;br /&gt;
-(E) &lt;code&gt;git add -u&lt;/code&gt;&lt;br /&gt;
-(E) &lt;code&gt;git add --u&lt;/code&gt;&lt;br /&gt;
-(F) &lt;code&gt;git add .&lt;/code&gt;&lt;br /&gt;
-(G) &lt;code&gt;git add .; git add -u&lt;/code&gt;&lt;br /&gt;
-(H) &lt;code&gt;git add .; git add --u&lt;/code&gt;&lt;br /&gt;
-(I) &lt;code&gt;git add -u; git add .&lt;/code&gt;&lt;br /&gt;
-(J) &lt;code&gt;git add --u; git add .&lt;/code&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Which of the following Git commands &lt;strong&gt;both&lt;/strong&gt; stages and commits &lt;strong&gt;only modified and deleted files&lt;/strong&gt; but &lt;strong&gt;NOT&lt;/strong&gt; the &lt;em&gt;new files&lt;/em&gt; added to the repository since the last commit. Choose all that apply.&lt;br /&gt;
-(A) &lt;code&gt;git commit&lt;/code&gt;&lt;br /&gt;
-(B) &lt;code&gt;git commit -a&lt;/code&gt;&lt;br /&gt;
-(C) &lt;code&gt;git commit -am&lt;/code&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Write down the Git command that lists all Git commands for you.&lt;/li&gt;
-  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
-(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily use.&lt;br /&gt;
-(B) Approximately how many decades is it old? ($\pm15$ years is an acceptable answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
-(B) Which language-generation are Fortran, C, C++, MATLAB, Python, R?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;In what decades C, C++, and MATLAB/Python were created, respectively?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of MATLAB/Python.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;How would you distinguish exponential behavior vs. power-law behavior (relationship) in a 2-dimensional plot?&lt;/li&gt;
-&lt;/ol&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/1-problems-version-control-system&quot;&gt;Quiz 1: Problems - Version control system&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/quiz/1-version-control-system&quot;&gt;Quiz 1: Version control system&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
 </entry>
 
 
@@ -4987,9 +5330,9 @@ Since slicing the cell array by &lt;code&gt;{}&lt;/code&gt; returns a comma-sepa
 
 
 <entry>
-  <title type="html"><![CDATA[Homework 2: Problems - Variables, Values, and Types]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/2-problems-variables-values-types"/>
-  <id>http:/MAPCP2019U/homework/2-problems-variables-values-types</id>
+  <title type="html"><![CDATA[Homework 2: Variables, Values, and Types]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/2-variables-values-types"/>
+  <id>http:/MAPCP2019U/homework/2-variables-values-types</id>
   <published>2019-06-18T00:00:00-05:00</published>
   <updated>2019-06-18T00:00:00-05:00</updated>
   <author>
@@ -5419,14 +5762,14 @@ However, the problem is that, except me (Amir, the instructor), everyone else ha
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/2-problems-variables-values-types&quot;&gt;Homework 2: Problems - Variables, Values, and Types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/2-variables-values-types&quot;&gt;Homework 2: Variables, Values, and Types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
-  <title type="html"><![CDATA[Homework 1: Solutions - Version Control Using Git and Github]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/1-solutions-version-control-using-git-github"/>
-  <id>http:/MAPCP2019U/homework/1-solutions-version-control-using-git-github</id>
+  <title type="html"><![CDATA[Homework 1: Version Control Using Git and Github]]></title>
+  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/1-version-control-using-git-github"/>
+  <id>http:/MAPCP2019U/homework/1-version-control-using-git-github</id>
   <published>2019-06-18T00:00:00-05:00</published>
   <updated>2019-06-18T00:00:00-05:00</updated>
   <author>
@@ -5437,24 +5780,23 @@ However, the problem is that, except me (Amir, the instructor), everyone else ha
   
   <content type="html">
   
-    &lt;p&gt;This is the solution to &lt;a href=&quot;1-problems-version-control-using-git-github.html&quot; target=&quot;_blank&quot;&gt;Homework 1: Problems - Version Control Using Git and Github&lt;/a&gt;.&lt;br /&gt;
-&amp;lt;!–
-The following figure illustrates the grade distribution for this homework.&lt;/p&gt;
+    &lt;!--
+The following figure illustrates the grade distribution for this homework.  
 &lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/homework/gradeDist/gradeHistHomework1.png&quot; width=&quot;700&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/gradeDist/gradeHistHomework1.png&quot; width=&quot;700&quot;&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points, excluding bonus questions, is 1.&lt;br /&gt;
+        Maximum possible points, excluding bonus questions, is 1.&lt;br&gt;
         Maximum possible points, including bonus questions, is 1.5.
     &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;–&amp;gt;&lt;/p&gt;
+--&gt;
+
+&lt;p&gt;♣ &lt;strong&gt;Due Date: One week from the posting date @ 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;♣ &lt;strong&gt;Due Date: One week from the posting date @ 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.&lt;/p&gt;
 
 &lt;p&gt;First, use the following Markdown language references, or any other reference that you find or prefer, to design a Github-interpretable README file for each of folders in your project for this course, and a Github web-page for your project.&lt;/p&gt;
 
@@ -5699,6 +6041,7 @@ Switched to branch 'test2'
 $ ls
 readme.md
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;
 The &lt;code&gt;test.txt&lt;/code&gt; files is not in the project’s working directory, since I just chaecked out a new branch &lt;em&gt;test2&lt;/em&gt; that does not contain any files that were generated and committed in &lt;em&gt;test1&lt;/em&gt; branch.&lt;/p&gt;
 
@@ -6018,7 +6361,7 @@ Ask me in class and I will explain how to do it.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/1-solutions-version-control-using-git-github&quot;&gt;Homework 1: Solutions - Version Control Using Git and Github&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/1-version-control-using-git-github&quot;&gt;Homework 1: Version Control Using Git and Github&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
 </entry>
 
 
@@ -8093,292 +8436,6 @@ If you are sure you want to delete it, run 'git branch -D test'.
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/1-version-control-system&quot;&gt;Lecture 1: A professional programmer uses Version Control System (VCS)&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 04, 2019.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Homework 1: Problems - Version Control Using Git and Github]]></title>
-  <link rel="alternate" type="text/html" href="http:/MAPCP2019U/homework/1-problems-version-control-using-git-github"/>
-  <id>http:/MAPCP2019U/homework/1-problems-version-control-using-git-github</id>
-  <published>2019-06-04T00:00:00-05:00</published>
-  <updated>2019-06-04T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/MAPCP2019U</uri>
-    <email>shahmoradi@utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;♣ &lt;strong&gt;Due Date: One week from the posting date @ 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.&lt;/p&gt;
-
-&lt;p&gt;First, use the following Markdown language references, or any other reference that you find or prefer, to design a Github-interpretable README file for each of folders in your project for this course, and a Github web-page for your project.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/MAPCP2019U/lecture/1/markdown-cheatsheet-online.pdf&quot; target=&quot;_blank&quot;&gt;Markdown language cheat-sheet (pdf)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.ghost.org/markdown/&quot; target=&quot;_blank&quot;&gt;Markdown language reference (web)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot; target=&quot;_blank&quot;&gt;Adam Pritchard’s Markdown cheat-sheet (web)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Write your code sections of your answer in Markdown syntax.
-For example,&lt;br /&gt;
-&lt;code&gt;
-    ```bash  &lt;br /&gt;
-    $ git branch -d test  &lt;br /&gt;
-    error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'  &lt;br /&gt;
-    ```
-&lt;/code&gt;
-&lt;br /&gt;
-will display the following text highlighted as &lt;em&gt;bash&lt;/em&gt; code, in your &lt;em&gt;readme.md&lt;/em&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch -d test
-error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Include the following information with the following format and information in your main directory &lt;code&gt;readme.md&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;h2 id=&quot;beginning-of-the-readme-files-content&quot;&gt;&lt;em&gt;Beginning of the README file’s content&lt;/em&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;mapcp2019u---introduction-to-computer-programming-summer-2019&quot;&gt;MAPCP2019U - Introduction to Computer Programming (Summer 2019)&lt;/h4&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;Name:&lt;/strong&gt; &amp;lt;first name&amp;gt; &amp;lt;last name&amp;gt;&lt;br /&gt;
-&lt;strong&gt;UTA EID:&lt;/strong&gt; &amp;lt;your UTA EID&amp;gt;&lt;br /&gt;
-&lt;strong&gt;Email:&lt;/strong&gt; &amp;lt;your email&amp;gt;&lt;br /&gt;
-&lt;strong&gt;Department:&lt;/strong&gt; &lt;a href=&quot;https://www.uta.edu/physics/&quot;&gt;Department of Physics&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;University:&lt;/strong&gt; &lt;a href=&quot;https://www.utexas.edu/&quot;&gt;The University of Texas at Arlington&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;Level:&lt;/strong&gt; graduate - &amp;lt;Freshman (1st year) / Sophomore (2nd year) / Junior (3rd year) / Senior (4th year) / Dinosaur (5th year and above) &amp;gt;&lt;br /&gt;
-&lt;strong&gt;MAPCP-Class Title:&lt;/strong&gt; Student&lt;br /&gt;
-&lt;strong&gt;Course Webpage:&lt;/strong&gt; &lt;a href=&quot;https://www.cdslab.orghttp:/MAPCP2019U/&quot;&gt;https://www.cdslab.orghttp:/MAPCP2019U/&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;Photo:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http:/MAPCP2019U/images/AmirShahmoradi.png&quot; alt=&quot;Amir Shahmoradi&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;description-of-the-projects-content&quot;&gt;Description of the project’s content&lt;/h4&gt;
-&lt;p&gt;&lt;br /&gt; This repository contains my homework, quizzes, and virtually every effort that I have made for &lt;a href=&quot;https://www.cdslab.orghttp:/MAPCP2019U/&quot;&gt;MAPCP2019U class&lt;/a&gt;. The structure of the project is the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#homework&quot;&gt;homework&lt;/a&gt;:&lt;/strong&gt; (the homework hyperlink should take the reader to the homework folder)&lt;br /&gt;
-  This directory contains all my homework submissions, each of which is a folder properly named with homework number, containing the homework submission.&lt;br /&gt;
-  &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#quiz&quot;&gt;quiz&lt;/a&gt;:&lt;/strong&gt; (the quiz hyperlink should take the reader to the quizzes folder)&lt;br /&gt;
-  This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.&lt;br /&gt;
-  &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#exam&quot;&gt;exam&lt;/a&gt;:&lt;/strong&gt; (the exam hyperlink should take the reader to the exams folder)&lt;br /&gt;
-  This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.&lt;br /&gt;
-  &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For questions and troubleshooting, please contact:&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;your name&amp;gt;&lt;br /&gt;
-&amp;lt;your email&amp;gt;&lt;br /&gt;
-&amp;lt;any other contact or signature information that you would like to add&amp;gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I have not failed. I’ve just found 10,000 ways that won’t work.&lt;br /&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Thomas_Edison&quot; target=&quot;_blank&quot;&gt;Thomas A. Edison&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;end-of-the-readme-files-content&quot;&gt;&lt;em&gt;End of the README file’s content&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Create two additional test branches in your project, each of which is branched directly from &lt;em&gt;master&lt;/em&gt;. &lt;strong&gt;For each of the following cases, write the command and the corresponding output message of Git, in Markdown language in a &lt;code&gt;readme.md&lt;/code&gt; file inside your &lt;code&gt;homework/1/&lt;/code&gt; folder in your master branch&lt;/strong&gt;. If you don’t have this folder in your project, then create the folder and then place your initial &lt;code&gt;readme.md&lt;/code&gt; file in this folder with your signature as the content of the file. Then stage and commit this file together with homework-1 folder to your local repository. Throughout the rest of this homework, you will fill this &lt;code&gt;readme.md&lt;/code&gt; file with your answers.&lt;/p&gt;
-
-&lt;p&gt;(A) Create two branches, &lt;strong&gt;both from your &lt;em&gt;master&lt;/em&gt; branch&lt;/strong&gt;, with names &lt;em&gt;test1&lt;/em&gt; and &lt;em&gt;test2&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(B) Now checkout the &lt;em&gt;test1&lt;/em&gt; branch and create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/1/&lt;/code&gt; directory of this branch.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(C) Inside &lt;code&gt;test.txt&lt;/code&gt; in &lt;em&gt;test1&lt;/em&gt; branch write this message: &lt;em&gt;This is some example text for branch test1&lt;/em&gt;, and save it.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(D) Now stage and commit &lt;code&gt;test.txt&lt;/code&gt; file to branch &lt;em&gt;test1&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(E) Checkout the branch &lt;em&gt;test2&lt;/em&gt;. Do you still see &lt;code&gt;test.txt&lt;/code&gt; that you just created in your &lt;code&gt;homework/1/&lt;/code&gt; directory? You can search for it by the &lt;em&gt;bash&lt;/em&gt; command &lt;code&gt;ls&lt;/code&gt;. Explain why you see/don’t see the file in your working directory anymore.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(F) Create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/1/&lt;/code&gt; directory of this branch as well, and add &lt;em&gt;This is some example text for branch test2&lt;/em&gt; to its content.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(G) Now try to checkout &lt;em&gt;test1&lt;/em&gt;. What error/warning message do you get? Fix the source of error and then checkout &lt;em&gt;test1&lt;/em&gt; branch.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(H) Now merge the content of &lt;em&gt;test1&lt;/em&gt; with &lt;em&gt;master&lt;/em&gt; branch. (Hint: Note from which branch you doing this merge!)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(I) Now what do you see as the content of &lt;em&gt;master&lt;/em&gt; branch? (Hint: Use &lt;code&gt;ls&lt;/code&gt; &lt;em&gt;bash&lt;/em&gt; command, to list the files in the working directory.)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(J) Now merge the content of &lt;em&gt;test2&lt;/em&gt; with &lt;em&gt;master&lt;/em&gt; branch. What error/warning message do you get? Why does this error arise?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(K) Now checkout &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(L) Run the Git command &lt;code&gt;git status&lt;/code&gt;. Why does such a conflict exist, as mentioned in &lt;code&gt;git status&lt;/code&gt; output?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(M) At this stage, you have two options: Either 1. stage and commit the combined conlifting &lt;code&gt;test.txt&lt;/code&gt; file to Git repository (but this is not recommended), or, 2. open the file &lt;code&gt;test.txt&lt;/code&gt; using &lt;em&gt;vim&lt;/em&gt; editor on the command line and reslve the conflict by editing the content of the file to only this sentence: &lt;em&gt;. Then save and quit *vim&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(N) Now, run &lt;code&gt;git status&lt;/code&gt;, then stage and commit your conflict-resolved file. Then checkout &lt;em&gt;test2&lt;/em&gt; branch.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(O) Now, try deleting branch &lt;em&gt;test1&lt;/em&gt;, while on branch &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(P) Now, switch back to &lt;em&gt;master&lt;/em&gt; branch. Now, try deleting branch &lt;em&gt;test1&lt;/em&gt;, while on &lt;em&gt;master&lt;/em&gt; branch. What message do you get from Git? List all the existing branches using &lt;code&gt;git branch&lt;/code&gt; command.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(Q) Why is there such a difference in Git messages between when you tried deleting &lt;em&gt;test1&lt;/em&gt; branch from &lt;em&gt;test2&lt;/em&gt; branch, and when you tried deleting &lt;em&gt;test1&lt;/em&gt; branch from &lt;em&gt;master&lt;/em&gt; branch?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(R) Now checkout &lt;em&gt;test2&lt;/em&gt; branch. While on &lt;em&gt;test2&lt;/em&gt;, try to delete branch &lt;em&gt;test2&lt;/em&gt;. What error/message do you get?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(S) Switch back to &lt;em&gt;master&lt;/em&gt; and delete &lt;em&gt;test2&lt;/em&gt; branch. List all your project branches by the appropriate Git command.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;(T) Stage and commit all the changes (including the file &lt;code&gt;test.txt&lt;/code&gt;) to your project’s &lt;em&gt;master&lt;/em&gt; branch. Now push it all to the remote repository by Wednesday Feb 15 2017, 9:00 a.m. CDT.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; (Bonus, not mandatory) Design a simple Github page for your project, using the main directory’s &lt;code&gt;readme.md&lt;/code&gt; file. Submit the link to the page as your answer. Note that you don’t need to add anything extra to your readme file.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; (Bonus, not mandatory) Create a website for your project, such that your project is accessible through its web address based on the content of your project’s website, not based on the content of &lt;em&gt;master&lt;/em&gt; branch.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/1-problems-version-control-using-git-github&quot;&gt;Homework 1: Problems - Version Control Using Git and Github&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 04, 2019.&lt;/p&gt;</content>
 </entry>
 
 
