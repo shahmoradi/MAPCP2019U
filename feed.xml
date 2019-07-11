@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-11T10:43:26-05:00</updated>
+<updated>2019-07-11T18:52:51-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -5524,6 +5524,31 @@ false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+In MATLAB:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = 1                   % assigns value 1 to a
+b = 'x'                 % assigns character 'x' to b
+c = true                % assigns logical value true to variable c
+whos a b c              % prints a description of the variables a b c
+a == c                  % evaluates whether a euqals b
+a + c                   % returns sum of a and c
+d = [1 2 3 4]           % creates a real array
+e = ['a' 'b' 'c' 'd']   % creates a string 'abcd'
+f = {'a','b','c','d'}   % creates a cell array of the input 4 characters
+g = ['abcd']            % creates a string 'abcd'
+h = {‘a’ ‘b’ ‘c’ ‘d’}   % syntax error due to use of undefined characters ‘ and ’
+i = { a b c d}          % creates a cell array from the four input variables
+whos d e f g h i        % prints a description of the variables d e f g h i
+class(a)                % returns the type of the variable a
+type(a)                 % syntax error: input arguments to type() must be character vectors or strings
+True                    % syntax error: undefined variable
+true                    % logical value true in MATLAB
+False                   % syntax error: undefined variable
+false                   % logical value false in MATLAB
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In Python, a lot of the above commands would yield syntax errors, however, many of them can be easily fixed with minor tweaks.&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5531,7 +5556,35 @@ false
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Integer_overflow&quot; target=&quot;blank&quot;&gt;Overflow&lt;/a&gt;.&lt;/strong&gt; What would happen if you go beyond the range for a particular type? For example, the largest integer that can be stored in &lt;strong&gt;int8&lt;/strong&gt; is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type &lt;strong&gt;int8&lt;/strong&gt;? Smaller integer? Use the MATLAB built-in functions &lt;code&gt;intmin&lt;/code&gt; and &lt;code&gt;intmax&lt;/code&gt; or Python’s numpy package command &lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.iinfo.html&quot; target=&quot;blank&quot;&gt;&lt;code&gt;iinfo&lt;/code&gt;&lt;/a&gt; to find the largest and smallest integers that can be stored in &lt;strong&gt;int16&lt;/strong&gt; and &lt;strong&gt;int32&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Integer_overflow&quot; target=&quot;blank&quot;&gt;Overflow&lt;/a&gt;.&lt;/strong&gt; What would happen if you went beyond the range for a particular type? For example, the largest integer that can be stored in &lt;strong&gt;int8&lt;/strong&gt; is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type &lt;strong&gt;int8&lt;/strong&gt;? Smaller integer? Use the MATLAB built-in functions &lt;code&gt;intmin&lt;/code&gt; and &lt;code&gt;intmax&lt;/code&gt; or Python’s numpy package command &lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.iinfo.html&quot; target=&quot;blank&quot;&gt;&lt;code&gt;iinfo&lt;/code&gt;&lt;/a&gt; to find the largest and smallest integers that can be stored in &lt;strong&gt;int16&lt;/strong&gt; and &lt;strong&gt;int32&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+The resulting behavior is language-dependent. In MATLAB, the overflow and underflow as of today freeze to the largest or smallest possible values that could be represented by that variable type. In python, it leads to rollover or perhaps random value assignments to the variable. Here is the results in MATLAB:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; int8(200)
+ans =
+  int8
+   127
+&amp;gt;&amp;gt; int8(-150)
+ans =
+  int8
+   -128
+&amp;gt;&amp;gt; intmax('int16')
+ans =
+  int16
+   32767
+&amp;gt;&amp;gt; intmin('int16')
+ans =
+  int16
+   -32768
+&amp;gt;&amp;gt; intmax('int32')
+ans =
+  int32
+   2147483647
+&amp;gt;&amp;gt; intmin('int32')
+ans =
+  int32
+   -2147483648
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5555,6 +5608,39 @@ false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;
+Here is the output in MATLAB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 1\2
+ans =
+     2
+&amp;gt;&amp;gt; 1/2
+ans =
+    0.5000
+&amp;gt;&amp;gt; int8(1/2)
+ans =
+  int8
+   1
+&amp;gt;&amp;gt; int8(1/3)
+ans =
+  int8
+   0
+&amp;gt;&amp;gt; -5^2
+ans =
+   -25
+&amp;gt;&amp;gt; (-5)^2
+ans =
+    25
+&amp;gt;&amp;gt; 10-6/2
+ans =
+     7
+&amp;gt;&amp;gt; 5*4/2*3
+ans =
+    30
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However, note that the same results would not hold in Python.&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5569,7 +5655,37 @@ a =
      0     2     0
      0     0     2
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is the output in MATLAB. Similar results can be achieved in Python, by using the same function names as in MATLAB, but via Python’s &lt;code&gt;numpy&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = eye(3,3) * 2
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; d = [2 2 2]
+d =
+     2     2     2
+&amp;gt;&amp;gt; a = diag(d)
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = zeros(3,3);
+&amp;gt;&amp;gt; a(1,1) = 2;
+&amp;gt;&amp;gt; a(2,2) = 2;
+&amp;gt;&amp;gt; a(3,3) = 2;
+&amp;gt;&amp;gt; a
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5578,7 +5694,7 @@ a =
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; &lt;strong&gt;MATLAB.&lt;/strong&gt; Download this &lt;a href=&quot;http:/MAPCP2019U/homework/2-problems/matlab_script_full_of_errors.m&quot; target=&quot;_blank&quot;&gt;code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_fixed.m&lt;/code&gt; in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; &lt;strong&gt;MATLAB.&lt;/strong&gt; Download this &lt;a href=&quot;/homework/2-problems/matlab_script_full_of_errors.m&quot; target=&quot;_blank&quot;&gt;code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_fixed.m&lt;/code&gt; in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; Persian
 Persian =
 Persian is a human language
@@ -5593,6 +5709,9 @@ Modify the last line such that for the last line the code displays,&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 Explain these results.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+The corrected script can be found &lt;a href=&quot;/homework/2-solutions/script_full_of_errors_fixed.m&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5600,7 +5719,7 @@ Explain these results.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Download &lt;a href=&quot;http:/MAPCP2019U/homework/2-problems/python_script_full_of_errors.pi&quot; target=&quot;_blank&quot;&gt;this Python script&lt;/a&gt;. This Python script is full of syntax, runtime, and semantic errors. Please identify and corrent these errors, such that code becomes fully executable and outputs the following message on the screen, when run from the Git Bash command line:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Download &lt;a href=&quot;/homework/2-problems/python_script_full_of_errors.pi&quot; target=&quot;_blank&quot;&gt;this Python script&lt;/a&gt;. This Python script is full of syntax, runtime, and semantic errors. Please identify and corrent these errors, such that code becomes fully executable and outputs the following message on the screen, when run from the Git Bash command line:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;The life expectancy for the millennials is projected to be 120 years! (But don't believe it...)
 
@@ -5660,6 +5779,29 @@ Identify at least one example in the code for each of the error types.&lt;/p&gt;
   &lt;li&gt;Become familiar with &lt;a href=&quot;https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html&quot; target=&quot;_blank&quot;&gt;escape characters&lt;/a&gt; in Python, such as &lt;code&gt;'\n'&lt;/code&gt;, &lt;code&gt;'\t'&lt;/code&gt;, and &lt;code&gt;'\t'&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+The corrected file can be downloaded from &lt;a href=&quot;/homework/2-solutions/python_script_full_of_errors_corrected.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Examples of different types of programming errors:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;semantic error example: &lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;line 15, in the wrong script: The purpose is to print the complex number 5+sqrt(-15), but instead 5-15j is printed by the wrong script.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;line 35, in the wrong script: The purpose is to print float number, but since we used &lt;code&gt;sqrt&lt;/code&gt; from &lt;code&gt;cmath&lt;/code&gt; module, the output is in complex format, which is not what we intend to obtain and print.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;runtime error example:&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;in line 45, in the wrong script, division by zero, is a runtime exception.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;syntax error example:&lt;br /&gt;
+Almost any other error in the code is a syntax error. For example, lines 11,12,13 should be aligned, but they are not.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5680,6 +5822,19 @@ plot(x,y);
 &lt;p&gt;&lt;br /&gt;
 Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can create a new directory and switch the current directory to it using the following commands,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&amp;gt;&amp;gt; mkdir mynewdir
+&amp;gt;&amp;gt; cd mynewdir
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The script &lt;code&gt;myscript&lt;/code&gt; generates a plot of $y$ versus $x$ where $y = |sin(x)|$. In doing so, MATLAB opens a new window called &lt;strong&gt;plot window&lt;/strong&gt; that contains the plot of y as a function of x. Here is the resulting figure:&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/homework/2-solutions/plot.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5688,6 +5843,19 @@ Now on MATLAB command line, run the script by calling its name. What do you get?
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; &lt;strong&gt;MATLAB.&lt;/strong&gt; Now change your working directory to the original directory before you created &lt;code&gt;mynewdir&lt;/code&gt; directory. Try to run the script &lt;code&gt;myscript&lt;/code&gt; you had created again, from MATLAB command line. What do you get? and why?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You get an error message like the following,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; cd mynewdir\
+&amp;gt;&amp;gt; myscript
+&amp;gt;&amp;gt; cd ..
+&amp;gt;&amp;gt; myscript
+Undefined function or variable 'myscript'.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+And this happens because the script we are trying to run is neither in MATLAB’s working directory, nor in any of MATLAB’s search paths. Therefore, MATLAB gives an error, as it cannot find the requested file.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5733,7 +5901,7 @@ MANIPULATION!
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here are some hints (all the information you need to answer this question can be found in &lt;a href=&quot;https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types&quot; target=&quot;_blank&quot;&gt;Lecture 4&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;Here are some hints (all the information you need to answer this question can be found in the lecture notes):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;To make the script executable, add the appropriate shebang to the script’s file.&lt;br /&gt;
@@ -5742,14 +5910,15 @@ MANIPULATION!
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Define a String variable &lt;code&gt;my_string&lt;/code&gt; which contains the string value “Python is the best language for String manipulation!” ( Of course, you can totally accomplish this question without defining a string variable, by only using the string value itself wherever needed… This is also totally fine at this point in our course, if your prefer this method).&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Then use the appropriate examples and external links provided in &lt;a href=&quot;https://www.cdslab.org/ECL2017S/lecture/4-python-values-variables-types&quot; target=&quot;_blank&quot;&gt;Lecture 4&lt;/a&gt;, to find the proper &lt;strong&gt;string methods&lt;/strong&gt; that can manipulate this string variable/value in order to generate each of the outputs printed above.&lt;br /&gt;
+  &lt;li&gt;Then use the appropriate examples and external links provided in the lecture notes, to find the proper &lt;strong&gt;string methods&lt;/strong&gt; that can manipulate this string variable/value in order to generate each of the outputs printed above.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Again, note that for each output, the entire output must result from &lt;strong&gt;one single call&lt;/strong&gt; to function &lt;code&gt;print&lt;/code&gt;.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Wherever needed, use the &lt;a href=&quot;https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html&quot; target=&quot;_blank&quot;&gt;escape character&lt;/a&gt; value &lt;code&gt;'\n'&lt;/code&gt; in &lt;code&gt;print&lt;/code&gt; input arguments, in order to generate a line-break (or new line) in the output.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+A working Python script file can be downloaded from &lt;a href=&quot;/homework/2-solutions/bashExecutable.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5771,6 +5940,9 @@ is one of the most widely used functions in science and technology. The paramete
 &lt;p&gt;&lt;br /&gt;
 Verify your answer by getting the same result from &lt;a href=&quot;https://www.wolframalpha.com/&quot; target=&quot;_blank&quot;&gt;Wolfram Alpha&lt;/a&gt; mathematical search engine.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+A version of the code in Python can be downloaded from &lt;a href=&quot;/homework/2-solutions/gaussian.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5778,11 +5950,14 @@ Verify your answer by getting the same result from &lt;a href=&quot;https://www.
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;11. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Download &lt;a href=&quot;http:/MAPCP2019U/homework/2-problems/script_full_of_errors.py&quot; target=&quot;_blank&quot;&gt;this code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_corrected.py&lt;/code&gt; in your hw4 folder of your project. Explain in front of each corrected Python statement, why the error occurred.  On the last line of the script,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;11. &lt;/strong&gt; &lt;strong&gt;Python.&lt;/strong&gt; Download &lt;a href=&quot;/homework/2-problems/script_full_of_errors.py&quot; target=&quot;_blank&quot;&gt;this code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_corrected.py&lt;/code&gt; in your hw4 folder of your project. Explain in front of each corrected Python statement, why the error occurred.  On the last line of the script,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;true = fox is rev in Persian
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 the statement runs without error. But can you explain what it does? (Hint: For this part you need to understand operation precedence. You can find more information &lt;a href=&quot;https://www.mathcs.emory.edu/~valerie/courses/fall10/155/resources/op_precedence.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+The corrected file can be downloaded from &lt;a href=&quot;/homework/2-solutions/script_full_of_errors_corrected.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5806,6 +5981,9 @@ the statement runs without error. But can you explain what it does? (Hint: For t
 &lt;p&gt;&lt;br /&gt;
 where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat capacity, and $K$ is thermal conductivity. Relevant values are $M=47~[g]$ for a small egg and $M=67~[g]$ for a large egg, $\rho=1.038 ~[g~cm^{-3}]$, $c = 3.7 ~[J~g^{-1}~K^{-1}]$, and $K = 5.4\times10^{-3} ~[Wcm^{-1}K^{-1}]$. Furthermore, $T_w$ is the temperature
 (in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a Python/MATLAB program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (&lt;strong&gt;Hint&lt;/strong&gt;: Note that for this problem you will need to import &lt;code&gt;log, pi&lt;/code&gt; from &lt;code&gt;math&lt;/code&gt; module in Python, but these are intrinsic in MATLAB.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+A version of the code can be downloaded from &lt;a href=&quot;/homework/2-solutions/egg.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5861,6 +6039,87 @@ b = a[:]
 print (id(a), id(b))
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;(A)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Assign a value to a new variable
+a = 5
+ 
+# Create an alias identifier for this variable
+b = a
+ 
+# Observe how they refer to the same variable!
+print (id(a), id(b))
+ 
+# Create another alias
+c = b
+ 
+# Now assign a new value to b!
+b = 3
+ 
+# And observe how a and c are still the same variable
+# But b is not
+print (a,b,c)
+print (id(a),id(b),id(c))
+ 
+# Now for another quirk, suppose we do this:
+b = a
+b = 5
+ 
+# We used an assignment, but the value didn't actually change
+# So the alias remains unbroken
+print (id(a), id(b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(B)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Create a new &amp;lt;list&amp;gt;
+a = [5]
+ 
+# Create an alias identifier for this list
+b = a
+print (id(a), id(b))
+ 
+# Now change the &amp;lt;list&amp;gt; b in-place
+b.append(1)
+ 
+# And observe how this also changes a
+# The alias is not broken by in-place operations
+print (a,b)
+print (id(a),id(b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(C)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Create a &amp;lt;list&amp;gt;
+a = [5]
+ 
+# Create a new &amp;lt;list&amp;gt; with the same value
+b = list(a)
+ 
+# We now have two separate variables with identical but separate values
+print (a,b)
+print (id(a), id(b))
+ 
+# Same with the full slice technique:
+b = a[:]
+print (a,b)
+print (id(a), id(b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(D)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Create &amp;lt;tuple&amp;gt;
+a = (5,)
+ 
+# Try to force a copy
+b = tuple(a)
+ 
+# It didn't work...
+print (id(a), id(b))
+ 
+# Neither does this
+b = a[:]
+print (id(a), id(b))
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -5885,7 +6144,7 @@ Amir Shahmoradi
 Carolina Vedovato
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-We want to create a dictionary of members of this class with individuals’ full names serving as dictionary keys, and their roles in class as the corresponding values of the keys. The naive way of generating this dictionary would be to use one of the methods for generating dictionary discussed in &lt;a href=&quot;http:/MAPCP2019U/lecture/4-python-variables-assignments&quot; target=&quot;_blank&quot;&gt;Lecture 4&lt;/a&gt;. For example,&lt;/p&gt;
+We want to create a dictionary of members of this class with individuals’ full names serving as dictionary keys, and their roles in class as the corresponding values of the keys. The naive way of generating this dictionary would be to use one of the methods for generating dictionary discussed in the lecture notes. For example,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class_dict  = { 
             , 'Christian-Andrew Bagby-wright' : 'student'
             , 'Matthew Chrysler'              : 'student'
@@ -5904,9 +6163,56 @@ We want to create a dictionary of members of this class with individuals’ full
             }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-However, the problem is that, except me (Amir, the instructor), everyone else has a student role in this class. So it would be a very painful process to type all ‘student’ values by hand manually. Now, the goal is to come up with a shortcut method that avoids the aforementioned problem. Can you find a way of creating this dictionary, without having to type the value ‘student’ 18 times? Note that in order to achieve this, you don’t need anything beyond what you learned in Lecture 5. (&lt;strong&gt;Hint:&lt;/strong&gt; Have a look at the section for simultaneous assignments in Lecture 5.)&lt;/p&gt;
+However, the problem is that, except me (Amir, the instructor), everyone else has a student role in this class. So it would be a very painful process to type all ‘student’ values by hand manually. Now, the goal is to come up with a shortcut method that avoids the aforementioned problem. Can you find a way of creating this dictionary, without having to type the value ‘student’ 14 times? Note that in order to achieve this, you don’t need anything beyond what you learned in the lecture notes. (&lt;strong&gt;Hint:&lt;/strong&gt; Have a look at the section for simultaneous assignments in the lecture notes.)&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class_dict = { 'amir shahmoradi'  : 'instructor'
+           }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class_dict
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{'amir shahmoradi': 'instructor'}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class_dict[ 'Christian-Andrew Bagby-wright' ] = \
+class_dict[ 'Matthew Chrysler'              ] = \
+class_dict[ 'Niyousha Davachi'              ] = \
+class_dict[ 'Pauline Dredger'               ] = \
+class_dict[ 'Marcos Guillen'                ] = \
+class_dict[ 'Lauren Kuffel'                 ] = \
+class_dict[ 'Shashank Kumbhare'             ] = \
+class_dict[ 'Hany Mahdy'                    ] = \
+class_dict[ 'Sarah Moorman'                 ] = \
+class_dict[ 'Andrew Myers'                  ] = \
+class_dict[ 'Joshua Osborne'                ] = \
+class_dict[ 'Rebecca Proni'                 ] = \
+class_dict[ 'Carolina Vedovato'             ] = 'student'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class_dict
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{'amir shahmoradi': 'instructor',
+'Christian-Andrew Bagby-wright': 'student',
+'Matthew Chrysler': 'student',
+'Niyousha Davachi': 'student',
+'Pauline Dredger': 'student',
+'Marcos Guillen': 'student',
+'Lauren Kuffel': 'student',
+'Shashank Kumbhare': 'student',
+'Hany Mahdy': 'student',
+'Sarah Moorman': 'student',
+'Andrew Myers': 'student',
+'Joshua Osborne': 'student',
+'Rebecca Proni': 'student',
+'Carolina Vedovato': 'student'}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;type(class_dict)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;dict
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Later on, we will learn more effective methods of constructing this dictionary using Python’s for-loops.&lt;/p&gt;
+
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/2-variables-values-types&quot;&gt;Homework 2: Variables, Values, and Types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on June 18, 2019.&lt;/p&gt;</content>
