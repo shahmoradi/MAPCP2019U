@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-15T16:06:55-05:00</updated>
+<updated>2019-07-15T17:29:28-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -6844,7 +6844,7 @@ Ask me in class and I will explain how to do it.&lt;/p&gt;
 &lt;p&gt;Python was developed close to the beginning of the 1990’, by &lt;a href=&quot;https://en.wikipedia.org/wiki/Guido_van_Rossum&quot; target=&quot;_blank&quot;&gt;Guido van Rossum&lt;/a&gt;, a former employee of &lt;a href=&quot;https://en.wikipedia.org/wiki/Google&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;, who is now an employee of &lt;a href=&quot;https://en.wikipedia.org/wiki/Dropbox_(service)&quot; target=&quot;_blank&quot;&gt;Dropbox&lt;/a&gt;. The name of the language is attribution to the British sketch comedy &lt;a href=&quot;https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus&quot; target=&quot;_blank&quot;&gt;Monty Python’s Flying Circus&lt;/a&gt;. As of 2016 Python seems to be the fastest growing language for data science. Python has the following features and attributes.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Python is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/MAPCP2019U/lecture/programming-history&quot; target=&quot;_blank&quot;&gt;zeroth lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C, and C++ are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
+  &lt;li&gt;&lt;strong&gt;Python is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/MAPCP2019U/lecture/2-programming-history&quot; target=&quot;_blank&quot;&gt;zeroth lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C, and C++ are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Python is general-purpose programming language&lt;/strong&gt;, meaning that it is designed to be used for writing software in a wide variety of application domains, such as &lt;em&gt;scientific computation&lt;/em&gt;, &lt;em&gt;web and internet development&lt;/em&gt;, &lt;em&gt;education&lt;/em&gt;, &lt;em&gt;Software Development&lt;/em&gt;. For more information, visit &lt;a href=&quot;https://www.python.org/about/apps/&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
