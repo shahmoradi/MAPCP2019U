@@ -3,7 +3,7 @@
 		{
 		  "title"      : "Homework 3: Branching, looping, and functions",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/homework/3-branching-looping-functions",
+		  "url"        : "/MAPCP2019U/homework/3-branching-looping-functions",
 		  "date"       : "2019-07-11 00:00:00 -0500",
 		  "shortdate"  : "July 11, 2019"
 		} ,
@@ -11,7 +11,7 @@
 		{
 		  "title"      : "Final exam: semester project",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/exam/1-semester-project",
+		  "url"        : "/MAPCP2019U/exam/1-semester-project",
 		  "date"       : "2019-07-11 00:00:00 -0500",
 		  "shortdate"  : "July 11, 2019"
 		} ,
@@ -19,7 +19,7 @@
 		{
 		  "title"      : "Quiz 2: Value, variables, types",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/quiz/2-values-variables-types",
+		  "url"        : "/MAPCP2019U/quiz/2-values-variables-types",
 		  "date"       : "2019-06-26 00:00:00 -0500",
 		  "shortdate"  : "June 26, 2019"
 		} ,
@@ -27,7 +27,7 @@
 		{
 		  "title"      : "Lecture 5: Python - branching and functions",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/5-python-branching-functions",
+		  "url"        : "/MAPCP2019U/lecture/5-python-branching-functions",
 		  "date"       : "2019-06-20 00:00:00 -0500",
 		  "shortdate"  : "June 20, 2019"
 		} ,
@@ -35,7 +35,7 @@
 		{
 		  "title"      : "Lecture 5: MATLAB - operators, branching, and control statements",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/5-matlab-operators-branching",
+		  "url"        : "/MAPCP2019U/lecture/5-matlab-operators-branching",
 		  "date"       : "2019-06-20 00:00:00 -0500",
 		  "shortdate"  : "June 20, 2019"
 		} ,
@@ -43,7 +43,7 @@
 		{
 		  "title"      : "Quiz 1: Version control system",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/quiz/1-version-control-system",
+		  "url"        : "/MAPCP2019U/quiz/1-version-control-system",
 		  "date"       : "2019-06-18 00:00:00 -0500",
 		  "shortdate"  : "June 18, 2019"
 		} ,
@@ -51,7 +51,7 @@
 		{
 		  "title"      : "Lecture 4: Python - values, variables, and types",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/4-python-values-variables-types",
+		  "url"        : "/MAPCP2019U/lecture/4-python-values-variables-types",
 		  "date"       : "2019-06-18 00:00:00 -0500",
 		  "shortdate"  : "June 18, 2019"
 		} ,
@@ -59,7 +59,7 @@
 		{
 		  "title"      : "Lecture 4: MATLAB - values, variables, and types",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/4-matlab-values-variables-types",
+		  "url"        : "/MAPCP2019U/lecture/4-matlab-values-variables-types",
 		  "date"       : "2019-06-18 00:00:00 -0500",
 		  "shortdate"  : "June 18, 2019"
 		} ,
@@ -67,7 +67,7 @@
 		{
 		  "title"      : "Homework 2: Variables, Values, and Types",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/homework/2-variables-values-types",
+		  "url"        : "/MAPCP2019U/homework/2-variables-values-types",
 		  "date"       : "2019-06-18 00:00:00 -0500",
 		  "shortdate"  : "June 18, 2019"
 		} ,
@@ -75,7 +75,7 @@
 		{
 		  "title"      : "Homework 1: Version Control Using Git and Github",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/homework/1-version-control-using-git-github",
+		  "url"        : "/MAPCP2019U/homework/1-version-control-using-git-github",
 		  "date"       : "2019-06-18 00:00:00 -0500",
 		  "shortdate"  : "June 18, 2019"
 		} ,
@@ -83,7 +83,7 @@
 		{
 		  "title"      : "Lecture 3: Python for beginners",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/3-python-for-beginners",
+		  "url"        : "/MAPCP2019U/lecture/3-python-for-beginners",
 		  "date"       : "2019-06-13 00:00:00 -0500",
 		  "shortdate"  : "June 13, 2019"
 		} ,
@@ -91,7 +91,7 @@
 		{
 		  "title"      : "Lecture 3: MATLAB for beginners",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/3-matlab-for-beginners",
+		  "url"        : "/MAPCP2019U/lecture/3-matlab-for-beginners",
 		  "date"       : "2019-06-13 00:00:00 -0500",
 		  "shortdate"  : "June 13, 2019"
 		} ,
@@ -99,7 +99,7 @@
 		{
 		  "title"      : "Lecture 2: Programming history",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/2-programming-history",
+		  "url"        : "/MAPCP2019U/lecture/2-programming-history",
 		  "date"       : "2019-06-11 00:00:00 -0500",
 		  "shortdate"  : "June 11, 2019"
 		} ,
@@ -107,7 +107,7 @@
 		{
 		  "title"      : "Lecture 1: A professional programmer uses Version Control System (VCS)",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/lecture/1-version-control-system",
+		  "url"        : "/MAPCP2019U/lecture/1-version-control-system",
 		  "date"       : "2019-06-04 00:00:00 -0500",
 		  "shortdate"  : "June 04, 2019"
 		} ,
@@ -115,7 +115,7 @@
 		{
 		  "title"      : "Announcement 1: Assessing your programming knowledge and interests",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/announcement/1-assessing-your-programming-knowledge-and-interests",
+		  "url"        : "/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests",
 		  "date"       : "2019-06-04 00:00:00 -0500",
 		  "shortdate"  : "June 04, 2019"
 		} ,
@@ -123,7 +123,7 @@
 		{
 		  "title"      : "Announcement 0: Student-professor connection day",
 		  "category"   : "",
-		  "url"        : "https://www.cdslab.org/announcement/0-student-professor-connection-day",
+		  "url"        : "/MAPCP2019U/announcement/0-student-professor-connection-day",
 		  "date"       : "2019-06-04 00:00:00 -0500",
 		  "shortdate"  : "June 04, 2019"
 		} 
