@@ -3,82 +3,82 @@ callback([
 
   {
     "text": "Quiz 2: Value, variables, types",
-    "href": "/MAPCP2019U/quiz/2-values-variables-types"
+    "href": "https://www.cdslab.org/quiz/2-values-variables-types"
   } ,
 
   {
     "text": "Quiz 1: Version control system",
-    "href": "/MAPCP2019U/quiz/1-version-control-system"
+    "href": "https://www.cdslab.org/quiz/1-version-control-system"
   } ,
 
   {
     "text": "Lecture 5: Python - branching and functions",
-    "href": "/MAPCP2019U/lecture/5-python-branching-functions"
+    "href": "https://www.cdslab.org/lecture/5-python-branching-functions"
   } ,
 
   {
     "text": "Lecture 5: MATLAB - operators, branching, and control statements",
-    "href": "/MAPCP2019U/lecture/5-matlab-operators-branching"
+    "href": "https://www.cdslab.org/lecture/5-matlab-operators-branching"
   } ,
 
   {
     "text": "Lecture 4: Python - values, variables, and types",
-    "href": "/MAPCP2019U/lecture/4-python-values-variables-types"
+    "href": "https://www.cdslab.org/lecture/4-python-values-variables-types"
   } ,
 
   {
     "text": "Lecture 4: MATLAB - values, variables, and types",
-    "href": "/MAPCP2019U/lecture/4-matlab-values-variables-types"
+    "href": "https://www.cdslab.org/lecture/4-matlab-values-variables-types"
   } ,
 
   {
     "text": "Lecture 3: Python for beginners",
-    "href": "/MAPCP2019U/lecture/3-python-for-beginners"
+    "href": "https://www.cdslab.org/lecture/3-python-for-beginners"
   } ,
 
   {
     "text": "Lecture 3: MATLAB for beginners",
-    "href": "/MAPCP2019U/lecture/3-matlab-for-beginners"
+    "href": "https://www.cdslab.org/lecture/3-matlab-for-beginners"
   } ,
 
   {
     "text": "Lecture 2: Programming history",
-    "href": "/MAPCP2019U/lecture/2-programming-history"
+    "href": "https://www.cdslab.org/lecture/2-programming-history"
   } ,
 
   {
     "text": "Lecture 1: A professional programmer uses Version Control System (VCS)",
-    "href": "/MAPCP2019U/lecture/1-version-control-system"
+    "href": "https://www.cdslab.org/lecture/1-version-control-system"
   } ,
 
   {
     "text": "Homework 3: Branching, looping, and functions",
-    "href": "/MAPCP2019U/homework/3-branching-looping-functions"
+    "href": "https://www.cdslab.org/homework/3-branching-looping-functions"
   } ,
 
   {
     "text": "Homework 2: Variables, Values, and Types",
-    "href": "/MAPCP2019U/homework/2-variables-values-types"
+    "href": "https://www.cdslab.org/homework/2-variables-values-types"
   } ,
 
   {
     "text": "Homework 1: Version Control Using Git and Github",
-    "href": "/MAPCP2019U/homework/1-version-control-using-git-github"
+    "href": "https://www.cdslab.org/homework/1-version-control-using-git-github"
   } ,
 
   {
     "text": "Final exam: semester project",
-    "href": "/MAPCP2019U/exam/1-semester-project"
+    "href": "https://www.cdslab.org/exam/1-semester-project"
   } ,
 
   {
     "text": "Announcement 1: Assessing your programming knowledge and interests",
-    "href": "/MAPCP2019U/announcement/1-assessing-your-programming-knowledge-and-interests"
+    "href": "https://www.cdslab.org/announcement/1-assessing-your-programming-knowledge-and-interests"
   } ,
 
   {
     "text": "Announcement 0: Student-professor connection day",
-    "href": "/MAPCP2019U/announcement/0-student-professor-connection-day"
+    "href": "https://www.cdslab.org/announcement/0-student-professor-connection-day"
   } 
 
 ])
