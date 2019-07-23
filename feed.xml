@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-22T21:25:23-05:00</updated>
+<updated>2019-07-22T21:26:56-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -46,17 +46,6 @@ The sum of 1 2 1 23 is 27.0
 
 &lt;p&gt;Note that you will need to use the Python’s builtin function &lt;code&gt;sum()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import sys
-print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , sum([float(x) for x in sys.argv[1:]]) )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here is the Bash output,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python sum.py 1 2 1 23
-The sum of 1 2 1 23 is 27.0
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -65,18 +54,6 @@ The sum of 1 2 1 23 is 27.0
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.  Python.&lt;/strong&gt; Similar to the previous problem, write a simple program named &lt;code&gt;sum_via_eval.py&lt;/code&gt;, that takes in an arbitrary-size list of input numbers from the command-line, and prints out the sum of them on the terminal, this time using Python’s &lt;code&gt;eval&lt;/code&gt; function. The program output should look like the following,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python sum.py 1 2 1 23
-The sum of 1 2 1 23 is 27
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import sys
-print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , eval('+'.join(sys.argv[1:]) ) ) )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here is the Bash output,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python sum.py 1 2 1 23
 The sum of 1 2 1 23 is 27
@@ -157,9 +134,6 @@ Program aborted.
 
 &lt;p&gt;&lt;strong&gt;ATTENTION&lt;/strong&gt;: Note that in some rows instead of a one-letter amino acid name, there is &lt;code&gt;!&lt;/code&gt;. In such cases, your code should be able to detect the abnormality and skip that row, because that row does not contain amino acid information.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-An example implementation can be downloaded from &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/readDSSP.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -221,9 +195,6 @@ y = 1.2151999999999998
 y = 1.2151999999999998
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.cdslab.org/homework/4-problems/projectile.py&quot; target=&quot;_blank&quot;&gt;Here&lt;/a&gt; is an example implementation.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -250,20 +221,6 @@ y = 1.2151999999999998
 
 &lt;p&gt;This function is supposed to be able to handle exceptions such as divergent iterations, and division-by-zero. The latter error happens when &lt;code&gt;dfdx(x)=0&lt;/code&gt; in the above code. Write a test code that ensures the above code is able to correctly identify a division-by-zero exception and raise the correct assertionError.  &lt;br /&gt;
 (&lt;em&gt;Hint: To do so, you need to consider a test mathematical function as input to &lt;code&gt;Newton&lt;/code&gt;. One example could be $f(x)=\cos(x)$ with a starting search value $x=0$. This would result in derivative value $f’(x=0)=-\sin(x=0)=0$, which should lead to a &lt;code&gt;ZeroDivisionError&lt;/code&gt; exception. Now, write a test function &lt;code&gt;test_Newton_div_by_zero&lt;/code&gt; that can explicitly handle this exception by introducing a boolean variable &lt;code&gt;success&lt;/code&gt; that is &lt;code&gt;True&lt;/code&gt; if the exception is raised and otherwise &lt;code&gt;False&lt;/code&gt;&lt;/em&gt;.)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def test_Newton_div_by_zero():
-    from math import sin, cos
-    f = cos
-    dfdx = lambda x: -sin(x)
-    success = False
-    try:
-        x, f_x, n = Newton(f, dfdx, 0, eps=1E-4, maxit=1)
-    except ZeroDivisionError:
-        success = True
-    assert success , &quot;Test for division-by-zero failed&quot;
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -293,10 +250,6 @@ y = 1.2151999999999998
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function &lt;code&gt;saveas()&lt;/code&gt;. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an example implementation of the two MATLAB scripts: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/fetchDataFromWeb.m&quot; target=&quot;_blank&quot;&gt;fetchDataFromWeb.m&lt;/a&gt; and &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/plotDatafromFile.m&quot; target=&quot;_blank&quot;&gt;plotDatafromFile.m&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -368,9 +321,6 @@ As you see in the figure, although you may initially win by not switching your c
 	&lt;img src=&quot;https://www.cdslab.org/homework/4-solutions/approximatePI.png&quot; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/estimatePi.m&quot; target=&quot;_blank&quot;&gt;estimatePi.m&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -391,10 +341,6 @@ Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;https://ww
 	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/currentPlot.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/makeSubplots.m&quot; target=&quot;_blank&quot;&gt;makeSubplots.m&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -407,10 +353,6 @@ Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;https://ww
 &lt;figure&gt;
 	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/subplotsWithTumorBoundaries.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/makeSubplots.m&quot; target=&quot;_blank&quot;&gt;makeSubplotsWithTumorBoundary.m&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

@@ -162,17 +162,6 @@ The sum of 1 2 1 23 is 27.0
 
 <p>Note that you will need to use the Python’s builtin function <code>sum()</code>.</p>
 
-<p><strong>Answer:</strong></p>
-<pre><code class="language-python">import sys
-print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , sum([float(x) for x in sys.argv[1:]]) )
-</code></pre>
-
-<p>Here is the Bash output,</p>
-
-<pre><code class="language-bash">$ python sum.py 1 2 1 23
-The sum of 1 2 1 23 is 27.0
-</code></pre>
-
 <p><br /></p>
 
 <hr />
@@ -181,18 +170,6 @@ The sum of 1 2 1 23 is 27.0
 <p><br /></p>
 
 <p><strong>2.  Python.</strong> Similar to the previous problem, write a simple program named <code>sum_via_eval.py</code>, that takes in an arbitrary-size list of input numbers from the command-line, and prints out the sum of them on the terminal, this time using Python’s <code>eval</code> function. The program output should look like the following,</p>
-
-<pre><code class="language-bash">$ python sum.py 1 2 1 23
-The sum of 1 2 1 23 is 27
-</code></pre>
-
-<p><strong>Answer:</strong></p>
-
-<pre><code class="language-python">import sys
-print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , eval('+'.join(sys.argv[1:]) ) ) )
-</code></pre>
-
-<p>Here is the Bash output,</p>
 
 <pre><code class="language-bash">$ python sum.py 1 2 1 23
 The sum of 1 2 1 23 is 27
@@ -273,9 +250,6 @@ Program aborted.
 
 <p><strong>ATTENTION</strong>: Note that in some rows instead of a one-letter amino acid name, there is <code>!</code>. In such cases, your code should be able to detect the abnormality and skip that row, because that row does not contain amino acid information.</p>
 
-<p><strong>Answer:</strong><br />
-An example implementation can be downloaded from <a href="https://www.cdslab.org/homework/4-problems/readDSSP.py" target="_blank">here</a>.</p>
-
 <p><br /></p>
 
 <hr />
@@ -337,9 +311,6 @@ y = 1.2151999999999998
 y = 1.2151999999999998
 </code></pre>
 
-<p><strong>Answer:</strong><br />
-<a href="https://www.cdslab.org/homework/4-problems/projectile.py" target="_blank">Here</a> is an example implementation.</p>
-
 <p><br /></p>
 
 <hr />
@@ -366,20 +337,6 @@ y = 1.2151999999999998
 
 <p>This function is supposed to be able to handle exceptions such as divergent iterations, and division-by-zero. The latter error happens when <code>dfdx(x)=0</code> in the above code. Write a test code that ensures the above code is able to correctly identify a division-by-zero exception and raise the correct assertionError.  <br />
 (<em>Hint: To do so, you need to consider a test mathematical function as input to <code>Newton</code>. One example could be $f(x)=\cos(x)$ with a starting search value $x=0$. This would result in derivative value $f’(x=0)=-\sin(x=0)=0$, which should lead to a <code>ZeroDivisionError</code> exception. Now, write a test function <code>test_Newton_div_by_zero</code> that can explicitly handle this exception by introducing a boolean variable <code>success</code> that is <code>True</code> if the exception is raised and otherwise <code>False</code></em>.)</p>
-
-<p><strong>Answer:</strong></p>
-
-<pre><code class="language-python">def test_Newton_div_by_zero():
-    from math import sin, cos
-    f = cos
-    dfdx = lambda x: -sin(x)
-    success = False
-    try:
-        x, f_x, n = Newton(f, dfdx, 0, eps=1E-4, maxit=1)
-    except ZeroDivisionError:
-        success = True
-    assert success , "Test for division-by-zero failed"
-</code></pre>
 
 <p><br /></p>
 
@@ -409,10 +366,6 @@ y = 1.2151999999999998
 </code></pre>
 <p><br />
 as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function <code>saveas()</code>. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.</p>
-
-<p><strong>Answer:</strong></p>
-
-<p>Here is an example implementation of the two MATLAB scripts: <a href="https://www.cdslab.org/homework/4-solutions/fetchDataFromWeb.m" target="_blank">fetchDataFromWeb.m</a> and <a href="https://www.cdslab.org/homework/4-solutions/plotDatafromFile.m" target="_blank">plotDatafromFile.m</a>.</p>
 
 <p><br /></p>
 
@@ -484,9 +437,6 @@ As you see in the figure, although you may initially win by not switching your c
 	<img src="https://www.cdslab.org/homework/4-solutions/approximatePI.png" />
 </figure>
 
-<p><strong>Answer:</strong><br />
-Here is an example MATLAB code that estimates $\pi$: <a href="https://www.cdslab.org/homework/4-solutions/estimatePi.m" target="_blank">estimatePi.m</a>.</p>
-
 <p><br /></p>
 
 <hr />
@@ -507,10 +457,6 @@ Here is an example MATLAB code that estimates $\pi$: <a href="https://www.cdslab
 	<img src="https://www.cdslab.org/homework/4-problems/currentPlot.png" width="900" />  
 </figure>
 
-<p><strong>Answer:</strong></p>
-
-<p>Here is an implementation of this code: <a href="https://www.cdslab.org/homework/4-solutions/makeSubplots.m" target="_blank">makeSubplots.m</a>.</p>
-
 <p><br /></p>
 
 <hr />
@@ -523,10 +469,6 @@ Here is an example MATLAB code that estimates $\pi$: <a href="https://www.cdslab
 <figure>
 	<img src="https://www.cdslab.org/homework/4-problems/subplotsWithTumorBoundaries.png" width="900" />  
 </figure>
-
-<p><strong>Answer:</strong></p>
-
-<p>Here is an implementation of this code: <a href="https://www.cdslab.org/homework/4-solutions/makeSubplots.m" target="_blank">makeSubplotsWithTumorBoundary.m</a>.</p>
 
 <p><br /></p>
 
@@ -630,7 +572,7 @@ Start your parameter search via <code>fminsearch()</code> with the following val
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2019 / 07 / 22</section></br> -->
-         <section>Last updated Monday, 22 Jul 2019 at 09:25 PM CST</section></br>
+         <section>Last updated Monday, 22 Jul 2019 at 09:26 PM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
