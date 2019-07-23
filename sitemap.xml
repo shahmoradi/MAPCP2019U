@@ -48,6 +48,10 @@
 
     
     <url>
+        <loc>/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization</loc>
+    </url>
+    
+    <url>
         <loc>/MAPCP2019U/homework/3-branching-looping-functions</loc>
     </url>
     
@@ -60,23 +64,7 @@
     </url>
     
     <url>
-        <loc>/MAPCP2019U/lecture/5-python-branching-functions</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/5-matlab-operators-branching</loc>
-    </url>
-    
-    <url>
         <loc>/MAPCP2019U/quiz/1-version-control-system</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/4-python-values-variables-types</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/4-matlab-values-variables-types</loc>
     </url>
     
     <url>
@@ -85,22 +73,6 @@
     
     <url>
         <loc>/MAPCP2019U/homework/1-version-control-using-git-github</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/3-python-for-beginners</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/3-matlab-for-beginners</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/2-programming-history</loc>
-    </url>
-    
-    <url>
-        <loc>/MAPCP2019U/lecture/1-version-control-system</loc>
     </url>
     
     <url>

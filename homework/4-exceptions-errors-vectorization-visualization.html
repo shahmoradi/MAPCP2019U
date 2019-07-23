@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="/MAPCP2019U/assets/js/mdHeaderCollapse.js"></script>
+-->
+
+<meta charset="utf-8">
+<title>HOMEWORK 4: EXCEPTIONS, ERRORS, VECTORIZATION, VISUALIZATION &vert; PHYS 6302 - SUMMER 2019 - TTH 10:30-12:30 - LIFE SCIENCES BUILDING LS 102</title>
+<meta name="description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/MAPCP2019U/images/logo.png">
+<meta name="twitter:title" content="Homework 4: Exceptions, Errors, Vectorization, Visualization">
+<meta name="twitter:description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta name="twitter:creator" content="@AmirShahmoradi">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Homework 4: Exceptions, Errors, Vectorization, Visualization">
+<meta property="og:description" content="Methods of Applied Physics:<br>Computers in Physics">
+<meta property="og:url" content="/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization">
+<meta property="og:site_name" content="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102">
+<meta property="og:image" content="/MAPCP2019U/images/">
+
+
+
+
+
+<link rel="canonical" href="/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization">
+<!-- <link href="/MAPCP2019U/feed.xml" type="application/atom+xml" rel="alternate" title="PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102 Feed"> -->
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/font-awesome.min.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/normalize.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/nprogress.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/vendor/foundation.min.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/style.css">
+<link rel="stylesheet" href="/MAPCP2019U/assets/css/post.css">
+
+<!--Mathjax LaTeX engine-->
+
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/MAPCP2019U/favicon.ico">
+<!--
+<link rel="shortcut icon" href="/MAPCP2019U/favicon.png">
+-->
+
+
+<!-- prism
+<link href="/MAPCP2019U/assets/css/prismTwilight.css" rel="stylesheet" />
+<link href="/MAPCP2019U/assets/css/prismDefault.css" rel="stylesheet" />
+<link href="/MAPCP2019U/assets/css/prismCoy.css" rel="stylesheet" />
+-->
+<link href="/MAPCP2019U/assets/css/prismOkaidia.css" rel="stylesheet" />
+
+<!--header anchor links-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+</head>
+<body class="post-template" itemscope itemtype="https://schema.org/WebPage">  
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href=https://www.cdslab.org target="_blank"><img src="/MAPCP2019U/images/logo.png" alt="cdslab.org" /></a>
+
+                <div class="notepad-blog-menu">      
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="/MAPCP2019U/">Home</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/highlights">Highlights</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/categories">Categories</a>
+                 </li>
+
+            <li>
+                    <a href="/MAPCP2019U/about">About</a>
+                 </li>
+            
+           <li><a href="/MAPCP2019U/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h2>Homework 4: Exceptions, Errors, Vectorization, Visualization</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2019-07-23T00:00:00-05:00">23 Jul 2019</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        
+            <article class="notepad-post-content post tag-simple">
+        
+            <div style="text-align:justify;">
+                <p>♣ <strong>Due Date: Two weeks from the posting date @ 10:30 AM</strong>. This homework aims at giving you some experience with data transfer, exceptions and errors, vectorization, and visualization methods in Python and MATLAB. Write your scripts with the corresponding <code>*.py</code> or <code>*.m</code> file names, and add a readme.md file in HW 4 folder of your project if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>1.  Python.</strong> Write a simple program named <code>sum.py</code>, that takes in an arbitrary-size list of input floats from the command-line, and prints out the sum of them on the terminal with the following message,</p>
+<pre><code class="language-bash">$ python sum.py 1 2 1 23
+The sum of 1 2 1 23 is 27.0
+</code></pre>
+
+<p>Note that you will need to use the Python’s builtin function <code>sum()</code>.</p>
+
+<p><strong>Answer:</strong></p>
+<pre><code class="language-python">import sys
+print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , sum([float(x) for x in sys.argv[1:]]) )
+</code></pre>
+
+<p>Here is the Bash output,</p>
+
+<pre><code class="language-bash">$ python sum.py 1 2 1 23
+The sum of 1 2 1 23 is 27.0
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>2.  Python.</strong> Similar to the previous problem, write a simple program named <code>sum_via_eval.py</code>, that takes in an arbitrary-size list of input numbers from the command-line, and prints out the sum of them on the terminal, this time using Python’s <code>eval</code> function. The program output should look like the following,</p>
+
+<pre><code class="language-bash">$ python sum.py 1 2 1 23
+The sum of 1 2 1 23 is 27
+</code></pre>
+
+<p><strong>Answer:</strong></p>
+
+<pre><code class="language-python">import sys
+print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , eval('+'.join(sys.argv[1:]) ) ) )
+</code></pre>
+
+<p>Here is the Bash output,</p>
+
+<pre><code class="language-bash">$ python sum.py 1 2 1 23
+The sum of 1 2 1 23 is 27
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>3.  Python.</strong> Consider <a href="https://www.cdslab.org/homework/4-problems/1A2T_A.dssp" target="_blank">this data file</a>. It contains information about the amino-acids in <a href="http://www.rcsb.org/pdb/explore.do?structureId=1a2t" target="_blank">a protein</a> called <code>1A2T</code>. Each amino-acid in protein is labeled by a single letter. There are 20 amin acid molecules in nature, and each has a total surface area (in units of Angstroms squared) that is given by the following table,</p>
+
+<pre><code>'A': 129.0
+'R': 274.0
+'N': 195.0
+'D': 193.0
+'C': 167.0
+'Q': 225.0
+'E': 223.0
+'G': 104.0
+'H': 224.0
+'I': 197.0
+'L': 201.0
+'K': 236.0
+'M': 224.0
+'F': 240.0
+'P': 159.0
+'S': 155.0
+'T': 172.0
+'W': 285.0
+'Y': 263.0
+'V': 174.0
+</code></pre>
+
+<p>However, when these amino acids sit next to each other to form a chain protein, they cover parts of each other, such that only parts of their surfaces is exposed, while the rest is hidden from the outside world by other neighboring amino acids. Therefore, one would expect an amino acid that is at the core of a spherical protein would have almost zero exposed surface area.</p>
+
+<p>Now given the above information, write a Python program that takes in two command-line input arguments, one of which is a string containing the path to the above <a href="https://www.cdslab.org/homework/4-problems/1A2T_A.dssp" target="_blank">input file</a> <code>1A2T_A.dssp</code> which contains the partially exposed surface areas of amino acids in protein <code>1A2T</code> for each of its amino acids, and a second command-line argument which is the path to the file containing output of the code (e.g., it could be <code>./readDSSP.out</code>). Then,</p>
+<ol>
+  <li>the code reads the content of this file, and<br />
+<br /></li>
+  <li>extracts the names of the amino acids in this protein from the data column inside the file which has the header <code>AA</code> (look at the line number 25 inside the input data file, below <code>AA</code> is the column containing the one-letter names of amino acids in this protein), and<br />
+<br /></li>
+  <li>also extracts the partially exposed surface area information for each of these amino acids which appear in the column with header <code>ACC</code>, and<br />
+<br /></li>
+  <li>then uses the above table of maximum surface area values to calculate the fractional exposed surface area of each amino acid in this protein (i.e., for each amino acid, fraction_of_exposed_surface = ACC / maximum_surface_area_from_table), and<br />
+<br /></li>
+  <li>finally for each amino acid in this protein, it prints the one-letter name of the amino acid, its corresponding partially exposed surface area (ACC from the input file), and its corresponding fractional exposed surface area (name it RSA) to the output file given by the user on the command line.<br />
+<br /></li>
+  <li>On the first column of the output file, the code should also write the name of the protein (which is basically the name of the input file <code>1A2T_A</code>) on each line of the output file. <strong>Note that your code should extract the protein name from the input filename</strong> (by removing the file extension and other unnecessary information from the input command line string). <a href="https://www.cdslab.org/homework/4-problems/readDSSP.out" target="_blank">Here</a> is an example output of the code.<br />
+<br /></li>
+  <li>Your code should also be able to handle an error resulting from less or more than 2 input command line arguments. That is, if the number of input arguments is 3 or 1, then it should input the following message on screen and stop.</li>
+</ol>
+
+<pre><code class="language-bash">$ ./readDSSP.py ./1A2T_A.dssp
+
+
+Usage:
+      ./readDSSP.py &lt;input dssp file&gt; &lt;output summary file&gt;
+
+Program aborted.
+</code></pre>
+
+<p>or,</p>
+<pre><code class="language-bash">$ ./readDSSP.py ./1A2T_A.dssp ./readDSSP.out amir
+
+
+Usage:
+      ./readDSSP.py &lt;input dssp file&gt; &lt;output summary file&gt;
+
+Program aborted.
+</code></pre>
+
+<p>To achieve the above goal, you will have to create a dictionary from the above table, with amino acid names as the keys, and the maximum surface areas as the corresponding values. Name your code <code>readDSSP.py</code> and submit it to your repository.</p>
+
+<p><strong>Write your code in such a way that it checks for the existence of the output file</strong>. If it already exists, then it does not remove the content of the file, whereas, it appends new data to the existing file. therwise, if the file does not exist, then it creates a new output file as requested by the user. To do so, you will need to use <code>os.path.isfile</code> function from module <code>os</code>.</p>
+
+<p><strong>ATTENTION</strong>: Note that in some rows instead of a one-letter amino acid name, there is <code>!</code>. In such cases, your code should be able to detect the abnormality and skip that row, because that row does not contain amino acid information.</p>
+
+<p><strong>Answer:</strong><br />
+An example implementation can be downloaded from <a href="https://www.cdslab.org/homework/4-problems/readDSSP.py" target="_blank">here</a>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>4.  MATLAB.</strong> Solve the same problem as in 3, except that you don’t need to read the arguments (i.e., filenames) from the command line. Instead, implement your script as a MATLAB function.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>5.  Python.</strong> Consider the simplest program for evaluating the formula $y(t) = v_0t-\frac{1}{2}gt^2$,</p>
+
+<pre><code class="language-python">v0 = 3; g = 9.81; t = 0.6
+y = v0*t - 0.5*g*t**2
+print(y)
+</code></pre>
+
+<p>(A) Write a program that takes in the above necessary input data ($t$,$v_0$) as command line arguments.<br />
+<br />
+(B) Extend your program from part (A) with exception handling such that missing command-line arguments are detected. For example, if the user has entered enough input arguments, then the code should raise <code>IndexError</code> exception. In the <code>except IndexError</code> block, the code should use the <code>input</code> function to ask the user for the missing input data.<br />
+<br />
+(C) Add another exception handling block that tests if the $t$ value read from the command line, lies between $0$ and $2v_0/g$. If not, then it raises a <code>ValueError</code> exception in the if block on the legal values of $t$, and notifes the user about the legal interval for $t$ in the exception message.</p>
+
+<p>Here are some example runs of the code,</p>
+
+<pre><code class="language-bash">$ ./projectile.py
+Both v0 and t must be supplied on the command line
+v0 = ?
+5
+t = ?
+4
+Traceback (most recent call last):
+  File "./projectile.py", line 17, in &lt;module&gt;
+    'must be between 0 and 2v0/g = {}'.format(t,2.0*v0/g))
+ValueError: t = 4.0 is a non-physical value.
+must be between 0 and 2v0/g = 1.019367991845056
+</code></pre>
+
+<pre><code class="language-bash">$ ./projectile.py
+Both v0 and t must be supplied on the command line
+v0 = ?
+5
+t = ?
+0.5
+y = 1.27375
+</code></pre>
+
+<pre><code class="language-bash">$ ./projectile.py 5 0.4
+y = 1.2151999999999998
+</code></pre>
+
+<pre><code class="language-bash">$ ./projectile.py 5 0.4 3
+y = 1.2151999999999998
+</code></pre>
+
+<p><strong>Answer:</strong><br />
+<a href="https://www.cdslab.org/homework/4-problems/projectile.py" target="_blank">Here</a> is an example implementation.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>6.  Python.</strong> Consider the function <code>Newton</code>,</p>
+
+<pre><code class="language-python">def Newton(f, dfdx, x, eps=1E-7, maxit=100):
+    if not callable(f): raise TypeError( 'f is %s, should be function or class with __call__' % type(f) )
+    if not callable(dfdx): raise TypeError( 'dfdx is %s, should be function or class with __call__' % type(dfdx) )
+    if not isinstance(maxit, int): raise TypeError( 'maxit is %s, must be int' % type(maxit) )
+    if maxit &lt;= 0: raise ValueError( 'maxit=%d &lt;= 0, must be &gt; 0' % maxit )
+    n = 0 # iteration counter
+    while abs(f(x)) &gt; eps and n &lt; maxit:
+        try:
+            x = x - f(x)/float(dfdx(x))
+        except ZeroDivisionError:
+            raise ZeroDivisionError( 'dfdx(%g)=%g - cannot divide by zero' % (x, dfdx(x)) )
+        n += 1
+    return x, f(x), n
+</code></pre>
+
+<p>This function is supposed to be able to handle exceptions such as divergent iterations, and division-by-zero. The latter error happens when <code>dfdx(x)=0</code> in the above code. Write a test code that ensures the above code is able to correctly identify a division-by-zero exception and raise the correct assertionError.  <br />
+(<em>Hint: To do so, you need to consider a test mathematical function as input to <code>Newton</code>. One example could be $f(x)=\cos(x)$ with a starting search value $x=0$. This would result in derivative value $f’(x=0)=-\sin(x=0)=0$, which should lead to a <code>ZeroDivisionError</code> exception. Now, write a test function <code>test_Newton_div_by_zero</code> that can explicitly handle this exception by introducing a boolean variable <code>success</code> that is <code>True</code> if the exception is raised and otherwise <code>False</code></em>.)</p>
+
+<p><strong>Answer:</strong></p>
+
+<pre><code class="language-python">def test_Newton_div_by_zero():
+    from math import sin, cos
+    f = cos
+    dfdx = lambda x: -sin(x)
+    success = False
+    try:
+        x, f_x, n = Newton(f, dfdx, 0, eps=1E-4, maxit=1)
+    except ZeroDivisionError:
+        success = True
+    assert success , "Test for division-by-zero failed"
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>7. </strong> <strong>Reading scientific data from web using Python/MATLAB</strong>. Consider the following webpage address <a href="https://www.cdslab.org/ICP2017F/homework/4-problems/swift/bat_time_table.html" target="_blank">https://www.cdslab.org/ICP2017F/homework/4-problems/swift/bat_time_table.html</a>. This is an data table (in HTML language) containing data from <a href="https://www.nasa.gov/mission_pages/swift/main" target="_blank">NASA’s Swift satellite</a>. Each row in this table represents information about a <a href="https://en.wikipedia.org/wiki/Gamma-ray_burst" target="_blank">Gamma-Ray Burst (GRB)</a> detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website <a href="https://www.cdslab.org/ICP2017F/homework/4-problems/swift/GRB00745966_ep_flu.txt" target="_blank">here</a>. For each event in this table, there is likely one such table hidden in this web directory.</p>
+
+<p>Our goal in this question is to fetch all these files from the website and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.</p>
+
+<p><strong>(A)</strong> Write a script named <code>fetchDataFromWeb.*</code> (with the star <code>*</code> indicating the arbitrary choice of your own language) that uses this web address: <a href="https://www.cdslab.org/ICP2017F/homework/4-problems/triggers.txt" target="_blank">https://www.cdslab.org/ICP2017F/homework/4-problems/triggers.txt</a> to read a list of all GRB events and then writes the entire table of <code>triggers.txt</code> to a local file with the same name on your device. For this purpose, you will need some built-in or library functionality to read the contents of a web page, such as <code>webread()</code> in MATLAB or the package <code>urllib.request</code> in Python (or some other libraries).</p>
+
+<p><strong>(B)</strong> Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: <a href="https://www.cdslab.org/ICP2017F/homework/4-problems/swift/GRB00745966_ep_flu.txt" target="_blank">https://www.cdslab.org/ICP2017F/homework/4-problems/swift/GRB00745966_ep_flu.txt</a>. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be <code>GRB00745966_ep_flu.txt</code>). <strong>Note:</strong> Some of the web addresses for the given event IDs do not exist. Therefore, you should use an exception-handling construct such as MATLAB’s <code>try-catch</code> or Python’s <code>try-except</code> construct to avoid runtime errors in your code.</p>
+
+<p><strong>(C)</strong> Now write another script named <code>plotDatafromFile.m</code>, that reads all of these files in your directory, one by one, and plots the content of all of them together, on a single scatter plot like the following,</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/SwiftDataPlot.png" />
+</figure>
+
+<p><strong>Note</strong> again that some the data files stored on your computer are empty and some others have useless data if data in the second column of the file is larger than 0. So you will have to write your script in such a way that it checks for non-emptiness of the file (that is, the file does indeed contain some numerical data) as well as the negativity of the values in the column of data in each file. For example, you could check for the negativity of the values in MATLAB using function <code>all(data[:,1]&lt;0.0)</code> assuming that data is the variable containing the information read from the file.</p>
+
+<p>Once you have done all these checks, you have to do one final manipulation of data, that is, the data in these files on the second column is actually the log of data, so have to get the <code>exp()</code> value to plot it (because the plot in the figure above is a log-log plot and we want to exactly regenerate it). To do so in MATLAB, for example, you could simply use the following,</p>
+<pre><code class="language-matlab">data[:,2] = exp(data[:,2]);
+</code></pre>
+<p><br />
+as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function <code>saveas()</code>. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of the two MATLAB scripts: <a href="https://www.cdslab.org/homework/4-solutions/fetchDataFromWeb.m" target="_blank">fetchDataFromWeb.m</a> and <a href="https://www.cdslab.org/homework/4-solutions/plotDatafromFile.m" target="_blank">plotDatafromFile.m</a>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>8. </strong> <strong>Simulating a fun Monte Carlo game.</strong> Suppose you’re on a game show, and you’re given the choice of three doors:</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/Monty_1.png" />
+</figure>
+<p><br /></p>
+
+<p>Behind one door is a car; behind the two others, goats. You pick a door, say No. 1, and the host of the show opens another door, say No. 3, which has a goat.</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/Monty_open_door.png" />
+</figure>
+<p><br /></p>
+
+<p>He then says to you, “Do you want to pick door No. 2?”.</p>
+
+<p><strong>Question: What would you do?</strong> Is it to your advantage to switch your choice from door 1 to door 2? Is it to your advantage, <strong>in the long run, for a large number of game tries</strong>, to switch to the other door?</p>
+
+<p>Now whatever your answer is, I want you to check/prove your answer by a Monte Carlo simulation of this problem. Make a plot of your simulation for <code>nExperiments=100000</code> repeat of this game, that shows, in the long run, on average, what is the probability of winning this game if you switch your choice, and what is the probability of winning, if you do not switch to the other door.</p>
+
+<p><strong>Hint:</strong> I strongly urge you to attend the lectures this week in order to get help for this question.</p>
+
+<p><br />
+<strong>Answer:</strong><br />
+An example code can be downloaded from <a href="https://www.cdslab.org/homework/4-solutions/montyGame.m" target="_blank">here</a>. Here is the code’s output figure,</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-solutions/MontyGameResult.png" width="800" />
+</figure>
+<p><br />
+As you see in the figure, although you may initially win by not switching your choice, but in the long run, on average, you will lose, if you don’t switch your choice.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>9. </strong> <strong>Monte Carlo approximation of the number $\pi$</strong>. Suppose we did not know the value of $\pi$ and we wanted to estimate its value using Monte Carlo methods. One practical approach is to draw a square of unit side, with its diagonal opposite corners extending from the coordinates origin $(0,0)$ to $(1,1)$. Now we try to simulate uniform random points from inside of this square by generating uniform random points along the $X$ and $Y$ axes, i.e., by generating two random uniform numbers (x,y) from the range $[0,1]$.</p>
+
+<p>Now the generated random point $P$ has the coordinate $(x,y)$, so we can calculate its distance from the coordinate origin. Now suppose we also draw a quarter-circle inside of this square whose radius is unit and is centered at the origin $(0,0)$. The ratio of the area of this quarter-circle, $S_C$ to the area of the area of the square enclosing it, $S_S$ is,</p>
+
+<script type="math/tex; mode=display">\frac{S_C}{S_S} = \frac{\frac{1}{4}\pi r^2}{r^2} = \frac{1}{4}\pi</script>
+
+<p>This is because the area of the square of unit sides, is just 1. Therefore, if we can somehow measure the area of the quarter $S_C$, then we can use the following equation, to get an estimate of $\pi$,</p>
+
+<script type="math/tex; mode=display">\pi = 4S_C</script>
+
+<p>In order to obtain, $S_C$, we are going to throw random points in the square, just as described above, and then find the fraction of points, $f=n_C/n_{\rm total}$, that fall inside this quarter-circle. This fraction is related to the area of the circle and square by the following equation,</p>
+
+<script type="math/tex; mode=display">f=\frac{n_C}{n_{\rm total}} = \frac{S_C}{S_S}</script>
+
+<p>Therefore, one can obtain an estimate of $\pi$ using this fraction,</p>
+
+<script type="math/tex; mode=display">\pi \approx 4\frac{n_C}{n_{\rm total}}</script>
+
+<p>Now, write a MATLAB script, that takes in the number of points to be simulated, and then calculates an approximate value for $\pi$ based on the Monte Carlo algorithm described above.  Write a second function that plot the estimate of $\pi$ versus the number of points simulated, like the following,</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-solutions/approximatePI.png" />
+</figure>
+
+<p><strong>Answer:</strong><br />
+Here is an example MATLAB code that estimates $\pi$: <a href="https://www.cdslab.org/homework/4-solutions/estimatePi.m" target="_blank">estimatePi.m</a>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>10. </strong> <strong>Subplots in MATLAB.</strong> Consider this MATLAB data file <a href="https://www.cdslab.org/homework/4-problems/data3D.mat" target="_blank">data3D.mat</a> which contains a 3-dimensional $41\times 61\times 16$ matrix of the brain of a rat. Write a MATLAB script that  creates and saves a graph of all $X-Y$ information for the 16 slices along the z axis like the following.</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/subplots.png" width="900" />  
+</figure>
+<p><br /></p>
+
+<p><strong>Hint:</strong> Start from this <a href="https://www.cdslab.org/homework/4-problems/hw6prob1.m" target="_blank">MATLAB script</a> that I have written for you. Play with all the options to understand what they do and see their effects on the resulting plot. This script should generate the following figure for you.</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/currentPlot.png" width="900" />  
+</figure>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an implementation of this code: <a href="https://www.cdslab.org/homework/4-solutions/makeSubplots.m" target="_blank">makeSubplots.m</a>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>11.  MATLAB.</strong> <strong>Getting the boundary of objects in images.</strong>. Consider the same dataset as in the previous problem. Write a MATLAB script that delineates the boundary of the tumor in all of the subplots and generates a figure with the tumor boundary highlighted, like the following graph.</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/subplotsWithTumorBoundaries.png" width="900" />  
+</figure>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an implementation of this code: <a href="https://www.cdslab.org/homework/4-solutions/makeSubplots.m" target="_blank">makeSubplotsWithTumorBoundary.m</a>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>12.  MATLAB.</strong> <strong>Regression: obtaining the most likely mean and standard deviation of a set of Standard Normally Distributed Random Variables.</strong> Consider this dataset, <a href="https://www.cdslab.org/homework/4-problems/Drand.mat" target="_blank">Drand.mat</a>, which contains a set of random numbers. Let’s make a hypothesis with regards to this dataset: We assume that this dataset is well fit by a <a href="https://en.wikipedia.org/wiki/Normal_distribution" target="_blank">Gaussian distribution</a>. But, we don’t know the values of the two parameters (mean and standard deviation) of this Normal (Gaussian) distribution. Therefore, write a MATLAB script that constructs an objective function (similar to what we are planning to do for the mathematical modeling section of the project) and then uses MATLAB’s built-in function, <code>fminsearch()</code>, to find the most likely values of the mean and standard deviation of this Gaussian distribution. Here is a best-fit Gaussian distribution using the most likely parameters to the histogram of this dataset.</p>
+
+<figure>
+	<img src="https://www.cdslab.org/homework/4-problems/histfit.png" width="700" />
+</figure>
+
+<p><strong>Hints:</strong> Our hypothesis is that the data in this histogram comes from a standard Normal distribution with a fixed mean ($\mu$) and standard deviation ($\sigma$). For the moment, let’s assume that we know the values of these two parameters. Then if all of these points, $D$, come from the normal distribution with the given $(\mu,\sigma)$, then the probability of all them coming from the normal distribution with these parameter values can be computed as,</p>
+
+<script type="math/tex; mode=display">\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \prod^{N=100}_{i=1} \frac{1}{2\pi\sigma^2}\exp\bigg( -\bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 \bigg) ~~,</script>
+
+<p>where the symbol $\pi$ to the left of equality means <strong>probability</strong> (but note that $\pi$ on the right hand side of the euqation stands for the number $\pi=3.14\ldots$, and $D(i)$ refers to the $i$th point in the sample of points. Since probabilities are always extremely small numbers, it is always good to work with their <code>log()</code> values instead of their raw values (can you guess why?). Therefore, we could take the log of the above equation to write it as,</p>
+
+<script type="math/tex; mode=display">\log\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \sum^{N=100}_{i=1} - \log\big(2\pi\sigma^2\big) - \bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 ~~,</script>
+
+<p>Now our goad is to construct this function (let’s name it <code>getLogProbNorm()</code>) and pass it to MATLAB’s built-in function <code>fminsearch()</code> in order to find the most likely $(\mu,\sigma)$ that leads to the highest likelihood value (the maximum of the above equation). Here is one last tip: Note that <code>fminsearch()</code> minimizes functions, but we want to maximize <code>getLogProbNorm()</code>, instead of minimizing it. What change could you make to this function to make it work with <code>fminsearch()</code>? Name your main script <code>findBestFitParameters.m</code>. Now when you run your script it should call <code>fminsearch()</code> and then output the best-fit parameters like the following,</p>
+
+<pre><code class="language-matlab">&gt;&gt; findBestFitParameters
+mu: -0.082001 , sigma: 1.0043
+</code></pre>
+<p><br />
+Start your parameter search via <code>fminsearch()</code> with the following values: $[\mu,\sigma] = [1,10]$.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an implementation of this code: <a href="https://www.cdslab.org/homework/4-solutions/findBestFitParameters.m" target="_blank">findBestFitParameters.m</a>.</p>
+
+            </div>
+        </article>
+        <div class="cf"></div>
+<div class="row text-center">
+    <section class="notepad-post-share">
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 4: Exceptions, Errors, Vectorization, Visualization&quot;%20/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization%20via%20&#64;AmirShahmoradi"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="google-icon" href="https://plus.google.com/share?url=/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+            <i class="fa fa-google-plus"></i>
+        </a>
+    </section>
+</div>
+        <div class="cf"></div>
+        
+<div class="notepad-author-info">
+    <div class="row">
+        <section class="notepad-post-author small-12 columns">
+            <a href=https://www.shahmoradi.org target="_blank">
+                <img src="/MAPCP2019U/images/AmirShahmoradi.png" class="notepad-post-author-avatar" alt="Amir Shahmoradi's photo">
+            </a>
+            <span class="author-label">Author</span>
+            <h1>Amir Shahmoradi</h1>
+            <p><a href="mailto:shahmoradi@utexas.edu" class="author-website">shahmoradi@utexas.edu</a></p>
+            <p>Genius is 99% perspiration and 1% inspiration</p>
+        </section>
+    </div>
+</div> 
+        
+        <div class="cf"></div>
+        
+        <section class="notepad-disqus row">
+    <div class="small-12 columns">
+        <h1 class="notepad-comments-header">Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'shahmoradi'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+        <div class="cf"></div>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <!-- <section>Last updated 2019 / 07 / 22</section></br> -->
+         <section>Last updated Monday, 22 Jul 2019 at 09:25 PM CST</section></br>
+         <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
+         <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
+         <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
+         <section>SEIR 365 | Arlington TX 76010</section></br>
+    </div>
+    <div class="social-icons">
+        
+        <a href="https://twitter.com/AmirShahmoradi" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="https://github.com/shahmoradi" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <!-- start of statc -->
+        <div style="color: #000000; float: none; width: 100%; padding-top: 1rem;">
+            <span style="font-size:0.8em">visitor count: 
+                <script type="text/javascript">
+                    var sc_project=12021516; 
+                    var sc_invisible=0; 
+                    var sc_security="0c65ecca"; 
+                    var sc_text=3; 
+                    var scJsHost = "https://";
+                    document.write("<sc"+"ript type='text/javascript' src='" + scJsHost + 
+                    "statcounter.com/counter/counter.js'></"+"script>");
+                </script>
+            </span>
+        </div>
+        <!-- end of statc -->
+    </div>
+    <div class="cf"></div>
+</footer> 
+</main>    
+<!--dynamic page header-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/MAPCP2019U/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="/MAPCP2019U/assets/js/vendor/modernizr.js"></script>
+  <script src="/MAPCP2019U/assets/js/foundation.min.js"></script>
+  
+  <script src="/MAPCP2019U/assets/js/notepad.js"></script>
+  <script src="/MAPCP2019U/assets/js/scripts.min.js"></script>
+  <script src="/MAPCP2019U/assets/js/vendor/nprogress.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+  <script type='text/javascript'>console.log("N/A");</script>
+  <script type='text/javascript'>console.log("https://www.cdslab.org/");</script>
+
+<!--header anchor links-->
+<script src="/MAPCP2019U/assets/js/autoAnchorLink.js"></script>
+
+<!-- <script src="/MAPCP2019U/assets/js/prismOkaidia.js"></script>
+<script src="/MAPCP2019U/assets/js/prismTwilight.js"></script>
+<script src="/MAPCP2019U/assets/js/prismDefault.js"></script>
+ -->
+<script src="/MAPCP2019U/assets/js/prismCoy.js"></script> 
+<!--automatic Table of Content.-->
+<script src="/MAPCP2019U/assets/js/autoTOC.js"></script>
+</body>
+</html>

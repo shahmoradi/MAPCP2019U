@@ -12,43 +12,8 @@ callback([
   } ,
 
   {
-    "text": "Lecture 5: Python - branching and functions",
-    "href": "/MAPCP2019U/lecture/5-python-branching-functions"
-  } ,
-
-  {
-    "text": "Lecture 5: MATLAB - operators, branching, and control statements",
-    "href": "/MAPCP2019U/lecture/5-matlab-operators-branching"
-  } ,
-
-  {
-    "text": "Lecture 4: Python - values, variables, and types",
-    "href": "/MAPCP2019U/lecture/4-python-values-variables-types"
-  } ,
-
-  {
-    "text": "Lecture 4: MATLAB - values, variables, and types",
-    "href": "/MAPCP2019U/lecture/4-matlab-values-variables-types"
-  } ,
-
-  {
-    "text": "Lecture 3: Python for beginners",
-    "href": "/MAPCP2019U/lecture/3-python-for-beginners"
-  } ,
-
-  {
-    "text": "Lecture 3: MATLAB for beginners",
-    "href": "/MAPCP2019U/lecture/3-matlab-for-beginners"
-  } ,
-
-  {
-    "text": "Lecture 2: Programming history",
-    "href": "/MAPCP2019U/lecture/2-programming-history"
-  } ,
-
-  {
-    "text": "Lecture 1: A professional programmer uses Version Control System (VCS)",
-    "href": "/MAPCP2019U/lecture/1-version-control-system"
+    "text": "Homework 4: Exceptions, Errors, Vectorization, Visualization",
+    "href": "/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization"
   } ,
 
   {

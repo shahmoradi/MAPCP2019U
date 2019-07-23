@@ -224,12 +224,12 @@ Please enter another non-negative integer or type stop: stop
 
 <p>Note that, if you call the function as <code>fib('stop')</code> in the Python interpreter, it should return nothing to you, just like the following example,</p>
 <pre><code class="language-python">fib('stop')
-
 </code></pre>
-<p><br />
-I highly recommend you to write your function in Jupyter notebook, test it there, and then get the results for the same input arguments as in the above example (a string, negative integer, float, and n=1,…,12, and also ‘stop’) and download all of the notebook as a Markdown file, and put it in your repository folder for this homework. Name the notebook, <code>fib.md</code>.</p>
+
+<p>I highly recommend you to write your function in Jupyter notebook, test it there, and then get the results for the same input arguments as in the above example (a string, negative integer, float, and n=1,…,12, and also ‘stop’) and download all of the notebook as a Markdown file, and put it in your repository folder for this homework. Name the notebook, <code>fib.md</code>.</p>
 
 <p>Also note that, you don’t need to know or use anything beyond Python function syntax, Python built-in functions and methods (like <code>input</code>, <code>isdigit()</code>, <code>print</code>, <code>str()</code>, <code>int()</code>, …), and Python if-blocks.</p>
+
 <blockquote>
     I recommend you to use Jupyter notebook on your device, since the online version of notebook, can be interrupted repeatedly because of internet connection.
 </blockquote>
@@ -258,8 +258,8 @@ if answer_status=='correct':
 else:
     print("wrong buddy...try again")
 </code></pre>
-<p><br />
-<strong>(B)</strong> Can you acheive the same goal as in <strong>(A)</strong> without if-expression or block, but instead using only tuple notation? Explain why your solution works.</p>
+
+<p><strong>(B)</strong> Can you acheive the same goal as in <strong>(A)</strong> without if-expression or block, but instead using only tuple notation? Explain why your solution works.</p>
 
 <p>Modify the if block and the print statements that are only in the last part of the code,</p>
 <pre><code class="language-python">if answer_status=='correct':
@@ -267,8 +267,8 @@ else:
 else:
     print("wrong buddy...try again")
 </code></pre>
-<p><br />
-to write a single-line Python statement that only uses <code>print</code> and tuple or list notations, to perform the exact same task as the original print and if-block statement.</p>
+
+<p>to write a single-line Python statement that only uses <code>print</code> and tuple or list notations, to perform the exact same task as the original print and if-block statement.</p>
 
 <p><br /></p>
 
@@ -282,8 +282,8 @@ to write a single-line Python statement that only uses <code>print</code> and tu
 <p><strong>(A)</strong> Write a <strong>single-line</strong> Python code that reads a string containing comma-separated first-name, last-name, and the city in which a person lives from the Python interpreter command line, and simultaneouly, in the same line of Python code, removes all white-space characters from the input string, and converts all letters of the input variables to lower-case, and converts the string to a tuple and saves in a tuple <code>(first,last,city)</code>, such that, for example,</p>
 <pre><code class="language-text">Enter the first name, last name, and the city of the person (comma-separated): Amir, Shahmoradi  ,  Austin
 </code></pre>
-<p><br />
-would give,</p>
+
+<p>would give,</p>
 <pre><code class="language-python">(first,last,city)
 </code></pre>
 <pre><code>('amir', 'shahmoradi', 'austin')
@@ -330,7 +330,6 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
     msg = 'computed area=%g != %g (expected)' % (computed, expected)
     assert success, msg
 </code></pre>
-<p><br /></p>
 
 <p><br /></p>
 
@@ -359,7 +358,7 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
 
 <p><br /></p>
 
-<p><strong>6. </strong> <strong>MATLAB Function generators.</strong> Write a nested function that evaluates a polynomial of the form $y = ax^2+bx+c$. The host function <code>genFunc()</code> should be able to take varying number of arguments using <code>varargin</code> with maximum of 3 arguments (<code>a,b,c</code>) to initialize the coefficients of the polynomial. If there is only one argument, then <code>b</code> and <code>c</code> must be set to zero. If there are two input arguments, then <code>c</code> is set to zero. If none are given on input, then the returned function should be zero. If more than 3 arguments exist, then the function should display an error and stop. Also, if the input arguments are not real numbers, then the function should return and error and stop.</p>
+<p><strong>6. </strong> <strong>MATLAB Function generators.</strong> Write a nested function that evaluates a polynomial of the form $y = ax^2+bx+c$. The host function <code>genFunc()</code> should be able to take varying number of arguments using <code>varargin</code> with maximum of 3 arguments (<code>a,b,c</code>) to initialize the coefficients of the polynomial. If there is only one argument, then <code>b</code> and <code>c</code> must be set to zero. If there are two input arguments, then <code>c</code> is set to zero. If none are given on input, then the returned function should be zero. If more than 3 arguments exist, then the function should display an error and stop. Also, if the input arguments are not real numbers, then the function should return an error and stop.</p>
 
 <p>On output, the host function should create and return a function handle for the nested function <code>evalFunc()</code>. The nested function should calculate a value of $y$ for a given value of $x$, using the values of $a$, $b$, and $c$ stored in the host function. This is called a <strong>function generator</strong>, since the host function generates and outputs another function that can be called and used later on in the program. Once you create your function generator, test it in the following way: Call <code>genFunc(1,2,0)</code> and save the output function handle in a variable, say <code>h1</code>. Call <code>genFunc(1,2)</code> and save the output function handle in a variable, say <code>h2</code>. Then these two function handles, should give the same result, given the same input <code>x</code> values.</p>
 
@@ -370,12 +369,19 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
 
 <p><br /></p>
 
-<p><strong>7. </strong> Consider the following nested list,</p>
+<p><strong>7. </strong> Consider the following nested list in Python,</p>
+
 <pre><code class="language-python">q = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h']]
 </code></pre>
-<p><br />
-Write a for-loop that extracts all the letters in the list and finally prints them all as a single string,</p>
-<pre><code class="language-python">abcdefgh
+
+<p>or its equivalent in MATLAB,</p>
+
+<pre><code class="language-matlab">q = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h'}}
+</code></pre>
+
+<p>Write a for-loop that extracts all the letters in the list and finally prints them all as a single string,</p>
+
+<pre><code class="language-text">abcdefgh
 </code></pre>
 
 <p><br /></p>
@@ -386,6 +392,7 @@ Write a for-loop that extracts all the letters in the list and finally prints th
 <p><br /></p>
 
 <p><strong>8. </strong>  <strong>The significant impact of round-off errors in numerical computation.</strong>  Consider the following program in Python,</p>
+
 <pre><code class="language-python">from math import sqrt
 for n in range(1, 60):
     r_org = 2.0
@@ -396,8 +403,9 @@ for n in range(1, 60):
         r = r ** 2
     print ('With {} times sqrt and then {} times **2, the number {} becomes: {:.16f}'.format(n,n,r_org,r))
 </code></pre>
-<p><br />
-or its equivalent in MATLAB,</p>
+
+<p>or its equivalent in MATLAB,</p>
+
 <pre><code class="language-matlab">formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
 for n = 1:60
     r_original = 2.0;
@@ -411,8 +419,8 @@ for n = 1:60
     fprintf(formatSpec,n,n,r_original,r);
 end
 </code></pre>
-<p><br />
-Explain what this code does. Then run the code, and explain why do you the behavior observed. In particular, why do you not recover the original value $2$ after many repetitions of the same forward and reverse task?</p>
+
+<p>Explain what this code does. Then run the code, and explain why do you the behavior observed. In particular, why do you not recover the original value $2$ after many repetitions of the same forward and reverse task?</p>
 
 <p><br /></p>
 
@@ -428,8 +436,8 @@ while 1.0 != 1.0 + eps:
     eps /= 2.0
 print ('final eps:', eps)
 </code></pre>
-<p><br /><br />
-or its equivalent in MATLAB,</p>
+
+<p>or its equivalent in MATLAB,</p>
 <pre><code class="language-matlab">eps = 1.0;
 while 1.0 ~= 1.0 + eps
     disp(num2str(eps));
@@ -437,8 +445,8 @@ while 1.0 ~= 1.0 + eps
 end
 disp(['final eps:', num2str(eps)]);
 </code></pre>
-<p><br />
-Explain what the code is doing. Run the code and observe the output. How could <code>1.0 != 1.0 + eps</code> be False?</p>
+
+<p>Explain what the code is doing. Run the code and observe the output. How could <code>1.0 != 1.0 + eps</code> be False?</p>
 
 <p><br /></p>
 
@@ -452,7 +460,6 @@ Explain what the code is doing. Run the code and observe the output. How could <
 ans =
    113
 </code></pre>
-<p><br /></p>
 
 <p><br /></p>
 
@@ -469,12 +476,12 @@ print(numbers)
 </code></pre>
 
 <p>Now run the following code, given the above list. Explain the weird behavior that you observe.</p>
+
 <pre><code class="language-python">for n in numbers:
     i = len(numbers)//2
     del numbers[i]
     print ('n={}, del {}'.format(n,i), numbers)
 </code></pre>
-<p><br /></p>
 
 <p><br /></p>
 
@@ -508,7 +515,7 @@ def get_primes(n):
         n -= 1
         return count + get_primes(n)
 </code></pre>
-<p><br /></p>
+
 <pre><code class="language-python">get_primes(13)
 </code></pre>
 <pre><code>5
@@ -587,8 +594,8 @@ def get_primes(n):
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2019 / 07 / 17</section></br> -->
-         <section>Last updated Wednesday, 17 Jul 2019 at 04:08 PM CST</section></br>
+         <!-- <section>Last updated 2019 / 07 / 22</section></br> -->
+         <section>Last updated Monday, 22 Jul 2019 at 09:25 PM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
