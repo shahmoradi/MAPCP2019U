@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-23T10:46:46-05:00</updated>
+<updated>2019-07-23T10:47:38-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -101,17 +101,6 @@ The sum of 1 2 1 23 is 27.0
 
 &lt;p&gt;Note that you will need to use the Python’s builtin function &lt;code&gt;sum()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import sys
-print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , sum([float(x) for x in sys.argv[1:]]) )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here is the Bash output,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python sum.py 1 2 1 23
-The sum of 1 2 1 23 is 27.0
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -120,18 +109,6 @@ The sum of 1 2 1 23 is 27.0
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.  Python.&lt;/strong&gt; Similar to the previous problem, write a simple program named &lt;code&gt;sum_via_eval.py&lt;/code&gt;, that takes in an arbitrary-size list of input numbers from the command-line, and prints out the sum of them on the terminal, this time using Python’s &lt;code&gt;eval&lt;/code&gt; function. The program output should look like the following,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python sum.py 1 2 1 23
-The sum of 1 2 1 23 is 27
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import sys
-print( 'The sum of {} is {}'.format( ' '.join(sys.argv[1:]) , eval('+'.join(sys.argv[1:]) ) ) )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here is the Bash output,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python sum.py 1 2 1 23
 The sum of 1 2 1 23 is 27
@@ -212,9 +189,6 @@ Program aborted.
 
 &lt;p&gt;&lt;strong&gt;ATTENTION&lt;/strong&gt;: Note that in some rows instead of a one-letter amino acid name, there is &lt;code&gt;!&lt;/code&gt;. In such cases, your code should be able to detect the abnormality and skip that row, because that row does not contain amino acid information.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-An example implementation can be downloaded from &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/readDSSP.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -276,9 +250,6 @@ y = 1.2151999999999998
 y = 1.2151999999999998
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.cdslab.org/homework/4-problems/projectile.py&quot; target=&quot;_blank&quot;&gt;Here&lt;/a&gt; is an example implementation.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -305,20 +276,6 @@ y = 1.2151999999999998
 
 &lt;p&gt;This function is supposed to be able to handle exceptions such as divergent iterations, and division-by-zero. The latter error happens when &lt;code&gt;dfdx(x)=0&lt;/code&gt; in the above code. Write a test code that ensures the above code is able to correctly identify a division-by-zero exception and raise the correct assertionError.  &lt;br /&gt;
 (&lt;em&gt;Hint: To do so, you need to consider a test mathematical function as input to &lt;code&gt;Newton&lt;/code&gt;. One example could be $f(x)=\cos(x)$ with a starting search value $x=0$. This would result in derivative value $f’(x=0)=-\sin(x=0)=0$, which should lead to a &lt;code&gt;ZeroDivisionError&lt;/code&gt; exception. Now, write a test function &lt;code&gt;test_Newton_div_by_zero&lt;/code&gt; that can explicitly handle this exception by introducing a boolean variable &lt;code&gt;success&lt;/code&gt; that is &lt;code&gt;True&lt;/code&gt; if the exception is raised and otherwise &lt;code&gt;False&lt;/code&gt;&lt;/em&gt;.)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def test_Newton_div_by_zero():
-    from math import sin, cos
-    f = cos
-    dfdx = lambda x: -sin(x)
-    success = False
-    try:
-        x, f_x, n = Newton(f, dfdx, 0, eps=1E-4, maxit=1)
-    except ZeroDivisionError:
-        success = True
-    assert success , &quot;Test for division-by-zero failed&quot;
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -348,10 +305,6 @@ y = 1.2151999999999998
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function &lt;code&gt;saveas()&lt;/code&gt;. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an example implementation of the two MATLAB scripts: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/fetchDataFromWeb.m&quot; target=&quot;_blank&quot;&gt;fetchDataFromWeb.m&lt;/a&gt; and &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/plotDatafromFile.m&quot; target=&quot;_blank&quot;&gt;plotDatafromFile.m&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -423,9 +376,6 @@ As you see in the figure, although you may initially win by not switching your c
 	&lt;img src=&quot;https://www.cdslab.org/homework/4-solutions/approximatePI.png&quot; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/estimatePi.m&quot; target=&quot;_blank&quot;&gt;estimatePi.m&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -446,10 +396,6 @@ Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;https://ww
 	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/currentPlot.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/makeSubplots.m&quot; target=&quot;_blank&quot;&gt;makeSubplots.m&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -462,10 +408,6 @@ Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;https://ww
 &lt;figure&gt;
 	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/subplotsWithTumorBoundaries.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/makeSubplots.m&quot; target=&quot;_blank&quot;&gt;makeSubplotsWithTumorBoundary.m&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -608,6 +550,63 @@ Please enter another non-negative integer or type stop: stop
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an implementation in Python:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def fib(n):
+
+    def fibo(n_int):
+        if n_int==0: return 0
+        elif n_int==1: return 1
+        else:
+            return fibo(n_int-1) + fibo(n_int-2)
+
+    if n=='stop':
+        return None
+    elif str(n).isdigit():    # Make sure n is integer. Here is a bug: all positive numbers are assumed to not precede with + sign.
+        n=int(n) 
+        print('Fib({}) = {}'.format(n,fibo(n)))
+        n = input(&quot;Please enter another integer or type stop: &quot;)  # Note that n is read as string!
+        return fib(n)
+    else: # the input is not an integer
+        print( 'The input argument {} is not a non-negative integer!'.format(n) )    
+        n = input(&quot;Please enter an integer: &quot;)  # Note that n is read as string!
+        return fib(n)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is an implementation in MATLAB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function fib()
+
+    % get the input 
+    n = input('Please enter a non-negative integer or type stop: ','s');
+    if strcmp(n,'stop')
+        return
+    else
+        n = str2double(n);
+        if isreal(n) &amp;amp;&amp;amp; n&amp;gt;=0 &amp;amp;&amp;amp; round(n)==n
+            disp( [ 'fib(' , num2str(n) , ') = ' , num2str(getFib(n)) ] );
+            fib()
+            return
+        end
+        disp('The input argument is not a non-negative integer!');
+        fib()
+    end
+
+    function fib = getFib(n_int)
+        if n_int == 0
+            fib = 0;
+        elseif n_int == 1
+            fib = 1;
+        else
+            fib = getFib(n_int-1) + getFib(n_int-2);
+        end
+    end
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -643,6 +642,44 @@ else:
 
 &lt;p&gt;to write a single-line Python statement that only uses &lt;code&gt;print&lt;/code&gt; and tuple or list notations, to perform the exact same task as the original print and if-block statement.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;#!/usr/bin/env python
+
+abbr = input (&quot;What is the four-letter abbreviation for the National Aeronautics and Space Administration? &quot;)
+
+answer_status = 'correct' if abbr == 'NASA' else 'wrong'
+
+if answer_status=='correct':
+    print('Your answer is correct!')
+else:
+    print(&quot;wrong buddy...try again&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;#!/usr/bin/env python
+
+abbr = input (&quot;What is the four-letter abbreviation for the National Aeronautics and Space Administration? &quot;)
+
+answer_status = ('wrong','correct')[abbr=='NASA']
+
+if answer_status=='correct':
+    print('Your answer is correct!')
+else:
+    print(&quot;wrong buddy...try again&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;#!/usr/bin/env python
+
+abbr = input (&quot;What is the four-letter abbreviation for the National Aeronautics and Space Administration? &quot;)
+
+answer_status = ('wrong','correct')[abbr=='NASA']
+
+print( ('wrong buddy...try again','Your answer is correct!')[answer_status=='correct'] )
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -676,6 +713,18 @@ else:
     return j
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;(first,last,univ) = ((input('Enter the first name, last name, and the city of the person (comma-separated): ').replace(' ','')).lower()).split(',')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def dummy(i):
+    j = 0 if i==0 else (1 if i==1 else (2 if i==2 else 'j is not in [0,1,2]') )
+    return j
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -704,6 +753,32 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
     assert success, msg
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a Python implementation of the solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# getTriangleArea.py
+def get_triangle_area(vert):
+    area = 0.5 * abs(vert[1][0] * vert[2][1] - vert[2][0] * vert[1][1] -
+                     vert[0][0] * vert[2][1] + vert[2][0] * vert[0][1] +
+                     vert[0][0] * vert[1][1] - vert[1][0] * vert[0][1])
+    return area
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is a MATLAB implementation of the solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;% getTriangleArea.m
+function area = getTriangleArea(vertices)
+    area = 0.5 * abs( vertices{2}(1) * vertices{3}(2) ...
+                    - vertices{3}(1) * vertices{2}(2) ...
+                    - vertices{1}(1) * vertices{3}(2) ...
+                    + vertices{3}(1) * vertices{1}(2) ...
+                    + vertices{1}(1) * vertices{2}(2) ...
+                    + vertices{2}(1) * vertices{1}(2) ...
+                    )
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -724,6 +799,49 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
 
 &lt;p&gt;Note that you do not need and don’t have to use &lt;code&gt;for-loop&lt;/code&gt; for this problem (we have not yet discussed loops in our class!). All of it can be done using recursive function concept.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an implementation in Python:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def is_prime(n):
+    
+    is_prime = True
+    
+    def is_divisible(n,divisor):
+        if n&amp;lt;(divisor-1)*divisor: return False
+        if n%divisor==0: return True
+        else:
+            divisor += 1
+            return is_divisible(n,divisor)
+
+    if is_divisible(n,divisor=2): is_prime=False
+    return is_prime
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is an implementation in MATLAB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function outLogical = isPrime(n)
+
+    divisor = 2;
+    outLogical = true;
+    sqrt_n = round(sqrt(n));
+    outLogical = isDivisible(n,sqrt_n,divisor);
+
+    function output = isDivisible(n,sqrt_n,divisor)
+        if mod(n,divisor) == 0
+            output = false;
+        elseif sqrt_n&amp;lt;divisor
+            output = true;
+            return
+        else
+            divisor = divisor + 1;
+            output = isDivisible(n,sqrt_n,divisor);
+        end
+    end
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -734,6 +852,41 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
 &lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; &lt;strong&gt;MATLAB Function generators.&lt;/strong&gt; Write a nested function that evaluates a polynomial of the form $y = ax^2+bx+c$. The host function &lt;code&gt;genFunc()&lt;/code&gt; should be able to take varying number of arguments using &lt;code&gt;varargin&lt;/code&gt; with maximum of 3 arguments (&lt;code&gt;a,b,c&lt;/code&gt;) to initialize the coefficients of the polynomial. If there is only one argument, then &lt;code&gt;b&lt;/code&gt; and &lt;code&gt;c&lt;/code&gt; must be set to zero. If there are two input arguments, then &lt;code&gt;c&lt;/code&gt; is set to zero. If none are given on input, then the returned function should be zero. If more than 3 arguments exist, then the function should display an error and stop. Also, if the input arguments are not real numbers, then the function should return an error and stop.&lt;/p&gt;
 
 &lt;p&gt;On output, the host function should create and return a function handle for the nested function &lt;code&gt;evalFunc()&lt;/code&gt;. The nested function should calculate a value of $y$ for a given value of $x$, using the values of $a$, $b$, and $c$ stored in the host function. This is called a &lt;strong&gt;function generator&lt;/strong&gt;, since the host function generates and outputs another function that can be called and used later on in the program. Once you create your function generator, test it in the following way: Call &lt;code&gt;genFunc(1,2,0)&lt;/code&gt; and save the output function handle in a variable, say &lt;code&gt;h1&lt;/code&gt;. Call &lt;code&gt;genFunc(1,2)&lt;/code&gt; and save the output function handle in a variable, say &lt;code&gt;h2&lt;/code&gt;. Then these two function handles, should give the same result, given the same input &lt;code&gt;x&lt;/code&gt; values.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an example implementation of the function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function [outputQuadraticFuncHandle] = genFunc(varargin)
+
+    switch nargin
+        case 0
+            a=0;
+            b=0;
+            c=0;
+        case 1
+            a=varargin{1};
+            b=0;
+            c=0;
+        case 2
+            a=varargin{1};
+            b=varargin{2};
+            c=0;
+        case 3
+            a=varargin{1};
+            b=varargin{2};
+            c=varargin{3};
+        otherwise
+            error('Too many arguments')   
+    end
+
+    function y = evalQuadFunc(x)
+        y = a*x.^2 + b*x + c;
+    end
+    outputQuadFuncHandle = @evalQuadFunc;
+
+end
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -755,6 +908,18 @@ An arbitrary triangle can be described by the coordinates of its three vertices:
 &lt;p&gt;Write a for-loop that extracts all the letters in the list and finally prints them all as a single string,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;abcdefgh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is a solution in Python:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;q = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h']]
+s = ''
+for i in q:
+    for j in range(len(i)):
+        s += i[j]
+print(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;abcdefgh
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -795,6 +960,161 @@ end
 
 &lt;p&gt;Explain what this code does. Then run the code, and explain why do you the behavior observed. In particular, why do you not recover the original value $2$ after many repetitions of the same forward and reverse task?&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+This code will yield the following output in Python:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;from math import sqrt
+for n in range(1, 60):
+    r_org = 2.0
+    r = r_org
+    for i in range(n):
+        r = sqrt(r)
+    for i in range(n):
+        r = r ** 2
+    print ('With {} times sqrt and then {} times **2, the number {} becomes: {:.16f}'.format(n,n,r_org,r))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;With 1 times sqrt and then 1 times **2, the number 2.0 becomes: 2.0000000000000004
+With 2 times sqrt and then 2 times **2, the number 2.0 becomes: 1.9999999999999996
+With 3 times sqrt and then 3 times **2, the number 2.0 becomes: 1.9999999999999996
+With 4 times sqrt and then 4 times **2, the number 2.0 becomes: 1.9999999999999964
+With 5 times sqrt and then 5 times **2, the number 2.0 becomes: 1.9999999999999964
+With 6 times sqrt and then 6 times **2, the number 2.0 becomes: 1.9999999999999964
+With 7 times sqrt and then 7 times **2, the number 2.0 becomes: 1.9999999999999714
+With 8 times sqrt and then 8 times **2, the number 2.0 becomes: 2.0000000000000235
+With 9 times sqrt and then 9 times **2, the number 2.0 becomes: 2.0000000000000235
+With 10 times sqrt and then 10 times **2, the number 2.0 becomes: 2.0000000000000235
+With 11 times sqrt and then 11 times **2, the number 2.0 becomes: 2.0000000000000235
+With 12 times sqrt and then 12 times **2, the number 2.0 becomes: 1.9999999999991336
+With 13 times sqrt and then 13 times **2, the number 2.0 becomes: 1.9999999999973292
+With 14 times sqrt and then 14 times **2, the number 2.0 becomes: 1.9999999999973292
+With 15 times sqrt and then 15 times **2, the number 2.0 becomes: 1.9999999999973292
+With 16 times sqrt and then 16 times **2, the number 2.0 becomes: 2.0000000000117746
+With 17 times sqrt and then 17 times **2, the number 2.0 becomes: 2.0000000000408580
+With 18 times sqrt and then 18 times **2, the number 2.0 becomes: 2.0000000000408580
+With 19 times sqrt and then 19 times **2, the number 2.0 becomes: 2.0000000001573586
+With 20 times sqrt and then 20 times **2, the number 2.0 becomes: 2.0000000001573586
+With 21 times sqrt and then 21 times **2, the number 2.0 becomes: 2.0000000001573586
+With 22 times sqrt and then 22 times **2, the number 2.0 becomes: 2.0000000010885857
+With 23 times sqrt and then 23 times **2, the number 2.0 becomes: 2.0000000029511749
+With 24 times sqrt and then 24 times **2, the number 2.0 becomes: 2.0000000066771721
+With 25 times sqrt and then 25 times **2, the number 2.0 becomes: 2.0000000066771721
+With 26 times sqrt and then 26 times **2, the number 2.0 becomes: 1.9999999917775542
+With 27 times sqrt and then 27 times **2, the number 2.0 becomes: 1.9999999917775542
+With 28 times sqrt and then 28 times **2, the number 2.0 becomes: 1.9999999917775542
+With 29 times sqrt and then 29 times **2, the number 2.0 becomes: 1.9999999917775542
+With 30 times sqrt and then 30 times **2, the number 2.0 becomes: 1.9999999917775542
+With 31 times sqrt and then 31 times **2, the number 2.0 becomes: 1.9999999917775542
+With 32 times sqrt and then 32 times **2, the number 2.0 becomes: 1.9999990380770896
+With 33 times sqrt and then 33 times **2, the number 2.0 becomes: 1.9999971307544144
+With 34 times sqrt and then 34 times **2, the number 2.0 becomes: 1.9999971307544144
+With 35 times sqrt and then 35 times **2, the number 2.0 becomes: 1.9999971307544144
+With 36 times sqrt and then 36 times **2, the number 2.0 becomes: 1.9999971307544144
+With 37 times sqrt and then 37 times **2, the number 2.0 becomes: 1.9999971307544144
+With 38 times sqrt and then 38 times **2, the number 2.0 becomes: 1.9999360966436217
+With 39 times sqrt and then 39 times **2, the number 2.0 becomes: 1.9999360966436217
+With 40 times sqrt and then 40 times **2, the number 2.0 becomes: 1.9999360966436217
+With 41 times sqrt and then 41 times **2, the number 2.0 becomes: 1.9994478907329654
+With 42 times sqrt and then 42 times **2, the number 2.0 becomes: 1.9984718365144798
+With 43 times sqrt and then 43 times **2, the number 2.0 becomes: 1.9965211562778555
+With 44 times sqrt and then 44 times **2, the number 2.0 becomes: 1.9965211562778555
+With 45 times sqrt and then 45 times **2, the number 2.0 becomes: 1.9887374575497223
+With 46 times sqrt and then 46 times **2, the number 2.0 becomes: 1.9887374575497223
+With 47 times sqrt and then 47 times **2, the number 2.0 becomes: 1.9887374575497223
+With 48 times sqrt and then 48 times **2, the number 2.0 becomes: 1.9887374575497223
+With 49 times sqrt and then 49 times **2, the number 2.0 becomes: 1.8682459487159784
+With 50 times sqrt and then 50 times **2, the number 2.0 becomes: 1.6487212645509468
+With 51 times sqrt and then 51 times **2, the number 2.0 becomes: 1.6487212645509468
+With 52 times sqrt and then 52 times **2, the number 2.0 becomes: 1.0000000000000000
+With 53 times sqrt and then 53 times **2, the number 2.0 becomes: 1.0000000000000000
+With 54 times sqrt and then 54 times **2, the number 2.0 becomes: 1.0000000000000000
+With 55 times sqrt and then 55 times **2, the number 2.0 becomes: 1.0000000000000000
+With 56 times sqrt and then 56 times **2, the number 2.0 becomes: 1.0000000000000000
+With 57 times sqrt and then 57 times **2, the number 2.0 becomes: 1.0000000000000000
+With 58 times sqrt and then 58 times **2, the number 2.0 becomes: 1.0000000000000000
+With 59 times sqrt and then 59 times **2, the number 2.0 becomes: 1.0000000000000000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and this code will yield the following output in MATLAB,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
+for n = 1:60
+    r_original = 2.0;
+    r = r_original;
+    for i = 1:n
+        r = sqrt(r);
+    end
+    for i = 1:n
+        r = r^2;
+    end
+    fprintf(formatSpec,n,n,r_original,r);
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt; roundoff
+With 1 sqrt, then 1 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000004 
+With 2 sqrt, then 2 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
+With 3 sqrt, then 3 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
+With 4 sqrt, then 4 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 5 sqrt, then 5 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 6 sqrt, then 6 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 7 sqrt, then 7 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999714 
+With 8 sqrt, then 8 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 9 sqrt, then 9 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 10 sqrt, then 10 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 11 sqrt, then 11 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 12 sqrt, then 12 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999991336 
+With 13 sqrt, then 13 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 14 sqrt, then 14 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 15 sqrt, then 15 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 16 sqrt, then 16 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000117746 
+With 17 sqrt, then 17 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
+With 18 sqrt, then 18 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
+With 19 sqrt, then 19 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 20 sqrt, then 20 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 21 sqrt, then 21 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 22 sqrt, then 22 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000010885857 
+With 23 sqrt, then 23 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000029511749 
+With 24 sqrt, then 24 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
+With 25 sqrt, then 25 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
+With 26 sqrt, then 26 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 27 sqrt, then 27 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 28 sqrt, then 28 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 29 sqrt, then 29 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 30 sqrt, then 30 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 31 sqrt, then 31 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 32 sqrt, then 32 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999990380770896 
+With 33 sqrt, then 33 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 34 sqrt, then 34 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 35 sqrt, then 35 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 36 sqrt, then 36 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 37 sqrt, then 37 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 38 sqrt, then 38 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 39 sqrt, then 39 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 40 sqrt, then 40 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 41 sqrt, then 41 times ^2 operations, the number 2.0000000000000000 becomes: 1.9994478907329654 
+With 42 sqrt, then 42 times ^2 operations, the number 2.0000000000000000 becomes: 1.9984718365144798 
+With 43 sqrt, then 43 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
+With 44 sqrt, then 44 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
+With 45 sqrt, then 45 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 46 sqrt, then 46 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 47 sqrt, then 47 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 48 sqrt, then 48 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 49 sqrt, then 49 times ^2 operations, the number 2.0000000000000000 becomes: 1.8682459487159784 
+With 50 sqrt, then 50 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
+With 51 sqrt, then 51 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
+With 52 sqrt, then 52 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 53 sqrt, then 53 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 54 sqrt, then 54 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 55 sqrt, then 55 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 56 sqrt, then 56 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 57 sqrt, then 57 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 58 sqrt, then 58 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 59 sqrt, then 59 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 60 sqrt, then 60 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What is happening is that, 1 is returned for n &amp;gt;= 52 as square root of 2, that is, after 52 times square-root operation, the degree of accuracy required for representing the result goes beyond the degree of accuracy available in a MATLAB double precision number. Consequently, the later squaring operation on 1.00000000000000 will leave the number unchanged and therefore, 2 is not recovered.&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -821,6 +1141,65 @@ disp(['final eps:', num2str(eps)]);
 
 &lt;p&gt;Explain what the code is doing. Run the code and observe the output. How could &lt;code&gt;1.0 != 1.0 + eps&lt;/code&gt; be False?&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is the output of the code,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;............... 1.0
+............... 0.5
+............... 0.25
+............... 0.125
+............... 0.0625
+............... 0.03125
+............... 0.015625
+............... 0.0078125
+............... 0.00390625
+............... 0.001953125
+............... 0.0009765625
+............... 0.00048828125
+............... 0.000244140625
+............... 0.0001220703125
+............... 6.103515625e-05
+............... 3.0517578125e-05
+............... 1.52587890625e-05
+............... 7.62939453125e-06
+............... 3.814697265625e-06
+............... 1.9073486328125e-06
+............... 9.5367431640625e-07
+............... 4.76837158203125e-07
+............... 2.384185791015625e-07
+............... 1.1920928955078125e-07
+............... 5.960464477539063e-08
+............... 2.9802322387695312e-08
+............... 1.4901161193847656e-08
+............... 7.450580596923828e-09
+............... 3.725290298461914e-09
+............... 1.862645149230957e-09
+............... 9.313225746154785e-10
+............... 4.656612873077393e-10
+............... 2.3283064365386963e-10
+............... 1.1641532182693481e-10
+............... 5.820766091346741e-11
+............... 2.9103830456733704e-11
+............... 1.4551915228366852e-11
+............... 7.275957614183426e-12
+............... 3.637978807091713e-12
+............... 1.8189894035458565e-12
+............... 9.094947017729282e-13
+............... 4.547473508864641e-13
+............... 2.2737367544323206e-13
+............... 1.1368683772161603e-13
+............... 5.684341886080802e-14
+............... 2.842170943040401e-14
+............... 1.4210854715202004e-14
+............... 7.105427357601002e-15
+............... 3.552713678800501e-15
+............... 1.7763568394002505e-15
+............... 8.881784197001252e-16
+............... 4.440892098500626e-16
+............... 2.220446049250313e-16
+final eps: 1.1102230246251565e-16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What is happening is that after a certain number of divisions performed on the value of &lt;code&gt;eps&lt;/code&gt;, the value goes beyond the highest float precision representable by Python standard ($0.0000000000000001$), and therefore the value of &lt;code&gt;eps&lt;/code&gt; is eventually rounded to exact zero. The nonzero &lt;code&gt;eps&lt;/code&gt; value computed above is called &lt;strong&gt;machine epsilon&lt;/strong&gt; or &lt;strong&gt;machine zero&lt;/strong&gt; and is an important parameter to know, since it can lead to disasters in your very important complex calculations.&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -832,6 +1211,21 @@ disp(['final eps:', num2str(eps)]);
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; getLargestPrime(123)
 ans =
    113
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function integer = getLargestPrime(upper)
+    if (upper&amp;lt;1)
+        disp('input value cannot be less than 1. Goodbye!')
+        return
+    end
+    for integer = upper:-1:1
+        if isprime(integer)
+            break
+        end
+    end
+end
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -855,6 +1249,24 @@ print(numbers)
     del numbers[i]
     print ('n={}, del {}'.format(n,i), numbers)
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;numbers = list(range(10))
+for n in numbers:
+    i = len(numbers)//2
+    del numbers[i]
+    print ('n={}, del {}'.format(n,i), numbers)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;n=0, del 5 [0, 1, 2, 3, 4, 6, 7, 8, 9]
+n=1, del 4 [0, 1, 2, 3, 6, 7, 8, 9]
+n=2, del 4 [0, 1, 2, 3, 7, 8, 9]
+n=3, del 3 [0, 1, 2, 7, 8, 9]
+n=8, del 3 [0, 1, 2, 8, 9]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What is really happening is that the list over which we are looping changes its content because of the modifications during on the list in the for-loop. The message in this exercise is to &lt;strong&gt;never modify a list that you are looping over&lt;/strong&gt;. Modification is indeed technically possible, as shown above, but you really need to know what you are doing. Otherwise you will experience very strange program behavior.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -896,7 +1308,45 @@ def get_primes(n):
 
 &lt;p&gt;(A) Now rewrite &lt;code&gt;get_primes(n)&lt;/code&gt; and the other functions in the above code using for-loop this time. Name the new functions &lt;code&gt;get_prime_for(n)&lt;/code&gt; and &lt;code&gt;is_prime_for(n)&lt;/code&gt;, with &lt;em&gt;for&lt;/em&gt; in the names indicating that the functions now use for-loops.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def is_prime_for(x):
+    if x &amp;gt; 1:
+        n = x // 2
+        for i in range(2, n + 1):
+            if x % i == 0:
+                return False
+        return True
+    else:
+        return False
+
+def get_primes_for(n):
+    count = 0
+    for i in range(2,n):
+        if is_prime(i):
+            count += 1
+    return count
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is a test,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;get_primes_for(13)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;5
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;(B) Now compare the performance of the two functions &lt;code&gt;get_primes(n=500)&lt;/code&gt; and &lt;code&gt;get_primes_for(n500)&lt;/code&gt; using Jupyter’s or IPython’s &lt;code&gt;%timeit&lt;/code&gt; magic function. Which one is faster?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;%timeit get_primes(500)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;1000 loops, best of 3: 1.32 ms per loop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;%timeit get_primes_for(500)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;1000 loops, best of 3: 1.69 ms per loop  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Interesting, recursive functions seem to be faster than Python for-loops!&lt;/p&gt;
 
 
   
