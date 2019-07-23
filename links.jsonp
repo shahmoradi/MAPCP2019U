@@ -2,13 +2,13 @@
 callback([
 
   {
-    "text": "Quiz 2: Value, variables, types",
-    "href": "/MAPCP2019U/quiz/2-values-variables-types"
+    "text": "Quiz 3: Branching, loops, functions",
+    "href": "/MAPCP2019U/quiz/3-branching-loops-functions"
   } ,
 
   {
-    "text": "Quiz 2: Branching, loops, functions",
-    "href": "/MAPCP2019U/quiz/3-branching-loops-functions"
+    "text": "Quiz 2: Value, variables, types",
+    "href": "/MAPCP2019U/quiz/2-values-variables-types"
   } ,
 
   {
