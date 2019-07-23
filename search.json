@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 2: Branching, loops, functions",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/quiz/3-branching-loops-functions",
+		  "date"       : "2019-07-23 00:00:00 -0500",
+		  "shortdate"  : "July 23, 2019"
+		} ,
+	
+		{
 		  "title"      : "Homework 4: Exceptions, Errors, Vectorization, Visualization",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization",

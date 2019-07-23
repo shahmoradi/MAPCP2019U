@@ -7,6 +7,11 @@ callback([
   } ,
 
   {
+    "text": "Quiz 2: Branching, loops, functions",
+    "href": "/MAPCP2019U/quiz/3-branching-loops-functions"
+  } ,
+
+  {
     "text": "Quiz 1: Version control system",
     "href": "/MAPCP2019U/quiz/1-version-control-system"
   } ,
