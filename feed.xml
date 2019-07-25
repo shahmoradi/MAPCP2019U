@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-25T10:41:24-05:00</updated>
+<updated>2019-07-25T17:15:05-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -335,15 +335,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 &lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; I strongly urge you to attend the lectures this week in order to get help for this question.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-An example code can be downloaded from &lt;a href=&quot;http:/MAPCP2019U/homework/4-solutions/montyGame.m&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Here is the code’s output figure,&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/MAPCP2019U/homework/4-solutions/MontyGameResult.png&quot; width=&quot;800&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;
-As you see in the figure, although you may initially win by not switching your choice, but in the long run, on average, you will lose, if you don’t switch your choice.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -438,9 +430,6 @@ mu: -0.082001 , sigma: 1.0043
 &lt;p&gt;&lt;br /&gt;
 Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the following values: $[\mu,\sigma] = [1,10]$.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;http:/MAPCP2019U/homework/4-solutions/findBestFitParameters.m&quot; target=&quot;_blank&quot;&gt;findBestFitParameters.m&lt;/a&gt;.&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization&quot;&gt;Homework 4: Exceptions, Errors, Vectorization, Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on July 23, 2019.&lt;/p&gt;</content>
