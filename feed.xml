@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/MAPCP2019U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/MAPCP2019U/" />
-<updated>2019-07-23T11:04:16-05:00</updated>
+<updated>2019-07-25T10:41:24-05:00</updated>
 <id>http:/MAPCP2019U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -51,11 +51,11 @@ The following figure illustrates the grade distribution for this quiz.
 
 &lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; A Geometric Series is defined by the following mathematical sequence,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots = \sum^{\infty}_{n=1} \frac{1}{2^n} ~,&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots = \sum^{\infty}_{n=0} \frac{1}{2^n} ~,&lt;/script&gt;
 
 &lt;p&gt;A finite version of this sequence can be defined as the following,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots  + \frac{1}{2^m} = \sum^{m}_{n=1} \frac{1}{2^n} ~,&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots  + \frac{1}{2^m} = \sum^{m}_{n=0} \frac{1}{2^n} ~,&lt;/script&gt;
 
 &lt;p&gt;a) Write a recursive function that takes an input integer &lt;code&gt;m&lt;/code&gt; and computes the finite Geometric sum as defined above.&lt;/p&gt;
 
@@ -121,7 +121,7 @@ The sum of 1 2 1 23 is 27
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3.  Python.&lt;/strong&gt; Consider &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/1A2T_A.dssp&quot; target=&quot;_blank&quot;&gt;this data file&lt;/a&gt;. It contains information about the amino-acids in &lt;a href=&quot;http://www.rcsb.org/pdb/explore.do?structureId=1a2t&quot; target=&quot;_blank&quot;&gt;a protein&lt;/a&gt; called &lt;code&gt;1A2T&lt;/code&gt;. Each amino-acid in protein is labeled by a single letter. There are 20 amin acid molecules in nature, and each has a total surface area (in units of Angstroms squared) that is given by the following table,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.  Python.&lt;/strong&gt; Consider &lt;a href=&quot;http:/MAPCP2019U/homework/4-problems/1A2T_A.dssp&quot; target=&quot;_blank&quot;&gt;this data file&lt;/a&gt;. It contains information about the amino-acids in &lt;a href=&quot;http://www.rcsb.org/pdb/explore.do?structureId=1a2t&quot; target=&quot;_blank&quot;&gt;a protein&lt;/a&gt; called &lt;code&gt;1A2T&lt;/code&gt;. Each amino-acid in protein is labeled by a single letter. There are 20 amin acid molecules in nature, and each has a total surface area (in units of Angstroms squared) that is given by the following table,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;'A': 129.0
 'R': 274.0
@@ -147,7 +147,7 @@ The sum of 1 2 1 23 is 27
 
 &lt;p&gt;However, when these amino acids sit next to each other to form a chain protein, they cover parts of each other, such that only parts of their surfaces is exposed, while the rest is hidden from the outside world by other neighboring amino acids. Therefore, one would expect an amino acid that is at the core of a spherical protein would have almost zero exposed surface area.&lt;/p&gt;
 
-&lt;p&gt;Now given the above information, write a Python program that takes in two command-line input arguments, one of which is a string containing the path to the above &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/1A2T_A.dssp&quot; target=&quot;_blank&quot;&gt;input file&lt;/a&gt; &lt;code&gt;1A2T_A.dssp&lt;/code&gt; which contains the partially exposed surface areas of amino acids in protein &lt;code&gt;1A2T&lt;/code&gt; for each of its amino acids, and a second command-line argument which is the path to the file containing output of the code (e.g., it could be &lt;code&gt;./readDSSP.out&lt;/code&gt;). Then,&lt;/p&gt;
+&lt;p&gt;Now given the above information, write a Python program that takes in two command-line input arguments, one of which is a string containing the path to the above &lt;a href=&quot;http:/MAPCP2019U/homework/4-problems/1A2T_A.dssp&quot; target=&quot;_blank&quot;&gt;input file&lt;/a&gt; &lt;code&gt;1A2T_A.dssp&lt;/code&gt; which contains the partially exposed surface areas of amino acids in protein &lt;code&gt;1A2T&lt;/code&gt; for each of its amino acids, and a second command-line argument which is the path to the file containing output of the code (e.g., it could be &lt;code&gt;./readDSSP.out&lt;/code&gt;). Then,&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;the code reads the content of this file, and&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
@@ -159,7 +159,7 @@ The sum of 1 2 1 23 is 27
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;finally for each amino acid in this protein, it prints the one-letter name of the amino acid, its corresponding partially exposed surface area (ACC from the input file), and its corresponding fractional exposed surface area (name it RSA) to the output file given by the user on the command line.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;On the first column of the output file, the code should also write the name of the protein (which is basically the name of the input file &lt;code&gt;1A2T_A&lt;/code&gt;) on each line of the output file. &lt;strong&gt;Note that your code should extract the protein name from the input filename&lt;/strong&gt; (by removing the file extension and other unnecessary information from the input command line string). &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/readDSSP.out&quot; target=&quot;_blank&quot;&gt;Here&lt;/a&gt; is an example output of the code.&lt;br /&gt;
+  &lt;li&gt;On the first column of the output file, the code should also write the name of the protein (which is basically the name of the input file &lt;code&gt;1A2T_A&lt;/code&gt;) on each line of the output file. &lt;strong&gt;Note that your code should extract the protein name from the input filename&lt;/strong&gt; (by removing the file extension and other unnecessary information from the input command line string). &lt;a href=&quot;http:/MAPCP2019U/homework/4-problems/readDSSP.out&quot; target=&quot;_blank&quot;&gt;Here&lt;/a&gt; is an example output of the code.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Your code should also be able to handle an error resulting from less or more than 2 input command line arguments. That is, if the number of input arguments is 3 or 1, then it should input the following message on screen and stop.&lt;/li&gt;
 &lt;/ol&gt;
@@ -295,7 +295,7 @@ y = 1.2151999999999998
 &lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt; Now write another script named &lt;code&gt;plotDatafromFile.m&lt;/code&gt;, that reads all of these files in your directory, one by one, and plots the content of all of them together, on a single scatter plot like the following,&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/SwiftDataPlot.png&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/SwiftDataPlot.png&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; again that some the data files stored on your computer are empty and some others have useless data if data in the second column of the file is larger than 0. So you will have to write your script in such a way that it checks for non-emptiness of the file (that is, the file does indeed contain some numerical data) as well as the negativity of the values in the column of data in each file. For example, you could check for the negativity of the values in MATLAB using function &lt;code&gt;all(data[:,1]&amp;lt;0.0)&lt;/code&gt; assuming that data is the variable containing the information read from the file.&lt;/p&gt;
@@ -316,14 +316,14 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 &lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; &lt;strong&gt;Simulating a fun Monte Carlo game.&lt;/strong&gt; Suppose you’re on a game show, and you’re given the choice of three doors:&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/Monty_1.png&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/Monty_1.png&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Behind one door is a car; behind the two others, goats. You pick a door, say No. 1, and the host of the show opens another door, say No. 3, which has a goat.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/Monty_open_door.png&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/Monty_open_door.png&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -337,10 +337,10 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-An example code can be downloaded from &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/montyGame.m&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Here is the code’s output figure,&lt;/p&gt;
+An example code can be downloaded from &lt;a href=&quot;http:/MAPCP2019U/homework/4-solutions/montyGame.m&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Here is the code’s output figure,&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-solutions/MontyGameResult.png&quot; width=&quot;800&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-solutions/MontyGameResult.png&quot; width=&quot;800&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;
 As you see in the figure, although you may initially win by not switching your choice, but in the long run, on average, you will lose, if you don’t switch your choice.&lt;/p&gt;
@@ -373,7 +373,7 @@ As you see in the figure, although you may initially win by not switching your c
 &lt;p&gt;Now, write a MATLAB script, that takes in the number of points to be simulated, and then calculates an approximate value for $\pi$ based on the Monte Carlo algorithm described above.  Write a second function that plot the estimate of $\pi$ versus the number of points simulated, like the following,&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-solutions/approximatePI.png&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-solutions/approximatePI.png&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -383,17 +383,17 @@ As you see in the figure, although you may initially win by not switching your c
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;10. &lt;/strong&gt; &lt;strong&gt;Subplots in MATLAB.&lt;/strong&gt; Consider this MATLAB data file &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/data3D.mat&quot; target=&quot;_blank&quot;&gt;data3D.mat&lt;/a&gt; which contains a 3-dimensional $41\times 61\times 16$ matrix of the brain of a rat. Write a MATLAB script that  creates and saves a graph of all $X-Y$ information for the 16 slices along the z axis like the following.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10. &lt;/strong&gt; &lt;strong&gt;Subplots in MATLAB.&lt;/strong&gt; Consider this MATLAB data file &lt;a href=&quot;http:/MAPCP2019U/homework/4-problems/data3D.mat&quot; target=&quot;_blank&quot;&gt;data3D.mat&lt;/a&gt; which contains a 3-dimensional $41\times 61\times 16$ matrix of the brain of a rat. Write a MATLAB script that  creates and saves a graph of all $X-Y$ information for the 16 slices along the z axis like the following.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/subplots.png&quot; width=&quot;900&quot; /&gt;  
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/subplots.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; Start from this &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/hw6prob1.m&quot; target=&quot;_blank&quot;&gt;MATLAB script&lt;/a&gt; that I have written for you. Play with all the options to understand what they do and see their effects on the resulting plot. This script should generate the following figure for you.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; Start from this &lt;a href=&quot;http:/MAPCP2019U/homework/4-problems/hw6prob1.m&quot; target=&quot;_blank&quot;&gt;MATLAB script&lt;/a&gt; that I have written for you. Play with all the options to understand what they do and see their effects on the resulting plot. This script should generate the following figure for you.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/currentPlot.png&quot; width=&quot;900&quot; /&gt;  
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/currentPlot.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -406,7 +406,7 @@ As you see in the figure, although you may initially win by not switching your c
 &lt;p&gt;&lt;strong&gt;11.  MATLAB.&lt;/strong&gt; &lt;strong&gt;Getting the boundary of objects in images.&lt;/strong&gt;. Consider the same dataset as in the previous problem. Write a MATLAB script that delineates the boundary of the tumor in all of the subplots and generates a figure with the tumor boundary highlighted, like the following graph.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/subplotsWithTumorBoundaries.png&quot; width=&quot;900&quot; /&gt;  
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/subplotsWithTumorBoundaries.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -416,10 +416,10 @@ As you see in the figure, although you may initially win by not switching your c
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;12.  MATLAB.&lt;/strong&gt; &lt;strong&gt;Regression: obtaining the most likely mean and standard deviation of a set of Standard Normally Distributed Random Variables.&lt;/strong&gt; Consider this dataset, &lt;a href=&quot;https://www.cdslab.org/homework/4-problems/Drand.mat&quot; target=&quot;_blank&quot;&gt;Drand.mat&lt;/a&gt;, which contains a set of random numbers. Let’s make a hypothesis with regards to this dataset: We assume that this dataset is well fit by a &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_distribution&quot; target=&quot;_blank&quot;&gt;Gaussian distribution&lt;/a&gt;. But, we don’t know the values of the two parameters (mean and standard deviation) of this Normal (Gaussian) distribution. Therefore, write a MATLAB script that constructs an objective function (similar to what we are planning to do for the mathematical modeling section of the project) and then uses MATLAB’s built-in function, &lt;code&gt;fminsearch()&lt;/code&gt;, to find the most likely values of the mean and standard deviation of this Gaussian distribution. Here is a best-fit Gaussian distribution using the most likely parameters to the histogram of this dataset.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.  MATLAB.&lt;/strong&gt; &lt;strong&gt;Regression: obtaining the most likely mean and standard deviation of a set of Standard Normally Distributed Random Variables.&lt;/strong&gt; Consider this dataset, &lt;a href=&quot;http:/MAPCP2019U/homework/4-problems/Drand.mat&quot; target=&quot;_blank&quot;&gt;Drand.mat&lt;/a&gt;, which contains a set of random numbers. Let’s make a hypothesis with regards to this dataset: We assume that this dataset is well fit by a &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_distribution&quot; target=&quot;_blank&quot;&gt;Gaussian distribution&lt;/a&gt;. But, we don’t know the values of the two parameters (mean and standard deviation) of this Normal (Gaussian) distribution. Therefore, write a MATLAB script that constructs an objective function (similar to what we are planning to do for the mathematical modeling section of the project) and then uses MATLAB’s built-in function, &lt;code&gt;fminsearch()&lt;/code&gt;, to find the most likely values of the mean and standard deviation of this Gaussian distribution. Here is a best-fit Gaussian distribution using the most likely parameters to the histogram of this dataset.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;https://www.cdslab.org/homework/4-problems/histfit.png&quot; width=&quot;700&quot; /&gt;
+	&lt;img src=&quot;http:/MAPCP2019U/homework/4-problems/histfit.png&quot; width=&quot;700&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Hints:&lt;/strong&gt; Our hypothesis is that the data in this histogram comes from a standard Normal distribution with a fixed mean ($\mu$) and standard deviation ($\sigma$). For the moment, let’s assume that we know the values of these two parameters. Then if all of these points, $D$, come from the normal distribution with the given $(\mu,\sigma)$, then the probability of all them coming from the normal distribution with these parameter values can be computed as,&lt;/p&gt;
@@ -440,7 +440,7 @@ Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the f
 
 &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;https://www.cdslab.org/homework/4-solutions/findBestFitParameters.m&quot; target=&quot;_blank&quot;&gt;findBestFitParameters.m&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;http:/MAPCP2019U/homework/4-solutions/findBestFitParameters.m&quot; target=&quot;_blank&quot;&gt;findBestFitParameters.m&lt;/a&gt;.&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http:/MAPCP2019U/homework/4-exceptions-errors-vectorization-visualization&quot;&gt;Homework 4: Exceptions, Errors, Vectorization, Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/MAPCP2019U&quot;&gt;PHYS 6302 - Summer 2019 - TTH 10:30-12:30 - Life Sciences Building LS 102&lt;/a&gt; on July 23, 2019.&lt;/p&gt;</content>
