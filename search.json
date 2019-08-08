@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 4: Converting Comma-Separated-Values (CSV) input to formatted output",
+		  "category"   : "",
+		  "url"        : "/MAPCP2019U/quiz/4-io",
+		  "date"       : "2019-08-08 00:00:00 -0500",
+		  "shortdate"  : "August 08, 2019"
+		} ,
+	
+		{
 		  "title"      : "Quiz 3: Branching, loops, functions",
 		  "category"   : "",
 		  "url"        : "/MAPCP2019U/quiz/3-branching-loops-functions",

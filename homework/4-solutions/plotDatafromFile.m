@@ -1,6 +1,8 @@
 close all;
 
 % Now read all data files and plot the results
+
+% set this path to point to the directory containing Swift downloaded data files
 dataDirectory = '../../5-problems/swift/';
 triggerListDirectory = '../../5-problems/';
 triggerList = fileread([triggerListDirectory,'triggers.txt']);
