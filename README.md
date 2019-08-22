@@ -1,21 +1,22 @@
-# ICP2017S
+# MAPCP2019U
 
-## Fall 2017 - Introduction to Computer Programming
+## Summer 2019 - Methods of Applied Physics - Computers in Physics
  
 Information about this course can be found on the course web-page:
  
-http://www.shahmoradi.org/ICP2017S/
+http://www.shahmoradi.org/MAPCP2019U/
 
 For questions about this course, contact:
 
-Amir Shahmoradi  
-Institute for Computational Engineering and Sciences (ICES)  
-Department of Aerospace Engineering and Engineering Mechanics  
-The University of Texas at Austin  
-201 E 24th Street, Stop C0200 | POB 6.328  
-Austin, TX 78712-1229  
-Phone: 512-232-7777  
-Email: amir@ices.utexas.edu  
-Email: amir@physics.utexas.edu  
-Email: a.shahmoradi@gmail.edu  
-Web: www.shahmoradi.org  
+Amir Shahmoradi
+Assistant Professor
+Department of Physics
+Data Science Program, College of Science
+The University of Texas at Arlington
+655 W Mitchell St | SEIR 365
+Arlington, TX 76010-1765
+Tel: 817-272-9047
+shahmoradi.org
+cdslab.org
+
+
