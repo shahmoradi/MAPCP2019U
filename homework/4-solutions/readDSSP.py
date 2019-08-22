@@ -28,7 +28,7 @@ Usage:''')
     input = open(dssp_in, 'r')
     fileContents = input.readlines()   # This is a list containing each line of the input file as an element.
     pdb_name = dssp_in[-11:-5]
-    
+
     resnam = []     # A list containing all Residue Names
     acc = []        # A list containing all normalized residue acc values in the pdb file
     rsa = []        # A list containing all normalized residue acc values in the pdb file
@@ -40,7 +40,7 @@ Usage:''')
             resnam.append(AA)
             acc.append(record[35:39])
             rsa.append(float(record[35:39])/residue_max_acc[AA])
-            
+
     input.close()
     
     # Now write out (or append to) the ouput file
